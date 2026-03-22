@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** GenericPayment - Schema of a payment with a generic payment method. */
@@ -33,7 +33,7 @@ class GenericPayment
      * @var PaymentProcessor $processor
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('processor')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\PaymentProcessor')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PaymentProcessor')]
     public PaymentProcessor $processor;
 
     /**
@@ -41,7 +41,7 @@ class GenericPayment
      * @var PaymentStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\PaymentStatus')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PaymentStatus')]
     public PaymentStatus $status;
 
     /**

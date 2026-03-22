@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class BenefitDownloadablesCreate
@@ -24,7 +24,7 @@ class BenefitDownloadablesCreate
      * @var BenefitDownloadablesCreateProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitDownloadablesCreateProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitDownloadablesCreateProperties')]
     public BenefitDownloadablesCreateProperties $properties;
 
     /**

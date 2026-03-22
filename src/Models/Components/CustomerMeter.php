@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomerMeter - An active customer meter, with current consumed and credited units. */
@@ -74,7 +74,7 @@ class CustomerMeter
      * @var Customer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Customer')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer')]
     public Customer $customer;
 
     /**
@@ -82,7 +82,7 @@ class CustomerMeter
      * @var Meter $meter
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('meter')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Meter')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Meter')]
     public Meter $meter;
 
     /**

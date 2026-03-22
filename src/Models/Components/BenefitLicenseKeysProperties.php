@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class BenefitLicenseKeysProperties
@@ -23,7 +23,7 @@ class BenefitLicenseKeysProperties
      * @var ?BenefitLicenseKeyExpirationProperties $expires
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('expires')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitLicenseKeyExpirationProperties|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitLicenseKeyExpirationProperties|null')]
     public ?BenefitLicenseKeyExpirationProperties $expires;
 
     /**
@@ -31,7 +31,7 @@ class BenefitLicenseKeysProperties
      * @var ?BenefitLicenseKeyActivationProperties $activations
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('activations')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitLicenseKeyActivationProperties|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitLicenseKeyActivationProperties|null')]
     public ?BenefitLicenseKeyActivationProperties $activations;
 
     /**

@@ -18,9 +18,9 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
+use Spaire;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 
 

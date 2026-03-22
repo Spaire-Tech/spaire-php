@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** ProductMediaFileCreate - Schema to create a file to be used as a product media file. */
@@ -40,7 +40,7 @@ class ProductMediaFileCreate
      * @var S3FileCreateMultipart $upload
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('upload')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\S3FileCreateMultipart')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\S3FileCreateMultipart')]
     public S3FileCreateMultipart $upload;
 
     /**

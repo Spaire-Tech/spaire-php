@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class ValidatedLicenseKey
@@ -46,7 +46,7 @@ class ValidatedLicenseKey
      * @var LicenseKeyCustomer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\LicenseKeyCustomer')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\LicenseKeyCustomer')]
     public LicenseKeyCustomer $customer;
 
     /**
@@ -76,7 +76,7 @@ class ValidatedLicenseKey
      * @var LicenseKeyStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\LicenseKeyStatus')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\LicenseKeyStatus')]
     public LicenseKeyStatus $status;
 
     /**
@@ -134,7 +134,7 @@ class ValidatedLicenseKey
      * @var ?LicenseKeyActivationBase $activation
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('activation')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\LicenseKeyActivationBase|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\LicenseKeyActivationBase|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?LicenseKeyActivationBase $activation = null;
 

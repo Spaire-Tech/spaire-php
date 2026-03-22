@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /**
@@ -21,7 +21,7 @@ class CheckoutDiscountPercentageRepeatDuration
      * @var DiscountDuration $duration
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('duration')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\DiscountDuration')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DiscountDuration')]
     public DiscountDuration $duration;
 
     /**
@@ -36,7 +36,7 @@ class CheckoutDiscountPercentageRepeatDuration
      * @var DiscountType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\DiscountType')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DiscountType')]
     public DiscountType $type;
 
     /**

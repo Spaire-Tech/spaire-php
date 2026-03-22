@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Utils;
+namespace Spaire\Utils;
 
 use Attribute;
 use ReflectionAttribute;

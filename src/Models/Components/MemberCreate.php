@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** MemberCreate - Schema for creating a new member. */
@@ -33,7 +33,7 @@ class MemberCreate
      * @var ?MemberRole $role
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('role')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\MemberRole|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MemberRole|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?MemberRole $role = null;
 

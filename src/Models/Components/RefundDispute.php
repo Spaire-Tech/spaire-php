@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /**
@@ -37,7 +37,7 @@ class RefundDispute
      * @var DisputeStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\DisputeStatus')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DisputeStatus')]
     public DisputeStatus $status;
 
     /**

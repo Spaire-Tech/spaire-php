@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class LicenseKeyActivationRead
@@ -53,7 +53,7 @@ class LicenseKeyActivationRead
      * @var LicenseKeyRead $licenseKey
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('license_key')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\LicenseKeyRead')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\LicenseKeyRead')]
     public LicenseKeyRead $licenseKey;
 
     /**

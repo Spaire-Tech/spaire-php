@@ -6,9 +6,9 @@
 
 declare(strict_types=1);
 
-namespace Polar\Utils;
+namespace Spaire\Utils;
 
-use Polar\Utils\Retry\RetryConfig;
+use Spaire\Utils\Retry\RetryConfig;
 
 class Options
 {

@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** BenefitCustomCreate - Schema to create a benefit of type `custom`. */
@@ -26,7 +26,7 @@ class BenefitCustomCreate
      * @var BenefitCustomCreateProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitCustomCreateProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitCustomCreateProperties')]
     public BenefitCustomCreateProperties $properties;
 
     /**

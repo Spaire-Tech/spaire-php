@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class MeterUpdate
@@ -47,7 +47,7 @@ class MeterUpdate
      * @var ?Filter $filter
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('filter')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Filter|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Filter|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?Filter $filter = null;
 
@@ -57,8 +57,8 @@ class MeterUpdate
      * @var CountAggregation|PropertyAggregation|UniqueAggregation|null $aggregation
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('aggregation')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CountAggregation|\Polar\Models\Components\PropertyAggregation|\Polar\Models\Components\UniqueAggregation|null')]
-    #[\Speakeasy\Serializer\Annotation\UnionDiscriminator(field: 'func', map: ['avg' => '\Polar\Models\Components\PropertyAggregation', 'count' => '\Polar\Models\Components\CountAggregation', 'max' => '\Polar\Models\Components\PropertyAggregation', 'min' => '\Polar\Models\Components\PropertyAggregation', 'sum' => '\Polar\Models\Components\PropertyAggregation', 'unique' => '\Polar\Models\Components\UniqueAggregation'])]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CountAggregation|\Spaire\Models\Components\PropertyAggregation|\Spaire\Models\Components\UniqueAggregation|null')]
+    #[\Speakeasy\Serializer\Annotation\UnionDiscriminator(field: 'func', map: ['avg' => '\Spaire\Models\Components\PropertyAggregation', 'count' => '\Spaire\Models\Components\CountAggregation', 'max' => '\Spaire\Models\Components\PropertyAggregation', 'min' => '\Spaire\Models\Components\PropertyAggregation', 'sum' => '\Spaire\Models\Components\PropertyAggregation', 'unique' => '\Spaire\Models\Components\UniqueAggregation'])]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public CountAggregation|PropertyAggregation|UniqueAggregation|null $aggregation = null;
 

@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class EventsIngest
@@ -17,7 +17,7 @@ class EventsIngest
      * @var array<EventCreateCustomer|EventCreateExternalCustomer> $events
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('events')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\EventCreateCustomer|\Polar\Models\Components\EventCreateExternalCustomer>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\EventCreateCustomer|\Spaire\Models\Components\EventCreateExternalCustomer>')]
     public array $events;
 
     /**

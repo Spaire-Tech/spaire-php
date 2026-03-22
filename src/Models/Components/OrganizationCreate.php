@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class OrganizationCreate
@@ -30,7 +30,7 @@ class OrganizationCreate
      * @var ?PresentmentCurrency $defaultPresentmentCurrency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('default_presentment_currency')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\PresentmentCurrency|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PresentmentCurrency $defaultPresentmentCurrency = null;
 
@@ -66,17 +66,17 @@ class OrganizationCreate
      * @var ?array<OrganizationSocialLink> $socials
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('socials')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\OrganizationSocialLink>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\OrganizationSocialLink>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $socials = null;
 
     /**
-     * Additional, private, business details Polar needs about active organizations for compliance (KYC).
+     * Additional, private, business details Spaire needs about active organizations for compliance (KYC).
      *
      * @var ?OrganizationDetails $details
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('details')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrganizationDetails|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationDetails|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?OrganizationDetails $details = null;
 
@@ -85,7 +85,7 @@ class OrganizationCreate
      * @var ?OrganizationFeatureSettings $featureSettings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('feature_settings')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrganizationFeatureSettings|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationFeatureSettings|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?OrganizationFeatureSettings $featureSettings = null;
 
@@ -94,7 +94,7 @@ class OrganizationCreate
      * @var ?OrganizationSubscriptionSettings $subscriptionSettings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('subscription_settings')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrganizationSubscriptionSettings|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationSubscriptionSettings|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?OrganizationSubscriptionSettings $subscriptionSettings = null;
 
@@ -103,7 +103,7 @@ class OrganizationCreate
      * @var ?OrganizationNotificationSettings $notificationSettings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('notification_settings')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrganizationNotificationSettings|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationNotificationSettings|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?OrganizationNotificationSettings $notificationSettings = null;
 
@@ -112,7 +112,7 @@ class OrganizationCreate
      * @var ?OrganizationCustomerEmailSettings $customerEmailSettings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_email_settings')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrganizationCustomerEmailSettings|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationCustomerEmailSettings|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?OrganizationCustomerEmailSettings $customerEmailSettings = null;
 
@@ -121,7 +121,7 @@ class OrganizationCreate
      * @var ?OrganizationCustomerPortalSettings $customerPortalSettings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_portal_settings')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrganizationCustomerPortalSettings|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationCustomerPortalSettings|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?OrganizationCustomerPortalSettings $customerPortalSettings = null;
 

@@ -24,10 +24,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 $request = new Operations\CustomerPortalOrdersListRequest();
 $requestSecurity = new Operations\CustomerPortalOrdersListSecurity(
@@ -77,10 +77,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 
 $requestSecurity = new Operations\CustomerPortalOrdersGetSecurity(
@@ -129,11 +129,11 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Components;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Components;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 $customerOrderUpdate = new Components\CustomerOrderUpdate(
     billingAddress: new Components\AddressInput(
@@ -188,10 +188,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 
 $requestSecurity = new Operations\CustomerPortalOrdersInvoiceSecurity(
@@ -240,10 +240,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 
 $requestSecurity = new Operations\CustomerPortalOrdersGenerateInvoiceSecurity(
@@ -292,10 +292,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 
 $requestSecurity = new Operations\CustomerPortalOrdersGetPaymentStatusSecurity(
@@ -344,11 +344,11 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Components;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Components;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 $customerOrderConfirmPayment = new Components\CustomerOrderConfirmPayment();
 $requestSecurity = new Operations\CustomerPortalOrdersConfirmRetryPaymentSecurity(

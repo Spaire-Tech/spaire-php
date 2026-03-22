@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class CustomerSubscriptionCancel
@@ -39,7 +39,7 @@ class CustomerSubscriptionCancel
      * @var ?CustomerCancellationReason $cancellationReason
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('cancellation_reason')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomerCancellationReason|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerCancellationReason|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?CustomerCancellationReason $cancellationReason = null;
 

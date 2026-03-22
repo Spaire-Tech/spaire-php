@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** DiscountFixedOnceForeverDurationCreate - Schema to create a fixed amount discount that is applied once or forever. */
@@ -17,7 +17,7 @@ class DiscountFixedOnceForeverDurationCreate
      * @var DiscountDuration $duration
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('duration')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\DiscountDuration')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DiscountDuration')]
     public DiscountDuration $duration;
 
     /**
@@ -25,7 +25,7 @@ class DiscountFixedOnceForeverDurationCreate
      * @var DiscountType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\DiscountType')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DiscountType')]
     public DiscountType $type;
 
     /**
@@ -49,7 +49,7 @@ class DiscountFixedOnceForeverDurationCreate
      * @var ?PresentmentCurrency $currency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\PresentmentCurrency|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PresentmentCurrency $currency = null;
 

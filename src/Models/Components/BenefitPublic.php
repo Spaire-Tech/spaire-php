@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class BenefitPublic
@@ -32,7 +32,7 @@ class BenefitPublic
      * @var BenefitType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitType')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitType')]
     public BenefitType $type;
 
     /**

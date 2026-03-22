@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomFieldCreateCheckbox - Schema to create a custom field of type checkbox. */
@@ -33,7 +33,7 @@ class CustomFieldCreateCheckbox
      * @var CustomFieldCheckboxProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomFieldCheckboxProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomFieldCheckboxProperties')]
     public CustomFieldCheckboxProperties $properties;
 
     /**

@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Utils\Retry;
+namespace Spaire\Utils\Retry;
 
 class PermanentError extends \Exception
 {

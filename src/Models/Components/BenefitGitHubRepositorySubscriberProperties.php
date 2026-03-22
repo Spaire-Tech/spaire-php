@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** BenefitGitHubRepositorySubscriberProperties - Properties available to subscribers for a benefit of type `github_repository`. */

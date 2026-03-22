@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** ProductPriceSeatBasedCreate - Schema to create a seat-based price with volume-based tiers. */
@@ -23,7 +23,7 @@ class ProductPriceSeatBasedCreate
      * @var ProductPriceSeatTiersInput $seatTiers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('seat_tiers')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\ProductPriceSeatTiersInput')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductPriceSeatTiersInput')]
     public ProductPriceSeatTiersInput $seatTiers;
 
     /**
@@ -31,7 +31,7 @@ class ProductPriceSeatBasedCreate
      * @var ?PresentmentCurrency $priceCurrency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('price_currency')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\PresentmentCurrency|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PresentmentCurrency $priceCurrency = null;
 

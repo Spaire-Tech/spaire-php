@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** WebhookDelivery - A webhook delivery for a webhook event. */
@@ -49,7 +49,7 @@ class WebhookDelivery
      * @var WebhookEvent $webhookEvent
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('webhook_event')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\WebhookEvent')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\WebhookEvent')]
     public WebhookEvent $webhookEvent;
 
     /**

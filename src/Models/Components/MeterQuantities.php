@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class MeterQuantities
@@ -17,7 +17,7 @@ class MeterQuantities
      * @var array<MeterQuantity> $quantities
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('quantities')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\MeterQuantity>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\MeterQuantity>')]
     public array $quantities;
 
     /**

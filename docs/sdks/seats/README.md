@@ -22,10 +22,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 
 $requestSecurity = new Operations\CustomerPortalSeatsListSeatsSecurity(
@@ -74,11 +74,11 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Components;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Components;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 $request = new Components\SeatAssign();
 $requestSecurity = new Operations\CustomerPortalSeatsAssignSeatSecurity(
@@ -125,10 +125,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 
 $requestSecurity = new Operations\CustomerPortalSeatsRevokeSeatSecurity(
@@ -176,10 +176,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 
 $requestSecurity = new Operations\CustomerPortalSeatsResendInvitationSecurity(
@@ -229,10 +229,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 
 $requestSecurity = new Operations\CustomerPortalSeatsListClaimedSubscriptionsSecurity(

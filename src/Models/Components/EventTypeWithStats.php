@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class EventTypeWithStats
@@ -56,7 +56,7 @@ class EventTypeWithStats
      * @var EventSource $source
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('source')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\EventSource')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\EventSource')]
     public EventSource $source;
 
     /**

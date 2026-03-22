@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** DiscountUpdate - Schema to update a discount. */
@@ -82,7 +82,7 @@ class DiscountUpdate
      * @var ?DiscountDuration $duration
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('duration')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\DiscountDuration|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DiscountDuration|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?DiscountDuration $duration = null;
 
@@ -99,7 +99,7 @@ class DiscountUpdate
      * @var ?DiscountType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\DiscountType|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DiscountType|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?DiscountType $type = null;
 
@@ -116,7 +116,7 @@ class DiscountUpdate
      * @var ?PresentmentCurrency $currency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\PresentmentCurrency|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PresentmentCurrency $currency = null;
 

@@ -6,9 +6,9 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Operations;
+namespace Spaire\Models\Operations;
 
-use Polar\Utils\SpeakeasyMetadata;
+use Spaire\Utils\SpeakeasyMetadata;
 class CheckoutsGetRequest
 {
     /**

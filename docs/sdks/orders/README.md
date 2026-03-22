@@ -25,10 +25,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()
+$sdk = Spaire\Spaire::builder()
     ->setSecurity(
         '<YOUR_BEARER_TOKEN_HERE>'
     )
@@ -81,9 +81,9 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
+use Spaire;
 
-$sdk = Polar\Polar::builder()
+$sdk = Spaire\Spaire::builder()
     ->setSecurity(
         '<YOUR_BEARER_TOKEN_HERE>'
     )
@@ -132,9 +132,9 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
+use Spaire;
 
-$sdk = Polar\Polar::builder()
+$sdk = Spaire\Spaire::builder()
     ->setSecurity(
         '<YOUR_BEARER_TOKEN_HERE>'
     )
@@ -183,10 +183,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Components;
+use Spaire;
+use Spaire\Models\Components;
 
-$sdk = Polar\Polar::builder()
+$sdk = Spaire\Spaire::builder()
     ->setSecurity(
         '<YOUR_BEARER_TOKEN_HERE>'
     )
@@ -242,9 +242,9 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
+use Spaire;
 
-$sdk = Polar\Polar::builder()
+$sdk = Spaire\Spaire::builder()
     ->setSecurity(
         '<YOUR_BEARER_TOKEN_HERE>'
     )
@@ -293,9 +293,9 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
+use Spaire;
 
-$sdk = Polar\Polar::builder()
+$sdk = Spaire\Spaire::builder()
     ->setSecurity(
         '<YOUR_BEARER_TOKEN_HERE>'
     )

@@ -6,9 +6,9 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Operations;
+namespace Spaire\Models\Operations;
 
-use Polar\Models\Components;
+use Spaire\Models\Components;
 class PaymentsGetResponse
 {
     /**

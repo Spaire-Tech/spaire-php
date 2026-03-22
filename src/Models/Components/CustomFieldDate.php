@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomFieldDate - Schema for a custom field of type date. */
@@ -66,7 +66,7 @@ class CustomFieldDate
      * @var CustomFieldDateProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomFieldDateProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomFieldDateProperties')]
     public CustomFieldDateProperties $properties;
 
     /**

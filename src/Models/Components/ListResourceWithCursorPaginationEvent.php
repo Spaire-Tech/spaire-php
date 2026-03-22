@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class ListResourceWithCursorPaginationEvent
@@ -17,7 +17,7 @@ class ListResourceWithCursorPaginationEvent
      * @var array<MeterCreditEvent|MeterResetEvent|BenefitGrantedEvent|BenefitCycledEvent|BenefitUpdatedEvent|BenefitRevokedEvent|SubscriptionCreatedEvent|SubscriptionCycledEvent|SubscriptionCanceledEvent|SubscriptionRevokedEvent|SubscriptionUncanceledEvent|SubscriptionProductUpdatedEvent|SubscriptionSeatsUpdatedEvent|SubscriptionBillingPeriodUpdatedEvent|OrderPaidEvent|OrderRefundedEvent|CheckoutCreatedEvent|CustomerCreatedEvent|CustomerUpdatedEvent|CustomerDeletedEvent|BalanceOrderEvent|BalanceCreditOrderEvent|BalanceRefundEvent|BalanceRefundReversalEvent|BalanceDisputeEvent|BalanceDisputeReversalEvent|UserEvent> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\MeterCreditEvent|\Polar\Models\Components\MeterResetEvent|\Polar\Models\Components\BenefitGrantedEvent|\Polar\Models\Components\BenefitCycledEvent|\Polar\Models\Components\BenefitUpdatedEvent|\Polar\Models\Components\BenefitRevokedEvent|\Polar\Models\Components\SubscriptionCreatedEvent|\Polar\Models\Components\SubscriptionCycledEvent|\Polar\Models\Components\SubscriptionCanceledEvent|\Polar\Models\Components\SubscriptionRevokedEvent|\Polar\Models\Components\SubscriptionUncanceledEvent|\Polar\Models\Components\SubscriptionProductUpdatedEvent|\Polar\Models\Components\SubscriptionSeatsUpdatedEvent|\Polar\Models\Components\SubscriptionBillingPeriodUpdatedEvent|\Polar\Models\Components\OrderPaidEvent|\Polar\Models\Components\OrderRefundedEvent|\Polar\Models\Components\CheckoutCreatedEvent|\Polar\Models\Components\CustomerCreatedEvent|\Polar\Models\Components\CustomerUpdatedEvent|\Polar\Models\Components\CustomerDeletedEvent|\Polar\Models\Components\BalanceOrderEvent|\Polar\Models\Components\BalanceCreditOrderEvent|\Polar\Models\Components\BalanceRefundEvent|\Polar\Models\Components\BalanceRefundReversalEvent|\Polar\Models\Components\BalanceDisputeEvent|\Polar\Models\Components\BalanceDisputeReversalEvent|\Polar\Models\Components\UserEvent>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\MeterCreditEvent|\Spaire\Models\Components\MeterResetEvent|\Spaire\Models\Components\BenefitGrantedEvent|\Spaire\Models\Components\BenefitCycledEvent|\Spaire\Models\Components\BenefitUpdatedEvent|\Spaire\Models\Components\BenefitRevokedEvent|\Spaire\Models\Components\SubscriptionCreatedEvent|\Spaire\Models\Components\SubscriptionCycledEvent|\Spaire\Models\Components\SubscriptionCanceledEvent|\Spaire\Models\Components\SubscriptionRevokedEvent|\Spaire\Models\Components\SubscriptionUncanceledEvent|\Spaire\Models\Components\SubscriptionProductUpdatedEvent|\Spaire\Models\Components\SubscriptionSeatsUpdatedEvent|\Spaire\Models\Components\SubscriptionBillingPeriodUpdatedEvent|\Spaire\Models\Components\OrderPaidEvent|\Spaire\Models\Components\OrderRefundedEvent|\Spaire\Models\Components\CheckoutCreatedEvent|\Spaire\Models\Components\CustomerCreatedEvent|\Spaire\Models\Components\CustomerUpdatedEvent|\Spaire\Models\Components\CustomerDeletedEvent|\Spaire\Models\Components\BalanceOrderEvent|\Spaire\Models\Components\BalanceCreditOrderEvent|\Spaire\Models\Components\BalanceRefundEvent|\Spaire\Models\Components\BalanceRefundReversalEvent|\Spaire\Models\Components\BalanceDisputeEvent|\Spaire\Models\Components\BalanceDisputeReversalEvent|\Spaire\Models\Components\UserEvent>')]
     public array $items;
 
     /**
@@ -25,7 +25,7 @@ class ListResourceWithCursorPaginationEvent
      * @var CursorPagination $pagination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pagination')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CursorPagination')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CursorPagination')]
     public CursorPagination $pagination;
 
     /**

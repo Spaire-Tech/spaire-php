@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class Order
@@ -32,7 +32,7 @@ class Order
      * @var OrderStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrderStatus')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrderStatus')]
     public OrderStatus $status;
 
     /**
@@ -127,7 +127,7 @@ class Order
      * @var OrderBillingReason $billingReason
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_reason')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrderBillingReason')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrderBillingReason')]
     public OrderBillingReason $billingReason;
 
     /**
@@ -175,7 +175,7 @@ class Order
      * @var OrderCustomer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrderCustomer')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrderCustomer')]
     public OrderCustomer $customer;
 
     /**
@@ -184,7 +184,7 @@ class Order
      * @var array<OrderItemSchema> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\OrderItemSchema>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\OrderItemSchema>')]
     public array $items;
 
     /**
@@ -216,7 +216,7 @@ class Order
      * @var ?Address $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Address|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Address|null')]
     public ?Address $billingAddress;
 
     /**
@@ -270,7 +270,7 @@ class Order
      * @var ?OrderProduct $product
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('product')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrderProduct|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrderProduct|null')]
     public ?OrderProduct $product;
 
     /**
@@ -278,7 +278,7 @@ class Order
      * @var DiscountFixedOnceForeverDurationBase|DiscountFixedRepeatDurationBase|DiscountPercentageOnceForeverDurationBase|DiscountPercentageRepeatDurationBase|null $discount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('discount')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\DiscountFixedOnceForeverDurationBase|\Polar\Models\Components\DiscountFixedRepeatDurationBase|\Polar\Models\Components\DiscountPercentageOnceForeverDurationBase|\Polar\Models\Components\DiscountPercentageRepeatDurationBase|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DiscountFixedOnceForeverDurationBase|\Spaire\Models\Components\DiscountFixedRepeatDurationBase|\Spaire\Models\Components\DiscountPercentageOnceForeverDurationBase|\Spaire\Models\Components\DiscountPercentageRepeatDurationBase|null')]
     public DiscountFixedOnceForeverDurationBase|DiscountFixedRepeatDurationBase|DiscountPercentageOnceForeverDurationBase|DiscountPercentageRepeatDurationBase|null $discount;
 
     /**
@@ -286,7 +286,7 @@ class Order
      * @var ?OrderSubscription $subscription
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('subscription')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrderSubscription|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrderSubscription|null')]
     public ?OrderSubscription $subscription;
 
     /**

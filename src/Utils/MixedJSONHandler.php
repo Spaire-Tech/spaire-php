@@ -7,7 +7,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Utils;
+namespace Spaire\Utils;
 
 use Speakeasy\Serializer\Context;
 use Speakeasy\Serializer\GraphNavigator;

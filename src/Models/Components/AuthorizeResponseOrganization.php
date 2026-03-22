@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class AuthorizeResponseOrganization
@@ -16,7 +16,7 @@ class AuthorizeResponseOrganization
      * @var OAuth2ClientPublic $client
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('client')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OAuth2ClientPublic')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OAuth2ClientPublic')]
     public OAuth2ClientPublic $client;
 
     /**
@@ -25,7 +25,7 @@ class AuthorizeResponseOrganization
      * @var array<Scope> $scopes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('scopes')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\Scope>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\Scope>')]
     public array $scopes;
 
     /**
@@ -34,7 +34,7 @@ class AuthorizeResponseOrganization
      * @var array<AuthorizeOrganization> $organizations
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('organizations')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\AuthorizeOrganization>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\AuthorizeOrganization>')]
     public array $organizations;
 
     /**
@@ -42,7 +42,7 @@ class AuthorizeResponseOrganization
      * @var ?AuthorizeOrganization $sub
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('sub')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\AuthorizeOrganization|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\AuthorizeOrganization|null')]
     public ?AuthorizeOrganization $sub;
 
     /**

@@ -6,18 +6,18 @@
 
 declare(strict_types=1);
 
-namespace Polar;
+namespace Spaire;
 
 
 
 class CustomerPortal
 {
     private SDKConfiguration $sdkConfiguration;
-    public PolarBenefitGrants $benefitGrants;
+    public SpaireBenefitGrants $benefitGrants;
 
-    public PolarCustomers $customers;
+    public SpaireCustomers $customers;
 
-    public PolarCustomerMeters $customerMeters;
+    public SpaireCustomerMeters $customerMeters;
 
     public Seats $seats;
 
@@ -25,15 +25,15 @@ class CustomerPortal
 
     public Downloadables $downloadables;
 
-    public PolarLicenseKeys $licenseKeys;
+    public SpaireLicenseKeys $licenseKeys;
 
-    public PolarMembers $members;
+    public SpaireMembers $members;
 
-    public PolarOrders $orders;
+    public SpaireOrders $orders;
 
-    public PolarOrganizations $organizations;
+    public SpaireOrganizations $organizations;
 
-    public PolarSubscriptions $subscriptions;
+    public SpaireSubscriptions $subscriptions;
 
     public Wallets $wallets;
 
@@ -43,17 +43,17 @@ class CustomerPortal
     public function __construct(public SDKConfiguration $sdkConfig)
     {
         $this->sdkConfiguration = $sdkConfig;
-        $this->benefitGrants = new PolarBenefitGrants($this->sdkConfiguration);
-        $this->customers = new PolarCustomers($this->sdkConfiguration);
-        $this->customerMeters = new PolarCustomerMeters($this->sdkConfiguration);
+        $this->benefitGrants = new SpaireBenefitGrants($this->sdkConfiguration);
+        $this->customers = new SpaireCustomers($this->sdkConfiguration);
+        $this->customerMeters = new SpaireCustomerMeters($this->sdkConfiguration);
         $this->seats = new Seats($this->sdkConfiguration);
         $this->customerSession = new CustomerSession($this->sdkConfiguration);
         $this->downloadables = new Downloadables($this->sdkConfiguration);
-        $this->licenseKeys = new PolarLicenseKeys($this->sdkConfiguration);
-        $this->members = new PolarMembers($this->sdkConfiguration);
-        $this->orders = new PolarOrders($this->sdkConfiguration);
-        $this->organizations = new PolarOrganizations($this->sdkConfiguration);
-        $this->subscriptions = new PolarSubscriptions($this->sdkConfiguration);
+        $this->licenseKeys = new SpaireLicenseKeys($this->sdkConfiguration);
+        $this->members = new SpaireMembers($this->sdkConfiguration);
+        $this->orders = new SpaireOrders($this->sdkConfiguration);
+        $this->organizations = new SpaireOrganizations($this->sdkConfiguration);
+        $this->subscriptions = new SpaireSubscriptions($this->sdkConfiguration);
         $this->wallets = new Wallets($this->sdkConfiguration);
     }
     /**

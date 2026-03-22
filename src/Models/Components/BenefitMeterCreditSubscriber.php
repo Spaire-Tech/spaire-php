@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class BenefitMeterCreditSubscriber
@@ -73,7 +73,7 @@ class BenefitMeterCreditSubscriber
      * @var BenefitSubscriberOrganization $organization
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('organization')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitSubscriberOrganization')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitSubscriberOrganization')]
     public BenefitSubscriberOrganization $organization;
 
     /**
@@ -82,7 +82,7 @@ class BenefitMeterCreditSubscriber
      * @var BenefitMeterCreditSubscriberProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitMeterCreditSubscriberProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitMeterCreditSubscriberProperties')]
     public BenefitMeterCreditSubscriberProperties $properties;
 
     /**

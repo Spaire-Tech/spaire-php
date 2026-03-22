@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Webhooks;
+namespace Spaire\Models\Webhooks;
 
 
 class EndpointrefundUpdatedPostResponse

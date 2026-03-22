@@ -1,7 +1,7 @@
 speakeasyVersion: 1.728.0
 sources:
-    Polar-OAS:
-        sourceNamespace: polar-oas
+    Spaire-OAS:
+        sourceNamespace: spaire-oas
         sourceRevisionDigest: sha256:8e36cfec4d157912c3038282edef69578a3480a8d4537909b8d482ab72b0c71d
         sourceBlobDigest: sha256:46f5784fd3a61ca8f87b1e553c00b3a703deaf699e6a2918c0cbfb778b793e83
         tags:
@@ -9,40 +9,40 @@ sources:
             - speakeasy-sdk-regen-1770078455
             - 0.1.0
 targets:
-    polar:
-        source: Polar-OAS
-        sourceNamespace: polar-oas
+    spaire:
+        source: Spaire-OAS
+        sourceNamespace: spaire-oas
         sourceRevisionDigest: sha256:8e36cfec4d157912c3038282edef69578a3480a8d4537909b8d482ab72b0c71d
         sourceBlobDigest: sha256:46f5784fd3a61ca8f87b1e553c00b3a703deaf699e6a2918c0cbfb778b793e83
-        codeSamplesNamespace: polar-api-php-code-samples
+        codeSamplesNamespace: spaire-api-php-code-samples
         codeSamplesRevisionDigest: sha256:2059e5245082b8e98477a0bdfcd174a441d94e0ffbbf3b637e2872acda1fed52
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
-        Polar-OAS:
+        Spaire-OAS:
             inputs:
-                - location: https://api.polar.sh/openapi.json
+                - location: https://api.spaire.tech/openapi.json
             overlays:
-                - location: https://raw.githubusercontent.com/polarsource/polar/main/sdk/overlays/security.yml
-                - location: https://raw.githubusercontent.com/polarsource/polar/main/sdk/overlays/type_parameter.yml
-                - location: https://raw.githubusercontent.com/polarsource/polar/main/sdk/overlays/read_only.yml
-                - location: https://raw.githubusercontent.com/polarsource/polar/main/sdk/overlays/event_discriminator.yml
-                - location: https://raw.githubusercontent.com/polarsource/polar/main/sdk/overlays/timezone_enum.yml
-                - location: https://raw.githubusercontent.com/polarsource/polar/main/sdk/overlays/event_metadata.yml
+                - location: https://raw.githubusercontent.com/spaire-tech/spaire/main/sdk/overlays/security.yml
+                - location: https://raw.githubusercontent.com/spaire-tech/spaire/main/sdk/overlays/type_parameter.yml
+                - location: https://raw.githubusercontent.com/spaire-tech/spaire/main/sdk/overlays/read_only.yml
+                - location: https://raw.githubusercontent.com/spaire-tech/spaire/main/sdk/overlays/event_discriminator.yml
+                - location: https://raw.githubusercontent.com/spaire-tech/spaire/main/sdk/overlays/timezone_enum.yml
+                - location: https://raw.githubusercontent.com/spaire-tech/spaire/main/sdk/overlays/event_metadata.yml
             registry:
-                location: registry.speakeasyapi.dev/polar/polar/polar-oas
+                location: registry.speakeasyapi.dev/spaire/spaire/spaire-oas
     targets:
-        polar:
+        spaire:
             target: php
-            source: Polar-OAS
+            source: Spaire-OAS
             publish:
                 packagist:
-                    username: polar
+                    username: spaire
                     token: $packagist_token
             codeSamples:
                 registry:
-                    location: registry.speakeasyapi.dev/polar/polar/polar-api-php-code-samples
+                    location: registry.speakeasyapi.dev/spaire/spaire/spaire-api-php-code-samples
                 labelOverride:
                     fixedValue: PHP (SDK)
                 blocking: false

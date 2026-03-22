@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** AttachedCustomField - Schema of a custom field attached to a resource. */
@@ -25,8 +25,8 @@ class AttachedCustomField
      * @var CustomFieldText|CustomFieldNumber|CustomFieldDate|CustomFieldCheckbox|CustomFieldSelect $customField
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('custom_field')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomFieldText|\Polar\Models\Components\CustomFieldNumber|\Polar\Models\Components\CustomFieldDate|\Polar\Models\Components\CustomFieldCheckbox|\Polar\Models\Components\CustomFieldSelect')]
-    #[\Speakeasy\Serializer\Annotation\UnionDiscriminator(field: 'type', map: ['checkbox' => '\Polar\Models\Components\CustomFieldCheckbox', 'date' => '\Polar\Models\Components\CustomFieldDate', 'number' => '\Polar\Models\Components\CustomFieldNumber', 'select' => '\Polar\Models\Components\CustomFieldSelect', 'text' => '\Polar\Models\Components\CustomFieldText'])]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomFieldText|\Spaire\Models\Components\CustomFieldNumber|\Spaire\Models\Components\CustomFieldDate|\Spaire\Models\Components\CustomFieldCheckbox|\Spaire\Models\Components\CustomFieldSelect')]
+    #[\Speakeasy\Serializer\Annotation\UnionDiscriminator(field: 'type', map: ['checkbox' => '\Spaire\Models\Components\CustomFieldCheckbox', 'date' => '\Spaire\Models\Components\CustomFieldDate', 'number' => '\Spaire\Models\Components\CustomFieldNumber', 'select' => '\Spaire\Models\Components\CustomFieldSelect', 'text' => '\Spaire\Models\Components\CustomFieldText'])]
     public CustomFieldText|CustomFieldNumber|CustomFieldDate|CustomFieldCheckbox|CustomFieldSelect $customField;
 
     /**

@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomerStateSubscription - An active customer subscription. */
@@ -42,7 +42,7 @@ class CustomerStateSubscription
      * @var Status $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Status')]
     public Status $status;
 
     /**
@@ -66,7 +66,7 @@ class CustomerStateSubscription
      * @var SubscriptionRecurringInterval $recurringInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('recurring_interval')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\SubscriptionRecurringInterval')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionRecurringInterval')]
     public SubscriptionRecurringInterval $recurringInterval;
 
     /**
@@ -99,7 +99,7 @@ class CustomerStateSubscription
      * @var array<CustomerStateSubscriptionMeter> $meters
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('meters')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\CustomerStateSubscriptionMeter>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CustomerStateSubscriptionMeter>')]
     public array $meters;
 
     /**

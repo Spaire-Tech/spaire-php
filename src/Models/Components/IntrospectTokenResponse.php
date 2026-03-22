@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class IntrospectTokenResponse
@@ -30,7 +30,7 @@ class IntrospectTokenResponse
      * @var TokenType $tokenType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('token_type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\TokenType')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TokenType')]
     public TokenType $tokenType;
 
     /**
@@ -45,7 +45,7 @@ class IntrospectTokenResponse
      * @var SubType $subType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('sub_type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\SubType')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubType')]
     public SubType $subType;
 
     /**

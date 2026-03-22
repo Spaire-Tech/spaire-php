@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class SeatsList
@@ -17,7 +17,7 @@ class SeatsList
      * @var array<CustomerSeat> $seats
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('seats')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\CustomerSeat>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CustomerSeat>')]
     public array $seats;
 
     /**

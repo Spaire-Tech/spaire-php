@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** Member - A member of a customer. */
@@ -49,7 +49,7 @@ class Member
      * @var MemberRole $role
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('role')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\MemberRole')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MemberRole')]
     public MemberRole $role;
 
     /**

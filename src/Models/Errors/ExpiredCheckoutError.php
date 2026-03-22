@@ -6,9 +6,9 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Errors;
+namespace Spaire\Models\Errors;
 
-use Polar\Utils;
+use Spaire\Utils;
 class ExpiredCheckoutError
 {
     /**

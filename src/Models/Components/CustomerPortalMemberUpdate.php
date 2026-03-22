@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomerPortalMemberUpdate - Schema for updating a member's role in the customer portal. */
@@ -18,7 +18,7 @@ class CustomerPortalMemberUpdate
      * @var ?MemberRole $role
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('role')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\MemberRole|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MemberRole|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?MemberRole $role = null;
 

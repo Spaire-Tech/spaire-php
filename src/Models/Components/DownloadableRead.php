@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class DownloadableRead
@@ -30,7 +30,7 @@ class DownloadableRead
      * @var FileDownload $file
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('file')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\FileDownload')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\FileDownload')]
     public FileDownload $file;
 
     /**

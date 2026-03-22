@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** WebhookEndpoint - A webhook endpoint. */
@@ -41,7 +41,7 @@ class WebhookEndpoint
      * @var WebhookFormat $format
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('format')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\WebhookFormat')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\WebhookFormat')]
     public WebhookFormat $format;
 
     /**
@@ -66,7 +66,7 @@ class WebhookEndpoint
      * @var array<WebhookEventType> $events
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('events')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\WebhookEventType>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\WebhookEventType>')]
     public array $events;
 
     /**

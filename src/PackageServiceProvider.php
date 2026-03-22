@@ -7,7 +7,7 @@
 
 declare(strict_types=1);
 
-namespace Polar;
+namespace Spaire;
 
 
 use Illuminate\Contracts\Support\DeferrableProvider;
@@ -27,8 +27,8 @@ final class PackageServiceProvider extends ServiceProvider implements Deferrable
     {
         $security = config('services.openapi.access_token');
         $this->app->singleton(
-            abstract: Polar::class,
-            concrete: fn (): Polar => Polar::builder()->setSecurity(
+            abstract: Spaire::class,
+            concrete: fn (): Spaire => Spaire::builder()->setSecurity(
                 $security
             )->build(),
         );

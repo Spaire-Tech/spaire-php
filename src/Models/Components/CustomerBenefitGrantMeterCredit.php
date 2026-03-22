@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class CustomerBenefitGrantMeterCredit
@@ -60,7 +60,7 @@ class CustomerBenefitGrantMeterCredit
      * @var CustomerPortalCustomer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomerPortalCustomer')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerPortalCustomer')]
     public CustomerPortalCustomer $customer;
 
     /**
@@ -68,7 +68,7 @@ class CustomerBenefitGrantMeterCredit
      * @var BenefitMeterCreditSubscriber $benefit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('benefit')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitMeterCreditSubscriber')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitMeterCreditSubscriber')]
     public BenefitMeterCreditSubscriber $benefit;
 
     /**
@@ -76,7 +76,7 @@ class CustomerBenefitGrantMeterCredit
      * @var BenefitGrantMeterCreditProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantMeterCreditProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantMeterCreditProperties')]
     public BenefitGrantMeterCreditProperties $properties;
 
     /**
@@ -128,7 +128,7 @@ class CustomerBenefitGrantMeterCredit
      * @var ?BenefitGrantError $error
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('error')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantError|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantError|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?BenefitGrantError $error = null;
 

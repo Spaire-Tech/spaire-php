@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /**
@@ -31,7 +31,7 @@ class WebhookOrderPaidPayload
      * @var Order $data
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('data')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Order')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Order')]
     public Order $data;
 
     /**

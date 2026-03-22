@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Utils;
+namespace Spaire\Utils;
 
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Promise\PromiseInterface;

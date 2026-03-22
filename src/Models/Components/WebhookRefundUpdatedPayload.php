@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /**
@@ -29,7 +29,7 @@ class WebhookRefundUpdatedPayload
      * @var Refund $data
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('data')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Refund')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Refund')]
     public Refund $data;
 
     /**

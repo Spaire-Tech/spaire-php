@@ -1,9 +1,9 @@
 {
-  "name": "polar-sh/sdk",
+  "name": "spaire-tech/spaire-php",
   "type": "library",
   "autoload": {
     "psr-4": {
-      "Polar\\": "src/"
+      "Spaire\\": "src/"
     }
   },
   "license": "MIT",
@@ -34,7 +34,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Polar\\PackageServiceProvider"
+        "Spaire\\PackageServiceProvider"
       ]
     }
   },

@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class ListResourceCheckout
@@ -17,7 +17,7 @@ class ListResourceCheckout
      * @var array<Checkout> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\Checkout>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\Checkout>')]
     public array $items;
 
     /**
@@ -25,7 +25,7 @@ class ListResourceCheckout
      * @var Pagination $pagination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pagination')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Pagination')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Pagination')]
     public Pagination $pagination;
 
     /**

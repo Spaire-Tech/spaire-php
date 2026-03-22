@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** MemberSession - A member session that can be used to authenticate as a member in the customer portal. */
@@ -62,7 +62,7 @@ class MemberSession
      * @var Member $member
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('member')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Member')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Member')]
     public Member $member;
 
     /**
@@ -78,7 +78,7 @@ class MemberSession
      * @var Customer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Customer')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer')]
     public Customer $customer;
 
     /**

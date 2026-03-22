@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomFieldUpdateCheckbox - Schema to update a custom field of type checkbox. */
@@ -54,7 +54,7 @@ class CustomFieldUpdateCheckbox
      * @var ?CustomFieldCheckboxProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomFieldCheckboxProperties|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomFieldCheckboxProperties|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?CustomFieldCheckboxProperties $properties = null;
 

@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class BenefitGrantMetadata
@@ -30,7 +30,7 @@ class BenefitGrantMetadata
      * @var BenefitType $benefitType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('benefit_type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitType')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitType')]
     public BenefitType $benefitType;
 
     /**

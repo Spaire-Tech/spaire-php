@@ -6,10 +6,10 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
-/** OrderPaidEvent - An event created by Polar when an order is paid. */
+/** OrderPaidEvent - An event created by Spaire when an order is paid. */
 class OrderPaidEvent
 {
     /**
@@ -49,11 +49,11 @@ class OrderPaidEvent
      * @var OrderPaidMetadata $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrderPaidMetadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrderPaidMetadata')]
     public OrderPaidMetadata $metadata;
 
     /**
-     * ID of the customer in your Polar organization associated with the event.
+     * ID of the customer in your Spaire organization associated with the event.
      *
      * @var ?string $customerId
      */
@@ -66,7 +66,7 @@ class OrderPaidEvent
      * @var ?Customer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Customer|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer|null')]
     public ?Customer $customer;
 
     /**
@@ -105,7 +105,7 @@ class OrderPaidEvent
     public ?string $parentId = null;
 
     /**
-     * The source of the event. `system` events are created by Polar. `user` events are the one you create through our ingestion API.
+     * The source of the event. `system` events are created by Spaire. `user` events are the one you create through our ingestion API.
      *
      * @var string $source
      */

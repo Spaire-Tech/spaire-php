@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class SubscriptionUpdateSeats
@@ -25,7 +25,7 @@ class SubscriptionUpdateSeats
      * @var ?SubscriptionProrationBehavior $prorationBehavior
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('proration_behavior')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\SubscriptionProrationBehavior|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionProrationBehavior|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?SubscriptionProrationBehavior $prorationBehavior = null;
 

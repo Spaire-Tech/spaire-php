@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class CustomerSubscriptionMeter
@@ -64,7 +64,7 @@ class CustomerSubscriptionMeter
      * @var CustomerSubscriptionMeterMeter $meter
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('meter')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomerSubscriptionMeterMeter')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerSubscriptionMeterMeter')]
     public CustomerSubscriptionMeterMeter $meter;
 
     /**

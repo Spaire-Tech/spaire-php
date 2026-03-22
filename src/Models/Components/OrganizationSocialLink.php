@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class OrganizationSocialLink
@@ -16,7 +16,7 @@ class OrganizationSocialLink
      * @var OrganizationSocialPlatforms $platform
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('platform')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrganizationSocialPlatforms')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationSocialPlatforms')]
     public OrganizationSocialPlatforms $platform;
 
     /**

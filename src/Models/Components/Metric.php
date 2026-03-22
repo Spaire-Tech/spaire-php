@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** Metric - Information about a metric. */
@@ -33,7 +33,7 @@ class Metric
      * @var MetricType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\MetricType')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MetricType')]
     public MetricType $type;
 
     /**

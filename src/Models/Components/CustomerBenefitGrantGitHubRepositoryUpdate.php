@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class CustomerBenefitGrantGitHubRepositoryUpdate
@@ -16,7 +16,7 @@ class CustomerBenefitGrantGitHubRepositoryUpdate
      * @var CustomerBenefitGrantGitHubRepositoryPropertiesUpdate $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomerBenefitGrantGitHubRepositoryPropertiesUpdate')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerBenefitGrantGitHubRepositoryPropertiesUpdate')]
     public CustomerBenefitGrantGitHubRepositoryPropertiesUpdate $properties;
 
     /**

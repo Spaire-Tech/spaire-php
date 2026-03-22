@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class ListResourceCustomerBenefitGrant
@@ -17,7 +17,7 @@ class ListResourceCustomerBenefitGrant
      * @var array<CustomerBenefitGrantDiscord|CustomerBenefitGrantGitHubRepository|CustomerBenefitGrantDownloadables|CustomerBenefitGrantLicenseKeys|CustomerBenefitGrantCustom|CustomerBenefitGrantMeterCredit> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\CustomerBenefitGrantDiscord|\Polar\Models\Components\CustomerBenefitGrantGitHubRepository|\Polar\Models\Components\CustomerBenefitGrantDownloadables|\Polar\Models\Components\CustomerBenefitGrantLicenseKeys|\Polar\Models\Components\CustomerBenefitGrantCustom|\Polar\Models\Components\CustomerBenefitGrantMeterCredit>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CustomerBenefitGrantDiscord|\Spaire\Models\Components\CustomerBenefitGrantGitHubRepository|\Spaire\Models\Components\CustomerBenefitGrantDownloadables|\Spaire\Models\Components\CustomerBenefitGrantLicenseKeys|\Spaire\Models\Components\CustomerBenefitGrantCustom|\Spaire\Models\Components\CustomerBenefitGrantMeterCredit>')]
     public array $items;
 
     /**
@@ -25,7 +25,7 @@ class ListResourceCustomerBenefitGrant
      * @var Pagination $pagination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pagination')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Pagination')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Pagination')]
     public Pagination $pagination;
 
     /**

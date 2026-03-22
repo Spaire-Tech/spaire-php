@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class FilterClause
@@ -23,7 +23,7 @@ class FilterClause
      * @var FilterOperator $operator
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('operator')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\FilterOperator')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\FilterOperator')]
     public FilterOperator $operator;
 
     /**

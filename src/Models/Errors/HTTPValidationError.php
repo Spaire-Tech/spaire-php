@@ -6,10 +6,10 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Errors;
+namespace Spaire\Models\Errors;
 
-use Polar\Models\Components;
-use Polar\Utils;
+use Spaire\Models\Components;
+use Spaire\Utils;
 class HTTPValidationError
 {
     /**
@@ -18,7 +18,7 @@ class HTTPValidationError
      * @var ?array<Components\ValidationError> $detail
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('detail')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\ValidationError>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\ValidationError>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $detail = null;
 

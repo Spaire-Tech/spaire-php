@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** SubscriptionCreateExternalCustomer - Create a subscription for an existing customer identified by an external ID. */
@@ -21,7 +21,7 @@ class SubscriptionCreateExternalCustomer
     public string $productId;
 
     /**
-     * The ID of the customer in your system to create the subscription for. It must already exist in Polar.
+     * The ID of the customer in your system to create the subscription for. It must already exist in Spaire.
      *
      * @var string $externalCustomerId
      */

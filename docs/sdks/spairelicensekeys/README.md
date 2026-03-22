@@ -22,10 +22,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 
 $requestSecurity = new Operations\CustomerPortalLicenseKeysListSecurity(
@@ -83,10 +83,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 
 $requestSecurity = new Operations\CustomerPortalLicenseKeysGetSecurity(
@@ -140,10 +140,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Components;
+use Spaire;
+use Spaire\Models\Components;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 $request = new Components\LicenseKeyValidate(
     key: '<key>',
@@ -194,10 +194,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Components;
+use Spaire;
+use Spaire\Models\Components;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 $request = new Components\LicenseKeyActivate(
     key: '<key>',
@@ -250,10 +250,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Components;
+use Spaire;
+use Spaire\Models\Components;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 $request = new Components\LicenseKeyDeactivate(
     key: '<key>',

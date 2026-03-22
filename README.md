@@ -1,9 +1,9 @@
-# polar-sh/sdk
+# spaire-tech/sdk
 
-Developer-friendly & type-safe Php SDK specifically catered to leverage *polar-sh/sdk* API.
+Developer-friendly & type-safe Php SDK specifically catered to leverage *spaire-tech/sdk* API.
 
 <div align="left">
-    <a href="https://www.speakeasy.com/?utm_source=polar-sh/sdk&utm_campaign=php"><img src="https://custom-icon-badges.demolab.com/badge/-Built%20By%20Speakeasy-212015?style=for-the-badge&logoColor=FBE331&logo=speakeasy&labelColor=545454" /></a>
+    <a href="https://www.speakeasy.com/?utm_source=spaire-tech/sdk&utm_campaign=php"><img src="https://custom-icon-badges.demolab.com/badge/-Built%20By%20Speakeasy-212015?style=for-the-badge&logoColor=FBE331&logo=speakeasy&labelColor=545454" /></a>
     <a href="https://opensource.org/licenses/MIT">
         <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="width: 100px; height: 28px;" />
     </a>
@@ -12,20 +12,20 @@ Developer-friendly & type-safe Php SDK specifically catered to leverage *polar-s
 
 <br /><br />
 > [!IMPORTANT]
-> This SDK is not yet ready for production use. To complete setup please follow the steps outlined in your [workspace](https://app.speakeasy.com/org/polar/polar). Delete this section before > publishing to a package manager.
+> This SDK is not yet ready for production use. To complete setup please follow the steps outlined in your [workspace](https://app.speakeasy.com/org/spaire/spaire). Delete this section before > publishing to a package manager.
 
 <!-- Start Summary [summary] -->
 ## Summary
 
-Polar API: Polar HTTP and Webhooks API
+Spaire API: Spaire HTTP and Webhooks API
 
-Read the docs at https://polar.sh/docs/api-reference
+Read the docs at https://spaire.tech/docs/api-reference
 <!-- End Summary [summary] -->
 
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
 <!-- $toc-max-depth=2 -->
-* [polar-sh/sdk](#polar-shsdk)
+* [spaire-tech/sdk](#spaire-techsdk)
   * [SDK Installation](#sdk-installation)
   * [SDK Example Usage](#sdk-example-usage)
   * [Authentication](#authentication)
@@ -46,7 +46,7 @@ The SDK relies on [Composer](https://getcomposer.org/) to manage its dependencie
 
 To install the SDK and add it as a dependency to an existing `composer.json` file:
 ```bash
-composer require "polar-sh/sdk"
+composer require "spaire-tech/sdk"
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -60,9 +60,9 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
+use Spaire;
 
-$sdk = Polar\Polar::builder()
+$sdk = Spaire\Spaire::builder()
     ->setSecurity(
         '<YOUR_BEARER_TOKEN_HERE>'
     )
@@ -102,9 +102,9 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
+use Spaire;
 
-$sdk = Polar\Polar::builder()
+$sdk = Spaire\Spaire::builder()
     ->setSecurity(
         '<YOUR_BEARER_TOKEN_HERE>'
     )
@@ -134,10 +134,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 $request = new Operations\CustomerPortalBenefitGrantsListRequest();
 $requestSecurity = new Operations\CustomerPortalBenefitGrantsListSecurity(
@@ -208,63 +208,63 @@ foreach ($responses as $response) {
 * [list](docs/sdks/customermeters/README.md#list) - List Customer Meters
 * [get](docs/sdks/customermeters/README.md#get) - Get Customer Meter
 
-### [CustomerPortal.BenefitGrants](docs/sdks/polarbenefitgrants/README.md)
+### [CustomerPortal.BenefitGrants](docs/sdks/spairebenefitgrants/README.md)
 
-* [list](docs/sdks/polarbenefitgrants/README.md#list) - List Benefit Grants
-* [get](docs/sdks/polarbenefitgrants/README.md#get) - Get Benefit Grant
-* [update](docs/sdks/polarbenefitgrants/README.md#update) - Update Benefit Grant
+* [list](docs/sdks/spairebenefitgrants/README.md#list) - List Benefit Grants
+* [get](docs/sdks/spairebenefitgrants/README.md#get) - Get Benefit Grant
+* [update](docs/sdks/spairebenefitgrants/README.md#update) - Update Benefit Grant
 
-### [CustomerPortal.CustomerMeters](docs/sdks/polarcustomermeters/README.md)
+### [CustomerPortal.CustomerMeters](docs/sdks/spairecustomermeters/README.md)
 
-* [list](docs/sdks/polarcustomermeters/README.md#list) - List Meters
-* [get](docs/sdks/polarcustomermeters/README.md#get) - Get Customer Meter
+* [list](docs/sdks/spairecustomermeters/README.md#list) - List Meters
+* [get](docs/sdks/spairecustomermeters/README.md#get) - Get Customer Meter
 
 ### [CustomerPortal.CustomerSession](docs/sdks/customersession/README.md)
 
 * [introspect](docs/sdks/customersession/README.md#introspect) - Introspect Customer Session
 * [getAuthenticatedUser](docs/sdks/customersession/README.md#getauthenticateduser) - Get Authenticated Portal User
 
-### [CustomerPortal.Customers](docs/sdks/polarcustomers/README.md)
+### [CustomerPortal.Customers](docs/sdks/spairecustomers/README.md)
 
-* [get](docs/sdks/polarcustomers/README.md#get) - Get Customer
-* [update](docs/sdks/polarcustomers/README.md#update) - Update Customer
-* [listPaymentMethods](docs/sdks/polarcustomers/README.md#listpaymentmethods) - List Customer Payment Methods
-* [addPaymentMethod](docs/sdks/polarcustomers/README.md#addpaymentmethod) - Add Customer Payment Method
-* [confirmPaymentMethod](docs/sdks/polarcustomers/README.md#confirmpaymentmethod) - Confirm Customer Payment Method
-* [deletePaymentMethod](docs/sdks/polarcustomers/README.md#deletepaymentmethod) - Delete Customer Payment Method
+* [get](docs/sdks/spairecustomers/README.md#get) - Get Customer
+* [update](docs/sdks/spairecustomers/README.md#update) - Update Customer
+* [listPaymentMethods](docs/sdks/spairecustomers/README.md#listpaymentmethods) - List Customer Payment Methods
+* [addPaymentMethod](docs/sdks/spairecustomers/README.md#addpaymentmethod) - Add Customer Payment Method
+* [confirmPaymentMethod](docs/sdks/spairecustomers/README.md#confirmpaymentmethod) - Confirm Customer Payment Method
+* [deletePaymentMethod](docs/sdks/spairecustomers/README.md#deletepaymentmethod) - Delete Customer Payment Method
 
 ### [CustomerPortal.Downloadables](docs/sdks/downloadables/README.md)
 
 * [list](docs/sdks/downloadables/README.md#list) - List Downloadables
 
-### [CustomerPortal.LicenseKeys](docs/sdks/polarlicensekeys/README.md)
+### [CustomerPortal.LicenseKeys](docs/sdks/spairelicensekeys/README.md)
 
-* [list](docs/sdks/polarlicensekeys/README.md#list) - List License Keys
-* [get](docs/sdks/polarlicensekeys/README.md#get) - Get License Key
-* [validate](docs/sdks/polarlicensekeys/README.md#validate) - Validate License Key
-* [activate](docs/sdks/polarlicensekeys/README.md#activate) - Activate License Key
-* [deactivate](docs/sdks/polarlicensekeys/README.md#deactivate) - Deactivate License Key
+* [list](docs/sdks/spairelicensekeys/README.md#list) - List License Keys
+* [get](docs/sdks/spairelicensekeys/README.md#get) - Get License Key
+* [validate](docs/sdks/spairelicensekeys/README.md#validate) - Validate License Key
+* [activate](docs/sdks/spairelicensekeys/README.md#activate) - Activate License Key
+* [deactivate](docs/sdks/spairelicensekeys/README.md#deactivate) - Deactivate License Key
 
-### [CustomerPortal.Members](docs/sdks/polarmembers/README.md)
+### [CustomerPortal.Members](docs/sdks/spairemembers/README.md)
 
-* [listMembers](docs/sdks/polarmembers/README.md#listmembers) - List Members
-* [addMember](docs/sdks/polarmembers/README.md#addmember) - Add Member
-* [removeMember](docs/sdks/polarmembers/README.md#removemember) - Remove Member
-* [updateMember](docs/sdks/polarmembers/README.md#updatemember) - Update Member
+* [listMembers](docs/sdks/spairemembers/README.md#listmembers) - List Members
+* [addMember](docs/sdks/spairemembers/README.md#addmember) - Add Member
+* [removeMember](docs/sdks/spairemembers/README.md#removemember) - Remove Member
+* [updateMember](docs/sdks/spairemembers/README.md#updatemember) - Update Member
 
-### [CustomerPortal.Orders](docs/sdks/polarorders/README.md)
+### [CustomerPortal.Orders](docs/sdks/spaireorders/README.md)
 
-* [list](docs/sdks/polarorders/README.md#list) - List Orders
-* [get](docs/sdks/polarorders/README.md#get) - Get Order
-* [update](docs/sdks/polarorders/README.md#update) - Update Order
-* [invoice](docs/sdks/polarorders/README.md#invoice) - Get Order Invoice
-* [generateInvoice](docs/sdks/polarorders/README.md#generateinvoice) - Generate Order Invoice
-* [getPaymentStatus](docs/sdks/polarorders/README.md#getpaymentstatus) - Get Order Payment Status
-* [confirmRetryPayment](docs/sdks/polarorders/README.md#confirmretrypayment) - Confirm Retry Payment
+* [list](docs/sdks/spaireorders/README.md#list) - List Orders
+* [get](docs/sdks/spaireorders/README.md#get) - Get Order
+* [update](docs/sdks/spaireorders/README.md#update) - Update Order
+* [invoice](docs/sdks/spaireorders/README.md#invoice) - Get Order Invoice
+* [generateInvoice](docs/sdks/spaireorders/README.md#generateinvoice) - Generate Order Invoice
+* [getPaymentStatus](docs/sdks/spaireorders/README.md#getpaymentstatus) - Get Order Payment Status
+* [confirmRetryPayment](docs/sdks/spaireorders/README.md#confirmretrypayment) - Confirm Retry Payment
 
-### [CustomerPortal.Organizations](docs/sdks/polarorganizations/README.md)
+### [CustomerPortal.Organizations](docs/sdks/spaireorganizations/README.md)
 
-* [get](docs/sdks/polarorganizations/README.md#get) - Get Organization
+* [get](docs/sdks/spaireorganizations/README.md#get) - Get Organization
 
 ### [CustomerPortal.Seats](docs/sdks/seats/README.md)
 
@@ -274,12 +274,12 @@ foreach ($responses as $response) {
 * [resendInvitation](docs/sdks/seats/README.md#resendinvitation) - Resend Invitation
 * [listClaimedSubscriptions](docs/sdks/seats/README.md#listclaimedsubscriptions) - List Claimed Subscriptions
 
-### [CustomerPortal.Subscriptions](docs/sdks/polarsubscriptions/README.md)
+### [CustomerPortal.Subscriptions](docs/sdks/spairesubscriptions/README.md)
 
-* [list](docs/sdks/polarsubscriptions/README.md#list) - List Subscriptions
-* [get](docs/sdks/polarsubscriptions/README.md#get) - Get Subscription
-* [cancel](docs/sdks/polarsubscriptions/README.md#cancel) - Cancel Subscription
-* [update](docs/sdks/polarsubscriptions/README.md#update) - Update Subscription
+* [list](docs/sdks/spairesubscriptions/README.md#list) - List Subscriptions
+* [get](docs/sdks/spairesubscriptions/README.md#get) - Get Subscription
+* [cancel](docs/sdks/spairesubscriptions/README.md#cancel) - Cancel Subscription
+* [update](docs/sdks/spairesubscriptions/README.md#update) - Update Subscription
 
 ### [CustomerPortal.Wallets](docs/sdks/wallets/README.md)
 
@@ -472,9 +472,9 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
+use Spaire;
 
-$sdk = Polar\Polar::builder()
+$sdk = Spaire\Spaire::builder()
     ->setSecurity(
         '<YOUR_BEARER_TOKEN_HERE>'
     )
@@ -525,10 +525,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Errors;
+use Spaire;
+use Spaire\Models\Errors;
 
-$sdk = Polar\Polar::builder()
+$sdk = Spaire\Spaire::builder()
     ->setSecurity(
         '<YOUR_BEARER_TOKEN_HERE>'
     )
@@ -565,8 +565,8 @@ You can override the default server globally using the `setServer(string $server
 
 | Name         | Server                         | Description            |
 | ------------ | ------------------------------ | ---------------------- |
-| `production` | `https://api.polar.sh`         | Production environment |
-| `sandbox`    | `https://sandbox-api.polar.sh` | Sandbox environment    |
+| `production` | `https://api.spaire.tech`         | Production environment |
+| `sandbox`    | `https://sandbox-api.spaire.tech` | Sandbox environment    |
 
 #### Example
 
@@ -575,9 +575,9 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
+use Spaire;
 
-$sdk = Polar\Polar::builder()
+$sdk = Spaire\Spaire::builder()
     ->setServer('production')
     ->setSecurity(
         '<YOUR_BEARER_TOKEN_HERE>'
@@ -608,10 +608,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
+use Spaire;
 
-$sdk = Polar\Polar::builder()
-    ->setServerURL('https://api.polar.sh')
+$sdk = Spaire\Spaire::builder()
+    ->setServerURL('https://api.spaire.tech')
     ->setSecurity(
         '<YOUR_BEARER_TOKEN_HERE>'
     )
@@ -649,4 +649,4 @@ looking for the latest version.
 While we value open-source contributions to this SDK, this library is generated programmatically. Any manual changes added to internal files will be overwritten on the next generation. 
 We look forward to hearing your feedback. Feel free to open a PR or an issue with a proof of concept and we'll do our best to include it in a future release. 
 
-### SDK Created by [Speakeasy](https://www.speakeasy.com/?utm_source=polar-sh/sdk&utm_campaign=php)
+### SDK Created by [Speakeasy](https://www.speakeasy.com/?utm_source=spaire-tech/sdk&utm_campaign=php)
