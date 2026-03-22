@@ -37,12 +37,12 @@ class ProductPriceFree
     public ProductPriceSource $source;
 
     /**
-     * The currency in which the customer will be charged.
      *
-     * @var string $priceCurrency
+     * @var PresentmentCurrency $priceCurrency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('price_currency')]
-    public string $priceCurrency;
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency')]
+    public PresentmentCurrency $priceCurrency;
 
     /**
      * Whether the price is archived and no longer available.
@@ -61,12 +61,29 @@ class ProductPriceFree
     public string $productId;
 
     /**
+     *
+     * @var ProductPriceType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductPriceType')]
+    public ProductPriceType $type;
+
+    /**
      * Last modification timestamp of the object.
      *
      * @var ?\DateTime $modifiedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('modified_at')]
     public ?\DateTime $modifiedAt;
+
+    /**
+     *
+     * @var ?SubscriptionRecurringInterval $recurringInterval
+     * @deprecated  field: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('recurring_interval')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionRecurringInterval|null')]
+    public ?SubscriptionRecurringInterval $recurringInterval;
 
     /**
      *
@@ -80,13 +97,15 @@ class ProductPriceFree
      * @param  string  $id
      * @param  ProductPriceSource  $source
      * @param  string  $amountType
-     * @param  string  $priceCurrency
+     * @param  PresentmentCurrency  $priceCurrency
      * @param  bool  $isArchived
      * @param  string  $productId
+     * @param  ProductPriceType  $type
      * @param  ?\DateTime  $modifiedAt
+     * @param  ?SubscriptionRecurringInterval  $recurringInterval
      * @phpstan-pure
      */
-    public function __construct(\DateTime $createdAt, string $id, ProductPriceSource $source, string $priceCurrency, bool $isArchived, string $productId, ?\DateTime $modifiedAt = null, string $amountType = 'free')
+    public function __construct(\DateTime $createdAt, string $id, ProductPriceSource $source, PresentmentCurrency $priceCurrency, bool $isArchived, string $productId, ProductPriceType $type, ?\DateTime $modifiedAt = null, ?SubscriptionRecurringInterval $recurringInterval = null, string $amountType = 'free')
     {
         $this->createdAt = $createdAt;
         $this->id = $id;
@@ -94,7 +113,9 @@ class ProductPriceFree
         $this->priceCurrency = $priceCurrency;
         $this->isArchived = $isArchived;
         $this->productId = $productId;
+        $this->type = $type;
         $this->modifiedAt = $modifiedAt;
+        $this->recurringInterval = $recurringInterval;
         $this->amountType = $amountType;
     }
 }

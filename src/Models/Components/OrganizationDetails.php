@@ -12,14 +12,6 @@ namespace Spaire\Models\Components;
 class OrganizationDetails
 {
     /**
-     * Brief information about you and your business.
-     *
-     * @var string $about
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('about')]
-    public string $about;
-
-    /**
      * Description of digital products being sold.
      *
      * @var string $productDescription
@@ -28,29 +20,14 @@ class OrganizationDetails
     public string $productDescription;
 
     /**
-     * How the organization will integrate and use Spaire.
-     *
-     * @var string $intendedUse
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('intended_use')]
-    public string $intendedUse;
-
-    /**
      * Main customer acquisition channels.
      *
-     * @var array<string> $customerAcquisition
+     * @var ?array<string> $customerAcquisition
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_acquisition')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>')]
-    public array $customerAcquisition;
-
-    /**
-     * Estimated revenue in the next 12 months
-     *
-     * @var int $futureAnnualRevenue
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('future_annual_revenue')]
-    public int $futureAnnualRevenue;
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $customerAcquisition = null;
 
     /**
      * Which platform the organization is migrating from.
@@ -61,6 +38,33 @@ class OrganizationDetails
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SwitchingFrom|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?SwitchingFrom $switchingFrom = null;
+
+    /**
+     * Brief information about you and your business.
+     *
+     * @var ?string $about
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('about')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $about = null;
+
+    /**
+     * How the organization will integrate and use Spaire.
+     *
+     * @var ?string $intendedUse
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('intended_use')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $intendedUse = null;
+
+    /**
+     * Estimated revenue in the next 12 months
+     *
+     * @var ?int $futureAnnualRevenue
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('future_annual_revenue')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?int $futureAnnualRevenue = null;
 
     /**
      * Switching from another platform?
@@ -81,24 +85,24 @@ class OrganizationDetails
     public ?int $previousAnnualRevenue = null;
 
     /**
-     * @param  string  $about
      * @param  string  $productDescription
-     * @param  string  $intendedUse
-     * @param  array<string>  $customerAcquisition
-     * @param  int  $futureAnnualRevenue
+     * @param  ?string  $about
+     * @param  ?string  $intendedUse
+     * @param  ?array<string>  $customerAcquisition
+     * @param  ?int  $futureAnnualRevenue
      * @param  ?bool  $switching
      * @param  ?int  $previousAnnualRevenue
      * @param  ?SwitchingFrom  $switchingFrom
      * @phpstan-pure
      */
-    public function __construct(string $about, string $productDescription, string $intendedUse, array $customerAcquisition, int $futureAnnualRevenue, ?SwitchingFrom $switchingFrom = null, ?bool $switching = true, ?int $previousAnnualRevenue = 0)
+    public function __construct(string $productDescription, ?array $customerAcquisition = null, ?SwitchingFrom $switchingFrom = null, ?string $about = '', ?string $intendedUse = '', ?int $futureAnnualRevenue = 0, ?bool $switching = true, ?int $previousAnnualRevenue = 0)
     {
-        $this->about = $about;
         $this->productDescription = $productDescription;
-        $this->intendedUse = $intendedUse;
         $this->customerAcquisition = $customerAcquisition;
-        $this->futureAnnualRevenue = $futureAnnualRevenue;
         $this->switchingFrom = $switchingFrom;
+        $this->about = $about;
+        $this->intendedUse = $intendedUse;
+        $this->futureAnnualRevenue = $futureAnnualRevenue;
         $this->switching = $switching;
         $this->previousAnnualRevenue = $previousAnnualRevenue;
     }

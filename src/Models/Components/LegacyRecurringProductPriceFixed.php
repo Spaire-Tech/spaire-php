@@ -42,12 +42,12 @@ class LegacyRecurringProductPriceFixed
     public ProductPriceSource $source;
 
     /**
-     * The currency in which the customer will be charged.
      *
-     * @var string $priceCurrency
+     * @var PresentmentCurrency $priceCurrency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('price_currency')]
-    public string $priceCurrency;
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency')]
+    public PresentmentCurrency $priceCurrency;
 
     /**
      * Whether the price is archived and no longer available.
@@ -116,7 +116,7 @@ class LegacyRecurringProductPriceFixed
      * @param  string  $id
      * @param  ProductPriceSource  $source
      * @param  string  $amountType
-     * @param  string  $priceCurrency
+     * @param  PresentmentCurrency  $priceCurrency
      * @param  bool  $isArchived
      * @param  string  $productId
      * @param  string  $type
@@ -126,7 +126,7 @@ class LegacyRecurringProductPriceFixed
      * @param  ?\DateTime  $modifiedAt
      * @phpstan-pure
      */
-    public function __construct(\DateTime $createdAt, string $id, ProductPriceSource $source, string $priceCurrency, bool $isArchived, string $productId, SubscriptionRecurringInterval $recurringInterval, int $priceAmount, ?\DateTime $modifiedAt = null, string $amountType = 'fixed', string $type = 'recurring', bool $legacy = true)
+    public function __construct(\DateTime $createdAt, string $id, ProductPriceSource $source, PresentmentCurrency $priceCurrency, bool $isArchived, string $productId, SubscriptionRecurringInterval $recurringInterval, int $priceAmount, ?\DateTime $modifiedAt = null, string $amountType = 'fixed', string $type = 'recurring', bool $legacy = true)
     {
         $this->createdAt = $createdAt;
         $this->id = $id;

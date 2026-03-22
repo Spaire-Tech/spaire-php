@@ -106,7 +106,6 @@ $request = new Components\CustomerCreate(
         '911144442',
         'us_ein',
     ],
-    locale: 'en',
     type: Components\CustomerType::Individual,
     organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',
     owner: new Components\OwnerCreate(
@@ -344,7 +343,6 @@ $customerUpdate = new Components\CustomerUpdate(
         '911144442',
         'us_ein',
     ],
-    locale: 'en',
     externalId: 'usr_1337',
     type: Components\CustomerType::Individual,
 );
@@ -521,7 +519,6 @@ $customerUpdateExternalID = new Components\CustomerUpdateExternalID(
         '911144442',
         'us_ein',
     ],
-    locale: 'en',
 );
 
 $response = $sdk->customers->updateExternal(

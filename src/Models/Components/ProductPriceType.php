@@ -9,10 +9,8 @@ declare(strict_types=1);
 namespace Spaire\Models\Components;
 
 
-class Context
+enum ProductPriceType: string
 {
-
-    public function __construct()
-    {
-    }
+    case OneTime = 'one_time';
+    case Recurring = 'recurring';
 }

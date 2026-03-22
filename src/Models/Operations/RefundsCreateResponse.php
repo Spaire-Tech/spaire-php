@@ -33,7 +33,7 @@ class RefundsCreateResponse
     public \Psr\Http\Message\ResponseInterface $rawResponse;
 
     /**
-     * Refund created.
+     * Successful Response
      *
      * @var ?Components\Refund $refund
      */

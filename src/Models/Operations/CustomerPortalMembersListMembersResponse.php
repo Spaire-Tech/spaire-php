@@ -35,39 +35,22 @@ class CustomerPortalMembersListMembersResponse
     /**
      * Successful Response
      *
-     * @var ?Components\ListResourceCustomerPortalMember $listResourceCustomerPortalMember
+     * @var ?array<Components\CustomerPortalMember> $responseCustomerPortalMembersListMembers
      */
-    public ?Components\ListResourceCustomerPortalMember $listResourceCustomerPortalMember = null;
+    public ?array $responseCustomerPortalMembersListMembers = null;
 
-    /**
-     * @var \Closure(string): ?CustomerPortalMembersListMembersResponse $next
-     */
-    public \Closure $next;
     /**
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\ListResourceCustomerPortalMember  $listResourceCustomerPortalMember
+     * @param  ?array<Components\CustomerPortalMember>  $responseCustomerPortalMembersListMembers
      * @phpstan-pure
      */
-    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\ListResourceCustomerPortalMember $listResourceCustomerPortalMember = null)
+    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $responseCustomerPortalMembersListMembers = null)
     {
         $this->contentType = $contentType;
         $this->statusCode = $statusCode;
         $this->rawResponse = $rawResponse;
-        $this->listResourceCustomerPortalMember = $listResourceCustomerPortalMember;
-    }
-    /**
-     * @param  string  $name
-     * @param  array<mixed>  $args
-     * @return ?CustomerPortalMembersListMembersResponse
-     */
-    public function __call($name, $args): ?CustomerPortalMembersListMembersResponse
-    {
-        if ($name === 'next') {
-            return call_user_func_array($this->next, $args);
-        }
-
-        return null;
+        $this->responseCustomerPortalMembersListMembers = $responseCustomerPortalMembersListMembers;
     }
 }

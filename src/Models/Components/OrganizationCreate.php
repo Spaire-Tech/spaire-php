@@ -27,15 +27,6 @@ class OrganizationCreate
 
     /**
      *
-     * @var ?PresentmentCurrency $defaultPresentmentCurrency
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('default_presentment_currency')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?PresentmentCurrency $defaultPresentmentCurrency = null;
-
-    /**
-     *
      * @var ?string $avatarUrl
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('avatar_url')]
@@ -128,7 +119,6 @@ class OrganizationCreate
     /**
      * @param  string  $name
      * @param  string  $slug
-     * @param  ?PresentmentCurrency  $defaultPresentmentCurrency
      * @param  ?string  $avatarUrl
      * @param  ?string  $email
      * @param  ?string  $website
@@ -141,11 +131,10 @@ class OrganizationCreate
      * @param  ?OrganizationCustomerPortalSettings  $customerPortalSettings
      * @phpstan-pure
      */
-    public function __construct(string $name, string $slug, ?PresentmentCurrency $defaultPresentmentCurrency = null, ?string $avatarUrl = null, ?string $email = null, ?string $website = null, ?array $socials = null, ?OrganizationDetails $details = null, ?OrganizationFeatureSettings $featureSettings = null, ?OrganizationSubscriptionSettings $subscriptionSettings = null, ?OrganizationNotificationSettings $notificationSettings = null, ?OrganizationCustomerEmailSettings $customerEmailSettings = null, ?OrganizationCustomerPortalSettings $customerPortalSettings = null)
+    public function __construct(string $name, string $slug, ?string $avatarUrl = null, ?string $email = null, ?string $website = null, ?array $socials = null, ?OrganizationDetails $details = null, ?OrganizationFeatureSettings $featureSettings = null, ?OrganizationSubscriptionSettings $subscriptionSettings = null, ?OrganizationNotificationSettings $notificationSettings = null, ?OrganizationCustomerEmailSettings $customerEmailSettings = null, ?OrganizationCustomerPortalSettings $customerPortalSettings = null)
     {
         $this->name = $name;
         $this->slug = $slug;
-        $this->defaultPresentmentCurrency = $defaultPresentmentCurrency;
         $this->avatarUrl = $avatarUrl;
         $this->email = $email;
         $this->website = $website;

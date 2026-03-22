@@ -21,15 +21,6 @@ Components\BenefitCustom $value = /* values here */
 Components\BenefitDiscord $value = /* values here */
 ```
 
-### `Components\BenefitDownloadables`
-
-```php
-/**
-* @var Components\BenefitDownloadables
-*/
-Components\BenefitDownloadables $value = /* values here */
-```
-
 ### `Components\BenefitGitHubRepository`
 
 ```php
@@ -37,6 +28,15 @@ Components\BenefitDownloadables $value = /* values here */
 * @var Components\BenefitGitHubRepository
 */
 Components\BenefitGitHubRepository $value = /* values here */
+```
+
+### `Components\BenefitDownloadables`
+
+```php
+/**
+* @var Components\BenefitDownloadables
+*/
+Components\BenefitDownloadables $value = /* values here */
 ```
 
 ### `Components\BenefitLicenseKeys`

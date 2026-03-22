@@ -30,7 +30,6 @@ class WebhookBenefitUpdatedPayload
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('data')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitCustom|\Spaire\Models\Components\BenefitDiscord|\Spaire\Models\Components\BenefitGitHubRepository|\Spaire\Models\Components\BenefitDownloadables|\Spaire\Models\Components\BenefitLicenseKeys|\Spaire\Models\Components\BenefitMeterCredit')]
-    #[\Speakeasy\Serializer\Annotation\UnionDiscriminator(field: 'type', map: ['custom' => '\Spaire\Models\Components\BenefitCustom', 'discord' => '\Spaire\Models\Components\BenefitDiscord', 'downloadables' => '\Spaire\Models\Components\BenefitDownloadables', 'github_repository' => '\Spaire\Models\Components\BenefitGitHubRepository', 'license_keys' => '\Spaire\Models\Components\BenefitLicenseKeys', 'meter_credit' => '\Spaire\Models\Components\BenefitMeterCredit'])]
     public BenefitCustom|BenefitDiscord|BenefitGitHubRepository|BenefitDownloadables|BenefitLicenseKeys|BenefitMeterCredit $data;
 
     /**

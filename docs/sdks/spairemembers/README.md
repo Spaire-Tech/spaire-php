@@ -33,26 +33,14 @@ $sdk = Spaire\Spaire::builder()
 
 
 
-$responses = $sdk->customerPortal->members->listMembers(
-    page: 1,
-    limit: 10
+$response = $sdk->customerPortal->members->listMembers(
 
 );
 
-
-foreach ($responses as $response) {
-    if ($response->statusCode === 200) {
-        // handle response
-    }
+if ($response->responseCustomerPortalMembersListMembers !== null) {
+    // handle response
 }
 ```
-
-### Parameters
-
-| Parameter                                       | Type                                            | Required                                        | Description                                     |
-| ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- |
-| `page`                                          | *?int*                                          | :heavy_minus_sign:                              | Page number, defaults to 1.                     |
-| `limit`                                         | *?int*                                          | :heavy_minus_sign:                              | Size of a page, defaults to 10. Maximum is 100. |
 
 ### Response
 
@@ -60,10 +48,9 @@ foreach ($responses as $response) {
 
 ### Errors
 
-| Error Type                 | Status Code                | Content Type               |
-| -------------------------- | -------------------------- | -------------------------- |
-| Errors\HTTPValidationError | 422                        | application/json           |
-| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\APIException | 4XX, 5XX            | \*/\*               |
 
 ## addMember
 

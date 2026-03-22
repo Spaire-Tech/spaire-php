@@ -1,4 +1,4 @@
-speakeasyVersion: 1.728.0
+speakeasyVersion: 1.759.0
 sources:
     Spaire-OAS:
         sourceNamespace: spaire-oas
@@ -14,8 +14,6 @@ targets:
         sourceNamespace: spaire-oas
         sourceRevisionDigest: sha256:8e36cfec4d157912c3038282edef69578a3480a8d4537909b8d482ab72b0c71d
         sourceBlobDigest: sha256:46f5784fd3a61ca8f87b1e553c00b3a703deaf699e6a2918c0cbfb778b793e83
-        codeSamplesNamespace: spaire-api-php-code-samples
-        codeSamplesRevisionDigest: sha256:2059e5245082b8e98477a0bdfcd174a441d94e0ffbbf3b637e2872acda1fed52
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -24,12 +22,12 @@ workflow:
             inputs:
                 - location: https://api.spairehq.com/openapi.json
             overlays:
-                - location: https://raw.githubusercontent.com/spaire-tech/spaire/main/sdk/overlays/security.yml
-                - location: https://raw.githubusercontent.com/spaire-tech/spaire/main/sdk/overlays/type_parameter.yml
-                - location: https://raw.githubusercontent.com/spaire-tech/spaire/main/sdk/overlays/read_only.yml
-                - location: https://raw.githubusercontent.com/spaire-tech/spaire/main/sdk/overlays/event_discriminator.yml
-                - location: https://raw.githubusercontent.com/spaire-tech/spaire/main/sdk/overlays/timezone_enum.yml
-                - location: https://raw.githubusercontent.com/spaire-tech/spaire/main/sdk/overlays/event_metadata.yml
+                - location: https://raw.githubusercontent.com/Spaire-Tech/polar/main/sdk/overlays/security.yml
+                - location: https://raw.githubusercontent.com/Spaire-Tech/polar/main/sdk/overlays/type_parameter.yml
+                - location: https://raw.githubusercontent.com/Spaire-Tech/polar/main/sdk/overlays/read_only.yml
+                - location: https://raw.githubusercontent.com/Spaire-Tech/polar/main/sdk/overlays/event_discriminator.yml
+                - location: https://raw.githubusercontent.com/Spaire-Tech/polar/main/sdk/overlays/timezone_enum.yml
+                - location: https://raw.githubusercontent.com/Spaire-Tech/polar/main/sdk/overlays/event_metadata.yml
             registry:
                 location: registry.speakeasyapi.dev/spaire/spaire/spaire-oas
     targets:

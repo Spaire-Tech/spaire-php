@@ -69,14 +69,6 @@ class CustomerUpdate
     public ?array $taxId = null;
 
     /**
-     *
-     * @var ?string $locale
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('locale')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $locale = null;
-
-    /**
      * The ID of the customer in your system. This must be unique within the organization. Once set, it can't be updated.
      *
      * @var ?string $externalId
@@ -101,19 +93,17 @@ class CustomerUpdate
      * @param  ?string  $name
      * @param  ?AddressInput  $billingAddress
      * @param  ?array<string|TaxIDFormat|null>  $taxId
-     * @param  ?string  $locale
      * @param  ?string  $externalId
      * @param  ?CustomerType  $type
      * @phpstan-pure
      */
-    public function __construct(?array $metadata = null, ?string $email = null, ?string $name = null, ?AddressInput $billingAddress = null, ?array $taxId = null, ?string $locale = null, ?string $externalId = null, ?CustomerType $type = null)
+    public function __construct(?array $metadata = null, ?string $email = null, ?string $name = null, ?AddressInput $billingAddress = null, ?array $taxId = null, ?string $externalId = null, ?CustomerType $type = null)
     {
         $this->metadata = $metadata;
         $this->email = $email;
         $this->name = $name;
         $this->billingAddress = $billingAddress;
         $this->taxId = $taxId;
-        $this->locale = $locale;
         $this->externalId = $externalId;
         $this->type = $type;
     }

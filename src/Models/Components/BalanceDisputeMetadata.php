@@ -101,14 +101,6 @@ class BalanceDisputeMetadata
 
     /**
      *
-     * @var ?float $exchangeRate
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('exchange_rate')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?float $exchangeRate = null;
-
-    /**
-     *
      * @var ?string $taxState
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax_state')]
@@ -136,12 +128,11 @@ class BalanceDisputeMetadata
      * @param  ?string  $orderCreatedAt
      * @param  ?string  $productId
      * @param  ?string  $subscriptionId
-     * @param  ?float  $exchangeRate
      * @param  ?string  $taxState
      * @param  ?string  $taxCountry
      * @phpstan-pure
      */
-    public function __construct(string $transactionId, string $disputeId, int $amount, string $currency, int $presentmentAmount, string $presentmentCurrency, int $taxAmount, int $fee, ?string $orderId = null, ?string $orderCreatedAt = null, ?string $productId = null, ?string $subscriptionId = null, ?float $exchangeRate = null, ?string $taxState = null, ?string $taxCountry = null)
+    public function __construct(string $transactionId, string $disputeId, int $amount, string $currency, int $presentmentAmount, string $presentmentCurrency, int $taxAmount, int $fee, ?string $orderId = null, ?string $orderCreatedAt = null, ?string $productId = null, ?string $subscriptionId = null, ?string $taxState = null, ?string $taxCountry = null)
     {
         $this->transactionId = $transactionId;
         $this->disputeId = $disputeId;
@@ -155,7 +146,6 @@ class BalanceDisputeMetadata
         $this->orderCreatedAt = $orderCreatedAt;
         $this->productId = $productId;
         $this->subscriptionId = $subscriptionId;
-        $this->exchangeRate = $exchangeRate;
         $this->taxState = $taxState;
         $this->taxCountry = $taxCountry;
     }

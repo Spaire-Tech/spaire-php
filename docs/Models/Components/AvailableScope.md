@@ -50,6 +50,8 @@
 | `CustomerSeatsWrite`             | customer_seats:write             |
 | `OrdersRead`                     | orders:read                      |
 | `OrdersWrite`                    | orders:write                     |
+| `ClientInvoicesRead`             | client_invoices:read             |
+| `ClientInvoicesWrite`            | client_invoices:write            |
 | `RefundsRead`                    | refunds:read                     |
 | `RefundsWrite`                   | refunds:write                    |
 | `PaymentsRead`                   | payments:read                    |

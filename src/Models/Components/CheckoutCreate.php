@@ -126,6 +126,15 @@ class CheckoutCreate
     public ?int $seats = null;
 
     /**
+     * Locale of the customer, given as an IETF BCP 47 language tag. Used to localize the checkout page.
+     *
+     * @var ?string $locale
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('locale')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $locale = null;
+
+    /**
      * ID of an existing customer in the organization. The customer data will be pre-filled in the checkout form. The resulting order will be linked to this customer.
      *
      * @var ?string $customerId
@@ -230,14 +239,6 @@ class CheckoutCreate
 
     /**
      *
-     * @var ?string $locale
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('locale')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $locale = null;
-
-    /**
-     *
      * @var ?PresentmentCurrency $currency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
@@ -305,6 +306,7 @@ class CheckoutCreate
      * @param  ?string  $discountId
      * @param  ?int  $amount
      * @param  ?int  $seats
+     * @param  ?string  $locale
      * @param  ?string  $customerId
      * @param  ?string  $externalCustomerId
      * @param  ?string  $customerName
@@ -317,12 +319,11 @@ class CheckoutCreate
      * @param  ?string  $successUrl
      * @param  ?string  $returnUrl
      * @param  ?string  $embedOrigin
-     * @param  ?string  $locale
      * @param  ?PresentmentCurrency  $currency
      * @param  ?array<string, array<ProductPriceFixedCreate|ProductPriceCustomCreate|ProductPriceFreeCreate|ProductPriceSeatBasedCreate|ProductPriceMeteredUnitCreate>>  $prices
      * @phpstan-pure
      */
-    public function __construct(array $products, ?array $metadata = null, ?array $customFieldData = null, ?array $customerMetadata = null, ?TrialInterval $trialInterval = null, ?int $trialIntervalCount = null, ?string $discountId = null, ?int $amount = null, ?int $seats = null, ?string $customerId = null, ?string $externalCustomerId = null, ?string $customerName = null, ?string $customerEmail = null, ?string $customerIpAddress = null, ?string $customerBillingName = null, ?AddressInput $customerBillingAddress = null, ?string $customerTaxId = null, ?string $subscriptionId = null, ?string $successUrl = null, ?string $returnUrl = null, ?string $embedOrigin = null, ?string $locale = null, ?PresentmentCurrency $currency = null, ?array $prices = null, ?bool $allowDiscountCodes = true, ?bool $requireBillingAddress = false, ?bool $allowTrial = true, ?bool $isBusinessCustomer = false)
+    public function __construct(array $products, ?array $metadata = null, ?array $customFieldData = null, ?array $customerMetadata = null, ?TrialInterval $trialInterval = null, ?int $trialIntervalCount = null, ?string $discountId = null, ?int $amount = null, ?int $seats = null, ?string $locale = null, ?string $customerId = null, ?string $externalCustomerId = null, ?string $customerName = null, ?string $customerEmail = null, ?string $customerIpAddress = null, ?string $customerBillingName = null, ?AddressInput $customerBillingAddress = null, ?string $customerTaxId = null, ?string $subscriptionId = null, ?string $successUrl = null, ?string $returnUrl = null, ?string $embedOrigin = null, ?PresentmentCurrency $currency = null, ?array $prices = null, ?bool $allowDiscountCodes = true, ?bool $requireBillingAddress = false, ?bool $allowTrial = true, ?bool $isBusinessCustomer = false)
     {
         $this->products = $products;
         $this->metadata = $metadata;
@@ -333,6 +334,7 @@ class CheckoutCreate
         $this->discountId = $discountId;
         $this->amount = $amount;
         $this->seats = $seats;
+        $this->locale = $locale;
         $this->customerId = $customerId;
         $this->externalCustomerId = $externalCustomerId;
         $this->customerName = $customerName;
@@ -345,7 +347,6 @@ class CheckoutCreate
         $this->successUrl = $successUrl;
         $this->returnUrl = $returnUrl;
         $this->embedOrigin = $embedOrigin;
-        $this->locale = $locale;
         $this->currency = $currency;
         $this->prices = $prices;
         $this->allowDiscountCodes = $allowDiscountCodes;
