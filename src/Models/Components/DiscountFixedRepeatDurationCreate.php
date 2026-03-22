@@ -61,15 +61,6 @@ class DiscountFixedRepeatDurationCreate
     public string $name;
 
     /**
-     *
-     * @var ?PresentmentCurrency $currency
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?PresentmentCurrency $currency = null;
-
-    /**
      * Key-value object allowing you to store additional information.
      *
      *
@@ -146,12 +137,21 @@ class DiscountFixedRepeatDurationCreate
     public ?string $organizationId = null;
 
     /**
+     * The currency. Currently, only `usd` is supported.
+     *
+     * @var ?string $currency
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $currency = null;
+
+    /**
      * @param  DiscountDuration  $duration
      * @param  int  $durationInMonths
      * @param  DiscountType  $type
      * @param  int  $amount
      * @param  string  $name
-     * @param  ?PresentmentCurrency  $currency
+     * @param  ?string  $currency
      * @param  ?array<string, string|int|float|bool>  $metadata
      * @param  ?string  $code
      * @param  ?\DateTime  $startsAt
@@ -161,14 +161,13 @@ class DiscountFixedRepeatDurationCreate
      * @param  ?string  $organizationId
      * @phpstan-pure
      */
-    public function __construct(DiscountDuration $duration, int $durationInMonths, DiscountType $type, int $amount, string $name, ?PresentmentCurrency $currency = null, ?array $metadata = null, ?string $code = null, ?\DateTime $startsAt = null, ?\DateTime $endsAt = null, ?int $maxRedemptions = null, ?array $products = null, ?string $organizationId = null)
+    public function __construct(DiscountDuration $duration, int $durationInMonths, DiscountType $type, int $amount, string $name, ?array $metadata = null, ?string $code = null, ?\DateTime $startsAt = null, ?\DateTime $endsAt = null, ?int $maxRedemptions = null, ?array $products = null, ?string $organizationId = null, ?string $currency = 'usd')
     {
         $this->duration = $duration;
         $this->durationInMonths = $durationInMonths;
         $this->type = $type;
         $this->amount = $amount;
         $this->name = $name;
-        $this->currency = $currency;
         $this->metadata = $metadata;
         $this->code = $code;
         $this->startsAt = $startsAt;
@@ -176,5 +175,6 @@ class DiscountFixedRepeatDurationCreate
         $this->maxRedemptions = $maxRedemptions;
         $this->products = $products;
         $this->organizationId = $organizationId;
+        $this->currency = $currency;
     }
 }

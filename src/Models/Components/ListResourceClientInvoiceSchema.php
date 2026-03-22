@@ -9,15 +9,15 @@ declare(strict_types=1);
 namespace Spaire\Models\Components;
 
 
-class ListResourceCustomerPortalMember
+class ListResourceClientInvoiceSchema
 {
     /**
      * $items
      *
-     * @var array<CustomerPortalMember> $items
+     * @var array<ClientInvoiceSchema> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CustomerPortalMember>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\ClientInvoiceSchema>')]
     public array $items;
 
     /**
@@ -29,7 +29,7 @@ class ListResourceCustomerPortalMember
     public Pagination $pagination;
 
     /**
-     * @param  array<CustomerPortalMember>  $items
+     * @param  array<ClientInvoiceSchema>  $items
      * @param  Pagination  $pagination
      * @phpstan-pure
      */

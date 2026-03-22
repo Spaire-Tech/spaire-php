@@ -9,3 +9,4 @@
 | `SubscriptionCreate` | subscription_create  |
 | `SubscriptionCycle`  | subscription_cycle   |
 | `SubscriptionUpdate` | subscription_update  |
+| `ClientInvoice`      | client_invoice       |

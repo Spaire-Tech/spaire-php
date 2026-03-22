@@ -15,4 +15,5 @@ enum OrderBillingReason: string
     case SubscriptionCreate = 'subscription_create';
     case SubscriptionCycle = 'subscription_cycle';
     case SubscriptionUpdate = 'subscription_update';
+    case ClientInvoice = 'client_invoice';
 }

@@ -128,14 +128,6 @@ class Customer
     public ?CustomerType $type = null;
 
     /**
-     *
-     * @var ?string $locale
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('locale')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $locale = null;
-
-    /**
      * @param  string  $id
      * @param  \DateTime  $createdAt
      * @param  array<string, string|int|float|bool>  $metadata
@@ -150,10 +142,9 @@ class Customer
      * @param  ?array<string|TaxIDFormat|null>  $taxId
      * @param  ?\DateTime  $deletedAt
      * @param  ?CustomerType  $type
-     * @param  ?string  $locale
      * @phpstan-pure
      */
-    public function __construct(string $id, \DateTime $createdAt, array $metadata, string $email, bool $emailVerified, string $organizationId, string $avatarUrl, ?\DateTime $modifiedAt = null, ?string $externalId = null, ?string $name = null, ?Address $billingAddress = null, ?array $taxId = null, ?\DateTime $deletedAt = null, ?CustomerType $type = null, ?string $locale = null)
+    public function __construct(string $id, \DateTime $createdAt, array $metadata, string $email, bool $emailVerified, string $organizationId, string $avatarUrl, ?\DateTime $modifiedAt = null, ?string $externalId = null, ?string $name = null, ?Address $billingAddress = null, ?array $taxId = null, ?\DateTime $deletedAt = null, ?CustomerType $type = null)
     {
         $this->id = $id;
         $this->createdAt = $createdAt;
@@ -169,6 +160,5 @@ class Customer
         $this->taxId = $taxId;
         $this->deletedAt = $deletedAt;
         $this->type = $type;
-        $this->locale = $locale;
     }
 }

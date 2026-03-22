@@ -135,29 +135,20 @@ class SpaireMembers
      *
      * Only available to owners and billing managers of team customers.
      *
-     * @param  ?int  $page
-     * @param  ?int  $limit
      * @return Operations\CustomerPortalMembersListMembersResponse
      * @throws \Spaire\Models\Errors\APIException
      */
-    private function listMembersIndividual(?int $page = null, ?int $limit = null, ?Options $options = null): Operations\CustomerPortalMembersListMembersResponse
+    public function listMembers(?Options $options = null): Operations\CustomerPortalMembersListMembersResponse
     {
-        $request = new Operations\CustomerPortalMembersListMembersRequest(
-            page: $page,
-            limit: $limit,
-        );
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/v1/customer-portal/members');
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
-
-        $qp = Utils\Utils::getQueryParams(Operations\CustomerPortalMembersListMembersRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
         $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'customer_portal:members:list_members', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
-        $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
         try {
@@ -169,7 +160,7 @@ class SpaireMembers
         $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
 
         $statusCode = $httpResponse->getStatusCode();
-        if (Utils\Utils::matchStatusCodes($statusCode, ['401', '403', '422', '4XX', '5XX'])) {
+        if (Utils\Utils::matchStatusCodes($statusCode, ['401', '403', '4XX', '5XX'])) {
             $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
             $httpResponse = $res;
         }
@@ -179,58 +170,14 @@ class SpaireMembers
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Spaire\Models\Components\ListResourceCustomerPortalMember', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, 'array<\Spaire\Models\Components\CustomerPortalMember>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\CustomerPortalMembersListMembersResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
-                    listResourceCustomerPortalMember: $obj);
-                $sdk = $this;
-
-                $response->next = function () use ($sdk, $request, $responseData): ?Operations\CustomerPortalMembersListMembersResponse {
-                    $page = $request != null ? $request->page : 0;
-                    $nextPage = $page + 1;
-                    $jsonObject = new \JsonPath\JsonObject($responseData);
-                    $numPages = $jsonObject->get('$.pagination.max_page');
-                    if ($numPages == null || $numPages[0] <= $page) {
-                        return null;
-                    }
-                    if (! $responseData) {
-                        return null;
-                    }
-                    $jsonObject = new \JsonPath\JsonObject($responseData);
-                    $results = $jsonObject->get('$.items');
-
-                    if (is_array($results)) {
-                        $results = $results[0];
-                    }
-                    if (count($results) === 0) {
-                        return null;
-                    }
-                    $limit = $request != null ? $request->limit : 0;
-                    if (count($results) < $limit) {
-                        return null;
-                    }
-
-                    return $sdk->listMembersIndividual(
-                        page: $nextPage,
-                        limit: $request != null ? $request->limit : null,
-                    );
-                };
-
+                    responseCustomerPortalMembersListMembers: $obj);
 
                 return $response;
-            } else {
-                throw new \Spaire\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
-            }
-        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['422'])) {
-            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
-                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
-
-                $serializer = Utils\JSON::createSerializer();
-                $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Spaire\Models\Errors\HTTPValidationError', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                throw $obj->toException();
             } else {
                 throw new \Spaire\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
@@ -240,26 +187,6 @@ class SpaireMembers
             throw new \Spaire\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
             throw new \Spaire\Models\Errors\APIException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
-        }
-    }
-    /**
-     * List Members
-     *
-     * List all members of the customer's team.
-     *
-     * Only available to owners and billing managers of team customers.
-     *
-     * @param  ?int  $page
-     * @param  ?int  $limit
-     * @return \Generator<Operations\CustomerPortalMembersListMembersResponse>
-     * @throws \Spaire\Models\Errors\APIException
-     */
-    public function listMembers(?int $page = null, ?int $limit = null, ?Options $options = null): \Generator
-    {
-        $res = $this->listMembersIndividual($page, $limit, $options);
-        while ($res !== null) {
-            yield $res;
-            $res = $res->next($res);
         }
     }
 

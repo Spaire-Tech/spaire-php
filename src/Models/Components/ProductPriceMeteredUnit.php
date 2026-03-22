@@ -37,12 +37,12 @@ class ProductPriceMeteredUnit
     public ProductPriceSource $source;
 
     /**
-     * The currency in which the customer will be charged.
      *
-     * @var string $priceCurrency
+     * @var PresentmentCurrency $priceCurrency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('price_currency')]
-    public string $priceCurrency;
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency')]
+    public PresentmentCurrency $priceCurrency;
 
     /**
      * Whether the price is archived and no longer available.
@@ -59,6 +59,14 @@ class ProductPriceMeteredUnit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('product_id')]
     public string $productId;
+
+    /**
+     *
+     * @var ProductPriceType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductPriceType')]
+    public ProductPriceType $type;
 
     /**
      * The price per unit in cents.
@@ -94,6 +102,15 @@ class ProductPriceMeteredUnit
     public ?\DateTime $modifiedAt;
 
     /**
+     *
+     * @var ?SubscriptionRecurringInterval $recurringInterval
+     * @deprecated  field: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('recurring_interval')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionRecurringInterval|null')]
+    public ?SubscriptionRecurringInterval $recurringInterval;
+
+    /**
      * The maximum amount in cents that can be charged, regardless of the number of units consumed.
      *
      * @var ?int $capAmount
@@ -113,17 +130,19 @@ class ProductPriceMeteredUnit
      * @param  string  $id
      * @param  ProductPriceSource  $source
      * @param  string  $amountType
-     * @param  string  $priceCurrency
+     * @param  PresentmentCurrency  $priceCurrency
      * @param  bool  $isArchived
      * @param  string  $productId
+     * @param  ProductPriceType  $type
      * @param  string  $unitAmount
      * @param  string  $meterId
      * @param  ProductPriceMeter  $meter
      * @param  ?\DateTime  $modifiedAt
+     * @param  ?SubscriptionRecurringInterval  $recurringInterval
      * @param  ?int  $capAmount
      * @phpstan-pure
      */
-    public function __construct(\DateTime $createdAt, string $id, ProductPriceSource $source, string $priceCurrency, bool $isArchived, string $productId, string $unitAmount, string $meterId, ProductPriceMeter $meter, ?\DateTime $modifiedAt = null, ?int $capAmount = null, string $amountType = 'metered_unit')
+    public function __construct(\DateTime $createdAt, string $id, ProductPriceSource $source, PresentmentCurrency $priceCurrency, bool $isArchived, string $productId, ProductPriceType $type, string $unitAmount, string $meterId, ProductPriceMeter $meter, ?\DateTime $modifiedAt = null, ?SubscriptionRecurringInterval $recurringInterval = null, ?int $capAmount = null, string $amountType = 'metered_unit')
     {
         $this->createdAt = $createdAt;
         $this->id = $id;
@@ -131,10 +150,12 @@ class ProductPriceMeteredUnit
         $this->priceCurrency = $priceCurrency;
         $this->isArchived = $isArchived;
         $this->productId = $productId;
+        $this->type = $type;
         $this->unitAmount = $unitAmount;
         $this->meterId = $meterId;
         $this->meter = $meter;
         $this->modifiedAt = $modifiedAt;
+        $this->recurringInterval = $recurringInterval;
         $this->capAmount = $capAmount;
         $this->amountType = $amountType;
     }

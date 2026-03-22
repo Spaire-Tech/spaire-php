@@ -109,14 +109,6 @@ class BalanceRefundMetadata
 
     /**
      *
-     * @var ?float $exchangeRate
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('exchange_rate')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?float $exchangeRate = null;
-
-    /**
-     *
      * @var ?string $taxState
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax_state')]
@@ -145,12 +137,11 @@ class BalanceRefundMetadata
      * @param  ?string  $productId
      * @param  ?string  $subscriptionId
      * @param  ?int  $refundableAmount
-     * @param  ?float  $exchangeRate
      * @param  ?string  $taxState
      * @param  ?string  $taxCountry
      * @phpstan-pure
      */
-    public function __construct(string $transactionId, string $refundId, int $amount, string $currency, int $presentmentAmount, string $presentmentCurrency, int $taxAmount, int $fee, ?string $orderId = null, ?string $orderCreatedAt = null, ?string $productId = null, ?string $subscriptionId = null, ?int $refundableAmount = null, ?float $exchangeRate = null, ?string $taxState = null, ?string $taxCountry = null)
+    public function __construct(string $transactionId, string $refundId, int $amount, string $currency, int $presentmentAmount, string $presentmentCurrency, int $taxAmount, int $fee, ?string $orderId = null, ?string $orderCreatedAt = null, ?string $productId = null, ?string $subscriptionId = null, ?int $refundableAmount = null, ?string $taxState = null, ?string $taxCountry = null)
     {
         $this->transactionId = $transactionId;
         $this->refundId = $refundId;
@@ -165,7 +156,6 @@ class BalanceRefundMetadata
         $this->productId = $productId;
         $this->subscriptionId = $subscriptionId;
         $this->refundableAmount = $refundableAmount;
-        $this->exchangeRate = $exchangeRate;
         $this->taxState = $taxState;
         $this->taxCountry = $taxCountry;
     }

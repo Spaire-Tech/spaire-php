@@ -46,7 +46,7 @@ The SDK relies on [Composer](https://getcomposer.org/) to manage its dependencie
 
 To install the SDK and add it as a dependency to an existing `composer.json` file:
 ```bash
-composer require "spaire-tech/sdk"
+composer require "spaire-tech/spaire-php"
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -194,6 +194,17 @@ foreach ($responses as $response) {
 * [clientGet](docs/sdks/checkouts/README.md#clientget) - Get Checkout Session from Client
 * [clientUpdate](docs/sdks/checkouts/README.md#clientupdate) - Update Checkout Session from Client
 * [clientConfirm](docs/sdks/checkouts/README.md#clientconfirm) - Confirm Checkout Session from Client
+
+### [ClientInvoices](docs/sdks/clientinvoices/README.md)
+
+* [listClientInvoices](docs/sdks/clientinvoices/README.md#listclientinvoices) - List Client Invoices
+* [createClientInvoice](docs/sdks/clientinvoices/README.md#createclientinvoice) - Create Client Invoice
+* [getClientInvoice](docs/sdks/clientinvoices/README.md#getclientinvoice) - Get Client Invoice
+* [downloadClientInvoicePdf](docs/sdks/clientinvoices/README.md#downloadclientinvoicepdf) - Download Client Invoice PDF
+* [finalizeClientInvoice](docs/sdks/clientinvoices/README.md#finalizeclientinvoice) - Finalize Client Invoice
+* [sendClientInvoice](docs/sdks/clientinvoices/README.md#sendclientinvoice) - Send Client Invoice
+* [markClientInvoicePaid](docs/sdks/clientinvoices/README.md#markclientinvoicepaid) - Mark Client Invoice as Paid
+* [voidClientInvoice](docs/sdks/clientinvoices/README.md#voidclientinvoice) - Void Client Invoice
 
 ### [CustomFields](docs/sdks/customfields/README.md)
 
@@ -399,7 +410,7 @@ foreach ($responses as $response) {
 ### [Orders](docs/sdks/orders/README.md)
 
 * [list](docs/sdks/orders/README.md#list) - List Orders
-* [export](docs/sdks/orders/README.md#export) - Export Orders
+* [export](docs/sdks/orders/README.md#export) - Export Subscriptions
 * [get](docs/sdks/orders/README.md#get) - Get Order
 * [update](docs/sdks/orders/README.md#update) - Update Order
 * [invoice](docs/sdks/orders/README.md#invoice) - Get Order Invoice
@@ -563,10 +574,9 @@ try {
 
 You can override the default server globally using the `setServer(string $serverName)` builder method when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the names associated with the available servers:
 
-| Name         | Server                         | Description            |
-| ------------ | ------------------------------ | ---------------------- |
-| `production` | `https://api.spairehq.com`         | Production environment |
-| `sandbox`    | `https://sandbox-api.spairehq.com` | Sandbox environment    |
+| Name         | Server                     | Description            |
+| ------------ | -------------------------- | ---------------------- |
+| `production` | `https://api.spairehq.com` | Production environment |
 
 #### Example
 

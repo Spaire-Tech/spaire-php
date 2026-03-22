@@ -75,22 +75,13 @@ class OrganizationFeatureSettings
     public ?bool $tinybirdCompare = null;
 
     /**
-     * If this organization has multiple presentment currencies enabled
+     * If this organization has unlocked the Startup Stack perks by completing their first sale
      *
-     * @var ?bool $presentmentCurrenciesEnabled
+     * @var ?bool $perksUnlocked
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('presentment_currencies_enabled')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('perks_unlocked')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?bool $presentmentCurrenciesEnabled = null;
-
-    /**
-     * If this organization has checkout localization enabled
-     *
-     * @var ?bool $checkoutLocalizationEnabled
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('checkout_localization_enabled')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?bool $checkoutLocalizationEnabled = null;
+    public ?bool $perksUnlocked = null;
 
     /**
      * @param  ?bool  $issueFundingEnabled
@@ -100,11 +91,10 @@ class OrganizationFeatureSettings
      * @param  ?bool  $memberModelEnabled
      * @param  ?bool  $tinybirdRead
      * @param  ?bool  $tinybirdCompare
-     * @param  ?bool  $presentmentCurrenciesEnabled
-     * @param  ?bool  $checkoutLocalizationEnabled
+     * @param  ?bool  $perksUnlocked
      * @phpstan-pure
      */
-    public function __construct(?bool $issueFundingEnabled = false, ?bool $seatBasedPricingEnabled = false, ?bool $revopsEnabled = false, ?bool $walletsEnabled = false, ?bool $memberModelEnabled = false, ?bool $tinybirdRead = false, ?bool $tinybirdCompare = false, ?bool $presentmentCurrenciesEnabled = false, ?bool $checkoutLocalizationEnabled = false)
+    public function __construct(?bool $issueFundingEnabled = false, ?bool $seatBasedPricingEnabled = false, ?bool $revopsEnabled = false, ?bool $walletsEnabled = false, ?bool $memberModelEnabled = false, ?bool $tinybirdRead = false, ?bool $tinybirdCompare = false, ?bool $perksUnlocked = false)
     {
         $this->issueFundingEnabled = $issueFundingEnabled;
         $this->seatBasedPricingEnabled = $seatBasedPricingEnabled;
@@ -113,7 +103,6 @@ class OrganizationFeatureSettings
         $this->memberModelEnabled = $memberModelEnabled;
         $this->tinybirdRead = $tinybirdRead;
         $this->tinybirdCompare = $tinybirdCompare;
-        $this->presentmentCurrenciesEnabled = $presentmentCurrenciesEnabled;
-        $this->checkoutLocalizationEnabled = $checkoutLocalizationEnabled;
+        $this->perksUnlocked = $perksUnlocked;
     }
 }

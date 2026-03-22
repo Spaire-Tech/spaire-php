@@ -53,6 +53,16 @@ class CheckoutUpdate
     public ?string $productId = null;
 
     /**
+     * ID of the product price to checkout. Must correspond to a price present in the checkout's product list.
+     *
+     * @var ?string $productPriceId
+     * @deprecated  field: This will be removed in a future release, please migrate away from it as soon as possible.
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('product_price_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $productPriceId = null;
+
+    /**
      *
      * @var ?int $amount
      */
@@ -68,6 +78,15 @@ class CheckoutUpdate
     #[\Speakeasy\Serializer\Annotation\SerializedName('seats')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?int $seats = null;
+
+    /**
+     * Locale of the customer, given as an IETF BCP 47 language tag. Used to localize the checkout page.
+     *
+     * @var ?string $locale
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('locale')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $locale = null;
 
     /**
      *
@@ -117,14 +136,6 @@ class CheckoutUpdate
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_tax_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $customerTaxId = null;
-
-    /**
-     *
-     * @var ?string $locale
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('locale')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $locale = null;
 
     /**
      * The interval unit for the trial period.
@@ -250,15 +261,16 @@ class CheckoutUpdate
      * @param  ?array<string, string|int|bool|\DateTime|null>  $customFieldData
      * @param  ?array<string, string|int|float|bool>  $metadata
      * @param  ?string  $productId
+     * @param  ?string  $productPriceId
      * @param  ?int  $amount
      * @param  ?int  $seats
+     * @param  ?string  $locale
      * @param  ?bool  $isBusinessCustomer
      * @param  ?string  $customerName
      * @param  ?string  $customerEmail
      * @param  ?string  $customerBillingName
      * @param  ?AddressInput  $customerBillingAddress
      * @param  ?string  $customerTaxId
-     * @param  ?string  $locale
      * @param  ?TrialInterval  $trialInterval
      * @param  ?int  $trialIntervalCount
      * @param  ?PresentmentCurrency  $currency
@@ -273,20 +285,21 @@ class CheckoutUpdate
      * @param  ?string  $embedOrigin
      * @phpstan-pure
      */
-    public function __construct(?array $customFieldData = null, ?array $metadata = null, ?string $productId = null, ?int $amount = null, ?int $seats = null, ?bool $isBusinessCustomer = null, ?string $customerName = null, ?string $customerEmail = null, ?string $customerBillingName = null, ?AddressInput $customerBillingAddress = null, ?string $customerTaxId = null, ?string $locale = null, ?TrialInterval $trialInterval = null, ?int $trialIntervalCount = null, ?PresentmentCurrency $currency = null, ?string $discountId = null, ?bool $allowDiscountCodes = null, ?bool $requireBillingAddress = null, ?bool $allowTrial = null, ?string $customerIpAddress = null, ?array $customerMetadata = null, ?string $successUrl = null, ?string $returnUrl = null, ?string $embedOrigin = null)
+    public function __construct(?array $customFieldData = null, ?array $metadata = null, ?string $productId = null, ?string $productPriceId = null, ?int $amount = null, ?int $seats = null, ?string $locale = null, ?bool $isBusinessCustomer = null, ?string $customerName = null, ?string $customerEmail = null, ?string $customerBillingName = null, ?AddressInput $customerBillingAddress = null, ?string $customerTaxId = null, ?TrialInterval $trialInterval = null, ?int $trialIntervalCount = null, ?PresentmentCurrency $currency = null, ?string $discountId = null, ?bool $allowDiscountCodes = null, ?bool $requireBillingAddress = null, ?bool $allowTrial = null, ?string $customerIpAddress = null, ?array $customerMetadata = null, ?string $successUrl = null, ?string $returnUrl = null, ?string $embedOrigin = null)
     {
         $this->customFieldData = $customFieldData;
         $this->metadata = $metadata;
         $this->productId = $productId;
+        $this->productPriceId = $productPriceId;
         $this->amount = $amount;
         $this->seats = $seats;
+        $this->locale = $locale;
         $this->isBusinessCustomer = $isBusinessCustomer;
         $this->customerName = $customerName;
         $this->customerEmail = $customerEmail;
         $this->customerBillingName = $customerBillingName;
         $this->customerBillingAddress = $customerBillingAddress;
         $this->customerTaxId = $customerTaxId;
-        $this->locale = $locale;
         $this->trialInterval = $trialInterval;
         $this->trialIntervalCount = $trialIntervalCount;
         $this->currency = $currency;

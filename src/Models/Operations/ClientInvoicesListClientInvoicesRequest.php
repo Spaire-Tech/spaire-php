@@ -8,9 +8,18 @@ declare(strict_types=1);
 
 namespace Spaire\Models\Operations;
 
+use Spaire\Models\Components;
 use Spaire\Utils\SpeakeasyMetadata;
-class CustomerPortalSeatsListClaimedSubscriptionsRequest
+class ClientInvoicesListClientInvoicesRequest
 {
+    /**
+     * Sorting criterion. Several criteria can be used simultaneously and will be applied in order. Add a minus sign `-` before the criteria name to sort by descending order.
+     *
+     * @var ?array<Components\ClientInvoiceSortProperty> $sorting
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sorting')]
+    public ?array $sorting = null;
+
     /**
      * Page number, defaults to 1.
      *
@@ -30,10 +39,12 @@ class CustomerPortalSeatsListClaimedSubscriptionsRequest
     /**
      * @param  ?int  $page
      * @param  ?int  $limit
+     * @param  ?array<Components\ClientInvoiceSortProperty>  $sorting
      * @phpstan-pure
      */
-    public function __construct(?int $page = 1, ?int $limit = 10)
+    public function __construct(?array $sorting = null, ?int $page = 1, ?int $limit = 10)
     {
+        $this->sorting = $sorting;
         $this->page = $page;
         $this->limit = $limit;
     }

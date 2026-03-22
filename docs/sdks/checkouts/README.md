@@ -92,11 +92,11 @@ $sdk = Spaire\Spaire::builder()
     ->build();
 
 $request = new Components\CheckoutCreate(
+    locale: 'en',
     customerName: 'John Doe',
     customerBillingAddress: new Components\AddressInput(
         country: Components\CountryAlpha2Input::Us,
     ),
-    locale: 'en',
     products: [
         '<value 1>',
         '<value 2>',
@@ -205,11 +205,11 @@ $sdk = Spaire\Spaire::builder()
     ->build();
 
 $checkoutUpdate = new Components\CheckoutUpdate(
+    locale: 'en',
     customerName: 'John Doe',
     customerBillingAddress: new Components\AddressInput(
         country: Components\CountryAlpha2Input::Us,
     ),
-    locale: 'en',
 );
 
 $response = $sdk->checkouts->update(
@@ -310,9 +310,9 @@ use Spaire\Models\Components;
 $sdk = Spaire\Spaire::builder()->build();
 
 $checkoutUpdatePublic = new Components\CheckoutUpdatePublic(
+    locale: 'en',
     customerName: 'John Doe',
     customerBillingAddress: null,
-    locale: 'en',
 );
 
 $response = $sdk->checkouts->clientUpdate(
@@ -374,11 +374,11 @@ $sdk = Spaire\Spaire::builder()
     ->build();
 
 $checkoutConfirmStripe = new Components\CheckoutConfirmStripe(
+    locale: 'en',
     customerName: 'John Doe',
     customerBillingAddress: new Components\AddressInput(
         country: Components\CountryAlpha2Input::Us,
     ),
-    locale: 'en',
 );
 
 $response = $sdk->checkouts->clientConfirm(

@@ -77,14 +77,6 @@ class CustomerCreate
     public ?array $taxId = null;
 
     /**
-     *
-     * @var ?string $locale
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('locale')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $locale = null;
-
-    /**
      * The type of customer. Defaults to 'individual'. Set to 'team' for customers that can have multiple members.
      *
      * @var ?CustomerType $type
@@ -120,13 +112,12 @@ class CustomerCreate
      * @param  ?string  $name
      * @param  ?AddressInput  $billingAddress
      * @param  ?array<string|TaxIDFormat|null>  $taxId
-     * @param  ?string  $locale
      * @param  ?CustomerType  $type
      * @param  ?string  $organizationId
      * @param  ?OwnerCreate  $owner
      * @phpstan-pure
      */
-    public function __construct(string $email, ?array $metadata = null, ?string $externalId = null, ?string $name = null, ?AddressInput $billingAddress = null, ?array $taxId = null, ?string $locale = null, ?CustomerType $type = null, ?string $organizationId = null, ?OwnerCreate $owner = null)
+    public function __construct(string $email, ?array $metadata = null, ?string $externalId = null, ?string $name = null, ?AddressInput $billingAddress = null, ?array $taxId = null, ?CustomerType $type = null, ?string $organizationId = null, ?OwnerCreate $owner = null)
     {
         $this->email = $email;
         $this->metadata = $metadata;
@@ -134,7 +125,6 @@ class CustomerCreate
         $this->name = $name;
         $this->billingAddress = $billingAddress;
         $this->taxId = $taxId;
-        $this->locale = $locale;
         $this->type = $type;
         $this->organizationId = $organizationId;
         $this->owner = $owner;

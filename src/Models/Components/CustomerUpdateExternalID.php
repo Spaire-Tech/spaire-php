@@ -69,29 +69,19 @@ class CustomerUpdateExternalID
     public ?array $taxId = null;
 
     /**
-     *
-     * @var ?string $locale
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('locale')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $locale = null;
-
-    /**
      * @param  ?array<string, string|int|float|bool>  $metadata
      * @param  ?string  $email
      * @param  ?string  $name
      * @param  ?AddressInput  $billingAddress
      * @param  ?array<string|TaxIDFormat|null>  $taxId
-     * @param  ?string  $locale
      * @phpstan-pure
      */
-    public function __construct(?array $metadata = null, ?string $email = null, ?string $name = null, ?AddressInput $billingAddress = null, ?array $taxId = null, ?string $locale = null)
+    public function __construct(?array $metadata = null, ?string $email = null, ?string $name = null, ?AddressInput $billingAddress = null, ?array $taxId = null)
     {
         $this->metadata = $metadata;
         $this->email = $email;
         $this->name = $name;
         $this->billingAddress = $billingAddress;
         $this->taxId = $taxId;
-        $this->locale = $locale;
     }
 }

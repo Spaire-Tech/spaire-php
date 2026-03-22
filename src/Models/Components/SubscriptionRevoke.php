@@ -43,7 +43,7 @@ class SubscriptionRevoke
      *
      * **IMPORTANT:**
      * Do not use this to store internal notes! It's intended to be input
-     * from the customer and is therefore also available in their Spaire
+     * from the customer and is therefore also available in their Polar
      * purchases library.
      *
      * Only set this in case your own service is requesting the reason from the

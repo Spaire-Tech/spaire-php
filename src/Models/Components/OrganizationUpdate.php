@@ -66,6 +66,16 @@ class OrganizationUpdate
     public ?OrganizationDetails $details = null;
 
     /**
+     * Default presentment currency for products and checkout.
+     *
+     * @var ?PresentmentCurrency $defaultPresentmentCurrency
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('default_presentment_currency')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PresentmentCurrency $defaultPresentmentCurrency = null;
+
+    /**
      *
      * @var ?OrganizationFeatureSettings $featureSettings
      */
@@ -111,31 +121,21 @@ class OrganizationUpdate
     public ?OrganizationCustomerPortalSettings $customerPortalSettings = null;
 
     /**
-     * Default presentment currency for the organization
-     *
-     * @var ?PresentmentCurrency $defaultPresentmentCurrency
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('default_presentment_currency')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?PresentmentCurrency $defaultPresentmentCurrency = null;
-
-    /**
      * @param  ?string  $name
      * @param  ?string  $avatarUrl
      * @param  ?string  $email
      * @param  ?string  $website
      * @param  ?array<OrganizationSocialLink>  $socials
      * @param  ?OrganizationDetails  $details
+     * @param  ?PresentmentCurrency  $defaultPresentmentCurrency
      * @param  ?OrganizationFeatureSettings  $featureSettings
      * @param  ?OrganizationSubscriptionSettings  $subscriptionSettings
      * @param  ?OrganizationNotificationSettings  $notificationSettings
      * @param  ?OrganizationCustomerEmailSettings  $customerEmailSettings
      * @param  ?OrganizationCustomerPortalSettings  $customerPortalSettings
-     * @param  ?PresentmentCurrency  $defaultPresentmentCurrency
      * @phpstan-pure
      */
-    public function __construct(?string $name = null, ?string $avatarUrl = null, ?string $email = null, ?string $website = null, ?array $socials = null, ?OrganizationDetails $details = null, ?OrganizationFeatureSettings $featureSettings = null, ?OrganizationSubscriptionSettings $subscriptionSettings = null, ?OrganizationNotificationSettings $notificationSettings = null, ?OrganizationCustomerEmailSettings $customerEmailSettings = null, ?OrganizationCustomerPortalSettings $customerPortalSettings = null, ?PresentmentCurrency $defaultPresentmentCurrency = null)
+    public function __construct(?string $name = null, ?string $avatarUrl = null, ?string $email = null, ?string $website = null, ?array $socials = null, ?OrganizationDetails $details = null, ?PresentmentCurrency $defaultPresentmentCurrency = null, ?OrganizationFeatureSettings $featureSettings = null, ?OrganizationSubscriptionSettings $subscriptionSettings = null, ?OrganizationNotificationSettings $notificationSettings = null, ?OrganizationCustomerEmailSettings $customerEmailSettings = null, ?OrganizationCustomerPortalSettings $customerPortalSettings = null)
     {
         $this->name = $name;
         $this->avatarUrl = $avatarUrl;
@@ -143,11 +143,11 @@ class OrganizationUpdate
         $this->website = $website;
         $this->socials = $socials;
         $this->details = $details;
+        $this->defaultPresentmentCurrency = $defaultPresentmentCurrency;
         $this->featureSettings = $featureSettings;
         $this->subscriptionSettings = $subscriptionSettings;
         $this->notificationSettings = $notificationSettings;
         $this->customerEmailSettings = $customerEmailSettings;
         $this->customerPortalSettings = $customerPortalSettings;
-        $this->defaultPresentmentCurrency = $defaultPresentmentCurrency;
     }
 }

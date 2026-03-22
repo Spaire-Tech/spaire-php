@@ -20,14 +20,9 @@ class Spaire
     /** SERVER_PRODUCTION - Production environment */
     public const SERVER_PRODUCTION = 'production';
 
-    /** SERVER_SANDBOX - Sandbox environment */
-    public const SERVER_SANDBOX = 'sandbox';
-
     public const SERVERS = [
         /** Production environment */
         Spaire::SERVER_PRODUCTION => 'https://api.spairehq.com',
-        /** Sandbox environment */
-        Spaire::SERVER_SANDBOX => 'https://sandbox-api.spairehq.com',
     ];
 
     public Organizations $organizations;
@@ -45,6 +40,8 @@ class Spaire
     public Products $products;
 
     public Orders $orders;
+
+    public ClientInvoices $clientInvoices;
 
     public Refunds $refunds;
 
@@ -112,6 +109,7 @@ class Spaire
         $this->webhooks = new Webhooks($this->sdkConfiguration);
         $this->products = new Products($this->sdkConfiguration);
         $this->orders = new Orders($this->sdkConfiguration);
+        $this->clientInvoices = new ClientInvoices($this->sdkConfiguration);
         $this->refunds = new Refunds($this->sdkConfiguration);
         $this->disputes = new Disputes($this->sdkConfiguration);
         $this->checkouts = new Checkouts($this->sdkConfiguration);
