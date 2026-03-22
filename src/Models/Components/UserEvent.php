@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** UserEvent - An event you created through the ingestion API. */
@@ -58,11 +58,11 @@ class UserEvent
      * @var array<string, string|int|float|bool|CostMetadataOutput|LLMMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, string|int|float|bool|\Polar\Models\Components\CostMetadataOutput|\Polar\Models\Components\LLMMetadata>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, string|int|float|bool|\Spaire\Models\Components\CostMetadataOutput|\Spaire\Models\Components\LLMMetadata>')]
     public array $metadata;
 
     /**
-     * ID of the customer in your Polar organization associated with the event.
+     * ID of the customer in your Spaire organization associated with the event.
      *
      * @var ?string $customerId
      */
@@ -75,7 +75,7 @@ class UserEvent
      * @var ?Customer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Customer|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer|null')]
     public ?Customer $customer;
 
     /**
@@ -114,7 +114,7 @@ class UserEvent
     public ?string $parentId = null;
 
     /**
-     * The source of the event. `system` events are created by Polar. `user` events are the one you create through our ingestion API.
+     * The source of the event. `system` events are created by Spaire. `user` events are the one you create through our ingestion API.
      *
      * @var string $source
      */

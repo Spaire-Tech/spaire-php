@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class PropertyAggregation
@@ -16,7 +16,7 @@ class PropertyAggregation
      * @var Func $func
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('func')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Func')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Func')]
     public Func $func;
 
     /**

@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CardPayment - Schema of a payment with a card payment method. */
@@ -33,7 +33,7 @@ class CardPayment
      * @var PaymentProcessor $processor
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('processor')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\PaymentProcessor')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PaymentProcessor')]
     public PaymentProcessor $processor;
 
     /**
@@ -41,7 +41,7 @@ class CardPayment
      * @var PaymentStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\PaymentStatus')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PaymentStatus')]
     public PaymentStatus $status;
 
     /**
@@ -74,7 +74,7 @@ class CardPayment
      * @var CardPaymentMetadata $methodMetadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('method_metadata')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CardPaymentMetadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CardPaymentMetadata')]
     public CardPaymentMetadata $methodMetadata;
 
     /**

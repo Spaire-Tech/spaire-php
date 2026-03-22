@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CheckoutLink - Checkout link data. */
@@ -42,7 +42,7 @@ class CheckoutLink
      * @var PaymentProcessor $paymentProcessor
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('payment_processor')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\PaymentProcessor')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PaymentProcessor')]
     public PaymentProcessor $paymentProcessor;
 
     /**
@@ -83,7 +83,7 @@ class CheckoutLink
      * @var array<CheckoutLinkProduct> $products
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('products')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\CheckoutLinkProduct>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CheckoutLinkProduct>')]
     public array $products;
 
     /**
@@ -107,7 +107,7 @@ class CheckoutLink
      * @var ?TrialInterval $trialInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('trial_interval')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\TrialInterval|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TrialInterval|null')]
     public ?TrialInterval $trialInterval;
 
     /**
@@ -155,7 +155,7 @@ class CheckoutLink
      * @var DiscountFixedOnceForeverDurationBase|DiscountFixedRepeatDurationBase|DiscountPercentageOnceForeverDurationBase|DiscountPercentageRepeatDurationBase|null $discount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('discount')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\DiscountFixedOnceForeverDurationBase|\Polar\Models\Components\DiscountFixedRepeatDurationBase|\Polar\Models\Components\DiscountPercentageOnceForeverDurationBase|\Polar\Models\Components\DiscountPercentageRepeatDurationBase|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DiscountFixedOnceForeverDurationBase|\Spaire\Models\Components\DiscountFixedRepeatDurationBase|\Spaire\Models\Components\DiscountPercentageOnceForeverDurationBase|\Spaire\Models\Components\DiscountPercentageRepeatDurationBase|null')]
     public DiscountFixedOnceForeverDurationBase|DiscountFixedRepeatDurationBase|DiscountPercentageOnceForeverDurationBase|DiscountPercentageRepeatDurationBase|null $discount;
 
     /**

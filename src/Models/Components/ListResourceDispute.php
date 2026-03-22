@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class ListResourceDispute
@@ -17,7 +17,7 @@ class ListResourceDispute
      * @var array<Dispute> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\Dispute>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\Dispute>')]
     public array $items;
 
     /**
@@ -25,7 +25,7 @@ class ListResourceDispute
      * @var Pagination $pagination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pagination')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Pagination')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Pagination')]
     public Pagination $pagination;
 
     /**

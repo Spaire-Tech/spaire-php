@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** DiscountProduct - A product that a discount can be applied to. */
@@ -50,7 +50,7 @@ class DiscountProduct
      * @var ProductVisibility $visibility
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('visibility')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\ProductVisibility')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductVisibility')]
     public ProductVisibility $visibility;
 
     /**
@@ -91,7 +91,7 @@ class DiscountProduct
      * @var ?TrialInterval $trialInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('trial_interval')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\TrialInterval|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TrialInterval|null')]
     public ?TrialInterval $trialInterval;
 
     /**
@@ -116,7 +116,7 @@ class DiscountProduct
      * @var ?SubscriptionRecurringInterval $recurringInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('recurring_interval')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\SubscriptionRecurringInterval|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionRecurringInterval|null')]
     public ?SubscriptionRecurringInterval $recurringInterval;
 
     /**

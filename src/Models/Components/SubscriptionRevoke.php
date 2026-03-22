@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class SubscriptionRevoke
@@ -33,7 +33,7 @@ class SubscriptionRevoke
      * @var ?CustomerCancellationReason $customerCancellationReason
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_cancellation_reason')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomerCancellationReason|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerCancellationReason|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?CustomerCancellationReason $customerCancellationReason = null;
 
@@ -43,7 +43,7 @@ class SubscriptionRevoke
      *
      * **IMPORTANT:**
      * Do not use this to store internal notes! It's intended to be input
-     * from the customer and is therefore also available in their Polar
+     * from the customer and is therefore also available in their Spaire
      * purchases library.
      *
      * Only set this in case your own service is requesting the reason from the

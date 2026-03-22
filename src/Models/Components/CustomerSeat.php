@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class CustomerSeat
@@ -32,7 +32,7 @@ class CustomerSeat
      * @var SeatStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\SeatStatus')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SeatStatus')]
     public SeatStatus $status;
 
     /**
@@ -85,7 +85,7 @@ class CustomerSeat
      * @var ?Member $member
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('member')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Member|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Member|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?Member $member = null;
 

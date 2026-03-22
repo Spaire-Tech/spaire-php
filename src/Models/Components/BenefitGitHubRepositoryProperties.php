@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** BenefitGitHubRepositoryProperties - Properties for a benefit of type `github_repository`. */
@@ -34,7 +34,7 @@ class BenefitGitHubRepositoryProperties
      * @var Permission $permission
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('permission')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Permission')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Permission')]
     public Permission $permission;
 
     /**

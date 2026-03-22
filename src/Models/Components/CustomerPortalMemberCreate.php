@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomerPortalMemberCreate - Schema for adding a new member to the customer's team. */
@@ -25,7 +25,7 @@ class CustomerPortalMemberCreate
      * @var ?MemberRole $role
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('role')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\MemberRole|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MemberRole|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?MemberRole $role = null;
 

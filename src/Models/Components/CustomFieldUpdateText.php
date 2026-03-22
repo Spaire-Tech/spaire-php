@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomFieldUpdateText - Schema to update a custom field of type text. */
@@ -54,7 +54,7 @@ class CustomFieldUpdateText
      * @var ?CustomFieldTextProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomFieldTextProperties|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomFieldTextProperties|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?CustomFieldTextProperties $properties = null;
 

@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class FileUpload
@@ -59,7 +59,7 @@ class FileUpload
      * @var S3FileUploadMultipart $upload
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('upload')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\S3FileUploadMultipart')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\S3FileUploadMultipart')]
     public S3FileUploadMultipart $upload;
 
     /**
@@ -67,7 +67,7 @@ class FileUpload
      * @var FileServiceTypes $service
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('service')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\FileServiceTypes')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\FileServiceTypes')]
     public FileServiceTypes $service;
 
     /**

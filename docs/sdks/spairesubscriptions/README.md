@@ -23,10 +23,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 $request = new Operations\CustomerPortalSubscriptionsListRequest();
 $requestSecurity = new Operations\CustomerPortalSubscriptionsListSecurity(
@@ -78,10 +78,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 
 $requestSecurity = new Operations\CustomerPortalSubscriptionsGetSecurity(
@@ -130,10 +130,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 
 $requestSecurity = new Operations\CustomerPortalSubscriptionsCancelSecurity(
@@ -183,11 +183,11 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Components;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Components;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 
 $requestSecurity = new Operations\CustomerPortalSubscriptionsUpdateSecurity(

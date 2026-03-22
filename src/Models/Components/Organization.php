@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class Organization
@@ -48,7 +48,7 @@ class Organization
      * @var SubscriptionProrationBehavior $prorationBehavior
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('proration_behavior')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\SubscriptionProrationBehavior')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionProrationBehavior')]
     public SubscriptionProrationBehavior $prorationBehavior;
 
     /**
@@ -65,7 +65,7 @@ class Organization
      * @var array<OrganizationSocialLink> $socials
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('socials')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\OrganizationSocialLink>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\OrganizationSocialLink>')]
     public array $socials;
 
     /**
@@ -73,7 +73,7 @@ class Organization
      * @var OrganizationStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrganizationStatus')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationStatus')]
     public OrganizationStatus $status;
 
     /**
@@ -89,7 +89,7 @@ class Organization
      * @var OrganizationSubscriptionSettings $subscriptionSettings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('subscription_settings')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrganizationSubscriptionSettings')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationSubscriptionSettings')]
     public OrganizationSubscriptionSettings $subscriptionSettings;
 
     /**
@@ -97,7 +97,7 @@ class Organization
      * @var OrganizationNotificationSettings $notificationSettings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('notification_settings')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrganizationNotificationSettings')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationNotificationSettings')]
     public OrganizationNotificationSettings $notificationSettings;
 
     /**
@@ -105,7 +105,7 @@ class Organization
      * @var OrganizationCustomerEmailSettings $customerEmailSettings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_email_settings')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrganizationCustomerEmailSettings')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationCustomerEmailSettings')]
     public OrganizationCustomerEmailSettings $customerEmailSettings;
 
     /**
@@ -113,7 +113,7 @@ class Organization
      * @var OrganizationCustomerPortalSettings $customerPortalSettings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_portal_settings')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrganizationCustomerPortalSettings')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationCustomerPortalSettings')]
     public OrganizationCustomerPortalSettings $customerPortalSettings;
 
     /**
@@ -162,7 +162,7 @@ class Organization
      * @var ?OrganizationFeatureSettings $featureSettings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('feature_settings')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrganizationFeatureSettings|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationFeatureSettings|null')]
     public ?OrganizationFeatureSettings $featureSettings;
 
     /**

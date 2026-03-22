@@ -6,15 +6,15 @@
 
 declare(strict_types=1);
 
-namespace Polar;
+namespace Spaire;
 
-use Polar\Hooks\HookContext;
-use Polar\Models\Components;
-use Polar\Models\Operations;
-use Polar\Utils\Options;
+use Spaire\Hooks\HookContext;
+use Spaire\Models\Components;
+use Spaire\Models\Operations;
+use Spaire\Utils\Options;
 use Speakeasy\Serializer\DeserializationContext;
 
-class PolarMembers
+class SpaireMembers
 {
     private SDKConfiguration $sdkConfiguration;
     /**
@@ -58,7 +58,7 @@ class PolarMembers
      *
      * @param  Components\CustomerPortalMemberCreate  $request
      * @return Operations\CustomerPortalMembersAddMemberResponse
-     * @throws \Polar\Models\Errors\APIException
+     * @throws \Spaire\Models\Errors\APIException
      */
     public function addMember(Components\CustomerPortalMemberCreate $request, ?Options $options = null): Operations\CustomerPortalMembersAddMemberResponse
     {
@@ -97,7 +97,7 @@ class PolarMembers
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Polar\Models\Components\CustomerPortalMember', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Spaire\Models\Components\CustomerPortalMember', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\CustomerPortalMembersAddMemberResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -106,7 +106,7 @@ class PolarMembers
 
                 return $response;
             } else {
-                throw new \Polar\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+                throw new \Spaire\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['422'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
@@ -114,17 +114,17 @@ class PolarMembers
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Polar\Models\Errors\HTTPValidationError', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Spaire\Models\Errors\HTTPValidationError', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 throw $obj->toException();
             } else {
-                throw new \Polar\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+                throw new \Spaire\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['400', '401', '403', '4XX'])) {
-            throw new \Polar\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            throw new \Spaire\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
-            throw new \Polar\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            throw new \Spaire\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
-            throw new \Polar\Models\Errors\APIException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            throw new \Spaire\Models\Errors\APIException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         }
     }
 
@@ -138,7 +138,7 @@ class PolarMembers
      * @param  ?int  $page
      * @param  ?int  $limit
      * @return Operations\CustomerPortalMembersListMembersResponse
-     * @throws \Polar\Models\Errors\APIException
+     * @throws \Spaire\Models\Errors\APIException
      */
     private function listMembersIndividual(?int $page = null, ?int $limit = null, ?Options $options = null): Operations\CustomerPortalMembersListMembersResponse
     {
@@ -179,7 +179,7 @@ class PolarMembers
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Polar\Models\Components\ListResourceCustomerPortalMember', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Spaire\Models\Components\ListResourceCustomerPortalMember', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\CustomerPortalMembersListMembersResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -221,7 +221,7 @@ class PolarMembers
 
                 return $response;
             } else {
-                throw new \Polar\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+                throw new \Spaire\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['422'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
@@ -229,17 +229,17 @@ class PolarMembers
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Polar\Models\Errors\HTTPValidationError', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Spaire\Models\Errors\HTTPValidationError', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 throw $obj->toException();
             } else {
-                throw new \Polar\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+                throw new \Spaire\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['401', '403', '4XX'])) {
-            throw new \Polar\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            throw new \Spaire\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
-            throw new \Polar\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            throw new \Spaire\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
-            throw new \Polar\Models\Errors\APIException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            throw new \Spaire\Models\Errors\APIException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         }
     }
     /**
@@ -252,7 +252,7 @@ class PolarMembers
      * @param  ?int  $page
      * @param  ?int  $limit
      * @return \Generator<Operations\CustomerPortalMembersListMembersResponse>
-     * @throws \Polar\Models\Errors\APIException
+     * @throws \Spaire\Models\Errors\APIException
      */
     public function listMembers(?int $page = null, ?int $limit = null, ?Options $options = null): \Generator
     {
@@ -276,7 +276,7 @@ class PolarMembers
      *
      * @param  string  $id
      * @return Operations\CustomerPortalMembersRemoveMemberResponse
-     * @throws \Polar\Models\Errors\APIException
+     * @throws \Spaire\Models\Errors\APIException
      */
     public function removeMember(string $id, ?Options $options = null): Operations\CustomerPortalMembersRemoveMemberResponse
     {
@@ -321,17 +321,17 @@ class PolarMembers
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Polar\Models\Errors\HTTPValidationError', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Spaire\Models\Errors\HTTPValidationError', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 throw $obj->toException();
             } else {
-                throw new \Polar\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+                throw new \Spaire\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['400', '401', '403', '404', '4XX'])) {
-            throw new \Polar\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            throw new \Spaire\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
-            throw new \Polar\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            throw new \Spaire\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
-            throw new \Polar\Models\Errors\APIException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            throw new \Spaire\Models\Errors\APIException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         }
     }
 
@@ -349,7 +349,7 @@ class PolarMembers
      * @param  Components\CustomerPortalMemberUpdate  $customerPortalMemberUpdate
      * @param  string  $id
      * @return Operations\CustomerPortalMembersUpdateMemberResponse
-     * @throws \Polar\Models\Errors\APIException
+     * @throws \Spaire\Models\Errors\APIException
      */
     public function updateMember(Components\CustomerPortalMemberUpdate $customerPortalMemberUpdate, string $id, ?Options $options = null): Operations\CustomerPortalMembersUpdateMemberResponse
     {
@@ -392,7 +392,7 @@ class PolarMembers
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Polar\Models\Components\CustomerPortalMember', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Spaire\Models\Components\CustomerPortalMember', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\CustomerPortalMembersUpdateMemberResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -401,7 +401,7 @@ class PolarMembers
 
                 return $response;
             } else {
-                throw new \Polar\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+                throw new \Spaire\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['422'])) {
             if (Utils\Utils::matchContentType($contentType, 'application/json')) {
@@ -409,17 +409,17 @@ class PolarMembers
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Polar\Models\Errors\HTTPValidationError', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Spaire\Models\Errors\HTTPValidationError', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 throw $obj->toException();
             } else {
-                throw new \Polar\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+                throw new \Spaire\Models\Errors\APIException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
             }
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['400', '401', '403', '404', '4XX'])) {
-            throw new \Polar\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            throw new \Spaire\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
-            throw new \Polar\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            throw new \Spaire\Models\Errors\APIException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         } else {
-            throw new \Polar\Models\Errors\APIException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            throw new \Spaire\Models\Errors\APIException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
         }
     }
 

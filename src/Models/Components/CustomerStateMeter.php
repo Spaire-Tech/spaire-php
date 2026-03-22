@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomerStateMeter - An active meter for a customer, with latest consumed and credited units. */

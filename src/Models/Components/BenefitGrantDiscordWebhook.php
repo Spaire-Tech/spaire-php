@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class BenefitGrantDiscordWebhook
@@ -65,7 +65,7 @@ class BenefitGrantDiscordWebhook
      * @var Customer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Customer')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer')]
     public Customer $customer;
 
     /**
@@ -77,7 +77,7 @@ class BenefitGrantDiscordWebhook
      * @var BenefitDiscord $benefit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('benefit')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitDiscord')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitDiscord')]
     public BenefitDiscord $benefit;
 
     /**
@@ -85,7 +85,7 @@ class BenefitGrantDiscordWebhook
      * @var BenefitGrantDiscordProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantDiscordProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantDiscordProperties')]
     public BenefitGrantDiscordProperties $properties;
 
     /**
@@ -145,7 +145,7 @@ class BenefitGrantDiscordWebhook
      * @var ?BenefitGrantError $error
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('error')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantError|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantError|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?BenefitGrantError $error = null;
 
@@ -154,7 +154,7 @@ class BenefitGrantDiscordWebhook
      * @var ?Member $member
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('member')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Member|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Member|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?Member $member = null;
 
@@ -163,7 +163,7 @@ class BenefitGrantDiscordWebhook
      * @var ?BenefitGrantDiscordProperties $previousProperties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('previous_properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantDiscordProperties|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantDiscordProperties|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?BenefitGrantDiscordProperties $previousProperties = null;
 

@@ -6,8 +6,8 @@
 
 declare(strict_types=1);
 
-namespace Polar;
-use Polar\Utils\Retry\RetryConfig;
+namespace Spaire;
+use Spaire\Utils\Retry\RetryConfig;
 
 class SDKConfiguration
 {
@@ -28,7 +28,7 @@ class SDKConfiguration
 
     public string $genVersion = '2.839.0';
 
-    public string $userAgent = 'speakeasy-sdk/php 0.8.0 2.839.0 0.1.0 polar-sh/sdk';
+    public string $userAgent = 'speakeasy-sdk/php 0.8.0 2.839.0 0.1.0 spaire-tech/sdk';
 
     public ?RetryConfig $retryConfig = null;
 
@@ -45,10 +45,10 @@ class SDKConfiguration
         }
 
         if ($this->server === '') {
-            $this->server = Polar::SERVER_PRODUCTION;
+            $this->server = Spaire::SERVER_PRODUCTION;
         }
 
-        return Polar::SERVERS[$this->server];
+        return Spaire::SERVERS[$this->server];
     }
     public function hasSecurity(): bool
     {
@@ -69,7 +69,7 @@ class SDKConfiguration
             return new Utils\ServerDetails(rtrim($this->serverUrl, '/'), []);
         }
 
-        return new Utils\ServerDetails(Polar::SERVERS[$this->server], []);
+        return new Utils\ServerDetails(Spaire::SERVERS[$this->server], []);
 
     }
 

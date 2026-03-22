@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class CustomFieldSelectProperties
@@ -17,7 +17,7 @@ class CustomFieldSelectProperties
      * @var array<CustomFieldSelectOption> $options
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('options')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\CustomFieldSelectOption>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CustomFieldSelectOption>')]
     public array $options;
 
     /**

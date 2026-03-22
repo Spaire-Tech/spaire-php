@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class BenefitGrantGitHubRepositoryWebhook
@@ -65,7 +65,7 @@ class BenefitGrantGitHubRepositoryWebhook
      * @var Customer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Customer')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer')]
     public Customer $customer;
 
     /**
@@ -77,7 +77,7 @@ class BenefitGrantGitHubRepositoryWebhook
      * @var BenefitGitHubRepository $benefit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('benefit')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGitHubRepository')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGitHubRepository')]
     public BenefitGitHubRepository $benefit;
 
     /**
@@ -85,7 +85,7 @@ class BenefitGrantGitHubRepositoryWebhook
      * @var BenefitGrantGitHubRepositoryProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantGitHubRepositoryProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantGitHubRepositoryProperties')]
     public BenefitGrantGitHubRepositoryProperties $properties;
 
     /**
@@ -145,7 +145,7 @@ class BenefitGrantGitHubRepositoryWebhook
      * @var ?BenefitGrantError $error
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('error')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantError|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantError|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?BenefitGrantError $error = null;
 
@@ -154,7 +154,7 @@ class BenefitGrantGitHubRepositoryWebhook
      * @var ?Member $member
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('member')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Member|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Member|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?Member $member = null;
 
@@ -163,7 +163,7 @@ class BenefitGrantGitHubRepositoryWebhook
      * @var ?BenefitGrantGitHubRepositoryProperties $previousProperties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('previous_properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantGitHubRepositoryProperties|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantGitHubRepositoryProperties|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?BenefitGrantGitHubRepositoryProperties $previousProperties = null;
 

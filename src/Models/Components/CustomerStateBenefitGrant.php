@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomerStateBenefitGrant - An active benefit grant for a customer. */
@@ -49,7 +49,7 @@ class CustomerStateBenefitGrant
      * @var BenefitType $benefitType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('benefit_type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitType')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitType')]
     public BenefitType $benefitType;
 
     /**
@@ -66,7 +66,7 @@ class CustomerStateBenefitGrant
      * @var BenefitGrantDiscordProperties|BenefitGrantGitHubRepositoryProperties|BenefitGrantDownloadablesProperties|BenefitGrantLicenseKeysProperties|BenefitGrantCustomProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantDiscordProperties|\Polar\Models\Components\BenefitGrantGitHubRepositoryProperties|\Polar\Models\Components\BenefitGrantDownloadablesProperties|\Polar\Models\Components\BenefitGrantLicenseKeysProperties|\Polar\Models\Components\BenefitGrantCustomProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantDiscordProperties|\Spaire\Models\Components\BenefitGrantGitHubRepositoryProperties|\Spaire\Models\Components\BenefitGrantDownloadablesProperties|\Spaire\Models\Components\BenefitGrantLicenseKeysProperties|\Spaire\Models\Components\BenefitGrantCustomProperties')]
     public BenefitGrantDiscordProperties|BenefitGrantGitHubRepositoryProperties|BenefitGrantDownloadablesProperties|BenefitGrantLicenseKeysProperties|BenefitGrantCustomProperties $properties;
 
     /**

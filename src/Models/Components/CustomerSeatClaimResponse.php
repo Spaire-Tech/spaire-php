@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomerSeatClaimResponse - Response after successfully claiming a seat. */
@@ -17,7 +17,7 @@ class CustomerSeatClaimResponse
      * @var CustomerSeat $seat
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('seat')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomerSeat')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerSeat')]
     public CustomerSeat $seat;
 
     /**

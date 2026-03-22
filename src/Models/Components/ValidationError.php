@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class ValidationError
@@ -48,7 +48,7 @@ class ValidationError
      * @var ?Context $ctx
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('ctx')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Context|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Context|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?Context $ctx = null;
 

@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Operations;
+namespace Spaire\Models\Operations;
 
 
 class Oauth2ClientsOauth2CreateClientResponse

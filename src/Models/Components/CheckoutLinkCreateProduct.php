@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /**
@@ -51,7 +51,7 @@ class CheckoutLinkCreateProduct
      * @var ?TrialInterval $trialInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('trial_interval')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\TrialInterval|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TrialInterval|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?TrialInterval $trialInterval = null;
 

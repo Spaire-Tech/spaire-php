@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class BenefitGrantDownloadablesWebhook
@@ -65,7 +65,7 @@ class BenefitGrantDownloadablesWebhook
      * @var Customer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Customer')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer')]
     public Customer $customer;
 
     /**
@@ -73,7 +73,7 @@ class BenefitGrantDownloadablesWebhook
      * @var BenefitDownloadables $benefit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('benefit')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitDownloadables')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitDownloadables')]
     public BenefitDownloadables $benefit;
 
     /**
@@ -81,7 +81,7 @@ class BenefitGrantDownloadablesWebhook
      * @var BenefitGrantDownloadablesProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantDownloadablesProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantDownloadablesProperties')]
     public BenefitGrantDownloadablesProperties $properties;
 
     /**
@@ -141,7 +141,7 @@ class BenefitGrantDownloadablesWebhook
      * @var ?BenefitGrantError $error
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('error')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantError|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantError|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?BenefitGrantError $error = null;
 
@@ -150,7 +150,7 @@ class BenefitGrantDownloadablesWebhook
      * @var ?Member $member
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('member')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Member|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Member|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?Member $member = null;
 
@@ -159,7 +159,7 @@ class BenefitGrantDownloadablesWebhook
      * @var ?BenefitGrantDownloadablesProperties $previousProperties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('previous_properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantDownloadablesProperties|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantDownloadablesProperties|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?BenefitGrantDownloadablesProperties $previousProperties = null;
 

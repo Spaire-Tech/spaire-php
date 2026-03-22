@@ -6,10 +6,10 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Operations;
+namespace Spaire\Models\Operations;
 
-use Polar\Models\Components;
-use Polar\Utils\SpeakeasyMetadata;
+use Spaire\Models\Components;
+use Spaire\Utils\SpeakeasyMetadata;
 class CustomerPortalCustomerMetersListRequest
 {
     /**

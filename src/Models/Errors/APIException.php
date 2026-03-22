@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Errors;
+namespace Spaire\Models\Errors;
 
 class APIException extends \Exception
 {

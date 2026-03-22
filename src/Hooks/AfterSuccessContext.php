@@ -7,7 +7,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Hooks;
+namespace Spaire\Hooks;
 
 class AfterSuccessContext extends HookContext
 {

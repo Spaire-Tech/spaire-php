@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class BenefitLicenseKeysCreate
@@ -24,7 +24,7 @@ class BenefitLicenseKeysCreate
      * @var BenefitLicenseKeysCreateProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitLicenseKeysCreateProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitLicenseKeysCreateProperties')]
     public BenefitLicenseKeysCreateProperties $properties;
 
     /**

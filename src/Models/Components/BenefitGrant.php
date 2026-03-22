@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class BenefitGrant
@@ -65,7 +65,7 @@ class BenefitGrant
      * @var Customer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Customer')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer')]
     public Customer $customer;
 
     /**
@@ -73,8 +73,8 @@ class BenefitGrant
      * @var BenefitCustom|BenefitDiscord|BenefitGitHubRepository|BenefitDownloadables|BenefitLicenseKeys|BenefitMeterCredit $benefit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('benefit')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitCustom|\Polar\Models\Components\BenefitDiscord|\Polar\Models\Components\BenefitGitHubRepository|\Polar\Models\Components\BenefitDownloadables|\Polar\Models\Components\BenefitLicenseKeys|\Polar\Models\Components\BenefitMeterCredit')]
-    #[\Speakeasy\Serializer\Annotation\UnionDiscriminator(field: 'type', map: ['custom' => '\Polar\Models\Components\BenefitCustom', 'discord' => '\Polar\Models\Components\BenefitDiscord', 'downloadables' => '\Polar\Models\Components\BenefitDownloadables', 'github_repository' => '\Polar\Models\Components\BenefitGitHubRepository', 'license_keys' => '\Polar\Models\Components\BenefitLicenseKeys', 'meter_credit' => '\Polar\Models\Components\BenefitMeterCredit'])]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitCustom|\Spaire\Models\Components\BenefitDiscord|\Spaire\Models\Components\BenefitGitHubRepository|\Spaire\Models\Components\BenefitDownloadables|\Spaire\Models\Components\BenefitLicenseKeys|\Spaire\Models\Components\BenefitMeterCredit')]
+    #[\Speakeasy\Serializer\Annotation\UnionDiscriminator(field: 'type', map: ['custom' => '\Spaire\Models\Components\BenefitCustom', 'discord' => '\Spaire\Models\Components\BenefitDiscord', 'downloadables' => '\Spaire\Models\Components\BenefitDownloadables', 'github_repository' => '\Spaire\Models\Components\BenefitGitHubRepository', 'license_keys' => '\Spaire\Models\Components\BenefitLicenseKeys', 'meter_credit' => '\Spaire\Models\Components\BenefitMeterCredit'])]
     public BenefitCustom|BenefitDiscord|BenefitGitHubRepository|BenefitDownloadables|BenefitLicenseKeys|BenefitMeterCredit $benefit;
 
     /**
@@ -82,7 +82,7 @@ class BenefitGrant
      * @var BenefitGrantDiscordProperties|BenefitGrantGitHubRepositoryProperties|BenefitGrantDownloadablesProperties|BenefitGrantLicenseKeysProperties|BenefitGrantCustomProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantDiscordProperties|\Polar\Models\Components\BenefitGrantGitHubRepositoryProperties|\Polar\Models\Components\BenefitGrantDownloadablesProperties|\Polar\Models\Components\BenefitGrantLicenseKeysProperties|\Polar\Models\Components\BenefitGrantCustomProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantDiscordProperties|\Spaire\Models\Components\BenefitGrantGitHubRepositoryProperties|\Spaire\Models\Components\BenefitGrantDownloadablesProperties|\Spaire\Models\Components\BenefitGrantLicenseKeysProperties|\Spaire\Models\Components\BenefitGrantCustomProperties')]
     public BenefitGrantDiscordProperties|BenefitGrantGitHubRepositoryProperties|BenefitGrantDownloadablesProperties|BenefitGrantLicenseKeysProperties|BenefitGrantCustomProperties $properties;
 
     /**
@@ -142,7 +142,7 @@ class BenefitGrant
      * @var ?BenefitGrantError $error
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('error')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantError|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantError|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?BenefitGrantError $error = null;
 
@@ -151,7 +151,7 @@ class BenefitGrant
      * @var ?Member $member
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('member')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Member|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Member|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?Member $member = null;
 

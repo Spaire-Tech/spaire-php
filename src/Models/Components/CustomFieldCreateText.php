@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomFieldCreateText - Schema to create a custom field of type text. */
@@ -33,7 +33,7 @@ class CustomFieldCreateText
      * @var CustomFieldTextProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomFieldTextProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomFieldTextProperties')]
     public CustomFieldTextProperties $properties;
 
     /**

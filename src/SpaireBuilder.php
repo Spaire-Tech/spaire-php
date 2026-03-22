@@ -6,14 +6,14 @@
 
 declare(strict_types=1);
 
-namespace Polar;
+namespace Spaire;
 
-use Polar\Utils\Retry;
+use Spaire\Utils\Retry;
 
 /**
- * PolarBuilder is used to configure and build an instance of the SDK.
+ * SpaireBuilder is used to configure and build an instance of the SDK.
  */
-class PolarBuilder
+class SpaireBuilder
 {
     public function __construct(
         private SDKConfiguration $sdkConfig = new SDKConfiguration(),
@@ -24,9 +24,9 @@ class PolarBuilder
      * setClient allows setting a custom Guzzle client for the SDK to make requests with.
      *
      * @param  \GuzzleHttp\ClientInterface  $client
-     * @return PolarBuilder
+     * @return SpaireBuilder
      */
-    public function setClient(\GuzzleHttp\ClientInterface $client): PolarBuilder
+    public function setClient(\GuzzleHttp\ClientInterface $client): SpaireBuilder
     {
         $this->sdkConfig->client = $client;
 
@@ -37,9 +37,9 @@ class PolarBuilder
      * setSecurity is used to configure the security required for the SDK.
      *
      * @param  string  $accessToken
-     * @return PolarBuilder
+     * @return SpaireBuilder
      */
-    public function setSecurity(string $accessToken): PolarBuilder
+    public function setSecurity(string $accessToken): SpaireBuilder
     {
         $security = new Models\Components\Security(
             accessToken: $accessToken
@@ -54,9 +54,9 @@ class PolarBuilder
      * unlike setSecurity, setSecuritySource accepts a closure that will be called to retrieve the security information.
      *
      * @param  pure-Closure(): string  $securitySource
-     * @return PolarBuilder
+     * @return SpaireBuilder
      */
-    public function setSecuritySource(\Closure $securitySource): PolarBuilder
+    public function setSecuritySource(\Closure $securitySource): SpaireBuilder
     {
         $this->sdkConfig->securitySource = fn () => new Models\Components\Security(accessToken: $securitySource());
 
@@ -68,9 +68,9 @@ class PolarBuilder
      *
      * @param  string  $serverUrl
      * @param  array<string, string>  $params
-     * @return PolarBuilder
+     * @return SpaireBuilder
      */
-    public function setServerUrl(string $serverUrl, ?array $params = null): PolarBuilder
+    public function setServerUrl(string $serverUrl, ?array $params = null): SpaireBuilder
     {
         $this->sdkConfig->serverUrl = Utils\Utils::templateUrl($serverUrl, $params);
 
@@ -81,16 +81,16 @@ class PolarBuilder
      * setServer is used to configure the server for the SDK
      *
      * @param  string  $server
-     * @return PolarBuilder
+     * @return SpaireBuilder
      */
-    public function setServer(string $server): PolarBuilder
+    public function setServer(string $server): SpaireBuilder
     {
         $this->sdkConfig->server = $server;
 
         return $this;
     }
 
-    public function setRetryConfig(Retry\RetryConfig $config): PolarBuilder
+    public function setRetryConfig(Retry\RetryConfig $config): SpaireBuilder
     {
         $this->sdkConfig->retryConfig = $config;
 
@@ -100,9 +100,9 @@ class PolarBuilder
     /**
      * build is used to build the SDK with any of the configured options.
      *
-     * @return Polar
+     * @return Spaire
      */
-    public function build(): Polar
+    public function build(): Spaire
     {
         if ($this->sdkConfig->client === null) {
             $this->sdkConfig->client = new \GuzzleHttp\Client([
@@ -113,6 +113,6 @@ class PolarBuilder
             $this->sdkConfig->client = Utils\Utils::configureSecurityClient($this->sdkConfig->client, $this->sdkConfig->getSecurity());
         }
 
-        return new Polar($this->sdkConfig);
+        return new Spaire($this->sdkConfig);
     }
 }

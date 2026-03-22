@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** MetricsResponse - Metrics response schema. */
@@ -18,7 +18,7 @@ class MetricsResponse
      * @var array<MetricPeriod> $periods
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('periods')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\MetricPeriod>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\MetricPeriod>')]
     public array $periods;
 
     /**
@@ -26,7 +26,7 @@ class MetricsResponse
      * @var MetricsTotals $totals
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('totals')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\MetricsTotals')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MetricsTotals')]
     public MetricsTotals $totals;
 
     /**
@@ -34,7 +34,7 @@ class MetricsResponse
      * @var Metrics $metrics
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metrics')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Metrics')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metrics')]
     public Metrics $metrics;
 
     /**

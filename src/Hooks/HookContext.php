@@ -7,9 +7,9 @@
 
 declare(strict_types=1);
 
-namespace Polar\Hooks;
+namespace Spaire\Hooks;
 
-use Polar\SDKConfiguration;
+use Spaire\SDKConfiguration;
 
 class HookContext
 {

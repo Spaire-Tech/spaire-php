@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CheckoutConfirmStripe - Confirm a checkout session using a Stripe confirmation token. */
@@ -85,7 +85,7 @@ class CheckoutConfirmStripe
      * @var ?AddressInput $customerBillingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_billing_address')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\AddressInput|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\AddressInput|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?AddressInput $customerBillingAddress = null;
 

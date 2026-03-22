@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class CustomerPaymentMethodCreateSucceededResponse
@@ -16,7 +16,7 @@ class CustomerPaymentMethodCreateSucceededResponse
      * @var PaymentMethodCard|PaymentMethodGeneric $paymentMethod
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('payment_method')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\PaymentMethodCard|\Polar\Models\Components\PaymentMethodGeneric')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PaymentMethodCard|\Spaire\Models\Components\PaymentMethodGeneric')]
     public PaymentMethodCard|PaymentMethodGeneric $paymentMethod;
 
     /**

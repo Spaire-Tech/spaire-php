@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomerSessionCustomerExternalIDCreate - Schema for creating a customer session using an external customer ID. */

@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class CustomerPortalCustomerUpdate
@@ -24,7 +24,7 @@ class CustomerPortalCustomerUpdate
      * @var ?AddressInput $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\AddressInput|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\AddressInput|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?AddressInput $billingAddress = null;
 

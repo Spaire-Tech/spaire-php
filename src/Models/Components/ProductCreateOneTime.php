@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class ProductCreateOneTime
@@ -25,7 +25,7 @@ class ProductCreateOneTime
      * @var array<ProductPriceFixedCreate|ProductPriceCustomCreate|ProductPriceFreeCreate|ProductPriceSeatBasedCreate|ProductPriceMeteredUnitCreate> $prices
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('prices')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\ProductPriceFixedCreate|\Polar\Models\Components\ProductPriceCustomCreate|\Polar\Models\Components\ProductPriceFreeCreate|\Polar\Models\Components\ProductPriceSeatBasedCreate|\Polar\Models\Components\ProductPriceMeteredUnitCreate>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\ProductPriceFixedCreate|\Spaire\Models\Components\ProductPriceCustomCreate|\Spaire\Models\Components\ProductPriceFreeCreate|\Spaire\Models\Components\ProductPriceSeatBasedCreate|\Spaire\Models\Components\ProductPriceMeteredUnitCreate>')]
     public array $prices;
 
     /**
@@ -54,7 +54,7 @@ class ProductCreateOneTime
      * @var ?ProductVisibility $visibility
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('visibility')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\ProductVisibility|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductVisibility|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ProductVisibility $visibility = null;
 
@@ -64,7 +64,7 @@ class ProductCreateOneTime
      * @var ?array<AttachedCustomFieldCreate> $attachedCustomFields
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('attached_custom_fields')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\AttachedCustomFieldCreate>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\AttachedCustomFieldCreate>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $attachedCustomFields = null;
 

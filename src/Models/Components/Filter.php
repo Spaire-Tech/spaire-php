@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class Filter
@@ -16,7 +16,7 @@ class Filter
      * @var FilterConjunction $conjunction
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('conjunction')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\FilterConjunction')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\FilterConjunction')]
     public FilterConjunction $conjunction;
 
     /**
@@ -25,7 +25,7 @@ class Filter
      * @var array<FilterClause|Filter> $clauses
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('clauses')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\FilterClause|\Polar\Models\Components\Filter>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\FilterClause|\Spaire\Models\Components\Filter>')]
     public array $clauses;
 
     /**

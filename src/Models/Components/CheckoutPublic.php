@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CheckoutPublic - Checkout session data retrieved using the client secret. */
@@ -33,7 +33,7 @@ class CheckoutPublic
      * @var PaymentProcessor $paymentProcessor
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('payment_processor')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\PaymentProcessor')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PaymentProcessor')]
     public PaymentProcessor $paymentProcessor;
 
     /**
@@ -41,7 +41,7 @@ class CheckoutPublic
      * @var CheckoutStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CheckoutStatus')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CheckoutStatus')]
     public CheckoutStatus $status;
 
     /**
@@ -202,7 +202,7 @@ class CheckoutPublic
      * @var CheckoutBillingAddressFields $billingAddressFields
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address_fields')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CheckoutBillingAddressFields')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CheckoutBillingAddressFields')]
     public CheckoutBillingAddressFields $billingAddressFields;
 
     /**
@@ -211,7 +211,7 @@ class CheckoutPublic
      * @var array<CheckoutProduct> $products
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('products')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\CheckoutProduct>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CheckoutProduct>')]
     public array $products;
 
     /**
@@ -219,7 +219,7 @@ class CheckoutPublic
      * @var CheckoutOrganization $organization
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('organization')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CheckoutOrganization')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CheckoutOrganization')]
     public CheckoutOrganization $organization;
 
     /**
@@ -278,7 +278,7 @@ class CheckoutPublic
      * @var ?TrialInterval $activeTrialInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('active_trial_interval')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\TrialInterval|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TrialInterval|null')]
     public ?TrialInterval $activeTrialInterval;
 
     /**
@@ -355,7 +355,7 @@ class CheckoutPublic
      * @var ?Address $customerBillingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_billing_address')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Address|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Address|null')]
     public ?Address $customerBillingAddress;
 
     /**
@@ -371,7 +371,7 @@ class CheckoutPublic
      * @var ?CheckoutProduct $product
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('product')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CheckoutProduct|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CheckoutProduct|null')]
     public ?CheckoutProduct $product;
 
     /**
@@ -380,7 +380,7 @@ class CheckoutPublic
      * @var ?array<string, array<LegacyRecurringProductPriceFixed|LegacyRecurringProductPriceCustom|LegacyRecurringProductPriceFree|ProductPriceFixed|ProductPriceCustom|ProductPriceFree|ProductPriceSeatBased|ProductPriceMeteredUnit>> $prices
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('prices')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, array<\Polar\Models\Components\LegacyRecurringProductPriceFixed|\Polar\Models\Components\LegacyRecurringProductPriceCustom|\Polar\Models\Components\LegacyRecurringProductPriceFree|\Polar\Models\Components\ProductPriceFixed|\Polar\Models\Components\ProductPriceCustom|\Polar\Models\Components\ProductPriceFree|\Polar\Models\Components\ProductPriceSeatBased|\Polar\Models\Components\ProductPriceMeteredUnit>>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, array<\Spaire\Models\Components\LegacyRecurringProductPriceFixed|\Spaire\Models\Components\LegacyRecurringProductPriceCustom|\Spaire\Models\Components\LegacyRecurringProductPriceFree|\Spaire\Models\Components\ProductPriceFixed|\Spaire\Models\Components\ProductPriceCustom|\Spaire\Models\Components\ProductPriceFree|\Spaire\Models\Components\ProductPriceSeatBased|\Spaire\Models\Components\ProductPriceMeteredUnit>>|null')]
     public ?array $prices;
 
     /**
@@ -388,7 +388,7 @@ class CheckoutPublic
      * @var CheckoutDiscountFixedOnceForeverDuration|CheckoutDiscountFixedRepeatDuration|CheckoutDiscountPercentageOnceForeverDuration|CheckoutDiscountPercentageRepeatDuration|null $discount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('discount')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CheckoutDiscountFixedOnceForeverDuration|\Polar\Models\Components\CheckoutDiscountFixedRepeatDuration|\Polar\Models\Components\CheckoutDiscountPercentageOnceForeverDuration|\Polar\Models\Components\CheckoutDiscountPercentageRepeatDuration|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CheckoutDiscountFixedOnceForeverDuration|\Spaire\Models\Components\CheckoutDiscountFixedRepeatDuration|\Spaire\Models\Components\CheckoutDiscountPercentageOnceForeverDuration|\Spaire\Models\Components\CheckoutDiscountPercentageRepeatDuration|null')]
     public CheckoutDiscountFixedOnceForeverDuration|CheckoutDiscountFixedRepeatDuration|CheckoutDiscountPercentageOnceForeverDuration|CheckoutDiscountPercentageRepeatDuration|null $discount;
 
     /**
@@ -397,7 +397,7 @@ class CheckoutPublic
      * @var ?array<AttachedCustomField> $attachedCustomFields
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('attached_custom_fields')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\AttachedCustomField>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\AttachedCustomField>|null')]
     public ?array $attachedCustomFields;
 
     /**

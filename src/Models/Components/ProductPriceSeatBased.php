@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** ProductPriceSeatBased - A seat-based price for a product. */
@@ -33,7 +33,7 @@ class ProductPriceSeatBased
      * @var ProductPriceSource $source
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('source')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\ProductPriceSource')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductPriceSource')]
     public ProductPriceSource $source;
 
     /**
@@ -71,7 +71,7 @@ class ProductPriceSeatBased
      * @var ProductPriceSeatTiersOutput $seatTiers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('seat_tiers')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\ProductPriceSeatTiersOutput')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductPriceSeatTiersOutput')]
     public ProductPriceSeatTiersOutput $seatTiers;
 
     /**

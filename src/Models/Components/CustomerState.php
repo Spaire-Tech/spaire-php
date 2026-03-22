@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /**
@@ -74,7 +74,7 @@ class CustomerState
      * @var array<CustomerStateSubscription> $activeSubscriptions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('active_subscriptions')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\CustomerStateSubscription>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CustomerStateSubscription>')]
     public array $activeSubscriptions;
 
     /**
@@ -83,7 +83,7 @@ class CustomerState
      * @var array<CustomerStateBenefitGrant> $grantedBenefits
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('granted_benefits')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\CustomerStateBenefitGrant>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CustomerStateBenefitGrant>')]
     public array $grantedBenefits;
 
     /**
@@ -92,7 +92,7 @@ class CustomerState
      * @var array<CustomerStateMeter> $activeMeters
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('active_meters')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\CustomerStateMeter>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CustomerStateMeter>')]
     public array $activeMeters;
 
     /**
@@ -131,7 +131,7 @@ class CustomerState
      * @var ?Address $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Address|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Address|null')]
     public ?Address $billingAddress;
 
     /**
@@ -140,7 +140,7 @@ class CustomerState
      * @var ?array<string|TaxIDFormat|null> $taxId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax_id')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string|\Polar\Models\Components\TaxIDFormat|null>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string|\Spaire\Models\Components\TaxIDFormat|null>|null')]
     public ?array $taxId;
 
     /**
@@ -157,7 +157,7 @@ class CustomerState
      * @var ?CustomerType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomerType|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerType|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?CustomerType $type = null;
 

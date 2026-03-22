@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class EventCreateExternalCustomer
@@ -42,7 +42,7 @@ class EventCreateExternalCustomer
      * @var ?array<string, string|int|float|bool|CostMetadataInput|LLMMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, string|int|float|bool|\Polar\Models\Components\CostMetadataInput|\Polar\Models\Components\LLMMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, string|int|float|bool|\Spaire\Models\Components\CostMetadataInput|\Spaire\Models\Components\LLMMetadata>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $metadata = null;
 
@@ -65,7 +65,7 @@ class EventCreateExternalCustomer
     public ?string $externalId = null;
 
     /**
-     * The ID of the parent event. Can be either a Polar event ID (UUID) or an external event ID.
+     * The ID of the parent event. Can be either a Spaire event ID (UUID) or an external event ID.
      *
      * @var ?string $parentId
      */

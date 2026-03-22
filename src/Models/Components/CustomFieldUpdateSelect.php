@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomFieldUpdateSelect - Schema to update a custom field of type select. */
@@ -54,7 +54,7 @@ class CustomFieldUpdateSelect
      * @var ?CustomFieldSelectProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomFieldSelectProperties|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomFieldSelectProperties|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?CustomFieldSelectProperties $properties = null;
 

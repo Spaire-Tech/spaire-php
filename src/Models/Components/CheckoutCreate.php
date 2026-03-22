@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /**
@@ -86,7 +86,7 @@ class CheckoutCreate
      * @var ?TrialInterval $trialInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('trial_interval')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\TrialInterval|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TrialInterval|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?TrialInterval $trialInterval = null;
 
@@ -135,7 +135,7 @@ class CheckoutCreate
     public ?string $customerId = null;
 
     /**
-     * ID of the customer in your system. If a matching customer exists on Polar, the resulting order will be linked to this customer. Otherwise, a new customer will be created with this external ID set.
+     * ID of the customer in your system. If a matching customer exists on Spaire, the resulting order will be linked to this customer. Otherwise, a new customer will be created with this external ID set.
      *
      * @var ?string $externalCustomerId
      */
@@ -180,7 +180,7 @@ class CheckoutCreate
      * @var ?AddressInput $customerBillingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_billing_address')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\AddressInput|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\AddressInput|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?AddressInput $customerBillingAddress = null;
 
@@ -220,7 +220,7 @@ class CheckoutCreate
     public ?string $returnUrl = null;
 
     /**
-     * If you plan to embed the checkout session, set this to the Origin of the embedding page. It'll allow the Polar iframe to communicate with the parent page.
+     * If you plan to embed the checkout session, set this to the Origin of the embedding page. It'll allow the Spaire iframe to communicate with the parent page.
      *
      * @var ?string $embedOrigin
      */
@@ -241,7 +241,7 @@ class CheckoutCreate
      * @var ?PresentmentCurrency $currency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\PresentmentCurrency|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PresentmentCurrency $currency = null;
 
@@ -251,7 +251,7 @@ class CheckoutCreate
      * @var ?array<string, array<ProductPriceFixedCreate|ProductPriceCustomCreate|ProductPriceFreeCreate|ProductPriceSeatBasedCreate|ProductPriceMeteredUnitCreate>> $prices
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('prices')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, array<\Polar\Models\Components\ProductPriceFixedCreate|\Polar\Models\Components\ProductPriceCustomCreate|\Polar\Models\Components\ProductPriceFreeCreate|\Polar\Models\Components\ProductPriceSeatBasedCreate|\Polar\Models\Components\ProductPriceMeteredUnitCreate>>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, array<\Spaire\Models\Components\ProductPriceFixedCreate|\Spaire\Models\Components\ProductPriceCustomCreate|\Spaire\Models\Components\ProductPriceFreeCreate|\Spaire\Models\Components\ProductPriceSeatBasedCreate|\Spaire\Models\Components\ProductPriceMeteredUnitCreate>>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $prices = null;
 

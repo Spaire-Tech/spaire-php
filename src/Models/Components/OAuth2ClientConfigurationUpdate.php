@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class OAuth2ClientConfigurationUpdate
@@ -40,7 +40,7 @@ class OAuth2ClientConfigurationUpdate
      * @var ?array<OAuth2ClientConfigurationUpdateGrantTypes> $grantTypes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('grant_types')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\OAuth2ClientConfigurationUpdateGrantTypes>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\OAuth2ClientConfigurationUpdateGrantTypes>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $grantTypes = null;
 
@@ -59,7 +59,7 @@ class OAuth2ClientConfigurationUpdate
      * @var ?SubType $defaultSubType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('default_sub_type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\SubType|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubType|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?SubType $defaultSubType = null;
 
@@ -100,7 +100,7 @@ class OAuth2ClientConfigurationUpdate
      * @var ?OAuth2ClientConfigurationUpdateTokenEndpointAuthMethod $tokenEndpointAuthMethod
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('token_endpoint_auth_method')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OAuth2ClientConfigurationUpdateTokenEndpointAuthMethod|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OAuth2ClientConfigurationUpdateTokenEndpointAuthMethod|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?OAuth2ClientConfigurationUpdateTokenEndpointAuthMethod $tokenEndpointAuthMethod = null;
 

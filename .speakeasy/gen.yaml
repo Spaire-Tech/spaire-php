@@ -1,6 +1,6 @@
 configVersion: 2.0.0
 generation:
-  sdkClassName: Polar
+  sdkClassName: Spaire
   maintainOpenAPIOrder: true
   usageSnippets:
     optionalPropertyRendering: withExample
@@ -35,7 +35,7 @@ php:
     autoload-dev: {}
     require: {}
     require-dev: {}
-  baseErrorName: PolarError
+  baseErrorName: SpaireError
   clientServerStatusCodesAsErrors: true
   defaultErrorName: APIException
   flattenGlobalSecurity: true
@@ -55,6 +55,6 @@ php:
   maxMethodParams: 4
   methodArguments: infer-optional-args
   multipartArrayFormat: legacy
-  namespace: Polar
+  namespace: Spaire
   outputModelSuffix: output
-  packageName: polar-sh/sdk
+  packageName: spaire-tech/spaire-php

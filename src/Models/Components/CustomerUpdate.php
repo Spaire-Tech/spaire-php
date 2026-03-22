@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class CustomerUpdate
@@ -54,7 +54,7 @@ class CustomerUpdate
      * @var ?AddressInput $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\AddressInput|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\AddressInput|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?AddressInput $billingAddress = null;
 
@@ -64,7 +64,7 @@ class CustomerUpdate
      * @var ?array<string|TaxIDFormat|null> $taxId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax_id')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string|\Polar\Models\Components\TaxIDFormat|null>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string|\Spaire\Models\Components\TaxIDFormat|null>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $taxId = null;
 
@@ -91,7 +91,7 @@ class CustomerUpdate
      * @var ?CustomerType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomerType|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerType|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?CustomerType $type = null;
 

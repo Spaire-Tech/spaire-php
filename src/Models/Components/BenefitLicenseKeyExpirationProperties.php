@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class BenefitLicenseKeyExpirationProperties
@@ -23,7 +23,7 @@ class BenefitLicenseKeyExpirationProperties
      * @var Timeframe $timeframe
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('timeframe')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Timeframe')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Timeframe')]
     public Timeframe $timeframe;
 
     /**

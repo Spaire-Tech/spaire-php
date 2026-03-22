@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class CheckoutBillingAddressFields
@@ -16,7 +16,7 @@ class CheckoutBillingAddressFields
      * @var BillingAddressFieldMode $country
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('country')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BillingAddressFieldMode')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BillingAddressFieldMode')]
     public BillingAddressFieldMode $country;
 
     /**
@@ -24,7 +24,7 @@ class CheckoutBillingAddressFields
      * @var BillingAddressFieldMode $state
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('state')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BillingAddressFieldMode')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BillingAddressFieldMode')]
     public BillingAddressFieldMode $state;
 
     /**
@@ -32,7 +32,7 @@ class CheckoutBillingAddressFields
      * @var BillingAddressFieldMode $city
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('city')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BillingAddressFieldMode')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BillingAddressFieldMode')]
     public BillingAddressFieldMode $city;
 
     /**
@@ -40,7 +40,7 @@ class CheckoutBillingAddressFields
      * @var BillingAddressFieldMode $postalCode
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('postal_code')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BillingAddressFieldMode')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BillingAddressFieldMode')]
     public BillingAddressFieldMode $postalCode;
 
     /**
@@ -48,7 +48,7 @@ class CheckoutBillingAddressFields
      * @var BillingAddressFieldMode $line1
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('line1')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BillingAddressFieldMode')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BillingAddressFieldMode')]
     public BillingAddressFieldMode $line1;
 
     /**
@@ -56,7 +56,7 @@ class CheckoutBillingAddressFields
      * @var BillingAddressFieldMode $line2
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('line2')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BillingAddressFieldMode')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BillingAddressFieldMode')]
     public BillingAddressFieldMode $line2;
 
     /**

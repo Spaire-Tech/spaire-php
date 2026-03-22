@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class ProductCreateRecurring
@@ -25,7 +25,7 @@ class ProductCreateRecurring
      * @var array<ProductPriceFixedCreate|ProductPriceCustomCreate|ProductPriceFreeCreate|ProductPriceSeatBasedCreate|ProductPriceMeteredUnitCreate> $prices
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('prices')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\ProductPriceFixedCreate|\Polar\Models\Components\ProductPriceCustomCreate|\Polar\Models\Components\ProductPriceFreeCreate|\Polar\Models\Components\ProductPriceSeatBasedCreate|\Polar\Models\Components\ProductPriceMeteredUnitCreate>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\ProductPriceFixedCreate|\Spaire\Models\Components\ProductPriceCustomCreate|\Spaire\Models\Components\ProductPriceFreeCreate|\Spaire\Models\Components\ProductPriceSeatBasedCreate|\Spaire\Models\Components\ProductPriceMeteredUnitCreate>')]
     public array $prices;
 
     /**
@@ -33,7 +33,7 @@ class ProductCreateRecurring
      * @var SubscriptionRecurringInterval $recurringInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('recurring_interval')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\SubscriptionRecurringInterval')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionRecurringInterval')]
     public SubscriptionRecurringInterval $recurringInterval;
 
     /**
@@ -62,7 +62,7 @@ class ProductCreateRecurring
      * @var ?ProductVisibility $visibility
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('visibility')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\ProductVisibility|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductVisibility|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ProductVisibility $visibility = null;
 
@@ -72,7 +72,7 @@ class ProductCreateRecurring
      * @var ?array<AttachedCustomFieldCreate> $attachedCustomFields
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('attached_custom_fields')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\AttachedCustomFieldCreate>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\AttachedCustomFieldCreate>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $attachedCustomFields = null;
 
@@ -110,7 +110,7 @@ class ProductCreateRecurring
      * @var ?TrialInterval $trialInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('trial_interval')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\TrialInterval|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TrialInterval|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?TrialInterval $trialInterval = null;
 

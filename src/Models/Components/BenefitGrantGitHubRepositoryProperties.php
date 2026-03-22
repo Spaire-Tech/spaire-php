@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class BenefitGrantGitHubRepositoryProperties
@@ -32,7 +32,7 @@ class BenefitGrantGitHubRepositoryProperties
      * @var ?BenefitGrantGitHubRepositoryPropertiesPermission $permission
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('permission')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantGitHubRepositoryPropertiesPermission|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantGitHubRepositoryPropertiesPermission|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?BenefitGrantGitHubRepositoryPropertiesPermission $permission = null;
 

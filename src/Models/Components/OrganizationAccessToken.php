@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class OrganizationAccessToken
@@ -32,7 +32,7 @@ class OrganizationAccessToken
      * @var array<Scope> $scopes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('scopes')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\Scope>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\Scope>')]
     public array $scopes;
 
     /**

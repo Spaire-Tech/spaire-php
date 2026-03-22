@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class BenefitLicenseKeysSubscriber
@@ -73,7 +73,7 @@ class BenefitLicenseKeysSubscriber
      * @var BenefitSubscriberOrganization $organization
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('organization')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitSubscriberOrganization')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitSubscriberOrganization')]
     public BenefitSubscriberOrganization $organization;
 
     /**
@@ -81,7 +81,7 @@ class BenefitLicenseKeysSubscriber
      * @var BenefitLicenseKeysSubscriberProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitLicenseKeysSubscriberProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitLicenseKeysSubscriberProperties')]
     public BenefitLicenseKeysSubscriberProperties $properties;
 
     /**

@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** WebhookEndpointUpdate - Schema to update a webhook endpoint. */
@@ -25,7 +25,7 @@ class WebhookEndpointUpdate
      * @var ?WebhookFormat $format
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('format')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\WebhookFormat|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\WebhookFormat|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?WebhookFormat $format = null;
 
@@ -35,7 +35,7 @@ class WebhookEndpointUpdate
      * @var ?array<WebhookEventType> $events
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('events')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\WebhookEventType>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\WebhookEventType>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $events = null;
 

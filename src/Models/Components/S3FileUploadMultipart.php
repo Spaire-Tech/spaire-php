@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class S3FileUploadMultipart
@@ -31,7 +31,7 @@ class S3FileUploadMultipart
      * @var array<S3FileUploadPart> $parts
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('parts')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\S3FileUploadPart>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\S3FileUploadPart>')]
     public array $parts;
 
     /**

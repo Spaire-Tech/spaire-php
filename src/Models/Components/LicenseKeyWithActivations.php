@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class LicenseKeyWithActivations
@@ -46,7 +46,7 @@ class LicenseKeyWithActivations
      * @var LicenseKeyCustomer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\LicenseKeyCustomer')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\LicenseKeyCustomer')]
     public LicenseKeyCustomer $customer;
 
     /**
@@ -76,7 +76,7 @@ class LicenseKeyWithActivations
      * @var LicenseKeyStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\LicenseKeyStatus')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\LicenseKeyStatus')]
     public LicenseKeyStatus $status;
 
     /**
@@ -99,7 +99,7 @@ class LicenseKeyWithActivations
      * @var array<LicenseKeyActivationBase> $activations
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('activations')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\LicenseKeyActivationBase>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\LicenseKeyActivationBase>')]
     public array $activations;
 
     /**

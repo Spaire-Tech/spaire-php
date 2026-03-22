@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /**
@@ -29,7 +29,7 @@ class WebhookBenefitGrantCreatedPayload
      * @var BenefitGrantDiscordWebhook|BenefitGrantCustomWebhook|BenefitGrantGitHubRepositoryWebhook|BenefitGrantDownloadablesWebhook|BenefitGrantLicenseKeysWebhook|BenefitGrantMeterCreditWebhook $data
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('data')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantDiscordWebhook|\Polar\Models\Components\BenefitGrantCustomWebhook|\Polar\Models\Components\BenefitGrantGitHubRepositoryWebhook|\Polar\Models\Components\BenefitGrantDownloadablesWebhook|\Polar\Models\Components\BenefitGrantLicenseKeysWebhook|\Polar\Models\Components\BenefitGrantMeterCreditWebhook')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantDiscordWebhook|\Spaire\Models\Components\BenefitGrantCustomWebhook|\Spaire\Models\Components\BenefitGrantGitHubRepositoryWebhook|\Spaire\Models\Components\BenefitGrantDownloadablesWebhook|\Spaire\Models\Components\BenefitGrantLicenseKeysWebhook|\Spaire\Models\Components\BenefitGrantMeterCreditWebhook')]
     public BenefitGrantDiscordWebhook|BenefitGrantCustomWebhook|BenefitGrantGitHubRepositoryWebhook|BenefitGrantDownloadablesWebhook|BenefitGrantLicenseKeysWebhook|BenefitGrantMeterCreditWebhook $data;
 
     /**

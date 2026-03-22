@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class CustomerBenefitGrantDownloadables
@@ -60,7 +60,7 @@ class CustomerBenefitGrantDownloadables
      * @var CustomerPortalCustomer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomerPortalCustomer')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerPortalCustomer')]
     public CustomerPortalCustomer $customer;
 
     /**
@@ -68,7 +68,7 @@ class CustomerBenefitGrantDownloadables
      * @var BenefitDownloadablesSubscriber $benefit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('benefit')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitDownloadablesSubscriber')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitDownloadablesSubscriber')]
     public BenefitDownloadablesSubscriber $benefit;
 
     /**
@@ -76,7 +76,7 @@ class CustomerBenefitGrantDownloadables
      * @var BenefitGrantDownloadablesProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantDownloadablesProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantDownloadablesProperties')]
     public BenefitGrantDownloadablesProperties $properties;
 
     /**
@@ -128,7 +128,7 @@ class CustomerBenefitGrantDownloadables
      * @var ?BenefitGrantError $error
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('error')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantError|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantError|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?BenefitGrantError $error = null;
 

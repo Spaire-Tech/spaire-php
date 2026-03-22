@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CheckoutUpdate - Update an existing checkout session using an access token. */
@@ -106,7 +106,7 @@ class CheckoutUpdate
      * @var ?AddressInput $customerBillingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_billing_address')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\AddressInput|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\AddressInput|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?AddressInput $customerBillingAddress = null;
 
@@ -132,7 +132,7 @@ class CheckoutUpdate
      * @var ?TrialInterval $trialInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('trial_interval')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\TrialInterval|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TrialInterval|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?TrialInterval $trialInterval = null;
 
@@ -150,7 +150,7 @@ class CheckoutUpdate
      * @var ?PresentmentCurrency $currency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\PresentmentCurrency|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PresentmentCurrency $currency = null;
 
@@ -238,7 +238,7 @@ class CheckoutUpdate
     public ?string $returnUrl = null;
 
     /**
-     * If you plan to embed the checkout session, set this to the Origin of the embedding page. It'll allow the Polar iframe to communicate with the parent page.
+     * If you plan to embed the checkout session, set this to the Origin of the embedding page. It'll allow the Spaire iframe to communicate with the parent page.
      *
      * @var ?string $embedOrigin
      */

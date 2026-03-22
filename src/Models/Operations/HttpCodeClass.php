@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Operations;
+namespace Spaire\Models\Operations;
 
 
 /** Filter by HTTP response code class (2xx, 3xx, 4xx, 5xx). */

@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** MetricsIntervalsLimits - Date interval limits to get metrics for each interval. */
@@ -18,7 +18,7 @@ class MetricsIntervalsLimits
      * @var MetricsIntervalLimit $hour
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('hour')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\MetricsIntervalLimit')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MetricsIntervalLimit')]
     public MetricsIntervalLimit $hour;
 
     /**
@@ -27,7 +27,7 @@ class MetricsIntervalsLimits
      * @var MetricsIntervalLimit $day
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('day')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\MetricsIntervalLimit')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MetricsIntervalLimit')]
     public MetricsIntervalLimit $day;
 
     /**
@@ -36,7 +36,7 @@ class MetricsIntervalsLimits
      * @var MetricsIntervalLimit $week
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('week')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\MetricsIntervalLimit')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MetricsIntervalLimit')]
     public MetricsIntervalLimit $week;
 
     /**
@@ -45,7 +45,7 @@ class MetricsIntervalsLimits
      * @var MetricsIntervalLimit $month
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('month')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\MetricsIntervalLimit')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MetricsIntervalLimit')]
     public MetricsIntervalLimit $month;
 
     /**
@@ -54,7 +54,7 @@ class MetricsIntervalsLimits
      * @var MetricsIntervalLimit $year
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('year')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\MetricsIntervalLimit')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MetricsIntervalLimit')]
     public MetricsIntervalLimit $year;
 
     /**

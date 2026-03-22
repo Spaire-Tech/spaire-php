@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class FileDownload
@@ -59,7 +59,7 @@ class FileDownload
      * @var S3DownloadURL $download
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('download')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\S3DownloadURL')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\S3DownloadURL')]
     public S3DownloadURL $download;
 
     /**
@@ -74,7 +74,7 @@ class FileDownload
      * @var FileServiceTypes $service
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('service')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\FileServiceTypes')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\FileServiceTypes')]
     public FileServiceTypes $service;
 
     /**

@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** Customer - A customer in an organization. */
@@ -97,7 +97,7 @@ class Customer
      * @var ?Address $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Address|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Address|null')]
     public ?Address $billingAddress;
 
     /**
@@ -106,7 +106,7 @@ class Customer
      * @var ?array<string|TaxIDFormat|null> $taxId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax_id')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string|\Polar\Models\Components\TaxIDFormat|null>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string|\Spaire\Models\Components\TaxIDFormat|null>|null')]
     public ?array $taxId;
 
     /**
@@ -123,7 +123,7 @@ class Customer
      * @var ?CustomerType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomerType|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerType|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?CustomerType $type = null;
 

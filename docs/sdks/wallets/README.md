@@ -19,10 +19,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 
 $requestSecurity = new Operations\CustomerPortalWalletsListSecurity(
@@ -76,10 +76,10 @@ declare(strict_types=1);
 
 require 'vendor/autoload.php';
 
-use Polar;
-use Polar\Models\Operations;
+use Spaire;
+use Spaire\Models\Operations;
 
-$sdk = Polar\Polar::builder()->build();
+$sdk = Spaire\Spaire::builder()->build();
 
 
 $requestSecurity = new Operations\CustomerPortalWalletsGetSecurity(

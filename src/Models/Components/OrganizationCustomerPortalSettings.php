@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class OrganizationCustomerPortalSettings
@@ -16,7 +16,7 @@ class OrganizationCustomerPortalSettings
      * @var CustomerPortalUsageSettings $usage
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('usage')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomerPortalUsageSettings')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerPortalUsageSettings')]
     public CustomerPortalUsageSettings $usage;
 
     /**
@@ -24,7 +24,7 @@ class OrganizationCustomerPortalSettings
      * @var CustomerPortalSubscriptionSettings $subscription
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('subscription')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomerPortalSubscriptionSettings')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerPortalSubscriptionSettings')]
     public CustomerPortalSubscriptionSettings $subscription;
 
     /**

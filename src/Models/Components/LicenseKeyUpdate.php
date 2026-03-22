@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class LicenseKeyUpdate
@@ -16,7 +16,7 @@ class LicenseKeyUpdate
      * @var ?LicenseKeyStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\LicenseKeyStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\LicenseKeyStatus|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?LicenseKeyStatus $status = null;
 

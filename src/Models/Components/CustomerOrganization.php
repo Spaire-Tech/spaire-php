@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class CustomerOrganization
@@ -48,7 +48,7 @@ class CustomerOrganization
      * @var SubscriptionProrationBehavior $prorationBehavior
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('proration_behavior')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\SubscriptionProrationBehavior')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionProrationBehavior')]
     public SubscriptionProrationBehavior $prorationBehavior;
 
     /**
@@ -64,7 +64,7 @@ class CustomerOrganization
      * @var OrganizationCustomerPortalSettings $customerPortalSettings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_portal_settings')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrganizationCustomerPortalSettings')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationCustomerPortalSettings')]
     public OrganizationCustomerPortalSettings $customerPortalSettings;
 
     /**
@@ -89,7 +89,7 @@ class CustomerOrganization
      * @var ?CustomerOrganizationFeatureSettings $organizationFeatures
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('organization_features')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomerOrganizationFeatureSettings|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerOrganizationFeatureSettings|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?CustomerOrganizationFeatureSettings $organizationFeatures = null;
 

@@ -8,7 +8,7 @@ Based on:
 ### Generated
 - [php v0.0.3] .
 ### Releases
-- [Composer v0.0.3] https://packagist.org/packages/polar-sh/sdk#v0.0.3 - .
+- [Composer v0.0.3] https://packagist.org/packages/spaire-tech/sdk#v0.0.3 - .
 
 ## 2025-02-19 08:07:38
 ### Changes
@@ -18,7 +18,7 @@ Based on:
 ### Generated
 - [php v0.1.0] .
 ### Releases
-- [Composer v0.1.0] https://packagist.org/packages/polar-sh/sdk#v0.1.0 - .
+- [Composer v0.1.0] https://packagist.org/packages/spaire-tech/sdk#v0.1.0 - .
 
 ## 2025-02-20 09:03:56
 ### Changes
@@ -28,7 +28,7 @@ Based on:
 ### Generated
 - [php v0.1.1] .
 ### Releases
-- [Composer v0.1.1] https://packagist.org/packages/polar-sh/sdk#v0.1.1 - .
+- [Composer v0.1.1] https://packagist.org/packages/spaire-tech/sdk#v0.1.1 - .
 
 ## 2025-03-07 00:17:18
 ### Changes
@@ -38,7 +38,7 @@ Based on:
 ### Generated
 - [php v0.2.0] .
 ### Releases
-- [Composer v0.2.0] https://packagist.org/packages/polar-sh/sdk#v0.2.0 - .
+- [Composer v0.2.0] https://packagist.org/packages/spaire-tech/sdk#v0.2.0 - .
 
 ## 2025-03-14 16:09:40
 ### Changes
@@ -48,7 +48,7 @@ Based on:
 ### Generated
 - [php v0.2.1] .
 ### Releases
-- [Composer v0.2.1] https://packagist.org/packages/polar-sh/sdk#v0.2.1 - .
+- [Composer v0.2.1] https://packagist.org/packages/spaire-tech/sdk#v0.2.1 - .
 
 ## 2025-03-20 11:04:19
 ### Changes
@@ -58,7 +58,7 @@ Based on:
 ### Generated
 - [php v0.2.2] .
 ### Releases
-- [Composer v0.2.2] https://packagist.org/packages/polar-sh/sdk#v0.2.2 - .
+- [Composer v0.2.2] https://packagist.org/packages/spaire-tech/sdk#v0.2.2 - .
 
 ## 2025-03-25 15:35:01
 ### Changes
@@ -68,7 +68,7 @@ Based on:
 ### Generated
 - [php v0.2.3] .
 ### Releases
-- [Composer v0.2.3] https://packagist.org/packages/polar-sh/sdk#v0.2.3 - .
+- [Composer v0.2.3] https://packagist.org/packages/spaire-tech/sdk#v0.2.3 - .
 
 ## 2025-04-02 08:02:28
 ### Changes
@@ -78,7 +78,7 @@ Based on:
 ### Generated
 - [php v0.2.4] .
 ### Releases
-- [Composer v0.2.4] https://packagist.org/packages/polar-sh/sdk#v0.2.4 - .
+- [Composer v0.2.4] https://packagist.org/packages/spaire-tech/sdk#v0.2.4 - .
 
 ## 2025-04-11 11:57:21
 ### Changes
@@ -88,7 +88,7 @@ Based on:
 ### Generated
 - [php v0.2.5] .
 ### Releases
-- [Composer v0.2.5] https://packagist.org/packages/polar-sh/sdk#v0.2.5 - .
+- [Composer v0.2.5] https://packagist.org/packages/spaire-tech/sdk#v0.2.5 - .
 
 ## 2025-04-16 00:18:13
 ### Changes
@@ -98,7 +98,7 @@ Based on:
 ### Generated
 - [php v0.2.6] .
 ### Releases
-- [Composer v0.2.6] https://packagist.org/packages/polar-sh/sdk#v0.2.6 - .
+- [Composer v0.2.6] https://packagist.org/packages/spaire-tech/sdk#v0.2.6 - .
 
 ## 2025-04-16 09:18:21
 ### Changes
@@ -108,7 +108,7 @@ Based on:
 ### Generated
 - [php v0.2.7] .
 ### Releases
-- [Composer v0.2.7] https://packagist.org/packages/polar-sh/sdk#v0.2.7 - .
+- [Composer v0.2.7] https://packagist.org/packages/spaire-tech/sdk#v0.2.7 - .
 
 ## 2025-04-17 14:18:17
 ### Changes
@@ -118,7 +118,7 @@ Based on:
 ### Generated
 - [php v0.2.8] .
 ### Releases
-- [Composer v0.2.8] https://packagist.org/packages/polar-sh/sdk#v0.2.8 - .
+- [Composer v0.2.8] https://packagist.org/packages/spaire-tech/sdk#v0.2.8 - .
 
 ## 2025-04-18 13:08:00
 ### Changes
@@ -128,7 +128,7 @@ Based on:
 ### Generated
 - [php v0.2.9] .
 ### Releases
-- [Composer v0.2.9] https://packagist.org/packages/polar-sh/sdk#v0.2.9 - .
+- [Composer v0.2.9] https://packagist.org/packages/spaire-tech/sdk#v0.2.9 - .
 
 ## 2025-04-30 09:17:46
 ### Changes
@@ -138,7 +138,7 @@ Based on:
 ### Generated
 - [php v0.2.10] .
 ### Releases
-- [Composer v0.2.10] https://packagist.org/packages/polar-sh/sdk#v0.2.10 - .
+- [Composer v0.2.10] https://packagist.org/packages/spaire-tech/sdk#v0.2.10 - .
 
 ## 2025-04-30 14:16:42
 ### Changes
@@ -148,7 +148,7 @@ Based on:
 ### Generated
 - [php v0.2.11] .
 ### Releases
-- [Composer v0.2.11] https://packagist.org/packages/polar-sh/sdk#v0.2.11 - .
+- [Composer v0.2.11] https://packagist.org/packages/spaire-tech/sdk#v0.2.11 - .
 
 ## 2025-05-15 11:34:50
 ### Changes
@@ -158,7 +158,7 @@ Based on:
 ### Generated
 - [php v0.2.12] .
 ### Releases
-- [Composer v0.2.12] https://packagist.org/packages/polar-sh/sdk#v0.2.12 - .
+- [Composer v0.2.12] https://packagist.org/packages/spaire-tech/sdk#v0.2.12 - .
 
 ## 2025-05-16 12:58:53
 ### Changes
@@ -168,7 +168,7 @@ Based on:
 ### Generated
 - [php v0.2.13] .
 ### Releases
-- [Composer v0.2.13] https://packagist.org/packages/polar-sh/sdk#v0.2.13 - .
+- [Composer v0.2.13] https://packagist.org/packages/spaire-tech/sdk#v0.2.13 - .
 
 ## 2025-05-22 00:18:52
 ### Changes
@@ -178,7 +178,7 @@ Based on:
 ### Generated
 - [php v0.2.14] .
 ### Releases
-- [Composer v0.2.14] https://packagist.org/packages/polar-sh/sdk#v0.2.14 - .
+- [Composer v0.2.14] https://packagist.org/packages/spaire-tech/sdk#v0.2.14 - .
 
 ## 2025-06-02 00:20:03
 ### Changes
@@ -188,7 +188,7 @@ Based on:
 ### Generated
 - [php v0.3.0] .
 ### Releases
-- [Composer v0.3.0] https://packagist.org/packages/polar-sh/sdk#v0.3.0 - .
+- [Composer v0.3.0] https://packagist.org/packages/spaire-tech/sdk#v0.3.0 - .
 
 ## 2025-06-12 08:33:12
 ### Changes
@@ -198,7 +198,7 @@ Based on:
 ### Generated
 - [php v0.3.1] .
 ### Releases
-- [Composer v0.3.1] https://packagist.org/packages/polar-sh/sdk#v0.3.1 - .
+- [Composer v0.3.1] https://packagist.org/packages/spaire-tech/sdk#v0.3.1 - .
 
 ## 2025-06-17 12:13:39
 ### Changes
@@ -208,7 +208,7 @@ Based on:
 ### Generated
 - [php v0.3.2] .
 ### Releases
-- [Composer v0.3.2] https://packagist.org/packages/polar-sh/sdk#v0.3.2 - .
+- [Composer v0.3.2] https://packagist.org/packages/spaire-tech/sdk#v0.3.2 - .
 
 ## 2025-06-18 12:46:12
 ### Changes
@@ -218,7 +218,7 @@ Based on:
 ### Generated
 - [php v0.4.0] .
 ### Releases
-- [Composer v0.4.0] https://packagist.org/packages/polar-sh/sdk#v0.4.0 - .
+- [Composer v0.4.0] https://packagist.org/packages/spaire-tech/sdk#v0.4.0 - .
 
 ## 2025-06-19 11:37:27
 ### Changes
@@ -228,7 +228,7 @@ Based on:
 ### Generated
 - [php v0.4.1] .
 ### Releases
-- [Composer v0.4.1] https://packagist.org/packages/polar-sh/sdk#v0.4.1 - .
+- [Composer v0.4.1] https://packagist.org/packages/spaire-tech/sdk#v0.4.1 - .
 
 ## 2025-07-15 00:20:34
 ### Changes
@@ -238,7 +238,7 @@ Based on:
 ### Generated
 - [php v0.4.2] .
 ### Releases
-- [Composer v0.4.2] https://packagist.org/packages/polar-sh/sdk#v0.4.2 - .
+- [Composer v0.4.2] https://packagist.org/packages/spaire-tech/sdk#v0.4.2 - .
 
 ## 2025-07-21 13:43:46
 ### Changes
@@ -248,7 +248,7 @@ Based on:
 ### Generated
 - [php v0.4.3] .
 ### Releases
-- [Composer v0.4.3] https://packagist.org/packages/polar-sh/sdk#v0.4.3 - .
+- [Composer v0.4.3] https://packagist.org/packages/spaire-tech/sdk#v0.4.3 - .
 
 ## 2025-08-11 00:21:44
 ### Changes
@@ -258,7 +258,7 @@ Based on:
 ### Generated
 - [php v0.4.4] .
 ### Releases
-- [Composer v0.4.4] https://packagist.org/packages/polar-sh/sdk#v0.4.4 - .
+- [Composer v0.4.4] https://packagist.org/packages/spaire-tech/sdk#v0.4.4 - .
 
 ## 2025-08-12 11:29:10
 ### Changes
@@ -268,7 +268,7 @@ Based on:
 ### Generated
 - [php v0.4.5] .
 ### Releases
-- [Composer v0.4.5] https://packagist.org/packages/polar-sh/sdk#v0.4.5 - .
+- [Composer v0.4.5] https://packagist.org/packages/spaire-tech/sdk#v0.4.5 - .
 
 ## 2025-08-20 00:18:20
 ### Changes
@@ -278,7 +278,7 @@ Based on:
 ### Generated
 - [php v0.4.6] .
 ### Releases
-- [Composer v0.4.6] https://packagist.org/packages/polar-sh/sdk#v0.4.6 - .
+- [Composer v0.4.6] https://packagist.org/packages/spaire-tech/sdk#v0.4.6 - .
 
 ## 2025-08-22 12:35:53
 ### Changes
@@ -288,7 +288,7 @@ Based on:
 ### Generated
 - [php v0.4.7] .
 ### Releases
-- [Composer v0.4.7] https://packagist.org/packages/polar-sh/sdk#v0.4.7 - .
+- [Composer v0.4.7] https://packagist.org/packages/spaire-tech/sdk#v0.4.7 - .
 
 ## 2025-09-05 00:18:10
 ### Changes
@@ -298,7 +298,7 @@ Based on:
 ### Generated
 - [php v0.4.8] .
 ### Releases
-- [Composer v0.4.8] https://packagist.org/packages/polar-sh/sdk#v0.4.8 - .
+- [Composer v0.4.8] https://packagist.org/packages/spaire-tech/sdk#v0.4.8 - .
 
 ## 2025-09-16 00:17:19
 ### Changes
@@ -308,7 +308,7 @@ Based on:
 ### Generated
 - [php v0.4.9] .
 ### Releases
-- [Composer v0.4.9] https://packagist.org/packages/polar-sh/sdk#v0.4.9 - .
+- [Composer v0.4.9] https://packagist.org/packages/spaire-tech/sdk#v0.4.9 - .
 
 ## 2025-09-22 10:13:37
 ### Changes
@@ -318,7 +318,7 @@ Based on:
 ### Generated
 - [php v0.5.0] .
 ### Releases
-- [Composer v0.5.0] https://packagist.org/packages/polar-sh/sdk#v0.5.0 - .
+- [Composer v0.5.0] https://packagist.org/packages/spaire-tech/sdk#v0.5.0 - .
 
 ## 2025-09-23 10:21:31
 ### Changes
@@ -328,7 +328,7 @@ Based on:
 ### Generated
 - [php v0.5.1] .
 ### Releases
-- [Composer v0.5.1] https://packagist.org/packages/polar-sh/sdk#v0.5.1 - .
+- [Composer v0.5.1] https://packagist.org/packages/spaire-tech/sdk#v0.5.1 - .
 
 ## 2025-09-29 00:18:59
 ### Changes
@@ -338,7 +338,7 @@ Based on:
 ### Generated
 - [php v0.5.2] .
 ### Releases
-- [Composer v0.5.2] https://packagist.org/packages/polar-sh/sdk#v0.5.2 - .
+- [Composer v0.5.2] https://packagist.org/packages/spaire-tech/sdk#v0.5.2 - .
 
 ## 2025-10-16 00:18:40
 ### Changes
@@ -348,7 +348,7 @@ Based on:
 ### Generated
 - [php v0.5.3] .
 ### Releases
-- [Composer v0.5.3] https://packagist.org/packages/polar-sh/sdk#v0.5.3 - .
+- [Composer v0.5.3] https://packagist.org/packages/spaire-tech/sdk#v0.5.3 - .
 
 ## 2025-10-16 12:58:02
 ### Changes
@@ -358,7 +358,7 @@ Based on:
 ### Generated
 - [php v0.5.4] .
 ### Releases
-- [Composer v0.5.4] https://packagist.org/packages/polar-sh/sdk#v0.5.4 - .
+- [Composer v0.5.4] https://packagist.org/packages/spaire-tech/sdk#v0.5.4 - .
 
 ## 2025-10-21 00:18:48
 ### Changes
@@ -368,7 +368,7 @@ Based on:
 ### Generated
 - [php v0.6.0] .
 ### Releases
-- [Composer v0.6.0] https://packagist.org/packages/polar-sh/sdk#v0.6.0 - .
+- [Composer v0.6.0] https://packagist.org/packages/spaire-tech/sdk#v0.6.0 - .
 
 ## 2025-10-21 13:14:26
 ### Changes
@@ -378,7 +378,7 @@ Based on:
 ### Generated
 - [php v0.6.1] .
 ### Releases
-- [Composer v0.6.1] https://packagist.org/packages/polar-sh/sdk#v0.6.1 - .
+- [Composer v0.6.1] https://packagist.org/packages/spaire-tech/sdk#v0.6.1 - .
 
 ## 2025-11-04 00:18:54
 ### Changes
@@ -388,7 +388,7 @@ Based on:
 ### Generated
 - [php v0.7.0] .
 ### Releases
-- [Composer v0.7.0] https://packagist.org/packages/polar-sh/sdk#v0.7.0 - .
+- [Composer v0.7.0] https://packagist.org/packages/spaire-tech/sdk#v0.7.0 - .
 
 ## 2026-01-13 14:57:12
 ### Changes
@@ -398,7 +398,7 @@ Based on:
 ### Generated
 - [php v0.7.1] .
 ### Releases
-- [Composer v0.7.1] https://packagist.org/packages/polar-sh/sdk#v0.7.1 - .
+- [Composer v0.7.1] https://packagist.org/packages/spaire-tech/sdk#v0.7.1 - .
 
 ## 2026-02-25 00:28:40
 ### Changes
@@ -408,4 +408,4 @@ Based on:
 ### Generated
 - [php v0.8.0] .
 ### Releases
-- [Composer v0.8.0] https://packagist.org/packages/polar-sh/sdk#v0.8.0 - .
+- [Composer v0.8.0] https://packagist.org/packages/spaire-tech/sdk#v0.8.0 - .

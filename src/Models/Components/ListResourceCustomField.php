@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class ListResourceCustomField
@@ -17,7 +17,7 @@ class ListResourceCustomField
      * @var array<CustomFieldText|CustomFieldNumber|CustomFieldDate|CustomFieldCheckbox|CustomFieldSelect> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\CustomFieldText|\Polar\Models\Components\CustomFieldNumber|\Polar\Models\Components\CustomFieldDate|\Polar\Models\Components\CustomFieldCheckbox|\Polar\Models\Components\CustomFieldSelect>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CustomFieldText|\Spaire\Models\Components\CustomFieldNumber|\Spaire\Models\Components\CustomFieldDate|\Spaire\Models\Components\CustomFieldCheckbox|\Spaire\Models\Components\CustomFieldSelect>')]
     public array $items;
 
     /**
@@ -25,7 +25,7 @@ class ListResourceCustomField
      * @var Pagination $pagination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pagination')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Pagination')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Pagination')]
     public Pagination $pagination;
 
     /**

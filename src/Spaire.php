@@ -6,16 +6,16 @@
 
 declare(strict_types=1);
 
-namespace Polar;
+namespace Spaire;
 
 
 
 /**
- * Polar - Polar API: Polar HTTP and Webhooks API
+ * Spaire - Spaire API: Spaire HTTP and Webhooks API
  *
- * Read the docs at https://polar.sh/docs/api-reference
+ * Read the docs at https://docs.spairehq.com/api-reference
  */
-class Polar
+class Spaire
 {
     /** SERVER_PRODUCTION - Production environment */
     public const SERVER_PRODUCTION = 'production';
@@ -25,9 +25,9 @@ class Polar
 
     public const SERVERS = [
         /** Production environment */
-        Polar::SERVER_PRODUCTION => 'https://api.polar.sh',
+        Spaire::SERVER_PRODUCTION => 'https://api.spairehq.com',
         /** Sandbox environment */
-        Polar::SERVER_SANDBOX => 'https://sandbox-api.polar.sh',
+        Spaire::SERVER_SANDBOX => 'https://sandbox-api.spairehq.com',
     ];
 
     public Organizations $organizations;
@@ -91,11 +91,11 @@ class Polar
     /**
      * Returns a new instance of the SDK builder used to configure and create the SDK instance.
      *
-     * @return PolarBuilder
+     * @return SpaireBuilder
      */
-    public static function builder(): PolarBuilder
+    public static function builder(): SpaireBuilder
     {
-        return new PolarBuilder();
+        return new SpaireBuilder();
     }
 
     /**

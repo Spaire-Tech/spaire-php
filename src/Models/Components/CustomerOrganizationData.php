@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomerOrganizationData - Schema of an organization and related data for customer portal. */
@@ -17,7 +17,7 @@ class CustomerOrganizationData
      * @var CustomerOrganization $organization
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('organization')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomerOrganization')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerOrganization')]
     public CustomerOrganization $organization;
 
     /**
@@ -26,7 +26,7 @@ class CustomerOrganizationData
      * @var array<CustomerProduct> $products
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('products')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\CustomerProduct>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CustomerProduct>')]
     public array $products;
 
     /**

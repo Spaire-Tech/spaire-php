@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /**
@@ -25,7 +25,7 @@ class ProductPriceSeatTiersOutput
      * @var array<ProductPriceSeatTier> $tiers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tiers')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\ProductPriceSeatTier>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\ProductPriceSeatTier>')]
     public array $tiers;
 
     /**

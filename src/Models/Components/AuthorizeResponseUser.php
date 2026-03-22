@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class AuthorizeResponseUser
@@ -16,7 +16,7 @@ class AuthorizeResponseUser
      * @var OAuth2ClientPublic $client
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('client')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OAuth2ClientPublic')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OAuth2ClientPublic')]
     public OAuth2ClientPublic $client;
 
     /**
@@ -25,7 +25,7 @@ class AuthorizeResponseUser
      * @var array<Scope> $scopes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('scopes')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\Scope>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\Scope>')]
     public array $scopes;
 
     /**
@@ -33,7 +33,7 @@ class AuthorizeResponseUser
      * @var ?AuthorizeUser $sub
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('sub')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\AuthorizeUser|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\AuthorizeUser|null')]
     public ?AuthorizeUser $sub;
 
     /**

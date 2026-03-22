@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Utils\Retry;
+namespace Spaire\Utils\Retry;
 use Psr\Http\Message\ResponseInterface;
 
 class TemporaryError extends \Exception

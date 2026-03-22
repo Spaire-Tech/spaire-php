@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class CustomerUpdatedFields
@@ -32,7 +32,7 @@ class CustomerUpdatedFields
      * @var ?AddressDict $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\AddressDict|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\AddressDict|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?AddressDict $billingAddress = null;
 

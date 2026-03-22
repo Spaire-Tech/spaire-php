@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class ListResourceFileRead
@@ -17,7 +17,7 @@ class ListResourceFileRead
      * @var array<DownloadableFileRead|ProductMediaFileRead|OrganizationAvatarFileRead> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\DownloadableFileRead|\Polar\Models\Components\ProductMediaFileRead|\Polar\Models\Components\OrganizationAvatarFileRead>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\DownloadableFileRead|\Spaire\Models\Components\ProductMediaFileRead|\Spaire\Models\Components\OrganizationAvatarFileRead>')]
     public array $items;
 
     /**
@@ -25,7 +25,7 @@ class ListResourceFileRead
      * @var Pagination $pagination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pagination')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Pagination')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Pagination')]
     public Pagination $pagination;
 
     /**

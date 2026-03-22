@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class CustomerOrderProduct
@@ -40,7 +40,7 @@ class CustomerOrderProduct
      * @var ProductVisibility $visibility
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('visibility')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\ProductVisibility')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductVisibility')]
     public ProductVisibility $visibility;
 
     /**
@@ -73,7 +73,7 @@ class CustomerOrderProduct
      * @var array<LegacyRecurringProductPriceFixed|LegacyRecurringProductPriceCustom|LegacyRecurringProductPriceFree|ProductPriceFixed|ProductPriceCustom|ProductPriceFree|ProductPriceSeatBased|ProductPriceMeteredUnit> $prices
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('prices')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\LegacyRecurringProductPriceFixed|\Polar\Models\Components\LegacyRecurringProductPriceCustom|\Polar\Models\Components\LegacyRecurringProductPriceFree|\Polar\Models\Components\ProductPriceFixed|\Polar\Models\Components\ProductPriceCustom|\Polar\Models\Components\ProductPriceFree|\Polar\Models\Components\ProductPriceSeatBased|\Polar\Models\Components\ProductPriceMeteredUnit>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\LegacyRecurringProductPriceFixed|\Spaire\Models\Components\LegacyRecurringProductPriceCustom|\Spaire\Models\Components\LegacyRecurringProductPriceFree|\Spaire\Models\Components\ProductPriceFixed|\Spaire\Models\Components\ProductPriceCustom|\Spaire\Models\Components\ProductPriceFree|\Spaire\Models\Components\ProductPriceSeatBased|\Spaire\Models\Components\ProductPriceMeteredUnit>')]
     public array $prices;
 
     /**
@@ -82,7 +82,7 @@ class CustomerOrderProduct
      * @var array<BenefitPublic> $benefits
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('benefits')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\BenefitPublic>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\BenefitPublic>')]
     public array $benefits;
 
     /**
@@ -91,7 +91,7 @@ class CustomerOrderProduct
      * @var array<ProductMediaFileRead> $medias
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('medias')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\ProductMediaFileRead>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\ProductMediaFileRead>')]
     public array $medias;
 
     /**
@@ -99,7 +99,7 @@ class CustomerOrderProduct
      * @var CustomerOrganization $organization
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('organization')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomerOrganization')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerOrganization')]
     public CustomerOrganization $organization;
 
     /**
@@ -116,7 +116,7 @@ class CustomerOrderProduct
      * @var ?TrialInterval $trialInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('trial_interval')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\TrialInterval|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TrialInterval|null')]
     public ?TrialInterval $trialInterval;
 
     /**
@@ -141,7 +141,7 @@ class CustomerOrderProduct
      * @var ?SubscriptionRecurringInterval $recurringInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('recurring_interval')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\SubscriptionRecurringInterval|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionRecurringInterval|null')]
     public ?SubscriptionRecurringInterval $recurringInterval;
 
     /**

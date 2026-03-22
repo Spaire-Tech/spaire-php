@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** ProductPriceMeteredUnit - A metered, usage-based, price for a product, with a fixed unit price. */
@@ -33,7 +33,7 @@ class ProductPriceMeteredUnit
      * @var ProductPriceSource $source
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('source')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\ProductPriceSource')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductPriceSource')]
     public ProductPriceSource $source;
 
     /**
@@ -82,7 +82,7 @@ class ProductPriceMeteredUnit
      * @var ProductPriceMeter $meter
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('meter')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\ProductPriceMeter')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductPriceMeter')]
     public ProductPriceMeter $meter;
 
     /**

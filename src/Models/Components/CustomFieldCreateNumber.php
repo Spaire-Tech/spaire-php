@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomFieldCreateNumber - Schema to create a custom field of type number. */
@@ -33,7 +33,7 @@ class CustomFieldCreateNumber
      * @var CustomFieldNumberProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomFieldNumberProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomFieldNumberProperties')]
     public CustomFieldNumberProperties $properties;
 
     /**

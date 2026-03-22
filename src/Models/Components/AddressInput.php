@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class AddressInput
@@ -16,7 +16,7 @@ class AddressInput
      * @var CountryAlpha2Input $country
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('country')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CountryAlpha2Input')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CountryAlpha2Input')]
     public CountryAlpha2Input $country;
 
     /**

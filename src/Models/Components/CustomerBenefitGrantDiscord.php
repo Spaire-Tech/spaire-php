@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class CustomerBenefitGrantDiscord
@@ -60,7 +60,7 @@ class CustomerBenefitGrantDiscord
      * @var CustomerPortalCustomer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomerPortalCustomer')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerPortalCustomer')]
     public CustomerPortalCustomer $customer;
 
     /**
@@ -68,7 +68,7 @@ class CustomerBenefitGrantDiscord
      * @var BenefitDiscordSubscriber $benefit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('benefit')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitDiscordSubscriber')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitDiscordSubscriber')]
     public BenefitDiscordSubscriber $benefit;
 
     /**
@@ -76,7 +76,7 @@ class CustomerBenefitGrantDiscord
      * @var BenefitGrantDiscordProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantDiscordProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantDiscordProperties')]
     public BenefitGrantDiscordProperties $properties;
 
     /**
@@ -128,7 +128,7 @@ class CustomerBenefitGrantDiscord
      * @var ?BenefitGrantError $error
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('error')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitGrantError|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantError|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?BenefitGrantError $error = null;
 

@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomFieldSelect - Schema for a custom field of type select. */
@@ -66,7 +66,7 @@ class CustomFieldSelect
      * @var CustomFieldSelectProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomFieldSelectProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomFieldSelectProperties')]
     public CustomFieldSelectProperties $properties;
 
     /**

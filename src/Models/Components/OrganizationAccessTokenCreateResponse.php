@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class OrganizationAccessTokenCreateResponse
@@ -16,7 +16,7 @@ class OrganizationAccessTokenCreateResponse
      * @var OrganizationAccessToken $organizationAccessToken
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('organization_access_token')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\OrganizationAccessToken')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationAccessToken')]
     public OrganizationAccessToken $organizationAccessToken;
 
     /**

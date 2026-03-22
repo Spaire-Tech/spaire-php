@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 use Brick\DateTime\LocalDate;
 /** MetricsLimits - Date limits to get metrics. */
@@ -26,7 +26,7 @@ class MetricsLimits
      * @var MetricsIntervalsLimits $intervals
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('intervals')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\MetricsIntervalsLimits')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MetricsIntervalsLimits')]
     public MetricsIntervalsLimits $intervals;
 
     /**

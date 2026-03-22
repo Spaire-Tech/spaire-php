@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /**
@@ -50,7 +50,7 @@ class WebhookEvent
      * @var WebhookEventType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\WebhookEventType')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\WebhookEventType')]
     public WebhookEventType $type;
 
     /**

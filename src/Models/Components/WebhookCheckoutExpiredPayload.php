@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /**
@@ -33,7 +33,7 @@ class WebhookCheckoutExpiredPayload
      * @var Checkout $data
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('data')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\Checkout')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Checkout')]
     public Checkout $data;
 
     /**

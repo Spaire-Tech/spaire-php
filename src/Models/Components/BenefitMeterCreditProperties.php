@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** BenefitMeterCreditProperties - Properties for a benefit of type `meter_unit`. */

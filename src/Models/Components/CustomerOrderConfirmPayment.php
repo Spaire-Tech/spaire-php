@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** CustomerOrderConfirmPayment - Schema to confirm a retry payment using either a saved payment method or a new confirmation token. */
@@ -17,7 +17,7 @@ class CustomerOrderConfirmPayment
      * @var ?PaymentProcessor $paymentProcessor
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('payment_processor')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\PaymentProcessor|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PaymentProcessor|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PaymentProcessor $paymentProcessor = null;
 

@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class CustomerUpdatedMetadata
@@ -30,7 +30,7 @@ class CustomerUpdatedMetadata
      * @var CustomerUpdatedFields $updatedFields
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_fields')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\CustomerUpdatedFields')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerUpdatedFields')]
     public CustomerUpdatedFields $updatedFields;
 
     /**

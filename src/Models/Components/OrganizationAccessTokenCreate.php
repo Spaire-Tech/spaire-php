@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class OrganizationAccessTokenCreate
@@ -24,7 +24,7 @@ class OrganizationAccessTokenCreate
      * @var array<AvailableScope> $scopes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('scopes')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\AvailableScope>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\AvailableScope>')]
     public array $scopes;
 
     /**

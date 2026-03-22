@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class BenefitMeterCreditUpdate
@@ -46,7 +46,7 @@ class BenefitMeterCreditUpdate
      * @var ?BenefitMeterCreditCreateProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitMeterCreditCreateProperties|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitMeterCreditCreateProperties|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?BenefitMeterCreditCreateProperties $properties = null;
 

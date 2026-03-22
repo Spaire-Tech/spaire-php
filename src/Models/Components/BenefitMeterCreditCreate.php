@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 /** BenefitMeterCreditCreate - Schema to create a benefit of type `meter_unit`. */
@@ -26,7 +26,7 @@ class BenefitMeterCreditCreate
      * @var BenefitMeterCreditCreateProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitMeterCreditCreateProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitMeterCreditCreateProperties')]
     public BenefitMeterCreditCreateProperties $properties;
 
     /**

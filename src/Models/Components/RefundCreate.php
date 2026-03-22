@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class RefundCreate
@@ -23,7 +23,7 @@ class RefundCreate
      * @var RefundReason $reason
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('reason')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\RefundReason')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\RefundReason')]
     public RefundReason $reason;
 
     /**

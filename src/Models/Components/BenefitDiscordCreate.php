@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class BenefitDiscordCreate
@@ -25,7 +25,7 @@ class BenefitDiscordCreate
      * @var BenefitDiscordCreateProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\BenefitDiscordCreateProperties')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitDiscordCreateProperties')]
     public BenefitDiscordCreateProperties $properties;
 
     /**

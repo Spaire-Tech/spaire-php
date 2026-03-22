@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class OrganizationDetails
@@ -28,7 +28,7 @@ class OrganizationDetails
     public string $productDescription;
 
     /**
-     * How the organization will integrate and use Polar.
+     * How the organization will integrate and use Spaire.
      *
      * @var string $intendedUse
      */
@@ -58,7 +58,7 @@ class OrganizationDetails
      * @var ?SwitchingFrom $switchingFrom
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('switching_from')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Polar\Models\Components\SwitchingFrom|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SwitchingFrom|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?SwitchingFrom $switchingFrom = null;
 

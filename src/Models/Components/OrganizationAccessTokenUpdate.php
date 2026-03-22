@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace Polar\Models\Components;
+namespace Spaire\Models\Components;
 
 
 class OrganizationAccessTokenUpdate
@@ -25,7 +25,7 @@ class OrganizationAccessTokenUpdate
      * @var ?array<AvailableScope> $scopes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('scopes')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Polar\Models\Components\AvailableScope>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\AvailableScope>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $scopes = null;
 
