@@ -19,7 +19,7 @@ Developer-friendly & type-safe Php SDK specifically catered to leverage *spaire-
 
 Spaire API: Spaire HTTP and Webhooks API
 
-Read the docs at https://spaire.tech/docs/api-reference
+Read the docs at https://docs.spairehq.com/api-reference
 <!-- End Summary [summary] -->
 
 <!-- Start Table of Contents [toc] -->
@@ -565,8 +565,8 @@ You can override the default server globally using the `setServer(string $server
 
 | Name         | Server                         | Description            |
 | ------------ | ------------------------------ | ---------------------- |
-| `production` | `https://api.spaire.tech`         | Production environment |
-| `sandbox`    | `https://sandbox-api.spaire.tech` | Sandbox environment    |
+| `production` | `https://api.spairehq.com`         | Production environment |
+| `sandbox`    | `https://sandbox-api.spairehq.com` | Sandbox environment    |
 
 #### Example
 
@@ -611,7 +611,7 @@ require 'vendor/autoload.php';
 use Spaire;
 
 $sdk = Spaire\Spaire::builder()
-    ->setServerURL('https://api.spaire.tech')
+    ->setServerURL('https://api.spairehq.com')
     ->setSecurity(
         '<YOUR_BEARER_TOKEN_HERE>'
     )

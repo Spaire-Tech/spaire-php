@@ -13,7 +13,7 @@ namespace Spaire;
 /**
  * Spaire - Spaire API: Spaire HTTP and Webhooks API
  *
- * Read the docs at https://spaire.tech/docs/api-reference
+ * Read the docs at https://docs.spairehq.com/api-reference
  */
 class Spaire
 {
@@ -25,9 +25,9 @@ class Spaire
 
     public const SERVERS = [
         /** Production environment */
-        Spaire::SERVER_PRODUCTION => 'https://api.spaire.tech',
+        Spaire::SERVER_PRODUCTION => 'https://api.spairehq.com',
         /** Sandbox environment */
-        Spaire::SERVER_SANDBOX => 'https://sandbox-api.spaire.tech',
+        Spaire::SERVER_SANDBOX => 'https://sandbox-api.spairehq.com',
     ];
 
     public Organizations $organizations;
