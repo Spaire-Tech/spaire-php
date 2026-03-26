@@ -6,6 +6,7 @@
 
 * [listClientInvoices](#listclientinvoices) - List Client Invoices
 * [createClientInvoice](#createclientinvoice) - Create Client Invoice
+* [previewClientInvoicePdf](#previewclientinvoicepdf) - Preview Client Invoice PDF
 * [getClientInvoice](#getclientinvoice) - Get Client Invoice
 * [downloadClientInvoicePdf](#downloadclientinvoicepdf) - Download Client Invoice PDF
 * [finalizeClientInvoice](#finalizeclientinvoice) - Finalize Client Invoice
@@ -117,6 +118,61 @@ if ($response->clientInvoiceSchema !== null) {
 ### Response
 
 **[?Operations\ClientInvoicesCreateClientInvoiceResponse](../../Models/Operations/ClientInvoicesCreateClientInvoiceResponse.md)**
+
+### Errors
+
+| Error Type                 | Status Code                | Content Type               |
+| -------------------------- | -------------------------- | -------------------------- |
+| Errors\HTTPValidationError | 422                        | application/json           |
+| Errors\APIException        | 4XX, 5XX                   | \*/\*                      |
+
+## previewClientInvoicePdf
+
+Generate a real PDF preview from form data without creating anything.
+
+**Scopes**: `client_invoices:read`
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="client_invoices:preview_client_invoice_pdf" method="post" path="/v1/client-invoices/preview-pdf" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Spaire;
+use Spaire\Models\Components;
+
+$sdk = Spaire\Spaire::builder()
+    ->setSecurity(
+        '<YOUR_BEARER_TOKEN_HERE>'
+    )
+    ->build();
+
+$request = new Components\ClientInvoicePreviewRequest(
+    organizationId: '<value>',
+    currency: 'Baht',
+    lineItems: [],
+);
+
+$response = $sdk->clientInvoices->previewClientInvoicePdf(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Components\ClientInvoicePreviewRequest](../../Models/Components/ClientInvoicePreviewRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\ClientInvoicesPreviewClientInvoicePdfResponse](../../Models/Operations/ClientInvoicesPreviewClientInvoicePdfResponse.md)**
 
 ### Errors
 

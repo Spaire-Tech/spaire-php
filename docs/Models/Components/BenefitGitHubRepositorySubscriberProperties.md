@@ -7,5 +7,5 @@ Properties available to subscribers for a benefit of type `github_repository`.
 
 | Field                        | Type                         | Required                     | Description                  | Example                      |
 | ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
-| `repositoryOwner`            | *string*                     | :heavy_check_mark:           | The owner of the repository. | polarsource                  |
+| `repositoryOwner`            | *string*                     | :heavy_check_mark:           | The owner of the repository. | spairesource                 |
 | `repositoryName`             | *string*                     | :heavy_check_mark:           | The name of the repository.  | private_repo                 |

@@ -1,19 +1,18 @@
-speakeasyVersion: 1.759.0
+speakeasyVersion: 1.759.3
 sources:
     Spaire-OAS:
         sourceNamespace: spaire-oas
-        sourceRevisionDigest: sha256:8e36cfec4d157912c3038282edef69578a3480a8d4537909b8d482ab72b0c71d
-        sourceBlobDigest: sha256:46f5784fd3a61ca8f87b1e553c00b3a703deaf699e6a2918c0cbfb778b793e83
+        sourceRevisionDigest: sha256:f9d98b30d8a24c9afe33107a73107eba7c66f00dff3802a42ec0ae3f5ce5f20c
+        sourceBlobDigest: sha256:5cd0b8ddabc7d907421bf94235ba20f148d007bc553e15b397bae8fb9e70f404
         tags:
             - latest
-            - speakeasy-sdk-regen-1770078455
             - 0.1.0
 targets:
     spaire:
         source: Spaire-OAS
         sourceNamespace: spaire-oas
-        sourceRevisionDigest: sha256:8e36cfec4d157912c3038282edef69578a3480a8d4537909b8d482ab72b0c71d
-        sourceBlobDigest: sha256:46f5784fd3a61ca8f87b1e553c00b3a703deaf699e6a2918c0cbfb778b793e83
+        sourceRevisionDigest: sha256:f9d98b30d8a24c9afe33107a73107eba7c66f00dff3802a42ec0ae3f5ce5f20c
+        sourceBlobDigest: sha256:5cd0b8ddabc7d907421bf94235ba20f148d007bc553e15b397bae8fb9e70f404
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -28,8 +27,9 @@ workflow:
                 - location: https://raw.githubusercontent.com/Spaire-Tech/polar/main/sdk/overlays/event_discriminator.yml
                 - location: https://raw.githubusercontent.com/Spaire-Tech/polar/main/sdk/overlays/timezone_enum.yml
                 - location: https://raw.githubusercontent.com/Spaire-Tech/polar/main/sdk/overlays/event_metadata.yml
+                - location: https://raw.githubusercontent.com/Spaire-Tech/polar/main/sdk/overlays/rebrand.yml
             registry:
-                location: registry.speakeasyapi.dev/spaire/spaire/spaire-oas
+                location: registry.speakeasyapi.dev/spaire/spaire-workspace/spaire-oas
     targets:
         spaire:
             target: php
@@ -38,9 +38,3 @@ workflow:
                 packagist:
                     username: spaire
                     token: $packagist_token
-            codeSamples:
-                registry:
-                    location: registry.speakeasyapi.dev/spaire/spaire/spaire-api-php-code-samples
-                labelOverride:
-                    fixedValue: PHP (SDK)
-                blocking: false

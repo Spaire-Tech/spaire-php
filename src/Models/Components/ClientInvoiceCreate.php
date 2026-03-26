@@ -110,11 +110,31 @@ class ClientInvoiceCreate
     public ?bool $includePaymentLink = null;
 
     /**
+     * Whether to show the organization logo on the PDF.
+     *
+     * @var ?bool $showLogo
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('show_logo')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $showLogo = null;
+
+    /**
+     * Whether to show 'via spaire' label under the logo.
+     *
+     * @var ?bool $showMorAttribution
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('show_mor_attribution')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $showMorAttribution = null;
+
+    /**
      * @param  string  $customerId
      * @param  string  $currency
      * @param  array<ClientInvoiceLineItemCreate>  $lineItems
      * @param  ?int  $discountAmount
      * @param  ?bool  $includePaymentLink
+     * @param  ?bool  $showLogo
+     * @param  ?bool  $showMorAttribution
      * @param  ?LocalDate  $dueDate
      * @param  ?string  $memo
      * @param  ?string  $poNumber
@@ -123,7 +143,7 @@ class ClientInvoiceCreate
      * @param  ?array<string, mixed>  $userMetadata
      * @phpstan-pure
      */
-    public function __construct(string $customerId, string $currency, array $lineItems, ?LocalDate $dueDate = null, ?string $memo = null, ?string $poNumber = null, ?string $onBehalfOfLabel = null, ?string $discountLabel = null, ?array $userMetadata = null, ?int $discountAmount = 0, ?bool $includePaymentLink = true)
+    public function __construct(string $customerId, string $currency, array $lineItems, ?LocalDate $dueDate = null, ?string $memo = null, ?string $poNumber = null, ?string $onBehalfOfLabel = null, ?string $discountLabel = null, ?array $userMetadata = null, ?int $discountAmount = 0, ?bool $includePaymentLink = true, ?bool $showLogo = true, ?bool $showMorAttribution = true)
     {
         $this->customerId = $customerId;
         $this->currency = $currency;
@@ -136,5 +156,7 @@ class ClientInvoiceCreate
         $this->userMetadata = $userMetadata;
         $this->discountAmount = $discountAmount;
         $this->includePaymentLink = $includePaymentLink;
+        $this->showLogo = $showLogo;
+        $this->showMorAttribution = $showMorAttribution;
     }
 }
