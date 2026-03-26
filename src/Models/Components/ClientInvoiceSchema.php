@@ -92,6 +92,20 @@ class ClientInvoiceSchema
     public bool $includePaymentLink;
 
     /**
+     *
+     * @var bool $showLogo
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('show_logo')]
+    public bool $showLogo;
+
+    /**
+     *
+     * @var bool $showMorAttribution
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('show_mor_attribution')]
+    public bool $showMorAttribution;
+
+    /**
      * Last modification timestamp of the object.
      *
      * @var ?\DateTime $modifiedAt
@@ -200,6 +214,8 @@ class ClientInvoiceSchema
      * @param  int  $taxAmount
      * @param  int  $totalAmount
      * @param  bool  $includePaymentLink
+     * @param  bool  $showLogo
+     * @param  bool  $showMorAttribution
      * @param  ?\DateTime  $modifiedAt
      * @param  ?string  $stripeInvoiceId
      * @param  ?string  $memo
@@ -215,7 +231,7 @@ class ClientInvoiceSchema
      * @param  ?array<ClientInvoiceLineItemSchema>  $lineItems
      * @phpstan-pure
      */
-    public function __construct(string $id, \DateTime $createdAt, string $organizationId, string $customerId, ClientInvoiceStatus $status, string $currency, int $subtotalAmount, int $discountAmount, int $taxAmount, int $totalAmount, bool $includePaymentLink, ?\DateTime $modifiedAt = null, ?string $stripeInvoiceId = null, ?string $memo = null, ?string $poNumber = null, ?LocalDate $dueDate = null, ?string $onBehalfOfLabel = null, ?string $discountLabel = null, ?string $stripeHostedInvoiceUrl = null, ?string $invoicePdfUrl = null, ?string $checkoutLink = null, ?array $userMetadata = null, ?string $orderId = null, ?array $lineItems = null)
+    public function __construct(string $id, \DateTime $createdAt, string $organizationId, string $customerId, ClientInvoiceStatus $status, string $currency, int $subtotalAmount, int $discountAmount, int $taxAmount, int $totalAmount, bool $includePaymentLink, bool $showLogo, bool $showMorAttribution, ?\DateTime $modifiedAt = null, ?string $stripeInvoiceId = null, ?string $memo = null, ?string $poNumber = null, ?LocalDate $dueDate = null, ?string $onBehalfOfLabel = null, ?string $discountLabel = null, ?string $stripeHostedInvoiceUrl = null, ?string $invoicePdfUrl = null, ?string $checkoutLink = null, ?array $userMetadata = null, ?string $orderId = null, ?array $lineItems = null)
     {
         $this->id = $id;
         $this->createdAt = $createdAt;
@@ -228,6 +244,8 @@ class ClientInvoiceSchema
         $this->taxAmount = $taxAmount;
         $this->totalAmount = $totalAmount;
         $this->includePaymentLink = $includePaymentLink;
+        $this->showLogo = $showLogo;
+        $this->showMorAttribution = $showMorAttribution;
         $this->modifiedAt = $modifiedAt;
         $this->stripeInvoiceId = $stripeInvoiceId;
         $this->memo = $memo;

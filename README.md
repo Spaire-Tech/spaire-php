@@ -199,6 +199,7 @@ foreach ($responses as $response) {
 
 * [listClientInvoices](docs/sdks/clientinvoices/README.md#listclientinvoices) - List Client Invoices
 * [createClientInvoice](docs/sdks/clientinvoices/README.md#createclientinvoice) - Create Client Invoice
+* [previewClientInvoicePdf](docs/sdks/clientinvoices/README.md#previewclientinvoicepdf) - Preview Client Invoice PDF
 * [getClientInvoice](docs/sdks/clientinvoices/README.md#getclientinvoice) - Get Client Invoice
 * [downloadClientInvoicePdf](docs/sdks/clientinvoices/README.md#downloadclientinvoicepdf) - Download Client Invoice PDF
 * [finalizeClientInvoice](docs/sdks/clientinvoices/README.md#finalizeclientinvoice) - Finalize Client Invoice
@@ -442,6 +443,10 @@ foreach ($responses as $response) {
 * [get](docs/sdks/products/README.md#get) - Get Product
 * [update](docs/sdks/products/README.md#update) - Update Product
 * [updateBenefits](docs/sdks/products/README.md#updatebenefits) - Update Product Benefits
+
+#### [Products.Products](docs/sdks/spaireproducts/README.md)
+
+* [previewTax](docs/sdks/spaireproducts/README.md#previewtax) - Preview Tax
 
 ### [Refunds](docs/sdks/refunds/README.md)
 

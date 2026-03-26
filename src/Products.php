@@ -17,12 +17,15 @@ use Speakeasy\Serializer\DeserializationContext;
 class Products
 {
     private SDKConfiguration $sdkConfiguration;
+    public SpaireProducts $products;
+
     /**
      * @param  SDKConfiguration  $sdkConfig
      */
     public function __construct(public SDKConfiguration $sdkConfig)
     {
         $this->sdkConfiguration = $sdkConfig;
+        $this->products = new SpaireProducts($this->sdkConfiguration);
     }
     /**
      * @param  string  $baseUrl

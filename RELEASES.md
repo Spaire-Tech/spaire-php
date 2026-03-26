@@ -419,3 +419,13 @@ Based on:
 - [php v0.9.0] .
 ### Releases
 - [Composer v0.9.0] https://packagist.org/packages/spaire-tech/spaire-php#v0.9.0 - .
+
+## 2026-03-26 01:25:46
+### Changes
+Based on:
+- OpenAPI Doc  
+- Speakeasy CLI 1.759.3 (2.869.25) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [php v0.9.1] .
+### Releases
+- [Composer v0.9.1] https://packagist.org/packages/spaire-tech/spaire-php#v0.9.1 - .

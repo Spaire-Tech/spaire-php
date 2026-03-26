@@ -1,19 +1,19 @@
 lockVersion: 2.0.0
 id: bd003db9-613a-4093-838e-6d19bf5f76d7
 management:
-  docChecksum: 7d2a37345b2a588c7e2e2c27584c8bb9
+  docChecksum: e07447e94f9365d3261e3b3494d715fe
   docVersion: 0.1.0
-  speakeasyVersion: 1.759.0
-  generationVersion: 2.869.3
-  releaseVersion: 0.9.0
-  configChecksum: f79b3fc4a4a45dc183ce7a1f35049264
+  speakeasyVersion: 1.759.3
+  generationVersion: 2.869.25
+  releaseVersion: 0.9.1
+  configChecksum: 506901372227961ac1e06919be5e2c34
   repoURL: https://github.com/Spaire-Tech/spaire-php.git
   installationURL: https://github.com/Spaire-Tech/spaire-php.git
   published: true
 persistentEdits:
-  generation_id: 7f2fefd5-14e8-42ba-85e1-1d755d18fd85
-  pristine_commit_hash: 3e41ca1663f7c78b78c9136452c8e1c9ce8800e7
-  pristine_tree_hash: d43b5d60fb7fc6748c445242915b3c9f4a127b14
+  generation_id: 76a2563b-5c4e-4198-9294-2f784db0d8f7
+  pristine_commit_hash: 03ce696d276a8d1a053ae44952f6fecbf119f2ed
+  pristine_tree_hash: 4d60a27e6b90afa281103d68d752523a7410c025
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -298,24 +298,24 @@ trackedFiles:
     pristine_git_object: 305635b0b09d51555582c5067f0f93ad47bd5ebd
   docs/Models/Components/BenefitGitHubRepositoryCreateProperties.md:
     id: f89f3ab85e29
-    last_write_checksum: sha1:9adb904a96308c2b5947ee814be2f816d2ffa708
-    pristine_git_object: 75492e628e0a3d610efe2b91b2d3ebd6a5598eab
+    last_write_checksum: sha1:73324a45bede2efa391e9dec121ad3163cc96c60
+    pristine_git_object: 52f29d58c1a4c1263fece16358eaab761cbffa46
   docs/Models/Components/BenefitGitHubRepositoryCreatePropertiesPermission.md:
     id: 61c3b108be42
     last_write_checksum: sha1:27f0f2df2345613c325914801c20712f82b61f50
     pristine_git_object: c33a6b096e9bf6c9baf48ba718dad841ce6842cc
   docs/Models/Components/BenefitGitHubRepositoryProperties.md:
     id: 99a870c6d210
-    last_write_checksum: sha1:a4128f12601a408ea149916fd26288550d51d4f7
-    pristine_git_object: e4fe3f79f7a9f98b7a1920b1d5e723293205f72f
+    last_write_checksum: sha1:b9b07b5edad1f2e5b31c3c2ac7dc3ee80be0412e
+    pristine_git_object: ec5d8a2bc9c0bcec8eacb3a88c9f94aa40b6ae05
   docs/Models/Components/BenefitGitHubRepositorySubscriber.md:
     id: df0c723537ff
     last_write_checksum: sha1:eba92275d0dc4a8ad490095739b1a1c04a307bcd
     pristine_git_object: f3662dd6425d7ee53abe69833d46a4c0483bb334
   docs/Models/Components/BenefitGitHubRepositorySubscriberProperties.md:
     id: c73b499e8fb8
-    last_write_checksum: sha1:42efe7f0a8a7cbf0088522d30d98080278bd95fb
-    pristine_git_object: f17bc00c0e0412daf412ef7ce3254480b913fefe
+    last_write_checksum: sha1:9be670a74082c96324341de404e8790c951969f0
+    pristine_git_object: 95e079a197c9a562d4ade36c2dae7646c433ff3b
   docs/Models/Components/BenefitGitHubRepositoryUpdate.md:
     id: 67b586c05550
     last_write_checksum: sha1:0c9e99c38a8c67f81802cc7927c891e8fd957e21
@@ -798,20 +798,28 @@ trackedFiles:
     pristine_git_object: c271db1bec0f156df61e3ca411eb22c079068223
   docs/Models/Components/ClientInvoiceCreate.md:
     id: d1098e3d4497
-    last_write_checksum: sha1:b1935b4ff9986156c5578390b483248f90c3adf3
-    pristine_git_object: 6135cad877ace275f7879033603fc568256c9e63
+    last_write_checksum: sha1:69cf71923b92604965c278d58bfc2933ea0eb3e2
+    pristine_git_object: 027b87fc3b04e688a45ec30c687ed66e70babeac
   docs/Models/Components/ClientInvoiceLineItemCreate.md:
     id: 31596e5cdcb1
     last_write_checksum: sha1:fa4ba320dde7b21dbf2be7820eaa5359b6375d0b
     pristine_git_object: 1965dc9197e89dc5d21518a86f13752b1ffc2bd5
+  docs/Models/Components/ClientInvoiceLineItemPreview.md:
+    id: ded82f3ca8b1
+    last_write_checksum: sha1:fd9073452f13b46531ff3890e1e5e77d6bad1683
+    pristine_git_object: 6f6c9d6edb4acbd094c511ff2650c201c162f967
   docs/Models/Components/ClientInvoiceLineItemSchema.md:
     id: 77980593cf8c
     last_write_checksum: sha1:b3125c63d5448c40c213348ff9853415cf817114
     pristine_git_object: 497a03b5476edf470f35664119b7a1a552a39f61
+  docs/Models/Components/ClientInvoicePreviewRequest.md:
+    id: 93bd84b33ae6
+    last_write_checksum: sha1:f73a69dd9c9e673e5ae579b91c8cb55485666a82
+    pristine_git_object: e9e5a27480746b1540720f100d86e97336797b6b
   docs/Models/Components/ClientInvoiceSchema.md:
     id: 3652215c38de
-    last_write_checksum: sha1:5aee405a76839c8a56ef648e9323945cb831bfd0
-    pristine_git_object: 9f48495364ade97efefdee5f5700d7822bb41821
+    last_write_checksum: sha1:6ab61775b04d57edc37829d1de6d65d3f12c1e5d
+    pristine_git_object: 7d7718b4169a6fffe44f0dfc5d8575c12c184007
   docs/Models/Components/ClientInvoiceSortProperty.md:
     id: fcf4013fbe80
     last_write_checksum: sha1:88322976015458f9f6d902c32c5bc27994ae10a5
@@ -2612,6 +2620,14 @@ trackedFiles:
     id: 40a806577779
     last_write_checksum: sha1:22835dbfcd3f10b5c94e0366592716e72ca0eccb
     pristine_git_object: c16f9da7b9d6c10dbbfb60dee03ed371717295f0
+  docs/Models/Components/ProductTaxPreviewRequest.md:
+    id: 2cb2cf056678
+    last_write_checksum: sha1:fc99c13ea112eebe01e0eca9f12ad6d11bca274d
+    pristine_git_object: 90c37ce0e1e3f5a729a4d9c700d9dcb98711d762
+  docs/Models/Components/ProductTaxPreviewResponse.md:
+    id: 91ba81cb065c
+    last_write_checksum: sha1:4842d455df222e22bc6ec847c52ffb5da0696cbe
+    pristine_git_object: df249959abc26171936c3e056e397bf0a1ba348f
   docs/Models/Components/ProductUpdate.md:
     id: b7be59820ee0
     last_write_checksum: sha1:92b7c0630a9653e2a5e62a7e13fcf846502ee49f
@@ -2766,8 +2782,8 @@ trackedFiles:
     pristine_git_object: 35eac7803426cc088ef6f6087dc7466ebfb9da0e
   docs/Models/Components/SubscriptionCancel.md:
     id: c0e461f7e18f
-    last_write_checksum: sha1:059ff69839e20a4330d406ef0fccf41df9384fc6
-    pristine_git_object: d08cd45b80b80514e0ff2f2661fee9c75cfb5c23
+    last_write_checksum: sha1:0a96afb41d80361aa7c12fc6a302a76d6a629234
+    pristine_git_object: adc0c0ba90c8dcad89bc4baa2a3332d9e0f90867
   docs/Models/Components/SubscriptionCanceledEvent.md:
     id: b8ffe8a23572
     last_write_checksum: sha1:20c283460850ebc26b0cdcd44013129de1ae49e3
@@ -2838,8 +2854,8 @@ trackedFiles:
     pristine_git_object: d3a58a119ea7936ece5cb5ef89c517d1bfca4bc1
   docs/Models/Components/SubscriptionRevoke.md:
     id: 897ae3896003
-    last_write_checksum: sha1:13e32d41c73e884e1905bd7cff368c7c0133506d
-    pristine_git_object: cd03a8863a3ae8d4ec96755bc2382011fbbaa51c
+    last_write_checksum: sha1:53a83fb639dae8501b6c97f1d802fbf93d16f32d
+    pristine_git_object: 8529e19a1ea42b5bb99b2ac20c9d7bf44101b14e
   docs/Models/Components/SubscriptionRevokedEvent.md:
     id: 42cebc9157bb
     last_write_checksum: sha1:2a7c56934b16c3b7cb95a3157a8b058c8314db03
@@ -2916,6 +2932,10 @@ trackedFiles:
     id: 6886173dbe90
     last_write_checksum: sha1:788e9c57919189dc3fa23b6429142ec16b5b6800
     pristine_git_object: d6bb0389a63addabffac517da5d0a7e9d851046a
+  docs/Models/Components/TaxRatePreview.md:
+    id: a1e0b2614f01
+    last_write_checksum: sha1:979f3c436878777e209f3d5c6d8cd095fb4c9cdf
+    pristine_git_object: c1128aa93f0fe588f564f21d2860a5d4e3f9919c
   docs/Models/Components/TimeInterval.md:
     id: aa3bd5b43a54
     last_write_checksum: sha1:a9bede24b6a59acd893deb55a75cdc7da0278cdd
@@ -3476,6 +3496,10 @@ trackedFiles:
     id: 1b028fa560e5
     last_write_checksum: sha1:8ae4193f468a867f8d1b0836a2b6ac2b8aaed623
     pristine_git_object: 33e5feea30fecd2e581cb52a928a539dc0e76d6b
+  docs/Models/Operations/ClientInvoicesPreviewClientInvoicePdfResponse.md:
+    id: a983a0b3b7d9
+    last_write_checksum: sha1:38a5d7d2f410bd310999558bd399ac5ef9a7ab15
+    pristine_git_object: 8dd3b852428ee7a2eb29e4c30ad34ad6fcf6749f
   docs/Models/Operations/ClientInvoicesSendClientInvoiceRequest.md:
     id: 569d4551513e
     last_write_checksum: sha1:41409f575c99759d2eacd401c640f3824577dd7f
@@ -4828,6 +4852,10 @@ trackedFiles:
     id: 9b4e5dec27a8
     last_write_checksum: sha1:079f73f9759f0de55217a2e4f38ca72d0044ad01
     pristine_git_object: 48b8e161eb802deff908619bce39564c8d1b878b
+  docs/Models/Operations/ProductsProductsPreviewTaxResponse.md:
+    id: 9deb1380a740
+    last_write_checksum: sha1:de94e49a47958b7856691cc8feb6098e4888787d
+    pristine_git_object: 9f4620a2808fd724e5e069cc8d50bb005d3833a3
   docs/Models/Operations/ProductsUpdateBenefitsRequest.md:
     id: 17d574cdcb73
     last_write_checksum: sha1:90f35e6f6fbdc043dedf2303a2fd5485201f6354
@@ -5214,8 +5242,8 @@ trackedFiles:
     pristine_git_object: 9de9c00326a34a8be6ea1acde7fc6bd3433197bf
   docs/sdks/clientinvoices/README.md:
     id: 53db4731ed0d
-    last_write_checksum: sha1:4b2732b8924b69e9eac89ca78721d6329d24750a
-    pristine_git_object: 65773b325491d98aa7864695834702029ef6671e
+    last_write_checksum: sha1:5bf8ccf5c84a16afe8061d03df53855d696f0250
+    pristine_git_object: 00ea10298097af3242776e80a37e98b45b6c56f7
   docs/sdks/clients/README.md:
     id: ba883fd0c1cf
     last_write_checksum: sha1:9de20cc8aadc1db517e2a25a41232863d87cc517
@@ -5348,6 +5376,10 @@ trackedFiles:
     id: 6e664ebeb7a9
     last_write_checksum: sha1:b8c54e9e351359c313842861a8789b5ecfc72b6b
     pristine_git_object: c039edf2b8c9bf0d49cbebb130f8d965851a6a4c
+  docs/sdks/spaireproducts/README.md:
+    id: 7233f5979e5c
+    last_write_checksum: sha1:c6f5b70d7476941013b605c5e790b45fa88e5c21
+    pristine_git_object: 1077a707558d09290bd988536c53366b8f0369b8
   docs/sdks/spairesubscriptions/README.md:
     id: 3baeb6932bf4
     last_write_checksum: sha1:0ae8950c01fd312ace97a25773576a914b6e8c7d
@@ -5398,8 +5430,8 @@ trackedFiles:
     pristine_git_object: 1fb1cce93100eb6b29c1c2337543a470dd1c836c
   src/ClientInvoices.php:
     id: 267d8e99ccb4
-    last_write_checksum: sha1:a17f41da7d7a373bedfeb8f74bca44b3bc8308a9
-    pristine_git_object: 533d6dcbafbdb90ddc55838573693aa746ca0a3c
+    last_write_checksum: sha1:af5203262cd71aa75fa8e158a2000f4893394bb0
+    pristine_git_object: 108c6da944005c82b0ebb3111b6070c87a00b5cd
   src/Clients.php:
     id: e778356f2ab3
     last_write_checksum: sha1:218dc97aa6d635406f7330cf57681b56c78dd4b6
@@ -6026,20 +6058,28 @@ trackedFiles:
     pristine_git_object: f2429f42fb94bce3a199b8b1ce906262c5e10f78
   src/Models/Components/ClientInvoiceCreate.php:
     id: 547f5c81f7be
-    last_write_checksum: sha1:2b26f99ffaa81549caf07a47a5a8eb99c3b938c7
-    pristine_git_object: dec4e5a15765aad3be4aa525ae740af9a3995de4
+    last_write_checksum: sha1:abd3ee4f0dab469366dc700f12c16e6f196ec6a5
+    pristine_git_object: 1d5a5b322d3afd6ab5c3813c427adb922770a9b8
   src/Models/Components/ClientInvoiceLineItemCreate.php:
     id: fced3fd3022a
     last_write_checksum: sha1:0eeb3791108c39a9918c2bff759f9321fb670062
     pristine_git_object: 12177e42b88b0511d5374ef3ea8edfe2745baf9d
+  src/Models/Components/ClientInvoiceLineItemPreview.php:
+    id: e67b652661a5
+    last_write_checksum: sha1:0db422f449f8da68f6a71993b63a05f4b1db5e2c
+    pristine_git_object: ad63e6655aa284c3c03749126a798845f91de60c
   src/Models/Components/ClientInvoiceLineItemSchema.php:
     id: f145a0b0a1ce
     last_write_checksum: sha1:af00804091923e3aa94765c4558795b95f8fe0ea
     pristine_git_object: e2b310235b659b7ec2cdf2d0f97527d60e3e56fb
+  src/Models/Components/ClientInvoicePreviewRequest.php:
+    id: 05fda7c368fc
+    last_write_checksum: sha1:94895199d2ac5e57d561577f6e7657d556c3b255
+    pristine_git_object: 1b9d72cfd44b617b79cfa4583ae2750899afb240
   src/Models/Components/ClientInvoiceSchema.php:
     id: 6b4a21bb14f1
-    last_write_checksum: sha1:a51036d04cca6c76a36ba1b9f941cc673b9b5154
-    pristine_git_object: 371a8325aa3a0e63631a0b9738c8f59675902f98
+    last_write_checksum: sha1:01ecf324b0ce6ffbab6b6cbc60c0f4e39c9cb513
+    pristine_git_object: bf2a1d49422daec63ddfe669c4d87d7c877d850a
   src/Models/Components/ClientInvoiceSortProperty.php:
     id: eb7513fb6cc5
     last_write_checksum: sha1:0860fb93dca703522dcde917cb6633985981ae22
@@ -7284,6 +7324,14 @@ trackedFiles:
     id: c609baff8e81
     last_write_checksum: sha1:86e92c265c5dead0c1023ffd5e311890d7de5fcb
     pristine_git_object: d6bdca4160713d1f784d49fa7094b3f2fdd86188
+  src/Models/Components/ProductTaxPreviewRequest.php:
+    id: 72c6d3f11a12
+    last_write_checksum: sha1:0f55bb0a0ca73bc4f35588346934388ad540c370
+    pristine_git_object: 5e005ca8df1a57746413024fd6783456c537dab6
+  src/Models/Components/ProductTaxPreviewResponse.php:
+    id: 32c8bdb2e0c6
+    last_write_checksum: sha1:5b7cd1dd433cff63e6a16b94526f0aed075a7826
+    pristine_git_object: 3f3aeaadd9befcecc763f30fa594db97b150cf3e
   src/Models/Components/ProductUpdate.php:
     id: 5510f4106d48
     last_write_checksum: sha1:c505a999a95c9afaa18a406c23f1710cb1221909
@@ -7406,8 +7454,8 @@ trackedFiles:
     pristine_git_object: 70fc00413de984983a8d88c3b33b7b6ece314e39
   src/Models/Components/SubscriptionCancel.php:
     id: 17d568a2f02c
-    last_write_checksum: sha1:dbe8993ba1c6b0a1d44c1617473d633f79955264
-    pristine_git_object: 1b4cea65dd31072fa1148f2a81dec58127bbf1f1
+    last_write_checksum: sha1:0b5060a7ec700df1b9a98e9aae9628e41dabac26
+    pristine_git_object: e8b01c5b1c9c771f1da91603e1cf02a46722e479
   src/Models/Components/SubscriptionCanceledEvent.php:
     id: 52fca20759f3
     last_write_checksum: sha1:08b469481621e6726fd8ccf4ad6cf46b2c2fe250
@@ -7466,8 +7514,8 @@ trackedFiles:
     pristine_git_object: 1e14a00ebf3eca99c261c741feaa5b127e5f61b1
   src/Models/Components/SubscriptionRevoke.php:
     id: 41edc258b049
-    last_write_checksum: sha1:787e4f4ee5c698b21654ca63dd2af2fdc663f127
-    pristine_git_object: 512356ed4629b5e71e3e8b55182b9d8dcef9806d
+    last_write_checksum: sha1:1d1a0da1581b257dde7d8c0f20333317691e3ae7
+    pristine_git_object: c6405149fb23d7a9f4786d1ba9b7c0f678ee4584
   src/Models/Components/SubscriptionRevokedEvent.php:
     id: 04dff8f58f12
     last_write_checksum: sha1:492232b7cee6a5793a3b2bce53efd49babfe5a6f
@@ -7528,6 +7576,10 @@ trackedFiles:
     id: "9637568732e6"
     last_write_checksum: sha1:4f9e322fc23f38abf16e6a73df09d59415843057
     pristine_git_object: ebaa26fcf7ab0443a7ad43a7e8c459bfb096f204
+  src/Models/Components/TaxRatePreview.php:
+    id: 018ea4bf20dc
+    last_write_checksum: sha1:10dec5c1619f6d24f582f88495225068b40110ac
+    pristine_git_object: 148c89c3cd08488836959db8c4f2a4c688a908bb
   src/Models/Components/TimeInterval.php:
     id: 3548f4acc04c
     last_write_checksum: sha1:e09008c89308145beceb6195d34ce3fdb1146655
@@ -8096,6 +8148,10 @@ trackedFiles:
     id: f7820dde43b1
     last_write_checksum: sha1:fa7b6cad4c39498c7411eaaf4130d8fd3059b7d4
     pristine_git_object: bd0093b3c867fcfc1c875453997ab3845822df15
+  src/Models/Operations/ClientInvoicesPreviewClientInvoicePdfResponse.php:
+    id: 4a8be45acda0
+    last_write_checksum: sha1:e513a3307d4119343523428f85c14867cb475fa9
+    pristine_git_object: e284fda92d519d0f269432b89d0df59f9564f02a
   src/Models/Operations/ClientInvoicesSendClientInvoiceRequest.php:
     id: 428ef36d803c
     last_write_checksum: sha1:b2d65664521b278d7ae3d086c44af399a90bd2be
@@ -9168,6 +9224,10 @@ trackedFiles:
     id: d93cdb89be26
     last_write_checksum: sha1:258ce3eca26b4b1486c2a800f9319f284af19d9d
     pristine_git_object: f7c3ceba78de44f5b1ef98811f82b042b33e18c5
+  src/Models/Operations/ProductsProductsPreviewTaxResponse.php:
+    id: 7e35b694a5c5
+    last_write_checksum: sha1:fb44955fe99191e94b8e0823f39ee2e4d8259cf1
+    pristine_git_object: 5db0dde3e52e1af27a7df74a38249b57f7521e72
   src/Models/Operations/ProductsUpdateBenefitsRequest.php:
     id: eaa13ae1ab60
     last_write_checksum: sha1:7d861170e6e976f04ab35dbda515cd71138432ad
@@ -9466,16 +9526,16 @@ trackedFiles:
     pristine_git_object: abadaa398498cdeee4af311bbdaf4ef6fa6b472e
   src/Products.php:
     id: 25f717192621
-    last_write_checksum: sha1:3441bfd1e543c9ab3353b71f1dc302daef1d9fa8
-    pristine_git_object: be6847c7acb861617db6e7c32ae6a7bc3f14e8a9
+    last_write_checksum: sha1:62e12a17ce1ef727c020f0aca6c99ec2ceb15993
+    pristine_git_object: ae321d98d8f23c506132824a4f3d5172b5db3392
   src/Refunds.php:
     id: 621a14ef2613
     last_write_checksum: sha1:23057dc61b6bb5082c8a0082caae1cdb866f4ed1
     pristine_git_object: 52ec6b7b8f23acd28e903bcf2fe4860b70c9f42a
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:970bb79a87286b92363c530f70803aa59071cb45
-    pristine_git_object: d2cef79b0c896632eb398d4b680f8f22c8f452bc
+    last_write_checksum: sha1:86ac2807efea2978421905291cdb2eb0ea797f63
+    pristine_git_object: 94f234594cfd993006c9148c0524b421a718d206
   src/Seats.php:
     id: 4830e6b5f52b
     last_write_checksum: sha1:bedc58ed1e626034a11298a3eecea74ab02196a1
@@ -9516,6 +9576,10 @@ trackedFiles:
     id: 3723b87e2b90
     last_write_checksum: sha1:8a65b6c55fcecac8285474e8fd8abfa04e7ac428
     pristine_git_object: 093588d8bb21820bdd644a992d701e1e10b4c878
+  src/SpaireProducts.php:
+    id: 05d7a63cc4ed
+    last_write_checksum: sha1:83c3c080a51b38e899e511fc90568ce8f9ff5f36
+    pristine_git_object: 7d75f9cb3702ae9d4ee8971ed0b57285095d2074
   src/SpaireSubscriptions.php:
     id: 3cea9519a201
     last_write_checksum: sha1:e340ecee07190112e8c732bc27836c7f1f7aad2f
@@ -11297,7 +11361,7 @@ examples:
         application/json: {"locale": "en", "customer_name": "John Doe", "customer_billing_address": {"country": "US"}}
       responses:
         "200":
-          application/json: {"id": "<value>", "created_at": "2025-08-11T13:37:19.351Z", "modified_at": "2025-01-17T16:36:47.350Z", "payment_processor": "stripe", "status": "expired", "client_secret": "<value>", "url": "https://quiet-longboat.name/", "expires_at": "2024-06-26T17:48:32.882Z", "success_url": "https://flawless-conversation.com/", "return_url": "https://winding-pliers.biz", "embed_origin": "<value>", "amount": 854455, "discount_amount": 294901, "net_amount": 889166, "tax_amount": 922052, "total_amount": 719988, "currency": "Rufiyaa", "allow_trial": false, "active_trial_interval": "year", "active_trial_interval_count": 682201, "trial_end": "2023-04-12T18:01:42.534Z", "organization_id": "<value>", "product_id": "<value>", "product_price_id": "<value>", "discount_id": null, "allow_discount_codes": false, "require_billing_address": true, "is_discount_applicable": false, "is_free_product_price": true, "is_payment_required": true, "is_payment_setup_required": false, "is_payment_form_required": false, "customer_id": "<value>", "is_business_customer": true, "customer_name": null, "customer_email": "<value>", "customer_ip_address": "<value>", "customer_billing_name": "<value>", "customer_billing_address": {"country": "US"}, "customer_tax_id": "<id>", "payment_processor_metadata": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "billing_address_fields": {"country": "required", "state": "disabled", "city": "disabled", "postal_code": "disabled", "line1": "required", "line2": "required"}, "trial_interval": "month", "trial_interval_count": 495203, "metadata": {"key": 175107, "key1": "<value>", "key2": 598875}, "external_customer_id": "<id>", "customer_external_id": "<id>", "products": [{"id": "<value>", "created_at": "2024-10-08T05:33:56.764Z", "modified_at": "2023-07-14T21:58:46.090Z", "trial_interval": null, "trial_interval_count": 186577, "name": "<value>", "description": "where underneath ignorant smoke pearl interesting meh amid", "visibility": "draft", "recurring_interval": null, "recurring_interval_count": 870044, "is_recurring": true, "is_archived": true, "organization_id": "<value>", "prices": [{"created_at": "2025-11-30T19:59:27.996Z", "modified_at": "2023-09-30T23:37:22.091Z", "id": "<value>", "source": "ad_hoc", "amount_type": "free", "price_currency": "usd", "is_archived": true, "product_id": "<value>", "type": "recurring", "recurring_interval": "year", "legacy": true}, {"created_at": "2024-06-26T17:48:32.882Z", "modified_at": null, "id": "<value>", "source": "ad_hoc", "amount_type": "free", "price_currency": "pen", "is_archived": true, "product_id": "<value>", "type": "recurring", "recurring_interval": "month", "legacy": true}], "benefits": [{"id": "<value>", "created_at": "2024-08-22T08:39:31.775Z", "modified_at": "2024-02-01T17:03:37.242Z", "type": "discord", "description": "overconfidently overplay down unless dilate before optimistically while curly by", "selectable": false, "deletable": false, "organization_id": "<value>"}], "medias": [{"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}, {"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}, {"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}]}, {"id": "<value>", "created_at": "2024-10-08T05:33:56.764Z", "modified_at": "2023-07-14T21:58:46.090Z", "trial_interval": "day", "trial_interval_count": 294901, "name": "<value>", "description": "where underneath ignorant smoke pearl interesting meh amid", "visibility": "public", "recurring_interval": null, "recurring_interval_count": 682201, "is_recurring": true, "is_archived": true, "organization_id": "<value>", "prices": [{"created_at": "2025-09-01T12:37:02.777Z", "modified_at": "2025-10-07T13:38:06.522Z", "id": "<value>", "source": "catalog", "amount_type": "fixed", "price_currency": "cop", "is_archived": false, "product_id": "<value>", "type": "recurring", "recurring_interval": "year", "price_amount": 615287, "legacy": true}, {"created_at": "2024-02-21T06:51:40.935Z", "modified_at": null, "id": "<value>", "source": "catalog", "amount_type": "fixed", "price_currency": "brl", "is_archived": false, "product_id": "<value>", "type": "recurring", "recurring_interval": "year", "price_amount": 391538, "legacy": true}], "benefits": [{"id": "<value>", "created_at": "2024-08-22T08:39:31.775Z", "modified_at": "2024-02-01T17:03:37.242Z", "type": "discord", "description": "overconfidently overplay down unless dilate before optimistically while curly by", "selectable": false, "deletable": false, "organization_id": "<value>"}], "medias": [{"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}, {"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}, {"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}]}], "product": {"id": "<value>", "created_at": "2023-09-02T08:09:15.374Z", "modified_at": "2023-01-08T13:18:17.680Z", "trial_interval": "year", "trial_interval_count": 719988, "name": "<value>", "description": null, "visibility": "public", "recurring_interval": "year", "recurring_interval_count": 92838, "is_recurring": false, "is_archived": true, "organization_id": "<value>", "prices": [], "benefits": [{"id": "<value>", "created_at": "2024-08-22T08:39:31.775Z", "modified_at": "2024-02-01T17:03:37.242Z", "type": "discord", "description": "overconfidently overplay down unless dilate before optimistically while curly by", "selectable": false, "deletable": false, "organization_id": "<value>"}, {"id": "<value>", "created_at": "2024-08-22T08:39:31.775Z", "modified_at": "2024-02-01T17:03:37.242Z", "type": "discord", "description": "overconfidently overplay down unless dilate before optimistically while curly by", "selectable": false, "deletable": false, "organization_id": "<value>"}], "medias": [{"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}, {"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}, {"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}]}, "product_price": {"created_at": "2025-06-26T17:48:32.882Z", "modified_at": null, "id": "<value>", "source": "catalog", "amount_type": "free", "price_currency": "clp", "is_archived": true, "product_id": "<value>", "type": "one_time", "recurring_interval": "week"}, "prices": {"key": [], "key1": []}, "discount": null, "subscription_id": "<value>", "attached_custom_fields": [{"custom_field_id": "<value>", "custom_field": {"created_at": "2023-09-18T08:05:49.385Z", "modified_at": "2023-01-31T14:16:46.453Z", "id": "<value>", "metadata": {"key": 376311, "key1": "<value>", "key2": 112991}, "type": "text", "slug": "<value>", "name": "<value>", "organization_id": "1dbfc517-0bbf-4301-9ba8-555ca42b9737", "properties": {}}, "order": 115053, "required": true}, {"custom_field_id": "<value>", "custom_field": {"created_at": "2023-09-18T08:05:49.385Z", "modified_at": "2023-01-31T14:16:46.453Z", "id": "<value>", "metadata": {"key": 376311, "key1": "<value>", "key2": 112991}, "type": "text", "slug": "<value>", "name": "<value>", "organization_id": "1dbfc517-0bbf-4301-9ba8-555ca42b9737", "properties": {}}, "order": 115053, "required": true}, {"custom_field_id": "<value>", "custom_field": {"created_at": "2023-09-18T08:05:49.385Z", "modified_at": "2023-01-31T14:16:46.453Z", "id": "<value>", "metadata": {"key": 376311, "key1": "<value>", "key2": 112991}, "type": "text", "slug": "<value>", "name": "<value>", "organization_id": "1dbfc517-0bbf-4301-9ba8-555ca42b9737", "properties": {}}, "order": 115053, "required": true}], "customer_metadata": {}}
+          application/json: {"id": "<value>", "created_at": "2025-08-11T13:37:19.351Z", "modified_at": "2025-01-17T16:36:47.350Z", "payment_processor": "stripe", "status": "expired", "client_secret": "<value>", "url": "https://quiet-longboat.name/", "expires_at": "2024-06-26T17:48:32.882Z", "success_url": "https://flawless-conversation.com/", "return_url": "https://winding-pliers.biz", "embed_origin": "<value>", "amount": 854455, "discount_amount": 294901, "net_amount": 889166, "tax_amount": 922052, "total_amount": 719988, "currency": "Rufiyaa", "allow_trial": false, "active_trial_interval": "year", "active_trial_interval_count": 682201, "trial_end": "2023-04-12T18:01:42.534Z", "organization_id": "<value>", "product_id": "<value>", "product_price_id": "<value>", "discount_id": null, "allow_discount_codes": false, "require_billing_address": true, "is_discount_applicable": false, "is_free_product_price": true, "is_payment_required": true, "is_payment_setup_required": false, "is_payment_form_required": false, "customer_id": "<value>", "is_business_customer": true, "customer_name": null, "customer_email": "<value>", "customer_ip_address": "<value>", "customer_billing_name": "<value>", "customer_billing_address": {"country": "US"}, "customer_tax_id": "<id>", "payment_processor_metadata": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "billing_address_fields": {"country": "required", "state": "disabled", "city": "disabled", "postal_code": "disabled", "line1": "required", "line2": "required"}, "trial_interval": "month", "trial_interval_count": 495203, "metadata": {"key": 175107, "key1": "<value>", "key2": 598875}, "external_customer_id": "<id>", "customer_external_id": "<id>", "products": [{"id": "<value>", "created_at": "2024-10-08T05:33:56.764Z", "modified_at": "2023-07-14T21:58:46.090Z", "trial_interval": null, "trial_interval_count": 186577, "name": "<value>", "description": "where underneath ignorant smoke pearl interesting meh amid", "visibility": "draft", "recurring_interval": null, "recurring_interval_count": 870044, "is_recurring": true, "is_archived": true, "organization_id": "<value>", "prices": [{"created_at": "2025-11-30T19:59:27.996Z", "modified_at": "2023-09-30T23:37:22.091Z", "id": "<value>", "source": "ad_hoc", "amount_type": "free", "price_currency": "usd", "is_archived": true, "product_id": "<value>", "type": "recurring", "recurring_interval": "year", "legacy": true}, {"created_at": "2024-06-26T17:48:32.882Z", "modified_at": null, "id": "<value>", "source": "ad_hoc", "amount_type": "free", "price_currency": "pen", "is_archived": true, "product_id": "<value>", "type": "recurring", "recurring_interval": "month", "legacy": true}], "benefits": [{"id": "<value>", "created_at": "2024-08-22T08:39:31.775Z", "modified_at": "2024-02-01T17:03:37.242Z", "type": "discord", "description": "overconfidently overplay down unless dilate before optimistically while curly by", "selectable": false, "deletable": false, "organization_id": "<value>"}], "medias": [{"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}, {"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}, {"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}]}, {"id": "<value>", "created_at": "2024-10-08T05:33:56.764Z", "modified_at": "2023-07-14T21:58:46.090Z", "trial_interval": "day", "trial_interval_count": 294901, "name": "<value>", "description": "where underneath ignorant smoke pearl interesting meh amid", "visibility": "public", "recurring_interval": null, "recurring_interval_count": 682201, "is_recurring": true, "is_archived": true, "organization_id": "<value>", "prices": [{"created_at": "2025-09-01T12:37:02.777Z", "modified_at": "2025-10-07T13:38:06.522Z", "id": "<value>", "source": "catalog", "amount_type": "fixed", "price_currency": "cop", "is_archived": false, "product_id": "<value>", "type": "recurring", "recurring_interval": "year", "price_amount": 615287, "legacy": true}, {"created_at": "2024-02-21T06:51:40.935Z", "modified_at": null, "id": "<value>", "source": "catalog", "amount_type": "fixed", "price_currency": "brl", "is_archived": false, "product_id": "<value>", "type": "recurring", "recurring_interval": "year", "price_amount": 391538, "legacy": true}], "benefits": [{"id": "<value>", "created_at": "2024-08-22T08:39:31.775Z", "modified_at": "2024-02-01T17:03:37.242Z", "type": "discord", "description": "overconfidently overplay down unless dilate before optimistically while curly by", "selectable": false, "deletable": false, "organization_id": "<value>"}], "medias": [{"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}, {"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}, {"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}]}], "product": {"id": "<value>", "created_at": "2023-09-02T08:09:15.374Z", "modified_at": "2023-01-08T13:18:17.680Z", "trial_interval": "year", "trial_interval_count": 719988, "name": "<value>", "description": null, "visibility": "public", "recurring_interval": "year", "recurring_interval_count": 92838, "is_recurring": false, "is_archived": true, "organization_id": "<value>", "prices": [], "benefits": [{"id": "<value>", "created_at": "2024-08-22T08:39:31.775Z", "modified_at": "2024-02-01T17:03:37.242Z", "type": "discord", "description": "overconfidently overplay down unless dilate before optimistically while curly by", "selectable": false, "deletable": false, "organization_id": "<value>"}, {"id": "<value>", "created_at": "2024-08-22T08:39:31.775Z", "modified_at": "2024-02-01T17:03:37.242Z", "type": "discord", "description": "overconfidently overplay down unless dilate before optimistically while curly by", "selectable": false, "deletable": false, "organization_id": "<value>"}], "medias": [{"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}, {"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}, {"id": "<value>", "organization_id": "<value>", "name": "<value>", "path": "/Applications", "mime_type": "<value>", "size": 72601, "storage_version": "<value>", "checksum_etag": "<value>", "checksum_sha256_base64": "<value>", "checksum_sha256_hex": "<value>", "last_modified_at": "2025-08-08T03:26:06.485Z", "version": "<value>", "service": "product_media", "is_uploaded": false, "created_at": "2025-10-12T01:25:31.801Z", "size_readable": "<value>", "public_url": "https://inexperienced-valuable.name/"}]}, "product_price": {"created_at": "2025-06-26T17:48:32.882Z", "modified_at": null, "id": "<value>", "source": "catalog", "amount_type": "free", "price_currency": "clp", "is_archived": true, "product_id": "<value>", "type": "recurring", "recurring_interval": "week", "legacy": true}, "prices": {"key": [], "key1": []}, "discount": null, "subscription_id": "<value>", "attached_custom_fields": [{"custom_field_id": "<value>", "custom_field": {"created_at": "2023-09-18T08:05:49.385Z", "modified_at": "2023-01-31T14:16:46.453Z", "id": "<value>", "metadata": {"key": 376311, "key1": "<value>", "key2": 112991}, "type": "text", "slug": "<value>", "name": "<value>", "organization_id": "1dbfc517-0bbf-4301-9ba8-555ca42b9737", "properties": {}}, "order": 115053, "required": true}, {"custom_field_id": "<value>", "custom_field": {"created_at": "2023-09-18T08:05:49.385Z", "modified_at": "2023-01-31T14:16:46.453Z", "id": "<value>", "metadata": {"key": 376311, "key1": "<value>", "key2": 112991}, "type": "text", "slug": "<value>", "name": "<value>", "organization_id": "1dbfc517-0bbf-4301-9ba8-555ca42b9737", "properties": {}}, "order": 115053, "required": true}, {"custom_field_id": "<value>", "custom_field": {"created_at": "2023-09-18T08:05:49.385Z", "modified_at": "2023-01-31T14:16:46.453Z", "id": "<value>", "metadata": {"key": 376311, "key1": "<value>", "key2": 112991}, "type": "text", "slug": "<value>", "name": "<value>", "organization_id": "1dbfc517-0bbf-4301-9ba8-555ca42b9737", "properties": {}}, "order": 115053, "required": true}], "customer_metadata": {}}
         "403":
           application/json: {"error": "AlreadyActiveSubscriptionError", "detail": "<value>"}
         "404":
@@ -12030,10 +12094,10 @@ examples:
   client_invoices:create_client_invoice:
     speakeasy-default-client-invoices:create-client-invoice:
       requestBody:
-        application/json: {"customer_id": "<value>", "currency": "Gibraltar Pound", "line_items": [], "discount_amount": 0, "include_payment_link": true}
+        application/json: {"customer_id": "<value>", "currency": "Gibraltar Pound", "line_items": [], "discount_amount": 0, "include_payment_link": true, "show_logo": true, "show_mor_attribution": true}
       responses:
         "201":
-          application/json: {"id": "<value>", "created_at": "2025-05-24T10:56:12.388Z", "modified_at": "2025-04-12T20:53:12.648Z", "organization_id": "<value>", "customer_id": "<value>", "stripe_invoice_id": "<id>", "status": "void", "currency": "Sri Lanka Rupee", "subtotal_amount": 926, "discount_amount": 73649, "tax_amount": 890703, "total_amount": 915693, "memo": "<value>", "po_number": "<value>", "due_date": "2024-06-26", "on_behalf_of_label": "<value>", "discount_label": null, "include_payment_link": true, "stripe_hosted_invoice_url": "https://total-giant.net", "invoice_pdf_url": "https://stable-secrecy.org", "checkout_link": "<value>", "user_metadata": {}, "order_id": "<value>"}
+          application/json: {"id": "<value>", "created_at": "2025-05-24T10:56:12.388Z", "modified_at": "2025-04-12T20:53:12.648Z", "organization_id": "<value>", "customer_id": "<value>", "stripe_invoice_id": "<id>", "status": "void", "currency": "Sri Lanka Rupee", "subtotal_amount": 926, "discount_amount": 73649, "tax_amount": 890703, "total_amount": 915693, "memo": "<value>", "po_number": "<value>", "due_date": "2024-06-26", "on_behalf_of_label": "<value>", "discount_label": null, "include_payment_link": true, "show_logo": true, "show_mor_attribution": true, "stripe_hosted_invoice_url": "https://total-giant.net", "invoice_pdf_url": "https://stable-secrecy.org", "checkout_link": "<value>", "user_metadata": {}, "order_id": "<value>"}
         "422":
           application/json: {}
   client_invoices:get_client_invoice:
@@ -12043,7 +12107,7 @@ examples:
           id: "<value>"
       responses:
         "200":
-          application/json: {"id": "<value>", "created_at": "2026-01-28T15:57:11.731Z", "modified_at": "2025-01-22T19:53:59.793Z", "organization_id": "<value>", "customer_id": "<value>", "stripe_invoice_id": "<id>", "status": "open", "currency": "Trinidad and Tobago Dollar", "subtotal_amount": 147707, "discount_amount": 80349, "tax_amount": 598624, "total_amount": 89503, "memo": "<value>", "po_number": "<value>", "due_date": "2025-10-10", "on_behalf_of_label": "<value>", "discount_label": null, "include_payment_link": false, "stripe_hosted_invoice_url": "https://apt-pile.com", "invoice_pdf_url": null, "checkout_link": "<value>", "user_metadata": {}, "order_id": "<value>"}
+          application/json: {"id": "<value>", "created_at": "2026-01-28T15:57:11.731Z", "modified_at": "2025-01-22T19:53:59.793Z", "organization_id": "<value>", "customer_id": "<value>", "stripe_invoice_id": "<id>", "status": "open", "currency": "Trinidad and Tobago Dollar", "subtotal_amount": 147707, "discount_amount": 80349, "tax_amount": 598624, "total_amount": 89503, "memo": "<value>", "po_number": "<value>", "due_date": "2025-10-10", "on_behalf_of_label": "<value>", "discount_label": null, "include_payment_link": false, "show_logo": false, "show_mor_attribution": true, "stripe_hosted_invoice_url": "https://apt-pile.com", "invoice_pdf_url": null, "checkout_link": "<value>", "user_metadata": {}, "order_id": "<value>"}
         "422":
           application/json: {}
   client_invoices:download_client_invoice_pdf:
@@ -12061,7 +12125,7 @@ examples:
           id: "<value>"
       responses:
         "200":
-          application/json: {"id": "<value>", "created_at": "2024-07-17T00:55:31.661Z", "modified_at": "2026-01-31T16:32:14.972Z", "organization_id": "<value>", "customer_id": "<value>", "stripe_invoice_id": "<id>", "status": "open", "currency": "Colombian Peso", "subtotal_amount": 258269, "discount_amount": 633335, "tax_amount": 272455, "total_amount": 799278, "memo": "<value>", "po_number": "<value>", "due_date": "2024-05-06", "on_behalf_of_label": "<value>", "discount_label": null, "include_payment_link": true, "stripe_hosted_invoice_url": "https://delicious-corral.net", "invoice_pdf_url": "https://wavy-bell.com", "checkout_link": "<value>", "user_metadata": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "order_id": "<value>"}
+          application/json: {"id": "<value>", "created_at": "2024-07-17T00:55:31.661Z", "modified_at": "2026-01-31T16:32:14.972Z", "organization_id": "<value>", "customer_id": "<value>", "stripe_invoice_id": "<id>", "status": "open", "currency": "Colombian Peso", "subtotal_amount": 258269, "discount_amount": 633335, "tax_amount": 272455, "total_amount": 799278, "memo": "<value>", "po_number": "<value>", "due_date": "2024-05-06", "on_behalf_of_label": "<value>", "discount_label": null, "include_payment_link": true, "show_logo": true, "show_mor_attribution": true, "stripe_hosted_invoice_url": "https://delicious-corral.net", "invoice_pdf_url": "https://wavy-bell.com", "checkout_link": "<value>", "user_metadata": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "order_id": "<value>"}
         "422":
           application/json: {}
   client_invoices:send_client_invoice:
@@ -12071,7 +12135,7 @@ examples:
           id: "<value>"
       responses:
         "200":
-          application/json: {"id": "<value>", "created_at": "2025-07-16T14:45:05.412Z", "modified_at": "2024-06-24T13:19:22.654Z", "organization_id": "<value>", "customer_id": "<value>", "stripe_invoice_id": "<id>", "status": "void", "currency": "Balboa", "subtotal_amount": 648533, "discount_amount": 508236, "tax_amount": 841301, "total_amount": 640554, "memo": "<value>", "po_number": "<value>", "due_date": "2026-03-18", "on_behalf_of_label": "<value>", "discount_label": "<value>", "include_payment_link": false, "stripe_hosted_invoice_url": "https://clean-version.net", "invoice_pdf_url": "https://better-presume.net/", "checkout_link": "<value>", "user_metadata": {"key": "<value>"}, "order_id": "<value>"}
+          application/json: {"id": "<value>", "created_at": "2025-07-16T14:45:05.412Z", "modified_at": "2024-06-24T13:19:22.654Z", "organization_id": "<value>", "customer_id": "<value>", "stripe_invoice_id": "<id>", "status": "void", "currency": "Balboa", "subtotal_amount": 648533, "discount_amount": 508236, "tax_amount": 841301, "total_amount": 640554, "memo": "<value>", "po_number": "<value>", "due_date": "2026-03-18", "on_behalf_of_label": "<value>", "discount_label": "<value>", "include_payment_link": false, "show_logo": false, "show_mor_attribution": true, "stripe_hosted_invoice_url": "https://clean-version.net", "invoice_pdf_url": "https://better-presume.net/", "checkout_link": "<value>", "user_metadata": {"key": "<value>"}, "order_id": "<value>"}
         "422":
           application/json: {}
   client_invoices:mark_client_invoice_paid:
@@ -12081,7 +12145,7 @@ examples:
           id: "<value>"
       responses:
         "200":
-          application/json: {"id": "<value>", "created_at": "2024-01-05T00:36:35.479Z", "modified_at": "2026-02-09T10:14:37.839Z", "organization_id": "<value>", "customer_id": "<value>", "stripe_invoice_id": "<id>", "status": "void", "currency": "Malagasy Ariary", "subtotal_amount": 325592, "discount_amount": 561695, "tax_amount": 904575, "total_amount": 448768, "memo": "<value>", "po_number": "<value>", "due_date": "2024-02-09", "on_behalf_of_label": "<value>", "discount_label": "<value>", "include_payment_link": false, "stripe_hosted_invoice_url": "https://apt-thigh.org", "invoice_pdf_url": "https://flashy-bonfire.biz/", "checkout_link": "<value>", "user_metadata": {"key": "<value>", "key1": "<value>"}, "order_id": "<value>"}
+          application/json: {"id": "<value>", "created_at": "2024-01-05T00:36:35.479Z", "modified_at": "2026-02-09T10:14:37.839Z", "organization_id": "<value>", "customer_id": "<value>", "stripe_invoice_id": "<id>", "status": "void", "currency": "Malagasy Ariary", "subtotal_amount": 325592, "discount_amount": 561695, "tax_amount": 904575, "total_amount": 448768, "memo": "<value>", "po_number": "<value>", "due_date": "2024-02-09", "on_behalf_of_label": "<value>", "discount_label": "<value>", "include_payment_link": false, "show_logo": true, "show_mor_attribution": true, "stripe_hosted_invoice_url": "https://apt-thigh.org", "invoice_pdf_url": "https://flashy-bonfire.biz/", "checkout_link": "<value>", "user_metadata": {"key": "<value>", "key1": "<value>"}, "order_id": "<value>"}
         "422":
           application/json: {}
   client_invoices:void_client_invoice:
@@ -12091,7 +12155,23 @@ examples:
           id: "<value>"
       responses:
         "200":
-          application/json: {"id": "<value>", "created_at": "2024-09-05T04:17:45.224Z", "modified_at": "2024-07-18T12:57:09.327Z", "organization_id": "<value>", "customer_id": "<value>", "stripe_invoice_id": "<id>", "status": "uncollectible", "currency": "Denar", "subtotal_amount": 96651, "discount_amount": 334288, "tax_amount": 624915, "total_amount": 543711, "memo": "<value>", "po_number": "<value>", "due_date": "2025-05-20", "on_behalf_of_label": "<value>", "discount_label": "<value>", "include_payment_link": false, "stripe_hosted_invoice_url": "https://questionable-final.net/", "invoice_pdf_url": "https://delectable-slime.info", "checkout_link": "<value>", "user_metadata": {}, "order_id": "<value>"}
+          application/json: {"id": "<value>", "created_at": "2024-09-05T04:17:45.224Z", "modified_at": "2024-07-18T12:57:09.327Z", "organization_id": "<value>", "customer_id": "<value>", "stripe_invoice_id": "<id>", "status": "uncollectible", "currency": "Denar", "subtotal_amount": 96651, "discount_amount": 334288, "tax_amount": 624915, "total_amount": 543711, "memo": "<value>", "po_number": "<value>", "due_date": "2025-05-20", "on_behalf_of_label": "<value>", "discount_label": "<value>", "include_payment_link": false, "show_logo": true, "show_mor_attribution": true, "stripe_hosted_invoice_url": "https://questionable-final.net/", "invoice_pdf_url": "https://delectable-slime.info", "checkout_link": "<value>", "user_metadata": {}, "order_id": "<value>"}
+        "422":
+          application/json: {}
+  products:products:preview_tax:
+    speakeasy-default-products:products:preview-tax:
+      requestBody:
+        application/json: {"amount": 428098, "currency": "Kina", "country": "Guatemala", "quantity": 1}
+      responses:
+        "200":
+          application/json: {"subtotal": 483155, "tax_amount": 758555, "total": 310765, "currency": "Jamaican Dollar", "quantity": 629284}
+        "422":
+          application/json: {}
+  client_invoices:preview_client_invoice_pdf:
+    speakeasy-default-client-invoices:preview-client-invoice-pdf:
+      requestBody:
+        application/json: {"organization_id": "<value>", "currency": "Baht", "line_items": [], "discount_amount": 0, "include_payment_link": true, "show_logo": true, "show_mor_attribution": true}
+      responses:
         "422":
           application/json: {}
 examplesVersion: 1.0.2
