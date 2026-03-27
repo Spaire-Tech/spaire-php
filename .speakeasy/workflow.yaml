@@ -22,3 +22,9 @@ targets:
             packagist:
                 username: spaire
                 token: $packagist_token
+        codeSamples:
+            output: codeSamples.yaml
+            registry:
+                location: registry.speakeasyapi.dev/spaire/spaire-workspace/spaire-oas-php-code-samples
+            labelOverride:
+                fixedValue: PHP (SDK)
