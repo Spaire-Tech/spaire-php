@@ -5,15 +5,15 @@ management:
   docVersion: 0.1.0
   speakeasyVersion: 1.759.3
   generationVersion: 2.869.25
-  releaseVersion: 0.9.1
-  configChecksum: 506901372227961ac1e06919be5e2c34
+  releaseVersion: 0.9.2
+  configChecksum: 68c9decadf368f6babdc6da45d5eda59
   repoURL: https://github.com/Spaire-Tech/spaire-php.git
   installationURL: https://github.com/Spaire-Tech/spaire-php.git
   published: true
 persistentEdits:
-  generation_id: 76a2563b-5c4e-4198-9294-2f784db0d8f7
-  pristine_commit_hash: 03ce696d276a8d1a053ae44952f6fecbf119f2ed
-  pristine_tree_hash: 4d60a27e6b90afa281103d68d752523a7410c025
+  generation_id: 2241e0b8-116a-4331-944c-24d85fbced61
+  pristine_commit_hash: 2c0936764d7bf1e3a45b500e135bb6e77af61b28
+  pristine_tree_hash: 4ea5e70613cbb22452c49efd858aae6f8e6b97ff
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -9534,8 +9534,8 @@ trackedFiles:
     pristine_git_object: 52ec6b7b8f23acd28e903bcf2fe4860b70c9f42a
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:86ac2807efea2978421905291cdb2eb0ea797f63
-    pristine_git_object: 94f234594cfd993006c9148c0524b421a718d206
+    last_write_checksum: sha1:231b6edce89ae918dd4c3befd5207e812962b75a
+    pristine_git_object: 187acad9244200bad86519c81977e8b46bda1a8a
   src/Seats.php:
     id: 4830e6b5f52b
     last_write_checksum: sha1:bedc58ed1e626034a11298a3eecea74ab02196a1

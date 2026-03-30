@@ -1,0 +1,1085 @@
+overlay: 1.0.0
+info:
+  title: CodeSamples overlay for php target
+  version: 0.0.0
+actions:
+  - target: $["paths"]["/v1/benefit-grants/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\BenefitGrantsListRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$responses = $sdk->benefitGrants->list(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/benefits/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\BenefitsListRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$responses = $sdk->benefits->list(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/benefits/"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\BenefitLicenseKeysCreate(\n    description: 'mature emergent at outside arrogantly gadzooks zealous equatorial notwithstanding',\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n    properties: new Components\\BenefitLicenseKeysCreateProperties(),\n);\n\n$response = $sdk->benefits->create(\n    request: $request\n);\n\nif ($response->benefit !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/benefits/{id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->benefits->delete(\n    id: '<value>'\n);\n\nif ($response->statusCode === 200) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/benefits/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->benefits->get(\n    id: '<value>'\n);\n\nif ($response->benefit !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/benefits/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->benefits->update(\n    id: '<value>',\n    requestBody: new Components\\BenefitCustomUpdate()\n\n);\n\nif ($response->benefit !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/benefits/{id}/grants"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\BenefitsGrantsRequest(\n    id: '<value>',\n);\n\n$responses = $sdk->benefits->grants(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/checkout-links/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\CheckoutLinksListRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$responses = $sdk->checkoutLinks->list(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/checkout-links/"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\CheckoutLinkCreateProductPrice(\n    productPriceId: '<value>',\n);\n\n$response = $sdk->checkoutLinks->create(\n    request: $request\n);\n\nif ($response->checkoutLink !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/checkout-links/{id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->checkoutLinks->delete(\n    id: '<value>'\n);\n\nif ($response->statusCode === 200) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/checkout-links/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->checkoutLinks->get(\n    id: '<value>'\n);\n\nif ($response->checkoutLink !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/checkout-links/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$checkoutLinkUpdate = new Components\\CheckoutLinkUpdate();\n\n$response = $sdk->checkoutLinks->update(\n    id: '<value>',\n    checkoutLinkUpdate: $checkoutLinkUpdate\n\n);\n\nif ($response->checkoutLink !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/checkouts/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\CheckoutsListRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$responses = $sdk->checkouts->list(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/checkouts/"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\CheckoutCreate(\n    locale: 'en',\n    customerName: 'John Doe',\n    customerBillingAddress: new Components\\AddressInput(\n        country: Components\\CountryAlpha2Input::Us,\n    ),\n    products: [\n        '<value 1>',\n        '<value 2>',\n        '<value 3>',\n    ],\n);\n\n$response = $sdk->checkouts->create(\n    request: $request\n);\n\nif ($response->checkout !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/checkouts/client/{client_secret}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n\n$response = $sdk->checkouts->clientGet(\n    clientSecret: '<value>'\n);\n\nif ($response->checkoutPublic !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/checkouts/client/{client_secret}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$checkoutUpdatePublic = new Components\\CheckoutUpdatePublic(\n    locale: 'en',\n    customerName: 'John Doe',\n    customerBillingAddress: null,\n);\n\n$response = $sdk->checkouts->clientUpdate(\n    clientSecret: '<value>',\n    checkoutUpdatePublic: $checkoutUpdatePublic\n\n);\n\nif ($response->checkoutPublic !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/checkouts/client/{client_secret}/confirm"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$checkoutConfirmStripe = new Components\\CheckoutConfirmStripe(\n    locale: 'en',\n    customerName: 'John Doe',\n    customerBillingAddress: new Components\\AddressInput(\n        country: Components\\CountryAlpha2Input::Us,\n    ),\n);\n\n$response = $sdk->checkouts->clientConfirm(\n    clientSecret: '<value>',\n    checkoutConfirmStripe: $checkoutConfirmStripe\n\n);\n\nif ($response->checkoutPublicConfirmed !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/checkouts/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->checkouts->get(\n    id: '<value>'\n);\n\nif ($response->checkout !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/checkouts/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$checkoutUpdate = new Components\\CheckoutUpdate(\n    locale: 'en',\n    customerName: 'John Doe',\n    customerBillingAddress: new Components\\AddressInput(\n        country: Components\\CountryAlpha2Input::Us,\n    ),\n);\n\n$response = $sdk->checkouts->update(\n    id: '<value>',\n    checkoutUpdate: $checkoutUpdate\n\n);\n\nif ($response->checkout !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/client-invoices/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$responses = $sdk->clientInvoices->listClientInvoices(\n    page: 1,\n    limit: 10\n\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/client-invoices/"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\ClientInvoiceCreate(\n    customerId: '<value>',\n    currency: 'Gibraltar Pound',\n    lineItems: [],\n);\n\n$response = $sdk->clientInvoices->createClientInvoice(\n    request: $request\n);\n\nif ($response->clientInvoiceSchema !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/client-invoices/preview-pdf"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\ClientInvoicePreviewRequest(\n    organizationId: '<value>',\n    currency: 'Baht',\n    lineItems: [],\n);\n\n$response = $sdk->clientInvoices->previewClientInvoicePdf(\n    request: $request\n);\n\nif ($response->statusCode === 200) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/client-invoices/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->clientInvoices->getClientInvoice(\n    id: '<value>'\n);\n\nif ($response->clientInvoiceSchema !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/client-invoices/{id}/finalize"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->clientInvoices->finalizeClientInvoice(\n    id: '<value>'\n);\n\nif ($response->clientInvoiceSchema !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/client-invoices/{id}/mark-paid"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->clientInvoices->markClientInvoicePaid(\n    id: '<value>'\n);\n\nif ($response->clientInvoiceSchema !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/client-invoices/{id}/pdf"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->clientInvoices->downloadClientInvoicePdf(\n    id: '<value>'\n);\n\nif ($response->statusCode === 200) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/client-invoices/{id}/send"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->clientInvoices->sendClientInvoice(\n    id: '<value>'\n);\n\nif ($response->clientInvoiceSchema !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/client-invoices/{id}/void"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->clientInvoices->voidClientInvoice(\n    id: '<value>'\n);\n\nif ($response->clientInvoiceSchema !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/custom-fields/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\CustomFieldsListRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$responses = $sdk->customFields->list(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/custom-fields/"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\CustomFieldCreateSelect(\n    slug: '<value>',\n    name: '<value>',\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n    properties: new Components\\CustomFieldSelectProperties(\n        options: [],\n    ),\n);\n\n$response = $sdk->customFields->create(\n    request: $request\n);\n\nif ($response->customField !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/custom-fields/{id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->customFields->delete(\n    id: '<value>'\n);\n\nif ($response->statusCode === 200) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/custom-fields/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->customFields->get(\n    id: '<value>'\n);\n\nif ($response->customField !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/custom-fields/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->customFields->update(\n    id: '<value>',\n    customFieldUpdate: new Components\\CustomFieldUpdateDate()\n\n);\n\nif ($response->customField !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-meters/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\CustomerMetersListRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$responses = $sdk->customerMeters->list(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/customer-meters/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->customerMeters->get(\n    id: '<value>'\n);\n\nif ($response->customerMeter !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/benefit-grants/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$request = new Operations\\CustomerPortalBenefitGrantsListRequest();\n$requestSecurity = new Operations\\CustomerPortalBenefitGrantsListSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$responses = $sdk->customerPortal->benefitGrants->list(\n    request: $request,\n    security: $requestSecurity\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/customer-portal/benefit-grants/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalBenefitGrantsGetSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->benefitGrants->get(\n    security: $requestSecurity,\n    id: '<value>'\n\n);\n\nif ($response->customerBenefitGrant !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/benefit-grants/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalBenefitGrantsUpdateSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->benefitGrants->update(\n    security: $requestSecurity,\n    id: '<value>',\n    customerBenefitGrantUpdate: new Components\\CustomerBenefitGrantLicenseKeysUpdate()\n\n);\n\nif ($response->customerBenefitGrant !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/customer-session/introspect"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalCustomerSessionIntrospectSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->customerSession->introspect(\n    security: $requestSecurity\n);\n\nif ($response->customerCustomerSession !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/customer-session/user"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalCustomerSessionGetAuthenticatedUserSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->customerSession->getAuthenticatedUser(\n    security: $requestSecurity\n);\n\nif ($response->portalAuthenticatedUser !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/customers/me"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalCustomersGetSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->customers->get(\n    security: $requestSecurity\n);\n\nif ($response->customerPortalCustomer !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/customers/me"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$request = new Components\\CustomerPortalCustomerUpdate(\n    billingAddress: new Components\\AddressInput(\n        country: Components\\CountryAlpha2Input::Us,\n    ),\n);\n$requestSecurity = new Operations\\CustomerPortalCustomersUpdateSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->customers->update(\n    request: $request,\n    security: $requestSecurity\n);\n\nif ($response->customerPortalCustomer !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/customers/me/payment-methods"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalCustomersListPaymentMethodsSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$responses = $sdk->customerPortal->customers->listPaymentMethods(\n    security: $requestSecurity,\n    page: 1,\n    limit: 10\n\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/customer-portal/customers/me/payment-methods"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$request = new Components\\CustomerPaymentMethodCreate(\n    confirmationTokenId: '<id>',\n    setDefault: false,\n    returnUrl: 'https://yearly-custom.net/',\n);\n$requestSecurity = new Operations\\CustomerPortalCustomersAddPaymentMethodSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->customers->addPaymentMethod(\n    request: $request,\n    security: $requestSecurity\n);\n\nif ($response->customerPaymentMethodCreateResponse !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/customers/me/payment-methods/confirm"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$request = new Components\\CustomerPaymentMethodConfirm(\n    setupIntentId: '<id>',\n    setDefault: true,\n);\n$requestSecurity = new Operations\\CustomerPortalCustomersConfirmPaymentMethodSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->customers->confirmPaymentMethod(\n    request: $request,\n    security: $requestSecurity\n);\n\nif ($response->customerPaymentMethodCreateResponse !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/customers/me/payment-methods/{id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalCustomersDeletePaymentMethodSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->customers->deletePaymentMethod(\n    security: $requestSecurity,\n    id: '<id>'\n\n);\n\nif ($response->statusCode === 200) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/downloadables/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalDownloadablesListSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$responses = $sdk->customerPortal->downloadables->list(\n    security: $requestSecurity,\n    page: 1,\n    limit: 10\n\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/customer-portal/license-keys/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalLicenseKeysListSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$responses = $sdk->customerPortal->licenseKeys->list(\n    security: $requestSecurity,\n    page: 1,\n    limit: 10\n\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/customer-portal/license-keys/activate"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$request = new Components\\LicenseKeyActivate(\n    key: '<key>',\n    organizationId: '<value>',\n    label: '<value>',\n);\n\n$response = $sdk->customerPortal->licenseKeys->activate(\n    request: $request\n);\n\nif ($response->licenseKeyActivationRead !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/license-keys/deactivate"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$request = new Components\\LicenseKeyDeactivate(\n    key: '<key>',\n    organizationId: '<value>',\n    activationId: '<value>',\n);\n\n$response = $sdk->customerPortal->licenseKeys->deactivate(\n    request: $request\n);\n\nif ($response->statusCode === 200) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/license-keys/validate"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$request = new Components\\LicenseKeyValidate(\n    key: '<key>',\n    organizationId: '<value>',\n);\n\n$response = $sdk->customerPortal->licenseKeys->validate(\n    request: $request\n);\n\nif ($response->validatedLicenseKey !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/license-keys/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalLicenseKeysGetSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->licenseKeys->get(\n    security: $requestSecurity,\n    id: '<value>'\n\n);\n\nif ($response->licenseKeyWithActivations !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/members"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->customerPortal->members->listMembers(\n\n);\n\nif ($response->responseCustomerPortalMembersListMembers !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/members"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\CustomerPortalMemberCreate(\n    email: 'Domenica.Schamberger@yahoo.com',\n);\n\n$response = $sdk->customerPortal->members->addMember(\n    request: $request\n);\n\nif ($response->customerPortalMember !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/members/{id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->customerPortal->members->removeMember(\n    id: 'b61c5e87-cda5-4b14-93ee-71a695f42d9d'\n);\n\nif ($response->statusCode === 200) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/members/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$customerPortalMemberUpdate = new Components\\CustomerPortalMemberUpdate();\n\n$response = $sdk->customerPortal->members->updateMember(\n    id: '8319ae11-ed5f-4642-81e4-4b40731df195',\n    customerPortalMemberUpdate: $customerPortalMemberUpdate\n\n);\n\nif ($response->customerPortalMember !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/meters/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$request = new Operations\\CustomerPortalCustomerMetersListRequest();\n$requestSecurity = new Operations\\CustomerPortalCustomerMetersListSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$responses = $sdk->customerPortal->customerMeters->list(\n    request: $request,\n    security: $requestSecurity\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/customer-portal/meters/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalCustomerMetersGetSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->customerMeters->get(\n    security: $requestSecurity,\n    id: '<value>'\n\n);\n\nif ($response->customerCustomerMeter !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/orders/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$request = new Operations\\CustomerPortalOrdersListRequest();\n$requestSecurity = new Operations\\CustomerPortalOrdersListSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$responses = $sdk->customerPortal->orders->list(\n    request: $request,\n    security: $requestSecurity\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/customer-portal/orders/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalOrdersGetSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->orders->get(\n    security: $requestSecurity,\n    id: '<value>'\n\n);\n\nif ($response->customerOrder !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/orders/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$customerOrderUpdate = new Components\\CustomerOrderUpdate(\n    billingAddress: new Components\\AddressInput(\n        country: Components\\CountryAlpha2Input::Us,\n    ),\n);\n$requestSecurity = new Operations\\CustomerPortalOrdersUpdateSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->orders->update(\n    security: $requestSecurity,\n    id: '<value>',\n    customerOrderUpdate: $customerOrderUpdate\n\n);\n\nif ($response->customerOrder !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/orders/{id}/confirm-payment"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$customerOrderConfirmPayment = new Components\\CustomerOrderConfirmPayment();\n$requestSecurity = new Operations\\CustomerPortalOrdersConfirmRetryPaymentSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->orders->confirmRetryPayment(\n    security: $requestSecurity,\n    id: '<value>',\n    customerOrderConfirmPayment: $customerOrderConfirmPayment\n\n);\n\nif ($response->customerOrderPaymentConfirmation !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/orders/{id}/invoice"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalOrdersInvoiceSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->orders->invoice(\n    security: $requestSecurity,\n    id: '<value>'\n\n);\n\nif ($response->customerOrderInvoice !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/orders/{id}/invoice"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalOrdersGenerateInvoiceSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->orders->generateInvoice(\n    security: $requestSecurity,\n    id: '<value>'\n\n);\n\nif ($response->any !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/orders/{id}/payment-status"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalOrdersGetPaymentStatusSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->orders->getPaymentStatus(\n    security: $requestSecurity,\n    id: '<value>'\n\n);\n\nif ($response->customerOrderPaymentStatus !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/organizations/{slug}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n\n$response = $sdk->customerPortal->organizations->get(\n    slug: '<value>'\n);\n\nif ($response->customerOrganizationData !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/seats"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalSeatsListSeatsSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->seats->listSeats(\n    security: $requestSecurity,\n    subscriptionId: '<id>'\n\n);\n\nif ($response->seatsList !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/seats"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$request = new Components\\SeatAssign();\n$requestSecurity = new Operations\\CustomerPortalSeatsAssignSeatSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->seats->assignSeat(\n    request: $request,\n    security: $requestSecurity\n);\n\nif ($response->customerSeat !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/seats/subscriptions"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalSeatsListClaimedSubscriptionsSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->seats->listClaimedSubscriptions(\n    security: $requestSecurity\n);\n\nif ($response->responseCustomerPortalSeatsListClaimedSubscriptions !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/seats/{seat_id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalSeatsRevokeSeatSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->seats->revokeSeat(\n    security: $requestSecurity,\n    seatId: '4b3d74b3-01ff-4aac-bd03-320535cd5ce4'\n\n);\n\nif ($response->customerSeat !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/seats/{seat_id}/resend"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalSeatsResendInvitationSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->seats->resendInvitation(\n    security: $requestSecurity,\n    seatId: 'e3817437-8d53-4578-88d2-1dc256825965'\n\n);\n\nif ($response->customerSeat !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/subscriptions/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$request = new Operations\\CustomerPortalSubscriptionsListRequest();\n$requestSecurity = new Operations\\CustomerPortalSubscriptionsListSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$responses = $sdk->customerPortal->subscriptions->list(\n    request: $request,\n    security: $requestSecurity\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/customer-portal/subscriptions/{id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalSubscriptionsCancelSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->subscriptions->cancel(\n    security: $requestSecurity,\n    id: '<value>'\n\n);\n\nif ($response->customerSubscription !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/subscriptions/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalSubscriptionsGetSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->subscriptions->get(\n    security: $requestSecurity,\n    id: '<value>'\n\n);\n\nif ($response->customerSubscription !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/subscriptions/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalSubscriptionsUpdateSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->subscriptions->update(\n    security: $requestSecurity,\n    id: '<value>',\n    customerSubscriptionUpdate: new Components\\CustomerSubscriptionCancel()\n\n);\n\nif ($response->customerSubscription !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-portal/wallets/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalWalletsListSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$responses = $sdk->customerPortal->wallets->list(\n    security: $requestSecurity,\n    page: 1,\n    limit: 10\n\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/customer-portal/wallets/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n$requestSecurity = new Operations\\CustomerPortalWalletsGetSecurity(\n    customerSession: '<YOUR_BEARER_TOKEN_HERE>',\n);\n\n$response = $sdk->customerPortal->wallets->get(\n    security: $requestSecurity,\n    id: '<value>'\n\n);\n\nif ($response->customerWallet !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-seats"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->customerSeats->listSeats(\n\n);\n\nif ($response->seatsList !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-seats"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\SeatAssign();\n\n$response = $sdk->customerSeats->assignSeat(\n    request: $request\n);\n\nif ($response->customerSeat !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-seats/claim"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$request = new Components\\SeatClaim(\n    invitationToken: '<value>',\n);\n\n$response = $sdk->customerSeats->claimSeat(\n    request: $request\n);\n\nif ($response->customerSeatClaimResponse !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-seats/claim/{invitation_token}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n\n\n$response = $sdk->customerSeats->getClaimInfo(\n    invitationToken: '<value>'\n);\n\nif ($response->seatClaimInfo !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-seats/{seat_id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->customerSeats->revokeSeat(\n    seatId: '<value>'\n);\n\nif ($response->customerSeat !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-seats/{seat_id}/resend"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->customerSeats->resendInvitation(\n    seatId: '<value>'\n);\n\nif ($response->customerSeat !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customer-sessions/"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\CustomerSessionCustomerExternalIDCreate(\n    externalCustomerId: '<id>',\n);\n\n$response = $sdk->customerSessions->create(\n    request: $request\n);\n\nif ($response->customerSession !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customers/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\CustomersListRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$responses = $sdk->customers->list(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/customers/"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\CustomerCreate(\n    externalId: 'usr_1337',\n    email: 'customer@example.com',\n    name: 'John Doe',\n    billingAddress: new Components\\AddressInput(\n        country: Components\\CountryAlpha2Input::Us,\n    ),\n    taxId: [\n        '911144442',\n        'us_ein',\n    ],\n    type: Components\\CustomerType::Individual,\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n    owner: new Components\\OwnerCreate(\n        email: 'member@example.com',\n        name: 'Jane Doe',\n        externalId: 'usr_1337',\n    ),\n);\n\n$response = $sdk->customers->create(\n    request: $request\n);\n\nif ($response->customerWithMembers !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customers/export"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->customers->export(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737'\n);\n\nif ($response->any !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customers/external/{external_id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->customers->deleteExternal(\n    externalId: '<id>',\n    anonymize: false\n\n);\n\nif ($response->statusCode === 200) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customers/external/{external_id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->customers->getExternal(\n    externalId: '<id>'\n);\n\nif ($response->customerWithMembers !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customers/external/{external_id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$customerUpdateExternalID = new Components\\CustomerUpdateExternalID(\n    email: 'customer@example.com',\n    name: 'John Doe',\n    billingAddress: new Components\\AddressInput(\n        country: Components\\CountryAlpha2Input::Us,\n    ),\n    taxId: [\n        '911144442',\n        'us_ein',\n    ],\n);\n\n$response = $sdk->customers->updateExternal(\n    externalId: '<id>',\n    customerUpdateExternalID: $customerUpdateExternalID\n\n);\n\nif ($response->customerWithMembers !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customers/external/{external_id}/state"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->customers->getStateExternal(\n    externalId: '<id>'\n);\n\nif ($response->customerState !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customers/{id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->customers->delete(\n    id: '<value>',\n    anonymize: false\n\n);\n\nif ($response->statusCode === 200) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customers/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->customers->get(\n    id: '<value>'\n);\n\nif ($response->customerWithMembers !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customers/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$customerUpdate = new Components\\CustomerUpdate(\n    email: 'customer@example.com',\n    name: 'John Doe',\n    billingAddress: new Components\\AddressInput(\n        country: Components\\CountryAlpha2Input::Us,\n    ),\n    taxId: [\n        '911144442',\n        'us_ein',\n    ],\n    externalId: 'usr_1337',\n    type: Components\\CustomerType::Individual,\n);\n\n$response = $sdk->customers->update(\n    id: '<value>',\n    customerUpdate: $customerUpdate\n\n);\n\nif ($response->customerWithMembers !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/customers/{id}/state"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->customers->getState(\n    id: '<value>'\n);\n\nif ($response->customerState !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/discounts/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\DiscountsListRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$responses = $sdk->discounts->list(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/discounts/"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\DiscountPercentageOnceForeverDurationCreate(\n    duration: Components\\DiscountDuration::Once,\n    type: Components\\DiscountType::Fixed,\n    basisPoints: 449604,\n    name: '<value>',\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$response = $sdk->discounts->create(\n    request: $request\n);\n\nif ($response->discount !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/discounts/{id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->discounts->delete(\n    id: '<value>'\n);\n\nif ($response->statusCode === 200) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/discounts/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->discounts->get(\n    id: '<value>'\n);\n\nif ($response->discount !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/discounts/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$discountUpdate = new Components\\DiscountUpdate();\n\n$response = $sdk->discounts->update(\n    id: '<value>',\n    discountUpdate: $discountUpdate\n\n);\n\nif ($response->discount !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/disputes/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\DisputesListRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$responses = $sdk->disputes->list(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/disputes/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->disputes->get(\n    id: '<value>'\n);\n\nif ($response->dispute !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/event-types/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\EventTypesListRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$responses = $sdk->eventTypes->list(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/event-types/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$eventTypeUpdate = new Components\\EventTypeUpdate(\n    label: '<value>',\n);\n\n$response = $sdk->eventTypes->update(\n    id: '<value>',\n    eventTypeUpdate: $eventTypeUpdate\n\n);\n\nif ($response->eventType !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/events/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\EventsListRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$response = $sdk->events->list(\n    request: $request\n);\n\nif ($response->responseEventsList !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/events/ingest"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\EventsIngest(\n    events: [],\n);\n\n$response = $sdk->events->ingest(\n    request: $request\n);\n\nif ($response->eventsIngestResponse !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/events/names"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\EventsListNamesRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$responses = $sdk->events->listNames(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/events/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->events->get(\n    id: '<value>'\n);\n\nif ($response->event !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/files/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$responses = $sdk->files->list(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n    page: 1,\n    limit: 10\n\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/files/"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\DownloadableFileCreate(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n    name: '<value>',\n    mimeType: '<value>',\n    size: 612128,\n    upload: new Components\\S3FileCreateMultipart(\n        parts: [],\n    ),\n);\n\n$response = $sdk->files->create(\n    request: $request\n);\n\nif ($response->fileUpload !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/files/{id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->files->delete(\n    id: '<value>'\n);\n\nif ($response->statusCode === 200) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/files/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$filePatch = new Components\\FilePatch();\n\n$response = $sdk->files->update(\n    id: '<value>',\n    filePatch: $filePatch\n\n);\n\nif ($response->responseFilesUpdate !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/files/{id}/uploaded"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$fileUploadCompleted = new Components\\FileUploadCompleted(\n    id: '<id>',\n    path: '/boot',\n    parts: [\n        new Components\\S3FileUploadCompletedPart(\n            number: 979613,\n            checksumEtag: '<value>',\n            checksumSha256Base64: '<value>',\n        ),\n        new Components\\S3FileUploadCompletedPart(\n            number: 979613,\n            checksumEtag: '<value>',\n            checksumSha256Base64: '<value>',\n        ),\n        new Components\\S3FileUploadCompletedPart(\n            number: 979613,\n            checksumEtag: '<value>',\n            checksumSha256Base64: '<value>',\n        ),\n    ],\n);\n\n$response = $sdk->files->uploaded(\n    id: '<value>',\n    fileUploadCompleted: $fileUploadCompleted\n\n);\n\nif ($response->responseFilesUploaded !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/license-keys/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$responses = $sdk->licenseKeys->list(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n    page: 1,\n    limit: 10\n\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/license-keys/activate"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\LicenseKeyActivate(\n    key: '<key>',\n    organizationId: '<value>',\n    label: '<value>',\n);\n\n$response = $sdk->licenseKeys->activate(\n    request: $request\n);\n\nif ($response->licenseKeyActivationRead !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/license-keys/deactivate"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\LicenseKeyDeactivate(\n    key: '<key>',\n    organizationId: '<value>',\n    activationId: '<value>',\n);\n\n$response = $sdk->licenseKeys->deactivate(\n    request: $request\n);\n\nif ($response->statusCode === 200) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/license-keys/validate"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\LicenseKeyValidate(\n    key: '<key>',\n    organizationId: '<value>',\n);\n\n$response = $sdk->licenseKeys->validate(\n    request: $request\n);\n\nif ($response->validatedLicenseKey !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/license-keys/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->licenseKeys->get(\n    id: '<value>'\n);\n\nif ($response->licenseKeyWithActivations !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/license-keys/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$licenseKeyUpdate = new Components\\LicenseKeyUpdate();\n\n$response = $sdk->licenseKeys->update(\n    id: '<value>',\n    licenseKeyUpdate: $licenseKeyUpdate\n\n);\n\nif ($response->licenseKeyRead !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/license-keys/{id}/activations/{activation_id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->licenseKeys->getActivation(\n    id: '<value>',\n    activationId: '<value>'\n\n);\n\nif ($response->licenseKeyActivationRead !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/member-sessions/"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\MemberSessionCreate(\n    memberId: '<value>',\n    returnUrl: 'https://example.com/account',\n);\n\n$response = $sdk->memberSessions->create(\n    request: $request\n);\n\nif ($response->memberSession !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/members/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\MembersListMembersRequest();\n\n$responses = $sdk->members->listMembers(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/members/"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\MemberCreate(\n    customerId: '<value>',\n    email: 'member@example.com',\n    name: 'Jane Doe',\n    externalId: 'usr_1337',\n);\n\n$response = $sdk->members->createMember(\n    request: $request\n);\n\nif ($response->member !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/members/{id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->members->deleteMember(\n    id: '913247e9-8f2b-4bd1-a47e-9842d173a7cb'\n);\n\nif ($response->statusCode === 200) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/members/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->members->getMember(\n    id: '572bebad-ee17-4d04-a50f-6596a7d92cf3'\n);\n\nif ($response->member !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/members/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$memberUpdate = new Components\\MemberUpdate(\n    name: 'Jane Doe',\n);\n\n$response = $sdk->members->updateMember(\n    id: 'ab9b628a-6dbd-4f07-bcd6-163a8b5b7de4',\n    memberUpdate: $memberUpdate\n\n);\n\nif ($response->member !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/meters/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\MetersListRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$responses = $sdk->meters->list(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/meters/"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\MeterCreate(\n    name: '<value>',\n    filter: new Components\\Filter(\n        conjunction: Components\\FilterConjunction::Or,\n        clauses: [\n            new Components\\FilterClause(\n                property: '<value>',\n                operator: Components\\FilterOperator::Ne,\n                value: '<value>',\n            ),\n        ],\n    ),\n    aggregation: new Components\\PropertyAggregation(\n        func: Components\\Func::Max,\n        property: '<value>',\n    ),\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$response = $sdk->meters->create(\n    request: $request\n);\n\nif ($response->meter !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/meters/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->meters->get(\n    id: '<value>'\n);\n\nif ($response->meter !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/meters/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$meterUpdate = new Components\\MeterUpdate();\n\n$response = $sdk->meters->update(\n    id: '<value>',\n    meterUpdate: $meterUpdate\n\n);\n\nif ($response->meter !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/meters/{id}/quantities"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\nuse Spaire\\Models\\Operations;\nuse Spaire\\Utils;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\MetersQuantitiesRequest(\n    id: '<value>',\n    startTimestamp: Utils\\Utils::parseDateTime('2025-11-25T04:37:16.823Z'),\n    endTimestamp: Utils\\Utils::parseDateTime('2025-11-26T17:06:00.727Z'),\n    interval: Components\\TimeInterval::Day,\n);\n\n$response = $sdk->meters->quantities(\n    request: $request\n);\n\nif ($response->meterQuantities !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/metrics/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Brick\\DateTime\\LocalDate;\nuse Spaire;\nuse Spaire\\Models\\Components;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\MetricsGetRequest(\n    startDate: LocalDate::parse('2025-03-14'),\n    endDate: LocalDate::parse('2025-03-18'),\n    interval: Components\\TimeInterval::Hour,\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$response = $sdk->metrics->get(\n    request: $request\n);\n\nif ($response->metricsResponse !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/metrics/limits"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->metrics->limits(\n\n);\n\nif ($response->metricsLimits !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/oauth2/authorize"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->oauth2->authorize(\n\n);\n\nif ($response->responseOauth2Authorize !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/oauth2/introspect"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$request = new Components\\IntrospectTokenRequest(\n    token: '<value>',\n    clientId: '<id>',\n    clientSecret: '<value>',\n);\n\n$response = $sdk->oauth2->introspect(\n    request: $request\n);\n\nif ($response->introspectTokenResponse !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/oauth2/register"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\OAuth2ClientConfiguration(\n    redirectUris: [\n        'https://impolite-hippodrome.com/',\n        'https://acidic-tomography.net/',\n    ],\n    clientName: '<value>',\n);\n\n$response = $sdk->oauth2->clients->create(\n    request: $request\n);\n\nif ($response->any !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/oauth2/register/{client_id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->oauth2->clients->delete(\n    clientId: '<id>'\n);\n\nif ($response->any !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/oauth2/register/{client_id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->oauth2->clients->get(\n    clientId: '<id>'\n);\n\nif ($response->any !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/oauth2/register/{client_id}"]["put"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$oAuth2ClientConfigurationUpdate = new Components\\OAuth2ClientConfigurationUpdate(\n    redirectUris: [\n        'https://classic-cantaloupe.org',\n        'https://corrupt-status.biz/',\n    ],\n    clientName: '<value>',\n    clientId: '<id>',\n);\n\n$response = $sdk->oauth2->clients->update(\n    clientId: '<id>',\n    oAuth2ClientConfigurationUpdate: $oAuth2ClientConfigurationUpdate\n\n);\n\nif ($response->any !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/oauth2/revoke"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$request = new Components\\RevokeTokenRequest(\n    token: '<value>',\n    clientId: '<id>',\n    clientSecret: '<value>',\n);\n\n$response = $sdk->oauth2->revoke(\n    request: $request\n);\n\nif ($response->revokeTokenResponse !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/oauth2/token"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()->build();\n\n$request = new Components\\AuthorizationCodeTokenRequest(\n    clientId: '<id>',\n    clientSecret: '<value>',\n    code: '<value>',\n    redirectUri: 'https://memorable-season.name',\n);\n\n$response = $sdk->oauth2->token(\n    request: $request\n);\n\nif ($response->tokenResponse !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/oauth2/userinfo"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->oauth2->userinfo(\n\n);\n\nif ($response->responseOauth2Userinfo !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/orders/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\OrdersListRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$responses = $sdk->orders->list(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/orders/export"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->orders->export(\n    organizationId: null\n);\n\nif ($response->any !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/orders/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->orders->get(\n    id: '<value>'\n);\n\nif ($response->order !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/orders/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$orderUpdate = new Components\\OrderUpdate(\n    billingAddress: new Components\\AddressInput(\n        country: Components\\CountryAlpha2Input::Us,\n    ),\n);\n\n$response = $sdk->orders->update(\n    id: '<value>',\n    orderUpdate: $orderUpdate\n\n);\n\nif ($response->order !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/orders/{id}/invoice"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->orders->invoice(\n    id: '<value>'\n);\n\nif ($response->orderInvoice !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/orders/{id}/invoice"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->orders->generateInvoice(\n    id: '<value>'\n);\n\nif ($response->any !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/organization-access-tokens/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$responses = $sdk->organizationAccessTokens->list(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n    page: 1,\n    limit: 10\n\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/organization-access-tokens/"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\OrganizationAccessTokenCreate(\n    comment: 'The Football Is Good For Training And Recreational Purposes',\n    scopes: [],\n);\n\n$response = $sdk->organizationAccessTokens->create(\n    request: $request\n);\n\nif ($response->organizationAccessTokenCreateResponse !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/organization-access-tokens/{id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->organizationAccessTokens->delete(\n    id: '<value>'\n);\n\nif ($response->statusCode === 200) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/organization-access-tokens/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$organizationAccessTokenUpdate = new Components\\OrganizationAccessTokenUpdate();\n\n$response = $sdk->organizationAccessTokens->update(\n    id: '<value>',\n    organizationAccessTokenUpdate: $organizationAccessTokenUpdate\n\n);\n\nif ($response->organizationAccessToken !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/organizations/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$responses = $sdk->organizations->list(\n    page: 1,\n    limit: 10\n\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/organizations/"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\OrganizationCreate(\n    name: '<value>',\n    slug: '<value>',\n);\n\n$response = $sdk->organizations->create(\n    request: $request\n);\n\nif ($response->organization !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/organizations/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->organizations->get(\n    id: '1dbfc517-0bbf-4301-9ba8-555ca42b9737'\n);\n\nif ($response->organization !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/organizations/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$organizationUpdate = new Components\\OrganizationUpdate();\n\n$response = $sdk->organizations->update(\n    id: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n    organizationUpdate: $organizationUpdate\n\n);\n\nif ($response->organization !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/payments/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\PaymentsListRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$responses = $sdk->payments->list(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/payments/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->payments->get(\n    id: '<value>'\n);\n\nif ($response->payment !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/products/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\ProductsListRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$responses = $sdk->products->list(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/products/"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\ProductCreateOneTime(\n    name: '<value>',\n    prices: [\n        new Components\\ProductPriceFixedCreate(\n            priceCurrency: Components\\PresentmentCurrency::Usd,\n            priceAmount: 677078,\n        ),\n        new Components\\ProductPriceCustomCreate(\n            priceCurrency: Components\\PresentmentCurrency::Usd,\n        ),\n    ],\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n    recurringInterval: 'year',\n);\n\n$response = $sdk->products->create(\n    request: $request\n);\n\nif ($response->product !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/products/tax-preview"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\ProductTaxPreviewRequest(\n    amount: 428098,\n    currency: 'Kina',\n    country: 'Guatemala',\n);\n\n$response = $sdk->products->products->previewTax(\n    request: $request\n);\n\nif ($response->productTaxPreviewResponse !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/products/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->products->get(\n    id: '<value>'\n);\n\nif ($response->product !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/products/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$productUpdate = new Components\\ProductUpdate();\n\n$response = $sdk->products->update(\n    id: '<value>',\n    productUpdate: $productUpdate\n\n);\n\nif ($response->product !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/products/{id}/benefits"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$productBenefitsUpdate = new Components\\ProductBenefitsUpdate(\n    benefits: [\n        '<value 1>',\n        '<value 2>',\n        '<value 3>',\n    ],\n);\n\n$response = $sdk->products->updateBenefits(\n    id: '<value>',\n    productBenefitsUpdate: $productBenefitsUpdate\n\n);\n\nif ($response->product !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/refunds/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\RefundsListRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$responses = $sdk->refunds->list(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/refunds/"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\RefundCreate(\n    orderId: '<value>',\n    reason: Components\\RefundReason::CustomerRequest,\n    amount: 90,\n);\n\n$response = $sdk->refunds->create(\n    request: $request\n);\n\nif ($response->refund !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/subscriptions/"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\SubscriptionsListRequest(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$responses = $sdk->subscriptions->list(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/subscriptions/"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\SubscriptionCreateCustomer(\n    productId: 'd8dd2de1-21b7-4a41-8bc3-ce909c0cfe23',\n    customerId: '992fae2a-2a17-4b7a-8d9e-e287cf90131b',\n);\n\n$response = $sdk->subscriptions->create(\n    request: $request\n);\n\nif ($response->subscription !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/subscriptions/export"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->subscriptions->export(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737'\n);\n\nif ($response->any !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/subscriptions/{id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->subscriptions->revoke(\n    id: '<value>'\n);\n\nif ($response->subscription !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/subscriptions/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->subscriptions->get(\n    id: '<value>'\n);\n\nif ($response->subscription !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/subscriptions/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->subscriptions->update(\n    id: '<value>',\n    subscriptionUpdate: new Components\\SubscriptionUpdateProduct(\n        productId: '<value>',\n    )\n\n);\n\nif ($response->subscription !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/webhooks/deliveries"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Operations;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Operations\\WebhooksListWebhookDeliveriesRequest();\n\n$responses = $sdk->webhooks->listWebhookDeliveries(\n    request: $request\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/webhooks/endpoints"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$responses = $sdk->webhooks->listWebhookEndpoints(\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n    page: 1,\n    limit: 10\n\n);\n\n\nforeach ($responses as $response) {\n    if ($response->statusCode === 200) {\n        // handle response\n    }\n}"
+  - target: $["paths"]["/v1/webhooks/endpoints"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$request = new Components\\WebhookEndpointCreate(\n    url: 'https://webhook.site/cb791d80-f26e-4f8c-be88-6e56054192b0',\n    format: Components\\WebhookFormat::Slack,\n    events: [\n        Components\\WebhookEventType::SubscriptionUncanceled,\n    ],\n    organizationId: '1dbfc517-0bbf-4301-9ba8-555ca42b9737',\n);\n\n$response = $sdk->webhooks->createWebhookEndpoint(\n    request: $request\n);\n\nif ($response->webhookEndpoint !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/webhooks/endpoints/{id}"]["delete"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->webhooks->deleteWebhookEndpoint(\n    id: '<value>'\n);\n\nif ($response->statusCode === 200) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/webhooks/endpoints/{id}"]["get"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->webhooks->getWebhookEndpoint(\n    id: '<value>'\n);\n\nif ($response->webhookEndpoint !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/webhooks/endpoints/{id}"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\nuse Spaire\\Models\\Components;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n$webhookEndpointUpdate = new Components\\WebhookEndpointUpdate(\n    url: 'https://webhook.site/cb791d80-f26e-4f8c-be88-6e56054192b0',\n);\n\n$response = $sdk->webhooks->updateWebhookEndpoint(\n    id: '<value>',\n    webhookEndpointUpdate: $webhookEndpointUpdate\n\n);\n\nif ($response->webhookEndpoint !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/webhooks/endpoints/{id}/secret"]["patch"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->webhooks->resetWebhookEndpointSecret(\n    id: '<value>'\n);\n\nif ($response->webhookEndpoint !== null) {\n    // handle response\n}"
+  - target: $["paths"]["/v1/webhooks/events/{id}/redeliver"]["post"]
+    update:
+      "x-codeSamples":
+        - "lang": "php"
+          "label": "PHP (SDK)"
+          "source": "declare(strict_types=1);\n\nrequire 'vendor/autoload.php';\n\nuse Spaire;\n\n$sdk = Spaire\\Spaire::builder()\n    ->setSecurity(\n        '<YOUR_BEARER_TOKEN_HERE>'\n    )\n    ->build();\n\n\n\n$response = $sdk->webhooks->redeliverWebhookEvent(\n    id: '<value>'\n);\n\nif ($response->any !== null) {\n    // handle response\n}"
