@@ -13,7 +13,7 @@ class AddressInput
 {
     /**
      *
-     * @var CountryAlpha2Input $country
+     * @var \Spaire\Models\Components\CountryAlpha2Input $country
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('country')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CountryAlpha2Input')]
@@ -60,7 +60,7 @@ class AddressInput
     public ?string $state = null;
 
     /**
-     * @param  CountryAlpha2Input  $country
+     * @param  \Spaire\Models\Components\CountryAlpha2Input  $country
      * @param  ?string  $line1
      * @param  ?string  $line2
      * @param  ?string  $postalCode

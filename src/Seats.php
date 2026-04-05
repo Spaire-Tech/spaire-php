@@ -48,9 +48,9 @@ class Seats
     /**
      * Assign Seat
      *
-     * @param  Operations\CustomerPortalSeatsAssignSeatSecurity  $security
-     * @param  Components\SeatAssign  $request
-     * @return Operations\CustomerPortalSeatsAssignSeatResponse
+     * @param  \Spaire\Models\Operations\CustomerPortalSeatsAssignSeatSecurity  $security
+     * @param  \Spaire\Models\Components\SeatAssign  $request
+     * @return \Spaire\Models\Operations\CustomerPortalSeatsAssignSeatResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function assignSeat(Operations\CustomerPortalSeatsAssignSeatSecurity $security, Components\SeatAssign $request, ?Options $options = null): Operations\CustomerPortalSeatsAssignSeatResponse
@@ -134,8 +134,8 @@ class Seats
      *
      * **Scopes**: `customer_portal:read` `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalSeatsListClaimedSubscriptionsSecurity  $security
-     * @return Operations\CustomerPortalSeatsListClaimedSubscriptionsResponse
+     * @param  \Spaire\Models\Operations\CustomerPortalSeatsListClaimedSubscriptionsSecurity  $security
+     * @return \Spaire\Models\Operations\CustomerPortalSeatsListClaimedSubscriptionsResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function listClaimedSubscriptions(Operations\CustomerPortalSeatsListClaimedSubscriptionsSecurity $security, ?Options $options = null): Operations\CustomerPortalSeatsListClaimedSubscriptionsResponse
@@ -201,10 +201,10 @@ class Seats
      *
      * **Scopes**: `customer_portal:read` `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalSeatsListSeatsSecurity  $security
+     * @param  \Spaire\Models\Operations\CustomerPortalSeatsListSeatsSecurity  $security
      * @param  ?string  $subscriptionId
      * @param  ?string  $orderId
-     * @return Operations\CustomerPortalSeatsListSeatsResponse
+     * @return \Spaire\Models\Operations\CustomerPortalSeatsListSeatsResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function listSeats(Operations\CustomerPortalSeatsListSeatsSecurity $security, ?string $subscriptionId = null, ?string $orderId = null, ?Options $options = null): Operations\CustomerPortalSeatsListSeatsResponse
@@ -286,9 +286,9 @@ class Seats
     /**
      * Resend Invitation
      *
-     * @param  Operations\CustomerPortalSeatsResendInvitationSecurity  $security
+     * @param  \Spaire\Models\Operations\CustomerPortalSeatsResendInvitationSecurity  $security
      * @param  string  $seatId
-     * @return Operations\CustomerPortalSeatsResendInvitationResponse
+     * @return \Spaire\Models\Operations\CustomerPortalSeatsResendInvitationResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function resendInvitation(Operations\CustomerPortalSeatsResendInvitationSecurity $security, string $seatId, ?Options $options = null): Operations\CustomerPortalSeatsResendInvitationResponse
@@ -366,9 +366,9 @@ class Seats
     /**
      * Revoke Seat
      *
-     * @param  Operations\CustomerPortalSeatsRevokeSeatSecurity  $security
+     * @param  \Spaire\Models\Operations\CustomerPortalSeatsRevokeSeatSecurity  $security
      * @param  string  $seatId
-     * @return Operations\CustomerPortalSeatsRevokeSeatResponse
+     * @return \Spaire\Models\Operations\CustomerPortalSeatsRevokeSeatResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function revokeSeat(Operations\CustomerPortalSeatsRevokeSeatSecurity $security, string $seatId, ?Options $options = null): Operations\CustomerPortalSeatsRevokeSeatResponse

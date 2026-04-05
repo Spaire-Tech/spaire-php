@@ -27,7 +27,7 @@ class WebhookBenefitGrantCycledPayload
 
     /**
      *
-     * @var BenefitGrantDiscordWebhook|BenefitGrantCustomWebhook|BenefitGrantGitHubRepositoryWebhook|BenefitGrantDownloadablesWebhook|BenefitGrantLicenseKeysWebhook|BenefitGrantMeterCreditWebhook $data
+     * @var \Spaire\Models\Components\BenefitGrantDiscordWebhook|\Spaire\Models\Components\BenefitGrantCustomWebhook|\Spaire\Models\Components\BenefitGrantGitHubRepositoryWebhook|\Spaire\Models\Components\BenefitGrantDownloadablesWebhook|\Spaire\Models\Components\BenefitGrantLicenseKeysWebhook|\Spaire\Models\Components\BenefitGrantMeterCreditWebhook $data
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('data')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantDiscordWebhook|\Spaire\Models\Components\BenefitGrantCustomWebhook|\Spaire\Models\Components\BenefitGrantGitHubRepositoryWebhook|\Spaire\Models\Components\BenefitGrantDownloadablesWebhook|\Spaire\Models\Components\BenefitGrantLicenseKeysWebhook|\Spaire\Models\Components\BenefitGrantMeterCreditWebhook')]
@@ -43,7 +43,7 @@ class WebhookBenefitGrantCycledPayload
     /**
      * @param  string  $type
      * @param  \DateTime  $timestamp
-     * @param  BenefitGrantDiscordWebhook|BenefitGrantCustomWebhook|BenefitGrantGitHubRepositoryWebhook|BenefitGrantDownloadablesWebhook|BenefitGrantLicenseKeysWebhook|BenefitGrantMeterCreditWebhook  $data
+     * @param  \Spaire\Models\Components\BenefitGrantDiscordWebhook|\Spaire\Models\Components\BenefitGrantCustomWebhook|\Spaire\Models\Components\BenefitGrantGitHubRepositoryWebhook|\Spaire\Models\Components\BenefitGrantDownloadablesWebhook|\Spaire\Models\Components\BenefitGrantLicenseKeysWebhook|\Spaire\Models\Components\BenefitGrantMeterCreditWebhook  $data
      * @phpstan-pure
      */
     public function __construct(\DateTime $timestamp, BenefitGrantDiscordWebhook|BenefitGrantCustomWebhook|BenefitGrantGitHubRepositoryWebhook|BenefitGrantDownloadablesWebhook|BenefitGrantLicenseKeysWebhook|BenefitGrantMeterCreditWebhook $data, string $type = 'benefit_grant.cycled')

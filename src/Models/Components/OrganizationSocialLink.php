@@ -13,7 +13,7 @@ class OrganizationSocialLink
 {
     /**
      *
-     * @var OrganizationSocialPlatforms $platform
+     * @var \Spaire\Models\Components\OrganizationSocialPlatforms $platform
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('platform')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationSocialPlatforms')]
@@ -28,7 +28,7 @@ class OrganizationSocialLink
     public string $url;
 
     /**
-     * @param  OrganizationSocialPlatforms  $platform
+     * @param  \Spaire\Models\Components\OrganizationSocialPlatforms  $platform
      * @param  string  $url
      * @phpstan-pure
      */

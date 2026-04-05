@@ -50,9 +50,9 @@ class SpaireCustomers
      *
      * Add a payment method to the authenticated customer.
      *
-     * @param  Operations\CustomerPortalCustomersAddPaymentMethodSecurity  $security
-     * @param  Components\CustomerPaymentMethodCreate  $request
-     * @return Operations\CustomerPortalCustomersAddPaymentMethodResponse
+     * @param  \Spaire\Models\Operations\CustomerPortalCustomersAddPaymentMethodSecurity  $security
+     * @param  \Spaire\Models\Components\CustomerPaymentMethodCreate  $request
+     * @return \Spaire\Models\Operations\CustomerPortalCustomersAddPaymentMethodResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function addPaymentMethod(Operations\CustomerPortalCustomersAddPaymentMethodSecurity $security, Components\CustomerPaymentMethodCreate $request, ?Options $options = null): Operations\CustomerPortalCustomersAddPaymentMethodResponse
@@ -134,9 +134,9 @@ class SpaireCustomers
      *
      * Confirm a payment method for the authenticated customer.
      *
-     * @param  Operations\CustomerPortalCustomersConfirmPaymentMethodSecurity  $security
-     * @param  Components\CustomerPaymentMethodConfirm  $request
-     * @return Operations\CustomerPortalCustomersConfirmPaymentMethodResponse
+     * @param  \Spaire\Models\Operations\CustomerPortalCustomersConfirmPaymentMethodSecurity  $security
+     * @param  \Spaire\Models\Components\CustomerPaymentMethodConfirm  $request
+     * @return \Spaire\Models\Operations\CustomerPortalCustomersConfirmPaymentMethodResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function confirmPaymentMethod(Operations\CustomerPortalCustomersConfirmPaymentMethodSecurity $security, Components\CustomerPaymentMethodConfirm $request, ?Options $options = null): Operations\CustomerPortalCustomersConfirmPaymentMethodResponse
@@ -229,9 +229,9 @@ class SpaireCustomers
      *
      * Delete a payment method from the authenticated customer.
      *
-     * @param  Operations\CustomerPortalCustomersDeletePaymentMethodSecurity  $security
+     * @param  \Spaire\Models\Operations\CustomerPortalCustomersDeletePaymentMethodSecurity  $security
      * @param  string  $id
-     * @return Operations\CustomerPortalCustomersDeletePaymentMethodResponse
+     * @return \Spaire\Models\Operations\CustomerPortalCustomersDeletePaymentMethodResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function deletePaymentMethod(Operations\CustomerPortalCustomersDeletePaymentMethodSecurity $security, string $id, ?Options $options = null): Operations\CustomerPortalCustomersDeletePaymentMethodResponse
@@ -326,8 +326,8 @@ class SpaireCustomers
      *
      * **Scopes**: `customer_portal:read` `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalCustomersGetSecurity  $security
-     * @return Operations\CustomerPortalCustomersGetResponse
+     * @param  \Spaire\Models\Operations\CustomerPortalCustomersGetSecurity  $security
+     * @return \Spaire\Models\Operations\CustomerPortalCustomersGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(Operations\CustomerPortalCustomersGetSecurity $security, ?Options $options = null): Operations\CustomerPortalCustomersGetResponse
@@ -393,10 +393,10 @@ class SpaireCustomers
      *
      * Get saved payment methods of the authenticated customer.
      *
-     * @param  Operations\CustomerPortalCustomersListPaymentMethodsSecurity  $security
+     * @param  \Spaire\Models\Operations\CustomerPortalCustomersListPaymentMethodsSecurity  $security
      * @param  ?int  $page
      * @param  ?int  $limit
-     * @return Operations\CustomerPortalCustomersListPaymentMethodsResponse
+     * @return \Spaire\Models\Operations\CustomerPortalCustomersListPaymentMethodsResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listPaymentMethodsIndividual(Operations\CustomerPortalCustomersListPaymentMethodsSecurity $security, ?int $page = null, ?int $limit = null, ?Options $options = null): Operations\CustomerPortalCustomersListPaymentMethodsResponse
@@ -513,10 +513,10 @@ class SpaireCustomers
      *
      * Get saved payment methods of the authenticated customer.
      *
-     * @param  Operations\CustomerPortalCustomersListPaymentMethodsSecurity  $security
+     * @param  \Spaire\Models\Operations\CustomerPortalCustomersListPaymentMethodsSecurity  $security
      * @param  ?int  $page
      * @param  ?int  $limit
-     * @return \Generator<Operations\CustomerPortalCustomersListPaymentMethodsResponse>
+     * @return \Generator<\Spaire\Models\Operations\CustomerPortalCustomersListPaymentMethodsResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function listPaymentMethods(Operations\CustomerPortalCustomersListPaymentMethodsSecurity $security, ?int $page = null, ?int $limit = null, ?Options $options = null): \Generator
@@ -533,9 +533,9 @@ class SpaireCustomers
      *
      * Update authenticated customer.
      *
-     * @param  Operations\CustomerPortalCustomersUpdateSecurity  $security
-     * @param  Components\CustomerPortalCustomerUpdate  $request
-     * @return Operations\CustomerPortalCustomersUpdateResponse
+     * @param  \Spaire\Models\Operations\CustomerPortalCustomersUpdateSecurity  $security
+     * @param  \Spaire\Models\Components\CustomerPortalCustomerUpdate  $request
+     * @return \Spaire\Models\Operations\CustomerPortalCustomersUpdateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function update(Operations\CustomerPortalCustomersUpdateSecurity $security, Components\CustomerPortalCustomerUpdate $request, ?Options $options = null): Operations\CustomerPortalCustomersUpdateResponse

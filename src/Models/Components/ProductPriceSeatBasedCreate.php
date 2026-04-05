@@ -9,7 +9,13 @@ declare(strict_types=1);
 namespace Spaire\Models\Components;
 
 
-/** ProductPriceSeatBasedCreate - Schema to create a seat-based price with volume-based tiers. */
+/**
+ * ProductPriceSeatBasedCreate - Schema to create a seat-based price with tiered pricing.
+ *
+ *
+ * Supports volume pricing (all seats at matching tier's rate) and
+ * graduated pricing (each tier's range priced independently).
+ */
 class ProductPriceSeatBasedCreate
 {
     /**
@@ -20,7 +26,7 @@ class ProductPriceSeatBasedCreate
      * - minimum_seats = first tier's min_seats
      * - maximum_seats = last tier's max_seats (None for unlimited)
      *
-     * @var ProductPriceSeatTiersInput $seatTiers
+     * @var \Spaire\Models\Components\ProductPriceSeatTiersInput $seatTiers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('seat_tiers')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductPriceSeatTiersInput')]
@@ -28,12 +34,22 @@ class ProductPriceSeatBasedCreate
 
     /**
      *
-     * @var ?PresentmentCurrency $priceCurrency
+     * @var ?\Spaire\Models\Components\PresentmentCurrency $priceCurrency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('price_currency')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PresentmentCurrency $priceCurrency = null;
+
+    /**
+     * The tax behavior of the price. If not set, it will default to the organization's default tax behavior.
+     *
+     * @var ?\Spaire\Models\Components\TaxBehaviorOption $taxBehavior
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tax_behavior')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TaxBehaviorOption|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?TaxBehaviorOption $taxBehavior = null;
 
     /**
      *
@@ -44,14 +60,16 @@ class ProductPriceSeatBasedCreate
 
     /**
      * @param  string  $amountType
-     * @param  ProductPriceSeatTiersInput  $seatTiers
-     * @param  ?PresentmentCurrency  $priceCurrency
+     * @param  \Spaire\Models\Components\ProductPriceSeatTiersInput  $seatTiers
+     * @param  ?\Spaire\Models\Components\PresentmentCurrency  $priceCurrency
+     * @param  ?\Spaire\Models\Components\TaxBehaviorOption  $taxBehavior
      * @phpstan-pure
      */
-    public function __construct(ProductPriceSeatTiersInput $seatTiers, ?PresentmentCurrency $priceCurrency = null, string $amountType = 'seat_based')
+    public function __construct(ProductPriceSeatTiersInput $seatTiers, ?PresentmentCurrency $priceCurrency = null, ?TaxBehaviorOption $taxBehavior = null, string $amountType = 'seat_based')
     {
         $this->seatTiers = $seatTiers;
         $this->priceCurrency = $priceCurrency;
+        $this->taxBehavior = $taxBehavior;
         $this->amountType = $amountType;
     }
 }

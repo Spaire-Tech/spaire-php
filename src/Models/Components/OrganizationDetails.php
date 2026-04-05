@@ -32,7 +32,7 @@ class OrganizationDetails
     /**
      * Which platform the organization is migrating from.
      *
-     * @var ?SwitchingFrom $switchingFrom
+     * @var ?\Spaire\Models\Components\SwitchingFrom $switchingFrom
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('switching_from')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SwitchingFrom|null')]
@@ -92,7 +92,7 @@ class OrganizationDetails
      * @param  ?int  $futureAnnualRevenue
      * @param  ?bool  $switching
      * @param  ?int  $previousAnnualRevenue
-     * @param  ?SwitchingFrom  $switchingFrom
+     * @param  ?\Spaire\Models\Components\SwitchingFrom  $switchingFrom
      * @phpstan-pure
      */
     public function __construct(string $productDescription, ?array $customerAcquisition = null, ?SwitchingFrom $switchingFrom = null, ?string $about = '', ?string $intendedUse = '', ?int $futureAnnualRevenue = 0, ?bool $switching = true, ?int $previousAnnualRevenue = 0)

@@ -13,7 +13,7 @@ class DiscountFixedRepeatDurationBase
 {
     /**
      *
-     * @var DiscountDuration $duration
+     * @var \Spaire\Models\Components\DiscountDuration $duration
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('duration')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DiscountDuration')]
@@ -28,7 +28,7 @@ class DiscountFixedRepeatDurationBase
 
     /**
      *
-     * @var DiscountType $type
+     * @var \Spaire\Models\Components\DiscountType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DiscountType')]
@@ -138,9 +138,9 @@ class DiscountFixedRepeatDurationBase
     public ?int $maxRedemptions;
 
     /**
-     * @param  DiscountDuration  $duration
+     * @param  \Spaire\Models\Components\DiscountDuration  $duration
      * @param  int  $durationInMonths
-     * @param  DiscountType  $type
+     * @param  \Spaire\Models\Components\DiscountType  $type
      * @param  int  $amount
      * @param  string  $currency
      * @param  \DateTime  $createdAt

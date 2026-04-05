@@ -55,7 +55,7 @@ class WebhooksListWebhookDeliveriesRequest
     /**
      * Filter by HTTP response code class (2xx, 3xx, 4xx, 5xx).
      *
-     * @var ?HttpCodeClass $httpCodeClass
+     * @var ?\Spaire\Models\Operations\HttpCodeClass $httpCodeClass
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=http_code_class')]
     public ?HttpCodeClass $httpCodeClass = null;
@@ -63,7 +63,7 @@ class WebhooksListWebhookDeliveriesRequest
     /**
      * Filter by webhook event type.
      *
-     * @var Components\WebhookEventType|array<Components\WebhookEventType>|null $eventType
+     * @var \Spaire\Models\Components\WebhookEventType|array<\Spaire\Models\Components\WebhookEventType>|null $eventType
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=event_type')]
     public Components\WebhookEventType|array|null $eventType = null;
@@ -92,8 +92,8 @@ class WebhooksListWebhookDeliveriesRequest
      * @param  ?\DateTime  $endTimestamp
      * @param  ?bool  $succeeded
      * @param  ?string  $query
-     * @param  ?HttpCodeClass  $httpCodeClass
-     * @param  Components\WebhookEventType|array<Components\WebhookEventType>|null  $eventType
+     * @param  ?\Spaire\Models\Operations\HttpCodeClass  $httpCodeClass
+     * @param  \Spaire\Models\Components\WebhookEventType|array<\Spaire\Models\Components\WebhookEventType>|null  $eventType
      * @phpstan-pure
      */
     public function __construct(string|array|null $endpointId = null, ?\DateTime $startTimestamp = null, ?\DateTime $endTimestamp = null, ?bool $succeeded = null, ?string $query = null, ?HttpCodeClass $httpCodeClass = null, Components\WebhookEventType|array|null $eventType = null, ?int $page = 1, ?int $limit = 10)

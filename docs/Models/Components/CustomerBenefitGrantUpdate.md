@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Components\CustomerBenefitGrantCustomUpdate
+* @var \Spaire\Models\Components\CustomerBenefitGrantCustomUpdate
 */
 Components\CustomerBenefitGrantCustomUpdate $value = /* values here */
 ```
@@ -16,7 +16,7 @@ Components\CustomerBenefitGrantCustomUpdate $value = /* values here */
 
 ```php
 /**
-* @var Components\CustomerBenefitGrantDiscordUpdate
+* @var \Spaire\Models\Components\CustomerBenefitGrantDiscordUpdate
 */
 Components\CustomerBenefitGrantDiscordUpdate $value = /* values here */
 ```
@@ -25,7 +25,7 @@ Components\CustomerBenefitGrantDiscordUpdate $value = /* values here */
 
 ```php
 /**
-* @var Components\CustomerBenefitGrantDownloadablesUpdate
+* @var \Spaire\Models\Components\CustomerBenefitGrantDownloadablesUpdate
 */
 Components\CustomerBenefitGrantDownloadablesUpdate $value = /* values here */
 ```
@@ -34,7 +34,7 @@ Components\CustomerBenefitGrantDownloadablesUpdate $value = /* values here */
 
 ```php
 /**
-* @var Components\CustomerBenefitGrantGitHubRepositoryUpdate
+* @var \Spaire\Models\Components\CustomerBenefitGrantGitHubRepositoryUpdate
 */
 Components\CustomerBenefitGrantGitHubRepositoryUpdate $value = /* values here */
 ```
@@ -43,7 +43,7 @@ Components\CustomerBenefitGrantGitHubRepositoryUpdate $value = /* values here */
 
 ```php
 /**
-* @var Components\CustomerBenefitGrantLicenseKeysUpdate
+* @var \Spaire\Models\Components\CustomerBenefitGrantLicenseKeysUpdate
 */
 Components\CustomerBenefitGrantLicenseKeysUpdate $value = /* values here */
 ```
@@ -52,7 +52,7 @@ Components\CustomerBenefitGrantLicenseKeysUpdate $value = /* values here */
 
 ```php
 /**
-* @var Components\CustomerBenefitGrantMeterCreditUpdate
+* @var \Spaire\Models\Components\CustomerBenefitGrantMeterCreditUpdate
 */
 Components\CustomerBenefitGrantMeterCreditUpdate $value = /* values here */
 ```

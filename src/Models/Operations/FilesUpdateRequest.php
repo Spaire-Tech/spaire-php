@@ -22,14 +22,14 @@ class FilesUpdateRequest
 
     /**
      *
-     * @var Components\FilePatch $filePatch
+     * @var \Spaire\Models\Components\FilePatch $filePatch
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Components\FilePatch $filePatch;
 
     /**
      * @param  string  $id
-     * @param  Components\FilePatch  $filePatch
+     * @param  \Spaire\Models\Components\FilePatch  $filePatch
      * @phpstan-pure
      */
     public function __construct(string $id, Components\FilePatch $filePatch)

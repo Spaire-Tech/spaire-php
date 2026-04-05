@@ -14,7 +14,7 @@ class ListResourceEventName
     /**
      * $items
      *
-     * @var array<EventName> $items
+     * @var array<\Spaire\Models\Components\EventName> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\EventName>')]
@@ -22,15 +22,15 @@ class ListResourceEventName
 
     /**
      *
-     * @var Pagination $pagination
+     * @var \Spaire\Models\Components\Pagination $pagination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pagination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Pagination')]
     public Pagination $pagination;
 
     /**
-     * @param  array<EventName>  $items
-     * @param  Pagination  $pagination
+     * @param  array<\Spaire\Models\Components\EventName>  $items
+     * @param  \Spaire\Models\Components\Pagination  $pagination
      * @phpstan-pure
      */
     public function __construct(array $items, Pagination $pagination)

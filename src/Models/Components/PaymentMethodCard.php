@@ -29,7 +29,7 @@ class PaymentMethodCard
 
     /**
      *
-     * @var PaymentProcessor $processor
+     * @var \Spaire\Models\Components\PaymentProcessor $processor
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('processor')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PaymentProcessor')]
@@ -44,7 +44,7 @@ class PaymentMethodCard
 
     /**
      *
-     * @var PaymentMethodCardMetadata $methodMetadata
+     * @var \Spaire\Models\Components\PaymentMethodCardMetadata $methodMetadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('method_metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PaymentMethodCardMetadata')]
@@ -68,10 +68,10 @@ class PaymentMethodCard
     /**
      * @param  string  $id
      * @param  \DateTime  $createdAt
-     * @param  PaymentProcessor  $processor
+     * @param  \Spaire\Models\Components\PaymentProcessor  $processor
      * @param  string  $customerId
      * @param  string  $type
-     * @param  PaymentMethodCardMetadata  $methodMetadata
+     * @param  \Spaire\Models\Components\PaymentMethodCardMetadata  $methodMetadata
      * @param  ?\DateTime  $modifiedAt
      * @phpstan-pure
      */

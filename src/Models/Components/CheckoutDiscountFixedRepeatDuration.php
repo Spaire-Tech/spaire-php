@@ -18,7 +18,7 @@ class CheckoutDiscountFixedRepeatDuration
 {
     /**
      *
-     * @var DiscountDuration $duration
+     * @var \Spaire\Models\Components\DiscountDuration $duration
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('duration')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DiscountDuration')]
@@ -33,7 +33,7 @@ class CheckoutDiscountFixedRepeatDuration
 
     /**
      *
-     * @var DiscountType $type
+     * @var \Spaire\Models\Components\DiscountType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DiscountType')]
@@ -76,9 +76,9 @@ class CheckoutDiscountFixedRepeatDuration
     public ?string $code;
 
     /**
-     * @param  DiscountDuration  $duration
+     * @param  \Spaire\Models\Components\DiscountDuration  $duration
      * @param  int  $durationInMonths
-     * @param  DiscountType  $type
+     * @param  \Spaire\Models\Components\DiscountType  $type
      * @param  int  $amount
      * @param  string  $currency
      * @param  string  $id

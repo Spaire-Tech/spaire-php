@@ -52,8 +52,8 @@ class Customers
      *
      * **Scopes**: `customers:write`
      *
-     * @param  Components\CustomerCreate  $request
-     * @return Operations\CustomersCreateResponse
+     * @param  \Spaire\Models\Components\CustomerCreate  $request
+     * @return \Spaire\Models\Operations\CustomersCreateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function create(Components\CustomerCreate $request, ?Options $options = null): Operations\CustomersCreateResponse
@@ -147,7 +147,7 @@ class Customers
      *
      * @param  string  $id
      * @param  ?bool  $anonymize
-     * @return Operations\CustomersDeleteResponse
+     * @return \Spaire\Models\Operations\CustomersDeleteResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function delete(string $id, ?bool $anonymize = null, ?Options $options = null): Operations\CustomersDeleteResponse
@@ -235,7 +235,7 @@ class Customers
      *
      * @param  string  $externalId
      * @param  ?bool  $anonymize
-     * @return Operations\CustomersDeleteExternalResponse
+     * @return \Spaire\Models\Operations\CustomersDeleteExternalResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function deleteExternal(string $externalId, ?bool $anonymize = null, ?Options $options = null): Operations\CustomersDeleteExternalResponse
@@ -318,7 +318,7 @@ class Customers
      * **Scopes**: `customers:read` `customers:write`
      *
      * @param  string|array<string>|null  $organizationId
-     * @return Operations\CustomersExportResponse
+     * @return \Spaire\Models\Operations\CustomersExportResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function export(string|array|null $organizationId = null, ?Options $options = null): Operations\CustomersExportResponse
@@ -398,7 +398,7 @@ class Customers
      * **Scopes**: `customers:read` `customers:write`
      *
      * @param  string  $id
-     * @return Operations\CustomersGetResponse
+     * @return \Spaire\Models\Operations\CustomersGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\CustomersGetResponse
@@ -486,7 +486,7 @@ class Customers
      * **Scopes**: `customers:read` `customers:write`
      *
      * @param  string  $externalId
-     * @return Operations\CustomersGetExternalResponse
+     * @return \Spaire\Models\Operations\CustomersGetExternalResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function getExternal(string $externalId, ?Options $options = null): Operations\CustomersGetExternalResponse
@@ -580,7 +580,7 @@ class Customers
      * **Scopes**: `customers:read` `customers:write`
      *
      * @param  string  $id
-     * @return Operations\CustomersGetStateResponse
+     * @return \Spaire\Models\Operations\CustomersGetStateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function getState(string $id, ?Options $options = null): Operations\CustomersGetStateResponse
@@ -674,7 +674,7 @@ class Customers
      * **Scopes**: `customers:read` `customers:write`
      *
      * @param  string  $externalId
-     * @return Operations\CustomersGetStateExternalResponse
+     * @return \Spaire\Models\Operations\CustomersGetStateExternalResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function getStateExternal(string $externalId, ?Options $options = null): Operations\CustomersGetStateExternalResponse
@@ -761,8 +761,8 @@ class Customers
      *
      * **Scopes**: `customers:read` `customers:write`
      *
-     * @param  ?Operations\CustomersListRequest  $request
-     * @return Operations\CustomersListResponse
+     * @param  ?\Spaire\Models\Operations\CustomersListRequest  $request
+     * @return \Spaire\Models\Operations\CustomersListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(?Operations\CustomersListRequest $request = null, ?Options $options = null): Operations\CustomersListResponse
@@ -877,8 +877,8 @@ class Customers
      *
      * **Scopes**: `customers:read` `customers:write`
      *
-     * @param  ?Operations\CustomersListRequest  $request
-     * @return \Generator<Operations\CustomersListResponse>
+     * @param  ?\Spaire\Models\Operations\CustomersListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\CustomersListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(?Operations\CustomersListRequest $request = null, ?Options $options = null): \Generator
@@ -897,9 +897,9 @@ class Customers
      *
      * **Scopes**: `customers:write`
      *
-     * @param  Components\CustomerUpdate  $customerUpdate
+     * @param  \Spaire\Models\Components\CustomerUpdate  $customerUpdate
      * @param  string  $id
-     * @return Operations\CustomersUpdateResponse
+     * @return \Spaire\Models\Operations\CustomersUpdateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function update(Components\CustomerUpdate $customerUpdate, string $id, ?Options $options = null): Operations\CustomersUpdateResponse
@@ -992,9 +992,9 @@ class Customers
      *
      * **Scopes**: `customers:write`
      *
-     * @param  Components\CustomerUpdateExternalID  $customerUpdateExternalID
+     * @param  \Spaire\Models\Components\CustomerUpdateExternalID  $customerUpdateExternalID
      * @param  string  $externalId
-     * @return Operations\CustomersUpdateExternalResponse
+     * @return \Spaire\Models\Operations\CustomersUpdateExternalResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function updateExternal(Components\CustomerUpdateExternalID $customerUpdateExternalID, string $externalId, ?Options $options = null): Operations\CustomersUpdateExternalResponse

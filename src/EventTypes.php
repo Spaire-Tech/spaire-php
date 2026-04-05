@@ -52,8 +52,8 @@ class EventTypes
      *
      * **Scopes**: `events:read` `events:write`
      *
-     * @param  ?Operations\EventTypesListRequest  $request
-     * @return Operations\EventTypesListResponse
+     * @param  ?\Spaire\Models\Operations\EventTypesListRequest  $request
+     * @return \Spaire\Models\Operations\EventTypesListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(?Operations\EventTypesListRequest $request = null, ?Options $options = null): Operations\EventTypesListResponse
@@ -171,8 +171,8 @@ class EventTypes
      *
      * **Scopes**: `events:read` `events:write`
      *
-     * @param  ?Operations\EventTypesListRequest  $request
-     * @return \Generator<Operations\EventTypesListResponse>
+     * @param  ?\Spaire\Models\Operations\EventTypesListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\EventTypesListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(?Operations\EventTypesListRequest $request = null, ?Options $options = null): \Generator
@@ -189,9 +189,9 @@ class EventTypes
      *
      * Update an event type's label.
      *
-     * @param  Components\EventTypeUpdate  $eventTypeUpdate
+     * @param  \Spaire\Models\Components\EventTypeUpdate  $eventTypeUpdate
      * @param  string  $id
-     * @return Operations\EventTypesUpdateResponse
+     * @return \Spaire\Models\Operations\EventTypesUpdateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function update(Components\EventTypeUpdate $eventTypeUpdate, string $id, ?Options $options = null): Operations\EventTypesUpdateResponse

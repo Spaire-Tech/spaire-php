@@ -29,7 +29,7 @@ class WebhookSubscriptionRevokedPayload
 
     /**
      *
-     * @var Subscription $data
+     * @var \Spaire\Models\Components\Subscription $data
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('data')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Subscription')]
@@ -45,7 +45,7 @@ class WebhookSubscriptionRevokedPayload
     /**
      * @param  string  $type
      * @param  \DateTime  $timestamp
-     * @param  Subscription  $data
+     * @param  \Spaire\Models\Components\Subscription  $data
      * @phpstan-pure
      */
     public function __construct(\DateTime $timestamp, Subscription $data, string $type = 'subscription.revoked')

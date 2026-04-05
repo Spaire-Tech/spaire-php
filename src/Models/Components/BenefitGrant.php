@@ -62,7 +62,7 @@ class BenefitGrant
     /**
      * A customer in an organization.
      *
-     * @var Customer $customer
+     * @var \Spaire\Models\Components\Customer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer')]
@@ -70,7 +70,7 @@ class BenefitGrant
 
     /**
      *
-     * @var BenefitCustom|BenefitDiscord|BenefitGitHubRepository|BenefitDownloadables|BenefitLicenseKeys|BenefitMeterCredit $benefit
+     * @var \Spaire\Models\Components\BenefitCustom|\Spaire\Models\Components\BenefitDiscord|\Spaire\Models\Components\BenefitGitHubRepository|\Spaire\Models\Components\BenefitDownloadables|\Spaire\Models\Components\BenefitLicenseKeys|\Spaire\Models\Components\BenefitMeterCredit $benefit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('benefit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitCustom|\Spaire\Models\Components\BenefitDiscord|\Spaire\Models\Components\BenefitGitHubRepository|\Spaire\Models\Components\BenefitDownloadables|\Spaire\Models\Components\BenefitLicenseKeys|\Spaire\Models\Components\BenefitMeterCredit')]
@@ -78,7 +78,7 @@ class BenefitGrant
 
     /**
      *
-     * @var BenefitGrantDiscordProperties|BenefitGrantGitHubRepositoryProperties|BenefitGrantDownloadablesProperties|BenefitGrantLicenseKeysProperties|BenefitGrantCustomProperties $properties
+     * @var \Spaire\Models\Components\BenefitGrantDiscordProperties|\Spaire\Models\Components\BenefitGrantGitHubRepositoryProperties|\Spaire\Models\Components\BenefitGrantDownloadablesProperties|\Spaire\Models\Components\BenefitGrantLicenseKeysProperties|\Spaire\Models\Components\BenefitGrantCustomProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantDiscordProperties|\Spaire\Models\Components\BenefitGrantGitHubRepositoryProperties|\Spaire\Models\Components\BenefitGrantDownloadablesProperties|\Spaire\Models\Components\BenefitGrantLicenseKeysProperties|\Spaire\Models\Components\BenefitGrantCustomProperties')]
@@ -138,7 +138,7 @@ class BenefitGrant
     /**
      * The error information if the benefit grant failed with an unrecoverable error.
      *
-     * @var ?BenefitGrantError $error
+     * @var ?\Spaire\Models\Components\BenefitGrantError $error
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('error')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantError|null')]
@@ -147,7 +147,7 @@ class BenefitGrant
 
     /**
      *
-     * @var ?Member $member
+     * @var ?\Spaire\Models\Components\Member $member
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('member')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Member|null')]
@@ -161,17 +161,17 @@ class BenefitGrant
      * @param  bool  $isRevoked
      * @param  string  $customerId
      * @param  string  $benefitId
-     * @param  Customer  $customer
-     * @param  BenefitCustom|BenefitDiscord|BenefitGitHubRepository|BenefitDownloadables|BenefitLicenseKeys|BenefitMeterCredit  $benefit
-     * @param  BenefitGrantDiscordProperties|BenefitGrantGitHubRepositoryProperties|BenefitGrantDownloadablesProperties|BenefitGrantLicenseKeysProperties|BenefitGrantCustomProperties  $properties
+     * @param  \Spaire\Models\Components\Customer  $customer
+     * @param  \Spaire\Models\Components\BenefitCustom|\Spaire\Models\Components\BenefitDiscord|\Spaire\Models\Components\BenefitGitHubRepository|\Spaire\Models\Components\BenefitDownloadables|\Spaire\Models\Components\BenefitLicenseKeys|\Spaire\Models\Components\BenefitMeterCredit  $benefit
+     * @param  \Spaire\Models\Components\BenefitGrantDiscordProperties|\Spaire\Models\Components\BenefitGrantGitHubRepositoryProperties|\Spaire\Models\Components\BenefitGrantDownloadablesProperties|\Spaire\Models\Components\BenefitGrantLicenseKeysProperties|\Spaire\Models\Components\BenefitGrantCustomProperties  $properties
      * @param  ?\DateTime  $modifiedAt
      * @param  ?string  $subscriptionId
      * @param  ?string  $orderId
      * @param  ?\DateTime  $grantedAt
      * @param  ?\DateTime  $revokedAt
      * @param  ?string  $memberId
-     * @param  ?BenefitGrantError  $error
-     * @param  ?Member  $member
+     * @param  ?\Spaire\Models\Components\BenefitGrantError  $error
+     * @param  ?\Spaire\Models\Components\Member  $member
      * @phpstan-pure
      */
     public function __construct(\DateTime $createdAt, string $id, bool $isGranted, bool $isRevoked, string $customerId, string $benefitId, Customer $customer, BenefitCustom|BenefitDiscord|BenefitGitHubRepository|BenefitDownloadables|BenefitLicenseKeys|BenefitMeterCredit $benefit, BenefitGrantDiscordProperties|BenefitGrantGitHubRepositoryProperties|BenefitGrantDownloadablesProperties|BenefitGrantLicenseKeysProperties|BenefitGrantCustomProperties $properties, ?\DateTime $modifiedAt = null, ?string $subscriptionId = null, ?string $orderId = null, ?\DateTime $grantedAt = null, ?\DateTime $revokedAt = null, ?string $memberId = null, ?BenefitGrantError $error = null, ?Member $member = null)

@@ -29,7 +29,7 @@ class CustomerOrder
 
     /**
      *
-     * @var OrderStatus $status
+     * @var \Spaire\Models\Components\OrderStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrderStatus')]
@@ -124,7 +124,7 @@ class CustomerOrder
 
     /**
      *
-     * @var OrderBillingReason $billingReason
+     * @var \Spaire\Models\Components\OrderBillingReason $billingReason
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_reason')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrderBillingReason')]
@@ -164,7 +164,7 @@ class CustomerOrder
     /**
      * Line items composing the order.
      *
-     * @var array<OrderItemSchema> $items
+     * @var array<\Spaire\Models\Components\OrderItemSchema> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\OrderItemSchema>')]
@@ -196,7 +196,7 @@ class CustomerOrder
 
     /**
      *
-     * @var ?Address $billingAddress
+     * @var ?\Spaire\Models\Components\Address $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Address|null')]
@@ -232,7 +232,7 @@ class CustomerOrder
 
     /**
      *
-     * @var ?CustomerOrderProduct $product
+     * @var ?\Spaire\Models\Components\CustomerOrderProduct $product
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('product')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerOrderProduct|null')]
@@ -240,7 +240,7 @@ class CustomerOrder
 
     /**
      *
-     * @var ?CustomerOrderSubscription $subscription
+     * @var ?\Spaire\Models\Components\CustomerOrderSubscription $subscription
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('subscription')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerOrderSubscription|null')]
@@ -267,7 +267,7 @@ class CustomerOrder
     /**
      * @param  string  $id
      * @param  \DateTime  $createdAt
-     * @param  OrderStatus  $status
+     * @param  \Spaire\Models\Components\OrderStatus  $status
      * @param  bool  $paid
      * @param  int  $subtotalAmount
      * @param  int  $discountAmount
@@ -279,22 +279,22 @@ class CustomerOrder
      * @param  int  $refundedAmount
      * @param  int  $refundedTaxAmount
      * @param  string  $currency
-     * @param  OrderBillingReason  $billingReason
+     * @param  \Spaire\Models\Components\OrderBillingReason  $billingReason
      * @param  string  $invoiceNumber
      * @param  bool  $isInvoiceGenerated
      * @param  string  $customerId
      * @param  string  $userId
-     * @param  array<OrderItemSchema>  $items
+     * @param  array<\Spaire\Models\Components\OrderItemSchema>  $items
      * @param  string  $description
      * @param  ?\DateTime  $modifiedAt
      * @param  ?string  $billingName
-     * @param  ?Address  $billingAddress
+     * @param  ?\Spaire\Models\Components\Address  $billingAddress
      * @param  ?string  $productId
      * @param  ?string  $discountId
      * @param  ?string  $subscriptionId
      * @param  ?string  $checkoutId
-     * @param  ?CustomerOrderProduct  $product
-     * @param  ?CustomerOrderSubscription  $subscription
+     * @param  ?\Spaire\Models\Components\CustomerOrderProduct  $product
+     * @param  ?\Spaire\Models\Components\CustomerOrderSubscription  $subscription
      * @param  ?int  $seats
      * @param  ?\DateTime  $nextPaymentAttemptAt
      * @phpstan-pure

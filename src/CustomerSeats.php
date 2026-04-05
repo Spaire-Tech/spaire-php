@@ -50,8 +50,8 @@ class CustomerSeats
      *
      * **Scopes**: `customer_seats:write`
      *
-     * @param  Components\SeatAssign  $request
-     * @return Operations\CustomerSeatsAssignSeatResponse
+     * @param  \Spaire\Models\Components\SeatAssign  $request
+     * @return \Spaire\Models\Operations\CustomerSeatsAssignSeatResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function assignSeat(Components\SeatAssign $request, ?Options $options = null): Operations\CustomerSeatsAssignSeatResponse
@@ -125,8 +125,8 @@ class CustomerSeats
     /**
      * Claim Seat
      *
-     * @param  Components\SeatClaim  $request
-     * @return Operations\CustomerSeatsClaimSeatResponse
+     * @param  \Spaire\Models\Components\SeatClaim  $request
+     * @return \Spaire\Models\Operations\CustomerSeatsClaimSeatResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function claimSeat(Components\SeatClaim $request, ?Options $options = null): Operations\CustomerSeatsClaimSeatResponse
@@ -201,7 +201,7 @@ class CustomerSeats
      * Get Claim Info
      *
      * @param  string  $invitationToken
-     * @return Operations\CustomerSeatsGetClaimInfoResponse
+     * @return \Spaire\Models\Operations\CustomerSeatsGetClaimInfoResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function getClaimInfo(string $invitationToken, ?Options $options = null): Operations\CustomerSeatsGetClaimInfoResponse
@@ -277,7 +277,7 @@ class CustomerSeats
      *
      * @param  ?string  $subscriptionId
      * @param  ?string  $orderId
-     * @return Operations\CustomerSeatsListSeatsResponse
+     * @return \Spaire\Models\Operations\CustomerSeatsListSeatsResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function listSeats(?string $subscriptionId = null, ?string $orderId = null, ?Options $options = null): Operations\CustomerSeatsListSeatsResponse
@@ -356,7 +356,7 @@ class CustomerSeats
      * **Scopes**: `customer_seats:write`
      *
      * @param  string  $seatId
-     * @return Operations\CustomerSeatsResendInvitationResponse
+     * @return \Spaire\Models\Operations\CustomerSeatsResendInvitationResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function resendInvitation(string $seatId, ?Options $options = null): Operations\CustomerSeatsResendInvitationResponse
@@ -431,7 +431,7 @@ class CustomerSeats
      * **Scopes**: `customer_seats:write`
      *
      * @param  string  $seatId
-     * @return Operations\CustomerSeatsRevokeSeatResponse
+     * @return \Spaire\Models\Operations\CustomerSeatsRevokeSeatResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function revokeSeat(string $seatId, ?Options $options = null): Operations\CustomerSeatsRevokeSeatResponse

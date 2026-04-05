@@ -52,8 +52,8 @@ class CustomFields
      *
      * **Scopes**: `custom_fields:write`
      *
-     * @param  Components\CustomFieldCreateText|Components\CustomFieldCreateNumber|Components\CustomFieldCreateDate|Components\CustomFieldCreateCheckbox|Components\CustomFieldCreateSelect  $request
-     * @return Operations\CustomFieldsCreateResponse
+     * @param  \Spaire\Models\Components\CustomFieldCreateText|\Spaire\Models\Components\CustomFieldCreateNumber|\Spaire\Models\Components\CustomFieldCreateDate|\Spaire\Models\Components\CustomFieldCreateCheckbox|\Spaire\Models\Components\CustomFieldCreateSelect  $request
+     * @return \Spaire\Models\Operations\CustomFieldsCreateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function create(Components\CustomFieldCreateText|Components\CustomFieldCreateNumber|Components\CustomFieldCreateDate|Components\CustomFieldCreateCheckbox|Components\CustomFieldCreateSelect $request, ?Options $options = null): Operations\CustomFieldsCreateResponse
@@ -132,7 +132,7 @@ class CustomFields
      * **Scopes**: `custom_fields:write`
      *
      * @param  string  $id
-     * @return Operations\CustomFieldsDeleteResponse
+     * @return \Spaire\Models\Operations\CustomFieldsDeleteResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function delete(string $id, ?Options $options = null): Operations\CustomFieldsDeleteResponse
@@ -211,7 +211,7 @@ class CustomFields
      * **Scopes**: `custom_fields:read` `custom_fields:write`
      *
      * @param  string  $id
-     * @return Operations\CustomFieldsGetResponse
+     * @return \Spaire\Models\Operations\CustomFieldsGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\CustomFieldsGetResponse
@@ -298,8 +298,8 @@ class CustomFields
      *
      * **Scopes**: `custom_fields:read` `custom_fields:write`
      *
-     * @param  ?Operations\CustomFieldsListRequest  $request
-     * @return Operations\CustomFieldsListResponse
+     * @param  ?\Spaire\Models\Operations\CustomFieldsListRequest  $request
+     * @return \Spaire\Models\Operations\CustomFieldsListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(?Operations\CustomFieldsListRequest $request = null, ?Options $options = null): Operations\CustomFieldsListResponse
@@ -413,8 +413,8 @@ class CustomFields
      *
      * **Scopes**: `custom_fields:read` `custom_fields:write`
      *
-     * @param  ?Operations\CustomFieldsListRequest  $request
-     * @return \Generator<Operations\CustomFieldsListResponse>
+     * @param  ?\Spaire\Models\Operations\CustomFieldsListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\CustomFieldsListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(?Operations\CustomFieldsListRequest $request = null, ?Options $options = null): \Generator
@@ -433,9 +433,9 @@ class CustomFields
      *
      * **Scopes**: `custom_fields:write`
      *
-     * @param  Components\CustomFieldUpdateText|Components\CustomFieldUpdateNumber|Components\CustomFieldUpdateDate|Components\CustomFieldUpdateCheckbox|Components\CustomFieldUpdateSelect  $customFieldUpdate
+     * @param  \Spaire\Models\Components\CustomFieldUpdateText|\Spaire\Models\Components\CustomFieldUpdateNumber|\Spaire\Models\Components\CustomFieldUpdateDate|\Spaire\Models\Components\CustomFieldUpdateCheckbox|\Spaire\Models\Components\CustomFieldUpdateSelect  $customFieldUpdate
      * @param  string  $id
-     * @return Operations\CustomFieldsUpdateResponse
+     * @return \Spaire\Models\Operations\CustomFieldsUpdateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function update(Components\CustomFieldUpdateText|Components\CustomFieldUpdateNumber|Components\CustomFieldUpdateDate|Components\CustomFieldUpdateCheckbox|Components\CustomFieldUpdateSelect $customFieldUpdate, string $id, ?Options $options = null): Operations\CustomFieldsUpdateResponse

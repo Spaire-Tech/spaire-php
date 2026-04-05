@@ -51,9 +51,9 @@ class SpaireCustomerMeters
      *
      * **Scopes**: `customer_portal:read` `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalCustomerMetersGetSecurity  $security
+     * @param  \Spaire\Models\Operations\CustomerPortalCustomerMetersGetSecurity  $security
      * @param  string  $id
-     * @return Operations\CustomerPortalCustomerMetersGetResponse
+     * @return \Spaire\Models\Operations\CustomerPortalCustomerMetersGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(Operations\CustomerPortalCustomerMetersGetSecurity $security, string $id, ?Options $options = null): Operations\CustomerPortalCustomerMetersGetResponse
@@ -146,9 +146,9 @@ class SpaireCustomerMeters
      *
      * **Scopes**: `customer_portal:read` `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalCustomerMetersListSecurity  $security
-     * @param  ?Operations\CustomerPortalCustomerMetersListRequest  $request
-     * @return Operations\CustomerPortalCustomerMetersListResponse
+     * @param  \Spaire\Models\Operations\CustomerPortalCustomerMetersListSecurity  $security
+     * @param  ?\Spaire\Models\Operations\CustomerPortalCustomerMetersListRequest  $request
+     * @return \Spaire\Models\Operations\CustomerPortalCustomerMetersListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(Operations\CustomerPortalCustomerMetersListSecurity $security, ?Operations\CustomerPortalCustomerMetersListRequest $request = null, ?Options $options = null): Operations\CustomerPortalCustomerMetersListResponse
@@ -268,9 +268,9 @@ class SpaireCustomerMeters
      *
      * **Scopes**: `customer_portal:read` `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalCustomerMetersListSecurity  $security
-     * @param  ?Operations\CustomerPortalCustomerMetersListRequest  $request
-     * @return \Generator<Operations\CustomerPortalCustomerMetersListResponse>
+     * @param  \Spaire\Models\Operations\CustomerPortalCustomerMetersListSecurity  $security
+     * @param  ?\Spaire\Models\Operations\CustomerPortalCustomerMetersListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\CustomerPortalCustomerMetersListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(Operations\CustomerPortalCustomerMetersListSecurity $security, ?Operations\CustomerPortalCustomerMetersListRequest $request = null, ?Options $options = null): \Generator

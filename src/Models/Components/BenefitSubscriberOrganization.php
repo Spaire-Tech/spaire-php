@@ -45,7 +45,7 @@ class BenefitSubscriberOrganization
 
     /**
      *
-     * @var SubscriptionProrationBehavior $prorationBehavior
+     * @var \Spaire\Models\Components\SubscriptionProrationBehavior $prorationBehavior
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('proration_behavior')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionProrationBehavior')]
@@ -80,7 +80,7 @@ class BenefitSubscriberOrganization
      * @param  string  $id
      * @param  string  $name
      * @param  string  $slug
-     * @param  SubscriptionProrationBehavior  $prorationBehavior
+     * @param  \Spaire\Models\Components\SubscriptionProrationBehavior  $prorationBehavior
      * @param  bool  $allowCustomerUpdates
      * @param  ?\DateTime  $modifiedAt
      * @param  ?string  $avatarUrl

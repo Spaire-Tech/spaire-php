@@ -21,7 +21,7 @@ class CustomerPortalCustomerUpdate
 
     /**
      *
-     * @var ?AddressInput $billingAddress
+     * @var ?\Spaire\Models\Components\AddressInput $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\AddressInput|null')]
@@ -38,7 +38,7 @@ class CustomerPortalCustomerUpdate
 
     /**
      * @param  ?string  $billingName
-     * @param  ?AddressInput  $billingAddress
+     * @param  ?\Spaire\Models\Components\AddressInput  $billingAddress
      * @param  ?string  $taxId
      * @phpstan-pure
      */

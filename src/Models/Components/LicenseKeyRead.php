@@ -43,7 +43,7 @@ class LicenseKeyRead
 
     /**
      *
-     * @var LicenseKeyCustomer $customer
+     * @var \Spaire\Models\Components\LicenseKeyCustomer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\LicenseKeyCustomer')]
@@ -73,7 +73,7 @@ class LicenseKeyRead
 
     /**
      *
-     * @var LicenseKeyStatus $status
+     * @var \Spaire\Models\Components\LicenseKeyStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\LicenseKeyStatus')]
@@ -134,11 +134,11 @@ class LicenseKeyRead
      * @param  \DateTime  $createdAt
      * @param  string  $organizationId
      * @param  string  $customerId
-     * @param  LicenseKeyCustomer  $customer
+     * @param  \Spaire\Models\Components\LicenseKeyCustomer  $customer
      * @param  string  $benefitId
      * @param  string  $key
      * @param  string  $displayKey
-     * @param  LicenseKeyStatus  $status
+     * @param  \Spaire\Models\Components\LicenseKeyStatus  $status
      * @param  int  $usage
      * @param  int  $validations
      * @param  ?\DateTime  $modifiedAt

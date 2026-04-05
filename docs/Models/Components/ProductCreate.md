@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Components\ProductCreateRecurring
+* @var \Spaire\Models\Components\ProductCreateRecurring
 */
 Components\ProductCreateRecurring $value = /* values here */
 ```
@@ -16,7 +16,7 @@ Components\ProductCreateRecurring $value = /* values here */
 
 ```php
 /**
-* @var Components\ProductCreateOneTime
+* @var \Spaire\Models\Components\ProductCreateOneTime
 */
 Components\ProductCreateOneTime $value = /* values here */
 ```

@@ -51,7 +51,7 @@ class CustomFieldUpdateNumber
 
     /**
      *
-     * @var ?CustomFieldNumberProperties $properties
+     * @var ?\Spaire\Models\Components\CustomFieldNumberProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomFieldNumberProperties|null')]
@@ -70,7 +70,7 @@ class CustomFieldUpdateNumber
      * @param  ?array<string, string|int|float|bool>  $metadata
      * @param  ?string  $name
      * @param  ?string  $slug
-     * @param  ?CustomFieldNumberProperties  $properties
+     * @param  ?\Spaire\Models\Components\CustomFieldNumberProperties  $properties
      * @phpstan-pure
      */
     public function __construct(?array $metadata = null, ?string $name = null, ?string $slug = null, ?CustomFieldNumberProperties $properties = null, string $type = 'number')

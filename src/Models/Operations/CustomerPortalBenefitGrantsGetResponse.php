@@ -35,7 +35,7 @@ class CustomerPortalBenefitGrantsGetResponse
     /**
      * Successful Response
      *
-     * @var Components\CustomerBenefitGrantDiscord|Components\CustomerBenefitGrantGitHubRepository|Components\CustomerBenefitGrantDownloadables|Components\CustomerBenefitGrantLicenseKeys|Components\CustomerBenefitGrantCustom|Components\CustomerBenefitGrantMeterCredit|null $customerBenefitGrant
+     * @var \Spaire\Models\Components\CustomerBenefitGrantDiscord|\Spaire\Models\Components\CustomerBenefitGrantGitHubRepository|\Spaire\Models\Components\CustomerBenefitGrantDownloadables|\Spaire\Models\Components\CustomerBenefitGrantLicenseKeys|\Spaire\Models\Components\CustomerBenefitGrantCustom|\Spaire\Models\Components\CustomerBenefitGrantMeterCredit|null $customerBenefitGrant
      */
     public Components\CustomerBenefitGrantDiscord|Components\CustomerBenefitGrantGitHubRepository|Components\CustomerBenefitGrantDownloadables|Components\CustomerBenefitGrantLicenseKeys|Components\CustomerBenefitGrantCustom|Components\CustomerBenefitGrantMeterCredit|null $customerBenefitGrant = null;
 
@@ -43,7 +43,7 @@ class CustomerPortalBenefitGrantsGetResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  Components\CustomerBenefitGrantDiscord|Components\CustomerBenefitGrantGitHubRepository|Components\CustomerBenefitGrantDownloadables|Components\CustomerBenefitGrantLicenseKeys|Components\CustomerBenefitGrantCustom|Components\CustomerBenefitGrantMeterCredit|null  $customerBenefitGrant
+     * @param  \Spaire\Models\Components\CustomerBenefitGrantDiscord|\Spaire\Models\Components\CustomerBenefitGrantGitHubRepository|\Spaire\Models\Components\CustomerBenefitGrantDownloadables|\Spaire\Models\Components\CustomerBenefitGrantLicenseKeys|\Spaire\Models\Components\CustomerBenefitGrantCustom|\Spaire\Models\Components\CustomerBenefitGrantMeterCredit|null  $customerBenefitGrant
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, Components\CustomerBenefitGrantDiscord|Components\CustomerBenefitGrantGitHubRepository|Components\CustomerBenefitGrantDownloadables|Components\CustomerBenefitGrantLicenseKeys|Components\CustomerBenefitGrantCustom|Components\CustomerBenefitGrantMeterCredit|null $customerBenefitGrant = null)

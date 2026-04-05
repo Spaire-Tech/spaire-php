@@ -21,7 +21,7 @@ class MeterCreate
 
     /**
      *
-     * @var Filter $filter
+     * @var \Spaire\Models\Components\Filter $filter
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('filter')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Filter')]
@@ -30,7 +30,7 @@ class MeterCreate
     /**
      * The aggregation to apply on the filtered events to calculate the meter.
      *
-     * @var CountAggregation|PropertyAggregation|UniqueAggregation $aggregation
+     * @var \Spaire\Models\Components\CountAggregation|\Spaire\Models\Components\PropertyAggregation|\Spaire\Models\Components\UniqueAggregation $aggregation
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('aggregation')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CountAggregation|\Spaire\Models\Components\PropertyAggregation|\Spaire\Models\Components\UniqueAggregation')]
@@ -69,8 +69,8 @@ class MeterCreate
 
     /**
      * @param  string  $name
-     * @param  Filter  $filter
-     * @param  CountAggregation|PropertyAggregation|UniqueAggregation  $aggregation
+     * @param  \Spaire\Models\Components\Filter  $filter
+     * @param  \Spaire\Models\Components\CountAggregation|\Spaire\Models\Components\PropertyAggregation|\Spaire\Models\Components\UniqueAggregation  $aggregation
      * @param  ?array<string, string|int|float|bool>  $metadata
      * @param  ?string  $organizationId
      * @phpstan-pure

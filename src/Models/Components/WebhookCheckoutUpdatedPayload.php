@@ -27,7 +27,7 @@ class WebhookCheckoutUpdatedPayload
     /**
      * Checkout session data retrieved using an access token.
      *
-     * @var Checkout $data
+     * @var \Spaire\Models\Components\Checkout $data
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('data')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Checkout')]
@@ -43,7 +43,7 @@ class WebhookCheckoutUpdatedPayload
     /**
      * @param  string  $type
      * @param  \DateTime  $timestamp
-     * @param  Checkout  $data
+     * @param  \Spaire\Models\Components\Checkout  $data
      * @phpstan-pure
      */
     public function __construct(\DateTime $timestamp, Checkout $data, string $type = 'checkout.updated')

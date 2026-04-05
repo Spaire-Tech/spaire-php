@@ -22,14 +22,14 @@ class CheckoutsUpdateRequest
 
     /**
      *
-     * @var Components\CheckoutUpdate $checkoutUpdate
+     * @var \Spaire\Models\Components\CheckoutUpdate $checkoutUpdate
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Components\CheckoutUpdate $checkoutUpdate;
 
     /**
      * @param  string  $id
-     * @param  Components\CheckoutUpdate  $checkoutUpdate
+     * @param  \Spaire\Models\Components\CheckoutUpdate  $checkoutUpdate
      * @phpstan-pure
      */
     public function __construct(string $id, Components\CheckoutUpdate $checkoutUpdate)

@@ -46,7 +46,7 @@ class OrderPaidEvent
 
     /**
      *
-     * @var OrderPaidMetadata $metadata
+     * @var \Spaire\Models\Components\OrderPaidMetadata $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrderPaidMetadata')]
@@ -63,7 +63,7 @@ class OrderPaidEvent
     /**
      * The customer associated with the event.
      *
-     * @var ?Customer $customer
+     * @var ?\Spaire\Models\Components\Customer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer|null')]
@@ -136,9 +136,9 @@ class OrderPaidEvent
      * @param  string  $label
      * @param  string  $source
      * @param  string  $name
-     * @param  OrderPaidMetadata  $metadata
+     * @param  \Spaire\Models\Components\OrderPaidMetadata  $metadata
      * @param  ?string  $customerId
-     * @param  ?Customer  $customer
+     * @param  ?\Spaire\Models\Components\Customer  $customer
      * @param  ?string  $externalCustomerId
      * @param  ?int  $childCount
      * @param  ?string  $memberId

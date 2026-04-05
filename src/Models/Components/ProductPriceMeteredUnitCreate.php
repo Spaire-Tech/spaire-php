@@ -31,12 +31,22 @@ class ProductPriceMeteredUnitCreate
 
     /**
      *
-     * @var ?PresentmentCurrency $priceCurrency
+     * @var ?\Spaire\Models\Components\PresentmentCurrency $priceCurrency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('price_currency')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PresentmentCurrency $priceCurrency = null;
+
+    /**
+     * The tax behavior of the price. If not set, it will default to the organization's default tax behavior.
+     *
+     * @var ?\Spaire\Models\Components\TaxBehaviorOption $taxBehavior
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tax_behavior')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TaxBehaviorOption|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?TaxBehaviorOption $taxBehavior = null;
 
     /**
      * Optional maximum amount in cents that can be charged, regardless of the number of units consumed.
@@ -58,15 +68,17 @@ class ProductPriceMeteredUnitCreate
      * @param  string  $amountType
      * @param  string  $meterId
      * @param  float|string  $unitAmount
-     * @param  ?PresentmentCurrency  $priceCurrency
+     * @param  ?\Spaire\Models\Components\PresentmentCurrency  $priceCurrency
+     * @param  ?\Spaire\Models\Components\TaxBehaviorOption  $taxBehavior
      * @param  ?int  $capAmount
      * @phpstan-pure
      */
-    public function __construct(string $meterId, float|string $unitAmount, ?PresentmentCurrency $priceCurrency = null, ?int $capAmount = null, string $amountType = 'metered_unit')
+    public function __construct(string $meterId, float|string $unitAmount, ?PresentmentCurrency $priceCurrency = null, ?TaxBehaviorOption $taxBehavior = null, ?int $capAmount = null, string $amountType = 'metered_unit')
     {
         $this->meterId = $meterId;
         $this->unitAmount = $unitAmount;
         $this->priceCurrency = $priceCurrency;
+        $this->taxBehavior = $taxBehavior;
         $this->capAmount = $capAmount;
         $this->amountType = $amountType;
     }

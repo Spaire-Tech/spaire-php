@@ -30,7 +30,7 @@ class MemberCreate
 
     /**
      *
-     * @var ?MemberRole $role
+     * @var ?\Spaire\Models\Components\MemberRole $role
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('role')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MemberRole|null')]
@@ -57,7 +57,7 @@ class MemberCreate
     /**
      * @param  string  $customerId
      * @param  string  $email
-     * @param  ?MemberRole  $role
+     * @param  ?\Spaire\Models\Components\MemberRole  $role
      * @param  ?string  $name
      * @param  ?string  $externalId
      * @phpstan-pure

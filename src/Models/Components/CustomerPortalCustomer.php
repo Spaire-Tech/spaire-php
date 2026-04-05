@@ -44,7 +44,7 @@ class CustomerPortalCustomer
     /**
      * $oauthAccounts
      *
-     * @var array<string, CustomerPortalOAuthAccount> $oauthAccounts
+     * @var array<string, \Spaire\Models\Components\CustomerPortalOAuthAccount> $oauthAccounts
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('oauth_accounts')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, \Spaire\Models\Components\CustomerPortalOAuthAccount>')]
@@ -74,7 +74,7 @@ class CustomerPortalCustomer
 
     /**
      *
-     * @var ?Address $billingAddress
+     * @var ?\Spaire\Models\Components\Address $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Address|null')]
@@ -83,7 +83,7 @@ class CustomerPortalCustomer
     /**
      * $taxId
      *
-     * @var ?array<string|TaxIDFormat|null> $taxId
+     * @var ?array<string|\Spaire\Models\Components\TaxIDFormat|null> $taxId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax_id')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string|\Spaire\Models\Components\TaxIDFormat|null>|null')]
@@ -99,7 +99,7 @@ class CustomerPortalCustomer
 
     /**
      *
-     * @var ?CustomerType $type
+     * @var ?\Spaire\Models\Components\CustomerType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerType|null')]
@@ -111,14 +111,14 @@ class CustomerPortalCustomer
      * @param  string  $id
      * @param  string  $email
      * @param  bool  $emailVerified
-     * @param  array<string, CustomerPortalOAuthAccount>  $oauthAccounts
+     * @param  array<string, \Spaire\Models\Components\CustomerPortalOAuthAccount>  $oauthAccounts
      * @param  ?\DateTime  $modifiedAt
      * @param  ?string  $name
      * @param  ?string  $billingName
-     * @param  ?Address  $billingAddress
-     * @param  ?array<string|TaxIDFormat|null>  $taxId
+     * @param  ?\Spaire\Models\Components\Address  $billingAddress
+     * @param  ?array<string|\Spaire\Models\Components\TaxIDFormat|null>  $taxId
      * @param  ?string  $defaultPaymentMethodId
-     * @param  ?CustomerType  $type
+     * @param  ?\Spaire\Models\Components\CustomerType  $type
      * @phpstan-pure
      */
     public function __construct(\DateTime $createdAt, string $id, string $email, bool $emailVerified, array $oauthAccounts, ?\DateTime $modifiedAt = null, ?string $name = null, ?string $billingName = null, ?Address $billingAddress = null, ?array $taxId = null, ?string $defaultPaymentMethodId = null, ?CustomerType $type = null)

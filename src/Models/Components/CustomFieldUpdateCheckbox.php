@@ -51,7 +51,7 @@ class CustomFieldUpdateCheckbox
 
     /**
      *
-     * @var ?CustomFieldCheckboxProperties $properties
+     * @var ?\Spaire\Models\Components\CustomFieldCheckboxProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomFieldCheckboxProperties|null')]
@@ -70,7 +70,7 @@ class CustomFieldUpdateCheckbox
      * @param  ?array<string, string|int|float|bool>  $metadata
      * @param  ?string  $name
      * @param  ?string  $slug
-     * @param  ?CustomFieldCheckboxProperties  $properties
+     * @param  ?\Spaire\Models\Components\CustomFieldCheckboxProperties  $properties
      * @phpstan-pure
      */
     public function __construct(?array $metadata = null, ?string $name = null, ?string $slug = null, ?CustomFieldCheckboxProperties $properties = null, string $type = 'checkbox')

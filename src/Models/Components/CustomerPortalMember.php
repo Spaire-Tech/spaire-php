@@ -38,7 +38,7 @@ class CustomerPortalMember
 
     /**
      *
-     * @var MemberRole $role
+     * @var \Spaire\Models\Components\MemberRole $role
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('role')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MemberRole')]
@@ -64,7 +64,7 @@ class CustomerPortalMember
      * @param  \DateTime  $createdAt
      * @param  string  $id
      * @param  string  $email
-     * @param  MemberRole  $role
+     * @param  \Spaire\Models\Components\MemberRole  $role
      * @param  ?\DateTime  $modifiedAt
      * @param  ?string  $name
      * @phpstan-pure

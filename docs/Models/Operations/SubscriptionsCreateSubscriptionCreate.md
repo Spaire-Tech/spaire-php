@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Components\SubscriptionCreateCustomer
+* @var \Spaire\Models\Components\SubscriptionCreateCustomer
 */
 Components\SubscriptionCreateCustomer $value = /* values here */
 ```
@@ -16,7 +16,7 @@ Components\SubscriptionCreateCustomer $value = /* values here */
 
 ```php
 /**
-* @var Components\SubscriptionCreateExternalCustomer
+* @var \Spaire\Models\Components\SubscriptionCreateExternalCustomer
 */
 Components\SubscriptionCreateExternalCustomer $value = /* values here */
 ```

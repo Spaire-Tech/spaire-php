@@ -77,7 +77,7 @@ class BenefitCustom
     /**
      * Properties for a benefit of type `custom`.
      *
-     * @var BenefitCustomProperties $properties
+     * @var \Spaire\Models\Components\BenefitCustomProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitCustomProperties')]
@@ -107,7 +107,7 @@ class BenefitCustom
      * @param  bool  $deletable
      * @param  string  $organizationId
      * @param  array<string, string|int|float|bool>  $metadata
-     * @param  BenefitCustomProperties  $properties
+     * @param  \Spaire\Models\Components\BenefitCustomProperties  $properties
      * @param  ?\DateTime  $modifiedAt
      * @phpstan-pure
      */

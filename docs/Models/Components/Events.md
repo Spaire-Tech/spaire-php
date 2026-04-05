@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Components\EventCreateCustomer
+* @var \Spaire\Models\Components\EventCreateCustomer
 */
 Components\EventCreateCustomer $value = /* values here */
 ```
@@ -16,7 +16,7 @@ Components\EventCreateCustomer $value = /* values here */
 
 ```php
 /**
-* @var Components\EventCreateExternalCustomer
+* @var \Spaire\Models\Components\EventCreateExternalCustomer
 */
 Components\EventCreateExternalCustomer $value = /* values here */
 ```

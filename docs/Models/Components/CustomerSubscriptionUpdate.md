@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Components\CustomerSubscriptionUpdateProduct
+* @var \Spaire\Models\Components\CustomerSubscriptionUpdateProduct
 */
 Components\CustomerSubscriptionUpdateProduct $value = /* values here */
 ```
@@ -16,7 +16,7 @@ Components\CustomerSubscriptionUpdateProduct $value = /* values here */
 
 ```php
 /**
-* @var Components\CustomerSubscriptionUpdateSeats
+* @var \Spaire\Models\Components\CustomerSubscriptionUpdateSeats
 */
 Components\CustomerSubscriptionUpdateSeats $value = /* values here */
 ```
@@ -25,7 +25,7 @@ Components\CustomerSubscriptionUpdateSeats $value = /* values here */
 
 ```php
 /**
-* @var Components\CustomerSubscriptionCancel
+* @var \Spaire\Models\Components\CustomerSubscriptionCancel
 */
 Components\CustomerSubscriptionCancel $value = /* values here */
 ```

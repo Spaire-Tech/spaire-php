@@ -32,7 +32,7 @@ class WebhookCustomerCreatedPayload
     /**
      * A customer in an organization.
      *
-     * @var Customer $data
+     * @var \Spaire\Models\Components\Customer $data
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('data')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer')]
@@ -48,7 +48,7 @@ class WebhookCustomerCreatedPayload
     /**
      * @param  string  $type
      * @param  \DateTime  $timestamp
-     * @param  Customer  $data
+     * @param  \Spaire\Models\Components\Customer  $data
      * @phpstan-pure
      */
     public function __construct(\DateTime $timestamp, Customer $data, string $type = 'customer.created')

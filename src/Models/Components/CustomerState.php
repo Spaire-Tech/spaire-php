@@ -71,7 +71,7 @@ class CustomerState
     /**
      * The customer's active subscriptions.
      *
-     * @var array<CustomerStateSubscription> $activeSubscriptions
+     * @var array<\Spaire\Models\Components\CustomerStateSubscription> $activeSubscriptions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('active_subscriptions')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CustomerStateSubscription>')]
@@ -80,7 +80,7 @@ class CustomerState
     /**
      * The customer's active benefit grants.
      *
-     * @var array<CustomerStateBenefitGrant> $grantedBenefits
+     * @var array<\Spaire\Models\Components\CustomerStateBenefitGrant> $grantedBenefits
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('granted_benefits')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CustomerStateBenefitGrant>')]
@@ -89,7 +89,7 @@ class CustomerState
     /**
      * The customer's active meters.
      *
-     * @var array<CustomerStateMeter> $activeMeters
+     * @var array<\Spaire\Models\Components\CustomerStateMeter> $activeMeters
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('active_meters')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CustomerStateMeter>')]
@@ -128,7 +128,7 @@ class CustomerState
 
     /**
      *
-     * @var ?Address $billingAddress
+     * @var ?\Spaire\Models\Components\Address $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Address|null')]
@@ -137,7 +137,7 @@ class CustomerState
     /**
      * $taxId
      *
-     * @var ?array<string|TaxIDFormat|null> $taxId
+     * @var ?array<string|\Spaire\Models\Components\TaxIDFormat|null> $taxId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax_id')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string|\Spaire\Models\Components\TaxIDFormat|null>|null')]
@@ -154,7 +154,7 @@ class CustomerState
     /**
      * The type of customer: 'individual' for single users, 'team' for customers with multiple members. Legacy customers may have NULL type which is treated as 'individual'.
      *
-     * @var ?CustomerType $type
+     * @var ?\Spaire\Models\Components\CustomerType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerType|null')]
@@ -168,17 +168,17 @@ class CustomerState
      * @param  string  $email
      * @param  bool  $emailVerified
      * @param  string  $organizationId
-     * @param  array<CustomerStateSubscription>  $activeSubscriptions
-     * @param  array<CustomerStateBenefitGrant>  $grantedBenefits
-     * @param  array<CustomerStateMeter>  $activeMeters
+     * @param  array<\Spaire\Models\Components\CustomerStateSubscription>  $activeSubscriptions
+     * @param  array<\Spaire\Models\Components\CustomerStateBenefitGrant>  $grantedBenefits
+     * @param  array<\Spaire\Models\Components\CustomerStateMeter>  $activeMeters
      * @param  string  $avatarUrl
      * @param  ?\DateTime  $modifiedAt
      * @param  ?string  $externalId
      * @param  ?string  $name
-     * @param  ?Address  $billingAddress
-     * @param  ?array<string|TaxIDFormat|null>  $taxId
+     * @param  ?\Spaire\Models\Components\Address  $billingAddress
+     * @param  ?array<string|\Spaire\Models\Components\TaxIDFormat|null>  $taxId
      * @param  ?\DateTime  $deletedAt
-     * @param  ?CustomerType  $type
+     * @param  ?\Spaire\Models\Components\CustomerType  $type
      * @phpstan-pure
      */
     public function __construct(string $id, \DateTime $createdAt, array $metadata, string $email, bool $emailVerified, string $organizationId, array $activeSubscriptions, array $grantedBenefits, array $activeMeters, string $avatarUrl, ?\DateTime $modifiedAt = null, ?string $externalId = null, ?string $name = null, ?Address $billingAddress = null, ?array $taxId = null, ?\DateTime $deletedAt = null, ?CustomerType $type = null)

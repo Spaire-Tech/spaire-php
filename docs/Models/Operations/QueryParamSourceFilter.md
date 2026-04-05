@@ -9,7 +9,7 @@ Filter by event source.
 
 ```php
 /**
-* @var Components\EventSource
+* @var \Spaire\Models\Components\EventSource
 */
 Components\EventSource $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Components\EventSource $value = /* values here */
 
 ```php
 /**
-* @var array<Components\EventSource>
+* @var array<\Spaire\Models\Components\EventSource>
 */
 array $value = /* values here */
 ```

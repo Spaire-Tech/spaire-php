@@ -14,12 +14,22 @@ class ProductPriceCustomCreate
 {
     /**
      *
-     * @var ?PresentmentCurrency $priceCurrency
+     * @var ?\Spaire\Models\Components\PresentmentCurrency $priceCurrency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('price_currency')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PresentmentCurrency $priceCurrency = null;
+
+    /**
+     * The tax behavior of the price. If not set, it will default to the organization's default tax behavior.
+     *
+     * @var ?\Spaire\Models\Components\TaxBehaviorOption $taxBehavior
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tax_behavior')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TaxBehaviorOption|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?TaxBehaviorOption $taxBehavior = null;
 
     /**
      * The maximum amount the customer can pay.
@@ -57,15 +67,17 @@ class ProductPriceCustomCreate
 
     /**
      * @param  string  $amountType
-     * @param  ?PresentmentCurrency  $priceCurrency
+     * @param  ?\Spaire\Models\Components\PresentmentCurrency  $priceCurrency
      * @param  ?int  $minimumAmount
+     * @param  ?\Spaire\Models\Components\TaxBehaviorOption  $taxBehavior
      * @param  ?int  $maximumAmount
      * @param  ?int  $presetAmount
      * @phpstan-pure
      */
-    public function __construct(?PresentmentCurrency $priceCurrency = null, ?int $maximumAmount = null, ?int $presetAmount = null, string $amountType = 'custom', ?int $minimumAmount = 50)
+    public function __construct(?PresentmentCurrency $priceCurrency = null, ?TaxBehaviorOption $taxBehavior = null, ?int $maximumAmount = null, ?int $presetAmount = null, string $amountType = 'custom', ?int $minimumAmount = 50)
     {
         $this->priceCurrency = $priceCurrency;
+        $this->taxBehavior = $taxBehavior;
         $this->maximumAmount = $maximumAmount;
         $this->presetAmount = $presetAmount;
         $this->amountType = $amountType;

@@ -14,7 +14,7 @@ class CustomerOrganizationData
 {
     /**
      *
-     * @var CustomerOrganization $organization
+     * @var \Spaire\Models\Components\CustomerOrganization $organization
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('organization')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerOrganization')]
@@ -23,15 +23,15 @@ class CustomerOrganizationData
     /**
      * $products
      *
-     * @var array<CustomerProduct> $products
+     * @var array<\Spaire\Models\Components\CustomerProduct> $products
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('products')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CustomerProduct>')]
     public array $products;
 
     /**
-     * @param  CustomerOrganization  $organization
-     * @param  array<CustomerProduct>  $products
+     * @param  \Spaire\Models\Components\CustomerOrganization  $organization
+     * @param  array<\Spaire\Models\Components\CustomerProduct>  $products
      * @phpstan-pure
      */
     public function __construct(CustomerOrganization $organization, array $products)

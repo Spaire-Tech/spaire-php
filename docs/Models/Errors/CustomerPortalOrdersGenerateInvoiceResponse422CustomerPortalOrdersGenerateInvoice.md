@@ -9,7 +9,7 @@ Order is not paid or is missing billing name or address.
 
 ```php
 /**
-* @var Errors\MissingInvoiceBillingDetails
+* @var \Spaire\Models\Errors\MissingInvoiceBillingDetails
 */
 Errors\MissingInvoiceBillingDetails $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Errors\MissingInvoiceBillingDetails $value = /* values here */
 
 ```php
 /**
-* @var Errors\NotPaidOrder
+* @var \Spaire\Models\Errors\NotPaidOrder
 */
 Errors\NotPaidOrder $value = /* values here */
 ```

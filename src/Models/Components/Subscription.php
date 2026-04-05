@@ -45,7 +45,7 @@ class Subscription
 
     /**
      *
-     * @var SubscriptionRecurringInterval $recurringInterval
+     * @var \Spaire\Models\Components\SubscriptionRecurringInterval $recurringInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('recurring_interval')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionRecurringInterval')]
@@ -61,7 +61,7 @@ class Subscription
 
     /**
      *
-     * @var SubscriptionStatus $status
+     * @var \Spaire\Models\Components\SubscriptionStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionStatus')]
@@ -110,7 +110,7 @@ class Subscription
 
     /**
      *
-     * @var SubscriptionCustomer $customer
+     * @var \Spaire\Models\Components\SubscriptionCustomer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionCustomer')]
@@ -119,7 +119,7 @@ class Subscription
     /**
      * A product.
      *
-     * @var Product $product
+     * @var \Spaire\Models\Components\Product $product
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('product')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Product')]
@@ -128,7 +128,7 @@ class Subscription
     /**
      * List of enabled prices for the subscription.
      *
-     * @var array<LegacyRecurringProductPriceFixed|LegacyRecurringProductPriceCustom|LegacyRecurringProductPriceFree|ProductPriceFixed|ProductPriceCustom|ProductPriceFree|ProductPriceSeatBased|ProductPriceMeteredUnit> $prices
+     * @var array<\Spaire\Models\Components\LegacyRecurringProductPriceFixed|\Spaire\Models\Components\LegacyRecurringProductPriceCustom|\Spaire\Models\Components\LegacyRecurringProductPriceFree|\Spaire\Models\Components\ProductPriceFixed|\Spaire\Models\Components\ProductPriceCustom|\Spaire\Models\Components\ProductPriceFree|\Spaire\Models\Components\ProductPriceSeatBased|\Spaire\Models\Components\ProductPriceMeteredUnit> $prices
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('prices')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\LegacyRecurringProductPriceFixed|\Spaire\Models\Components\LegacyRecurringProductPriceCustom|\Spaire\Models\Components\LegacyRecurringProductPriceFree|\Spaire\Models\Components\ProductPriceFixed|\Spaire\Models\Components\ProductPriceCustom|\Spaire\Models\Components\ProductPriceFree|\Spaire\Models\Components\ProductPriceSeatBased|\Spaire\Models\Components\ProductPriceMeteredUnit>')]
@@ -137,7 +137,7 @@ class Subscription
     /**
      * List of meters associated with the subscription.
      *
-     * @var array<SubscriptionMeter> $meters
+     * @var array<\Spaire\Models\Components\SubscriptionMeter> $meters
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('meters')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\SubscriptionMeter>')]
@@ -224,7 +224,7 @@ class Subscription
 
     /**
      *
-     * @var ?CustomerCancellationReason $customerCancellationReason
+     * @var ?\Spaire\Models\Components\CustomerCancellationReason $customerCancellationReason
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_cancellation_reason')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerCancellationReason|null')]
@@ -249,7 +249,7 @@ class Subscription
 
     /**
      *
-     * @var DiscountFixedOnceForeverDurationBase|DiscountFixedRepeatDurationBase|DiscountPercentageOnceForeverDurationBase|DiscountPercentageRepeatDurationBase|null $discount
+     * @var \Spaire\Models\Components\DiscountFixedOnceForeverDurationBase|\Spaire\Models\Components\DiscountFixedRepeatDurationBase|\Spaire\Models\Components\DiscountPercentageOnceForeverDurationBase|\Spaire\Models\Components\DiscountPercentageRepeatDurationBase|null $discount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('discount')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DiscountFixedOnceForeverDurationBase|\Spaire\Models\Components\DiscountFixedRepeatDurationBase|\Spaire\Models\Components\DiscountPercentageOnceForeverDurationBase|\Spaire\Models\Components\DiscountPercentageRepeatDurationBase|null')]
@@ -269,18 +269,18 @@ class Subscription
      * @param  string  $id
      * @param  int  $amount
      * @param  string  $currency
-     * @param  SubscriptionRecurringInterval  $recurringInterval
+     * @param  \Spaire\Models\Components\SubscriptionRecurringInterval  $recurringInterval
      * @param  int  $recurringIntervalCount
-     * @param  SubscriptionStatus  $status
+     * @param  \Spaire\Models\Components\SubscriptionStatus  $status
      * @param  \DateTime  $currentPeriodStart
      * @param  bool  $cancelAtPeriodEnd
      * @param  string  $customerId
      * @param  string  $productId
      * @param  array<string, string|int|float|bool>  $metadata
-     * @param  SubscriptionCustomer  $customer
-     * @param  Product  $product
-     * @param  array<LegacyRecurringProductPriceFixed|LegacyRecurringProductPriceCustom|LegacyRecurringProductPriceFree|ProductPriceFixed|ProductPriceCustom|ProductPriceFree|ProductPriceSeatBased|ProductPriceMeteredUnit>  $prices
-     * @param  array<SubscriptionMeter>  $meters
+     * @param  \Spaire\Models\Components\SubscriptionCustomer  $customer
+     * @param  \Spaire\Models\Components\Product  $product
+     * @param  array<\Spaire\Models\Components\LegacyRecurringProductPriceFixed|\Spaire\Models\Components\LegacyRecurringProductPriceCustom|\Spaire\Models\Components\LegacyRecurringProductPriceFree|\Spaire\Models\Components\ProductPriceFixed|\Spaire\Models\Components\ProductPriceCustom|\Spaire\Models\Components\ProductPriceFree|\Spaire\Models\Components\ProductPriceSeatBased|\Spaire\Models\Components\ProductPriceMeteredUnit>  $prices
+     * @param  array<\Spaire\Models\Components\SubscriptionMeter>  $meters
      * @param  ?\DateTime  $modifiedAt
      * @param  ?\DateTime  $currentPeriodEnd
      * @param  ?\DateTime  $trialStart
@@ -291,10 +291,10 @@ class Subscription
      * @param  ?\DateTime  $endedAt
      * @param  ?string  $discountId
      * @param  ?string  $checkoutId
-     * @param  ?CustomerCancellationReason  $customerCancellationReason
+     * @param  ?\Spaire\Models\Components\CustomerCancellationReason  $customerCancellationReason
      * @param  ?string  $customerCancellationComment
      * @param  ?array<string, string|int|bool|\DateTime|null>  $customFieldData
-     * @param  DiscountFixedOnceForeverDurationBase|DiscountFixedRepeatDurationBase|DiscountPercentageOnceForeverDurationBase|DiscountPercentageRepeatDurationBase|null  $discount
+     * @param  \Spaire\Models\Components\DiscountFixedOnceForeverDurationBase|\Spaire\Models\Components\DiscountFixedRepeatDurationBase|\Spaire\Models\Components\DiscountPercentageOnceForeverDurationBase|\Spaire\Models\Components\DiscountPercentageRepeatDurationBase|null  $discount
      * @param  ?int  $seats
      * @phpstan-pure
      */

@@ -21,7 +21,7 @@ class EventName
 
     /**
      *
-     * @var EventSource $source
+     * @var \Spaire\Models\Components\EventSource $source
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('source')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\EventSource')]
@@ -53,7 +53,7 @@ class EventName
 
     /**
      * @param  string  $name
-     * @param  EventSource  $source
+     * @param  \Spaire\Models\Components\EventSource  $source
      * @param  int  $occurrences
      * @param  \DateTime  $firstSeen
      * @param  \DateTime  $lastSeen

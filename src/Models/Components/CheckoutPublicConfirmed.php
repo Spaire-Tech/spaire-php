@@ -36,7 +36,7 @@ class CheckoutPublicConfirmed
 
     /**
      *
-     * @var PaymentProcessor $paymentProcessor
+     * @var \Spaire\Models\Components\PaymentProcessor $paymentProcessor
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('payment_processor')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PaymentProcessor')]
@@ -197,7 +197,7 @@ class CheckoutPublicConfirmed
 
     /**
      *
-     * @var CheckoutBillingAddressFields $billingAddressFields
+     * @var \Spaire\Models\Components\CheckoutBillingAddressFields $billingAddressFields
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address_fields')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CheckoutBillingAddressFields')]
@@ -206,7 +206,7 @@ class CheckoutPublicConfirmed
     /**
      * List of products available to select.
      *
-     * @var array<CheckoutProduct> $products
+     * @var array<\Spaire\Models\Components\CheckoutProduct> $products
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('products')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CheckoutProduct>')]
@@ -214,7 +214,7 @@ class CheckoutPublicConfirmed
 
     /**
      *
-     * @var CheckoutOrganization $organization
+     * @var \Spaire\Models\Components\CheckoutOrganization $organization
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('organization')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CheckoutOrganization')]
@@ -280,7 +280,7 @@ class CheckoutPublicConfirmed
     /**
      * Interval unit of the trial period, if any. This value is either set from the checkout, if `trial_interval` is set, or from the selected product.
      *
-     * @var ?TrialInterval $activeTrialInterval
+     * @var ?\Spaire\Models\Components\TrialInterval $activeTrialInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('active_trial_interval')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TrialInterval|null')]
@@ -366,7 +366,7 @@ class CheckoutPublicConfirmed
 
     /**
      *
-     * @var ?Address $customerBillingAddress
+     * @var ?\Spaire\Models\Components\Address $customerBillingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_billing_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Address|null')]
@@ -382,7 +382,7 @@ class CheckoutPublicConfirmed
     /**
      * Product selected to checkout.
      *
-     * @var ?CheckoutProduct $product
+     * @var ?\Spaire\Models\Components\CheckoutProduct $product
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('product')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CheckoutProduct|null')]
@@ -391,7 +391,7 @@ class CheckoutPublicConfirmed
     /**
      * Price of the selected product.
      *
-     * @var LegacyRecurringProductPriceFixed|LegacyRecurringProductPriceCustom|LegacyRecurringProductPriceFree|ProductPriceFixed|ProductPriceCustom|ProductPriceFree|ProductPriceSeatBased|ProductPriceMeteredUnit|null $productPrice
+     * @var \Spaire\Models\Components\LegacyRecurringProductPriceFixed|\Spaire\Models\Components\LegacyRecurringProductPriceCustom|\Spaire\Models\Components\LegacyRecurringProductPriceFree|\Spaire\Models\Components\ProductPriceFixed|\Spaire\Models\Components\ProductPriceCustom|\Spaire\Models\Components\ProductPriceFree|\Spaire\Models\Components\ProductPriceSeatBased|\Spaire\Models\Components\ProductPriceMeteredUnit|null $productPrice
      * @deprecated  field: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('product_price')]
@@ -401,7 +401,7 @@ class CheckoutPublicConfirmed
     /**
      * Mapping of product IDs to their list of prices.
      *
-     * @var ?array<string, array<LegacyRecurringProductPriceFixed|LegacyRecurringProductPriceCustom|LegacyRecurringProductPriceFree|ProductPriceFixed|ProductPriceCustom|ProductPriceFree|ProductPriceSeatBased|ProductPriceMeteredUnit>> $prices
+     * @var ?array<string, array<\Spaire\Models\Components\LegacyRecurringProductPriceFixed|\Spaire\Models\Components\LegacyRecurringProductPriceCustom|\Spaire\Models\Components\LegacyRecurringProductPriceFree|\Spaire\Models\Components\ProductPriceFixed|\Spaire\Models\Components\ProductPriceCustom|\Spaire\Models\Components\ProductPriceFree|\Spaire\Models\Components\ProductPriceSeatBased|\Spaire\Models\Components\ProductPriceMeteredUnit>> $prices
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('prices')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, array<\Spaire\Models\Components\LegacyRecurringProductPriceFixed|\Spaire\Models\Components\LegacyRecurringProductPriceCustom|\Spaire\Models\Components\LegacyRecurringProductPriceFree|\Spaire\Models\Components\ProductPriceFixed|\Spaire\Models\Components\ProductPriceCustom|\Spaire\Models\Components\ProductPriceFree|\Spaire\Models\Components\ProductPriceSeatBased|\Spaire\Models\Components\ProductPriceMeteredUnit>>|null')]
@@ -409,7 +409,7 @@ class CheckoutPublicConfirmed
 
     /**
      *
-     * @var CheckoutDiscountFixedOnceForeverDuration|CheckoutDiscountFixedRepeatDuration|CheckoutDiscountPercentageOnceForeverDuration|CheckoutDiscountPercentageRepeatDuration|null $discount
+     * @var \Spaire\Models\Components\CheckoutDiscountFixedOnceForeverDuration|\Spaire\Models\Components\CheckoutDiscountFixedRepeatDuration|\Spaire\Models\Components\CheckoutDiscountPercentageOnceForeverDuration|\Spaire\Models\Components\CheckoutDiscountPercentageRepeatDuration|null $discount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('discount')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CheckoutDiscountFixedOnceForeverDuration|\Spaire\Models\Components\CheckoutDiscountFixedRepeatDuration|\Spaire\Models\Components\CheckoutDiscountPercentageOnceForeverDuration|\Spaire\Models\Components\CheckoutDiscountPercentageRepeatDuration|null')]
@@ -418,7 +418,7 @@ class CheckoutPublicConfirmed
     /**
      * $attachedCustomFields
      *
-     * @var ?array<AttachedCustomField> $attachedCustomFields
+     * @var ?array<\Spaire\Models\Components\AttachedCustomField> $attachedCustomFields
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('attached_custom_fields')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\AttachedCustomField>|null')]
@@ -461,7 +461,7 @@ class CheckoutPublicConfirmed
     /**
      * @param  string  $id
      * @param  \DateTime  $createdAt
-     * @param  PaymentProcessor  $paymentProcessor
+     * @param  \Spaire\Models\Components\PaymentProcessor  $paymentProcessor
      * @param  string  $status
      * @param  string  $clientSecret
      * @param  string  $url
@@ -482,9 +482,9 @@ class CheckoutPublicConfirmed
      * @param  bool  $isPaymentFormRequired
      * @param  bool  $isBusinessCustomer
      * @param  array<string, string>  $paymentProcessorMetadata
-     * @param  CheckoutBillingAddressFields  $billingAddressFields
-     * @param  array<CheckoutProduct>  $products
-     * @param  CheckoutOrganization  $organization
+     * @param  \Spaire\Models\Components\CheckoutBillingAddressFields  $billingAddressFields
+     * @param  array<\Spaire\Models\Components\CheckoutProduct>  $products
+     * @param  \Spaire\Models\Components\CheckoutOrganization  $organization
      * @param  string  $customerSessionToken
      * @param  ?\DateTime  $modifiedAt
      * @param  ?array<string, string|int|bool|\DateTime|null>  $customFieldData
@@ -492,7 +492,7 @@ class CheckoutPublicConfirmed
      * @param  ?string  $embedOrigin
      * @param  ?int  $taxAmount
      * @param  ?bool  $allowTrial
-     * @param  ?TrialInterval  $activeTrialInterval
+     * @param  ?\Spaire\Models\Components\TrialInterval  $activeTrialInterval
      * @param  ?int  $activeTrialIntervalCount
      * @param  ?\DateTime  $trialEnd
      * @param  ?string  $productId
@@ -503,13 +503,13 @@ class CheckoutPublicConfirmed
      * @param  ?string  $customerEmail
      * @param  ?string  $customerIpAddress
      * @param  ?string  $customerBillingName
-     * @param  ?Address  $customerBillingAddress
+     * @param  ?\Spaire\Models\Components\Address  $customerBillingAddress
      * @param  ?string  $customerTaxId
-     * @param  ?CheckoutProduct  $product
-     * @param  LegacyRecurringProductPriceFixed|LegacyRecurringProductPriceCustom|LegacyRecurringProductPriceFree|ProductPriceFixed|ProductPriceCustom|ProductPriceFree|ProductPriceSeatBased|ProductPriceMeteredUnit|null  $productPrice
-     * @param  ?array<string, array<LegacyRecurringProductPriceFixed|LegacyRecurringProductPriceCustom|LegacyRecurringProductPriceFree|ProductPriceFixed|ProductPriceCustom|ProductPriceFree|ProductPriceSeatBased|ProductPriceMeteredUnit>>  $prices
-     * @param  CheckoutDiscountFixedOnceForeverDuration|CheckoutDiscountFixedRepeatDuration|CheckoutDiscountPercentageOnceForeverDuration|CheckoutDiscountPercentageRepeatDuration|null  $discount
-     * @param  ?array<AttachedCustomField>  $attachedCustomFields
+     * @param  ?\Spaire\Models\Components\CheckoutProduct  $product
+     * @param  \Spaire\Models\Components\LegacyRecurringProductPriceFixed|\Spaire\Models\Components\LegacyRecurringProductPriceCustom|\Spaire\Models\Components\LegacyRecurringProductPriceFree|\Spaire\Models\Components\ProductPriceFixed|\Spaire\Models\Components\ProductPriceCustom|\Spaire\Models\Components\ProductPriceFree|\Spaire\Models\Components\ProductPriceSeatBased|\Spaire\Models\Components\ProductPriceMeteredUnit|null  $productPrice
+     * @param  ?array<string, array<\Spaire\Models\Components\LegacyRecurringProductPriceFixed|\Spaire\Models\Components\LegacyRecurringProductPriceCustom|\Spaire\Models\Components\LegacyRecurringProductPriceFree|\Spaire\Models\Components\ProductPriceFixed|\Spaire\Models\Components\ProductPriceCustom|\Spaire\Models\Components\ProductPriceFree|\Spaire\Models\Components\ProductPriceSeatBased|\Spaire\Models\Components\ProductPriceMeteredUnit>>  $prices
+     * @param  \Spaire\Models\Components\CheckoutDiscountFixedOnceForeverDuration|\Spaire\Models\Components\CheckoutDiscountFixedRepeatDuration|\Spaire\Models\Components\CheckoutDiscountPercentageOnceForeverDuration|\Spaire\Models\Components\CheckoutDiscountPercentageRepeatDuration|null  $discount
+     * @param  ?array<\Spaire\Models\Components\AttachedCustomField>  $attachedCustomFields
      * @param  ?string  $locale
      * @param  ?int  $seats
      * @param  ?int  $pricePerSeat

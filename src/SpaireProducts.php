@@ -53,8 +53,8 @@ class SpaireProducts
      *
      * **Scopes**: `products:read` `products:write`
      *
-     * @param  Components\ProductTaxPreviewRequest  $request
-     * @return Operations\ProductsProductsPreviewTaxResponse
+     * @param  \Spaire\Models\Components\ProductTaxPreviewRequest  $request
+     * @return \Spaire\Models\Operations\ProductsProductsPreviewTaxResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function previewTax(Components\ProductTaxPreviewRequest $request, ?Options $options = null): Operations\ProductsProductsPreviewTaxResponse

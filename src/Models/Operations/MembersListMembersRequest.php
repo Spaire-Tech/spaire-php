@@ -31,7 +31,7 @@ class MembersListMembersRequest
     /**
      * Sorting criterion. Several criteria can be used simultaneously and will be applied in order. Add a minus sign `-` before the criteria name to sort by descending order.
      *
-     * @var ?array<Components\MemberSortProperty> $sorting
+     * @var ?array<\Spaire\Models\Components\MemberSortProperty> $sorting
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sorting')]
     public ?array $sorting = null;
@@ -57,7 +57,7 @@ class MembersListMembersRequest
      * @param  ?int  $limit
      * @param  ?string  $customerId
      * @param  ?string  $externalCustomerId
-     * @param  ?array<Components\MemberSortProperty>  $sorting
+     * @param  ?array<\Spaire\Models\Components\MemberSortProperty>  $sorting
      * @phpstan-pure
      */
     public function __construct(?string $customerId = null, ?string $externalCustomerId = null, ?array $sorting = null, ?int $page = 1, ?int $limit = 10)

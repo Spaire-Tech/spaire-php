@@ -59,7 +59,7 @@ class CustomerSession
     /**
      * A customer in an organization.
      *
-     * @var Customer $customer
+     * @var \Spaire\Models\Components\Customer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer')]
@@ -87,7 +87,7 @@ class CustomerSession
      * @param  \DateTime  $expiresAt
      * @param  string  $customerPortalUrl
      * @param  string  $customerId
-     * @param  Customer  $customer
+     * @param  \Spaire\Models\Components\Customer  $customer
      * @param  ?\DateTime  $modifiedAt
      * @param  ?string  $returnUrl
      * @phpstan-pure

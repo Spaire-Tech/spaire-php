@@ -28,7 +28,7 @@ class WebhookOrderPaidPayload
 
     /**
      *
-     * @var Order $data
+     * @var \Spaire\Models\Components\Order $data
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('data')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Order')]
@@ -44,7 +44,7 @@ class WebhookOrderPaidPayload
     /**
      * @param  string  $type
      * @param  \DateTime  $timestamp
-     * @param  Order  $data
+     * @param  \Spaire\Models\Components\Order  $data
      * @phpstan-pure
      */
     public function __construct(\DateTime $timestamp, Order $data, string $type = 'order.paid')

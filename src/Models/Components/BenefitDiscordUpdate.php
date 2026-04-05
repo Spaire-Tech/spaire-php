@@ -43,7 +43,7 @@ class BenefitDiscordUpdate
 
     /**
      *
-     * @var ?BenefitDiscordCreateProperties $properties
+     * @var ?\Spaire\Models\Components\BenefitDiscordCreateProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitDiscordCreateProperties|null')]
@@ -61,7 +61,7 @@ class BenefitDiscordUpdate
      * @param  string  $type
      * @param  ?array<string, string|int|float|bool>  $metadata
      * @param  ?string  $description
-     * @param  ?BenefitDiscordCreateProperties  $properties
+     * @param  ?\Spaire\Models\Components\BenefitDiscordCreateProperties  $properties
      * @phpstan-pure
      */
     public function __construct(?array $metadata = null, ?string $description = null, ?BenefitDiscordCreateProperties $properties = null, string $type = 'discord')

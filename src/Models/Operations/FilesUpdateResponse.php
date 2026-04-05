@@ -35,18 +35,18 @@ class FilesUpdateResponse
     /**
      * File updated.
      *
-     * @var Components\DownloadableFileRead|Components\ProductMediaFileRead|Components\OrganizationAvatarFileRead|null $responseFilesUpdate
+     * @var \Spaire\Models\Components\DownloadableFileRead|\Spaire\Models\Components\ProductMediaFileRead|\Spaire\Models\Components\OrganizationAvatarFileRead|\Spaire\Models\Components\StorefrontHeaderFileRead|null $responseFilesUpdate
      */
-    public Components\DownloadableFileRead|Components\ProductMediaFileRead|Components\OrganizationAvatarFileRead|null $responseFilesUpdate = null;
+    public Components\DownloadableFileRead|Components\ProductMediaFileRead|Components\OrganizationAvatarFileRead|Components\StorefrontHeaderFileRead|null $responseFilesUpdate = null;
 
     /**
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  Components\DownloadableFileRead|Components\ProductMediaFileRead|Components\OrganizationAvatarFileRead|null  $responseFilesUpdate
+     * @param  \Spaire\Models\Components\DownloadableFileRead|\Spaire\Models\Components\ProductMediaFileRead|\Spaire\Models\Components\OrganizationAvatarFileRead|\Spaire\Models\Components\StorefrontHeaderFileRead|null  $responseFilesUpdate
      * @phpstan-pure
      */
-    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, Components\DownloadableFileRead|Components\ProductMediaFileRead|Components\OrganizationAvatarFileRead|null $responseFilesUpdate = null)
+    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, Components\DownloadableFileRead|Components\ProductMediaFileRead|Components\OrganizationAvatarFileRead|Components\StorefrontHeaderFileRead|null $responseFilesUpdate = null)
     {
         $this->contentType = $contentType;
         $this->statusCode = $statusCode;

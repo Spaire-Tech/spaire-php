@@ -29,7 +29,7 @@ class BenefitPublic
 
     /**
      *
-     * @var BenefitType $type
+     * @var \Spaire\Models\Components\BenefitType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitType')]
@@ -78,7 +78,7 @@ class BenefitPublic
     /**
      * @param  string  $id
      * @param  \DateTime  $createdAt
-     * @param  BenefitType  $type
+     * @param  \Spaire\Models\Components\BenefitType  $type
      * @param  string  $description
      * @param  bool  $selectable
      * @param  bool  $deletable

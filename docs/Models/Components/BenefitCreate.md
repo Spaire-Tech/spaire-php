@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Components\BenefitCustomCreate
+* @var \Spaire\Models\Components\BenefitCustomCreate
 */
 Components\BenefitCustomCreate $value = /* values here */
 ```
@@ -16,7 +16,7 @@ Components\BenefitCustomCreate $value = /* values here */
 
 ```php
 /**
-* @var Components\BenefitDiscordCreate
+* @var \Spaire\Models\Components\BenefitDiscordCreate
 */
 Components\BenefitDiscordCreate $value = /* values here */
 ```
@@ -25,7 +25,7 @@ Components\BenefitDiscordCreate $value = /* values here */
 
 ```php
 /**
-* @var Components\BenefitDownloadablesCreate
+* @var \Spaire\Models\Components\BenefitDownloadablesCreate
 */
 Components\BenefitDownloadablesCreate $value = /* values here */
 ```
@@ -34,7 +34,7 @@ Components\BenefitDownloadablesCreate $value = /* values here */
 
 ```php
 /**
-* @var Components\BenefitGitHubRepositoryCreate
+* @var \Spaire\Models\Components\BenefitGitHubRepositoryCreate
 */
 Components\BenefitGitHubRepositoryCreate $value = /* values here */
 ```
@@ -43,7 +43,7 @@ Components\BenefitGitHubRepositoryCreate $value = /* values here */
 
 ```php
 /**
-* @var Components\BenefitLicenseKeysCreate
+* @var \Spaire\Models\Components\BenefitLicenseKeysCreate
 */
 Components\BenefitLicenseKeysCreate $value = /* values here */
 ```
@@ -52,7 +52,7 @@ Components\BenefitLicenseKeysCreate $value = /* values here */
 
 ```php
 /**
-* @var Components\BenefitMeterCreditCreate
+* @var \Spaire\Models\Components\BenefitMeterCreditCreate
 */
 Components\BenefitMeterCreditCreate $value = /* values here */
 ```

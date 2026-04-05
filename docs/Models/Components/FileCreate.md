@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Components\DownloadableFileCreate
+* @var \Spaire\Models\Components\DownloadableFileCreate
 */
 Components\DownloadableFileCreate $value = /* values here */
 ```
@@ -16,7 +16,7 @@ Components\DownloadableFileCreate $value = /* values here */
 
 ```php
 /**
-* @var Components\OrganizationAvatarFileCreate
+* @var \Spaire\Models\Components\OrganizationAvatarFileCreate
 */
 Components\OrganizationAvatarFileCreate $value = /* values here */
 ```
@@ -25,8 +25,17 @@ Components\OrganizationAvatarFileCreate $value = /* values here */
 
 ```php
 /**
-* @var Components\ProductMediaFileCreate
+* @var \Spaire\Models\Components\ProductMediaFileCreate
 */
 Components\ProductMediaFileCreate $value = /* values here */
+```
+
+### `Components\StorefrontHeaderFileCreate`
+
+```php
+/**
+* @var \Spaire\Models\Components\StorefrontHeaderFileCreate
+*/
+Components\StorefrontHeaderFileCreate $value = /* values here */
 ```
 

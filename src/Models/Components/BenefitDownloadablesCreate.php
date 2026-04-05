@@ -21,7 +21,7 @@ class BenefitDownloadablesCreate
 
     /**
      *
-     * @var BenefitDownloadablesCreateProperties $properties
+     * @var \Spaire\Models\Components\BenefitDownloadablesCreateProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitDownloadablesCreateProperties')]
@@ -67,7 +67,7 @@ class BenefitDownloadablesCreate
     /**
      * @param  string  $type
      * @param  string  $description
-     * @param  BenefitDownloadablesCreateProperties  $properties
+     * @param  \Spaire\Models\Components\BenefitDownloadablesCreateProperties  $properties
      * @param  ?array<string, string|int|float|bool>  $metadata
      * @param  ?string  $organizationId
      * @phpstan-pure

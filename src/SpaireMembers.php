@@ -56,8 +56,8 @@ class SpaireMembers
      * - Cannot add a member with the owner role (there must be exactly one owner)
      * - If a member with this email already exists, the existing member is returned
      *
-     * @param  Components\CustomerPortalMemberCreate  $request
-     * @return Operations\CustomerPortalMembersAddMemberResponse
+     * @param  \Spaire\Models\Components\CustomerPortalMemberCreate  $request
+     * @return \Spaire\Models\Operations\CustomerPortalMembersAddMemberResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function addMember(Components\CustomerPortalMemberCreate $request, ?Options $options = null): Operations\CustomerPortalMembersAddMemberResponse
@@ -135,7 +135,7 @@ class SpaireMembers
      *
      * Only available to owners and billing managers of team customers.
      *
-     * @return Operations\CustomerPortalMembersListMembersResponse
+     * @return \Spaire\Models\Operations\CustomerPortalMembersListMembersResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function listMembers(?Options $options = null): Operations\CustomerPortalMembersListMembersResponse
@@ -202,7 +202,7 @@ class SpaireMembers
      * - Cannot remove the only owner
      *
      * @param  string  $id
-     * @return Operations\CustomerPortalMembersRemoveMemberResponse
+     * @return \Spaire\Models\Operations\CustomerPortalMembersRemoveMemberResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function removeMember(string $id, ?Options $options = null): Operations\CustomerPortalMembersRemoveMemberResponse
@@ -273,9 +273,9 @@ class SpaireMembers
      * - Cannot modify your own role (to prevent self-demotion)
      * - Customer must have exactly one owner at all times
      *
-     * @param  Components\CustomerPortalMemberUpdate  $customerPortalMemberUpdate
+     * @param  \Spaire\Models\Components\CustomerPortalMemberUpdate  $customerPortalMemberUpdate
      * @param  string  $id
-     * @return Operations\CustomerPortalMembersUpdateMemberResponse
+     * @return \Spaire\Models\Operations\CustomerPortalMembersUpdateMemberResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function updateMember(Components\CustomerPortalMemberUpdate $customerPortalMemberUpdate, string $id, ?Options $options = null): Operations\CustomerPortalMembersUpdateMemberResponse

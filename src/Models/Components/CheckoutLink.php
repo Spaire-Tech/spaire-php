@@ -39,7 +39,7 @@ class CheckoutLink
 
     /**
      *
-     * @var PaymentProcessor $paymentProcessor
+     * @var \Spaire\Models\Components\PaymentProcessor $paymentProcessor
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('payment_processor')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PaymentProcessor')]
@@ -80,7 +80,7 @@ class CheckoutLink
     /**
      * $products
      *
-     * @var array<CheckoutLinkProduct> $products
+     * @var array<\Spaire\Models\Components\CheckoutLinkProduct> $products
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('products')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CheckoutLinkProduct>')]
@@ -104,7 +104,7 @@ class CheckoutLink
     /**
      * The interval unit for the trial period.
      *
-     * @var ?TrialInterval $trialInterval
+     * @var ?\Spaire\Models\Components\TrialInterval $trialInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('trial_interval')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TrialInterval|null')]
@@ -144,7 +144,7 @@ class CheckoutLink
 
     /**
      *
-     * @var DiscountFixedOnceForeverDurationBase|DiscountFixedRepeatDurationBase|DiscountPercentageOnceForeverDurationBase|DiscountPercentageRepeatDurationBase|null $discount
+     * @var \Spaire\Models\Components\DiscountFixedOnceForeverDurationBase|\Spaire\Models\Components\DiscountFixedRepeatDurationBase|\Spaire\Models\Components\DiscountPercentageOnceForeverDurationBase|\Spaire\Models\Components\DiscountPercentageRepeatDurationBase|null $discount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('discount')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DiscountFixedOnceForeverDurationBase|\Spaire\Models\Components\DiscountFixedRepeatDurationBase|\Spaire\Models\Components\DiscountPercentageOnceForeverDurationBase|\Spaire\Models\Components\DiscountPercentageRepeatDurationBase|null')]
@@ -154,20 +154,20 @@ class CheckoutLink
      * @param  string  $id
      * @param  \DateTime  $createdAt
      * @param  array<string, string|int|float|bool>  $metadata
-     * @param  PaymentProcessor  $paymentProcessor
+     * @param  \Spaire\Models\Components\PaymentProcessor  $paymentProcessor
      * @param  string  $clientSecret
      * @param  bool  $allowDiscountCodes
      * @param  bool  $requireBillingAddress
      * @param  string  $organizationId
-     * @param  array<CheckoutLinkProduct>  $products
+     * @param  array<\Spaire\Models\Components\CheckoutLinkProduct>  $products
      * @param  string  $url
      * @param  ?\DateTime  $modifiedAt
-     * @param  ?TrialInterval  $trialInterval
+     * @param  ?\Spaire\Models\Components\TrialInterval  $trialInterval
      * @param  ?int  $trialIntervalCount
      * @param  ?string  $successUrl
      * @param  ?string  $label
      * @param  ?string  $discountId
-     * @param  DiscountFixedOnceForeverDurationBase|DiscountFixedRepeatDurationBase|DiscountPercentageOnceForeverDurationBase|DiscountPercentageRepeatDurationBase|null  $discount
+     * @param  \Spaire\Models\Components\DiscountFixedOnceForeverDurationBase|\Spaire\Models\Components\DiscountFixedRepeatDurationBase|\Spaire\Models\Components\DiscountPercentageOnceForeverDurationBase|\Spaire\Models\Components\DiscountPercentageRepeatDurationBase|null  $discount
      * @phpstan-pure
      */
     public function __construct(string $id, \DateTime $createdAt, array $metadata, PaymentProcessor $paymentProcessor, string $clientSecret, bool $allowDiscountCodes, bool $requireBillingAddress, string $organizationId, array $products, string $url, ?\DateTime $modifiedAt = null, ?TrialInterval $trialInterval = null, ?int $trialIntervalCount = null, ?string $successUrl = null, ?string $label = null, ?string $discountId = null, DiscountFixedOnceForeverDurationBase|DiscountFixedRepeatDurationBase|DiscountPercentageOnceForeverDurationBase|DiscountPercentageRepeatDurationBase|null $discount = null)

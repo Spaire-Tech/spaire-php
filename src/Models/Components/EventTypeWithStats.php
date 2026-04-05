@@ -53,7 +53,7 @@ class EventTypeWithStats
 
     /**
      *
-     * @var EventSource $source
+     * @var \Spaire\Models\Components\EventSource $source
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('source')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\EventSource')]
@@ -106,7 +106,7 @@ class EventTypeWithStats
      * @param  string  $name
      * @param  string  $label
      * @param  string  $organizationId
-     * @param  EventSource  $source
+     * @param  \Spaire\Models\Components\EventSource  $source
      * @param  int  $occurrences
      * @param  \DateTime  $firstSeen
      * @param  \DateTime  $lastSeen

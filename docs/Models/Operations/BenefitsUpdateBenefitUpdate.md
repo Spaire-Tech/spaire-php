@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Components\BenefitCustomUpdate
+* @var \Spaire\Models\Components\BenefitCustomUpdate
 */
 Components\BenefitCustomUpdate $value = /* values here */
 ```
@@ -16,7 +16,7 @@ Components\BenefitCustomUpdate $value = /* values here */
 
 ```php
 /**
-* @var Components\BenefitDiscordUpdate
+* @var \Spaire\Models\Components\BenefitDiscordUpdate
 */
 Components\BenefitDiscordUpdate $value = /* values here */
 ```
@@ -25,7 +25,7 @@ Components\BenefitDiscordUpdate $value = /* values here */
 
 ```php
 /**
-* @var Components\BenefitGitHubRepositoryUpdate
+* @var \Spaire\Models\Components\BenefitGitHubRepositoryUpdate
 */
 Components\BenefitGitHubRepositoryUpdate $value = /* values here */
 ```
@@ -34,7 +34,7 @@ Components\BenefitGitHubRepositoryUpdate $value = /* values here */
 
 ```php
 /**
-* @var Components\BenefitDownloadablesUpdate
+* @var \Spaire\Models\Components\BenefitDownloadablesUpdate
 */
 Components\BenefitDownloadablesUpdate $value = /* values here */
 ```
@@ -43,7 +43,7 @@ Components\BenefitDownloadablesUpdate $value = /* values here */
 
 ```php
 /**
-* @var Components\BenefitLicenseKeysUpdate
+* @var \Spaire\Models\Components\BenefitLicenseKeysUpdate
 */
 Components\BenefitLicenseKeysUpdate $value = /* values here */
 ```
@@ -52,7 +52,7 @@ Components\BenefitLicenseKeysUpdate $value = /* values here */
 
 ```php
 /**
-* @var Components\BenefitMeterCreditUpdate
+* @var \Spaire\Models\Components\BenefitMeterCreditUpdate
 */
 Components\BenefitMeterCreditUpdate $value = /* values here */
 ```

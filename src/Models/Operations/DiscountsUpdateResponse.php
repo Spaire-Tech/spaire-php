@@ -35,7 +35,7 @@ class DiscountsUpdateResponse
     /**
      * Discount updated.
      *
-     * @var Components\DiscountFixedOnceForeverDuration|Components\DiscountFixedRepeatDuration|Components\DiscountPercentageOnceForeverDuration|Components\DiscountPercentageRepeatDuration|null $discount
+     * @var \Spaire\Models\Components\DiscountFixedOnceForeverDuration|\Spaire\Models\Components\DiscountFixedRepeatDuration|\Spaire\Models\Components\DiscountPercentageOnceForeverDuration|\Spaire\Models\Components\DiscountPercentageRepeatDuration|null $discount
      */
     public Components\DiscountFixedOnceForeverDuration|Components\DiscountFixedRepeatDuration|Components\DiscountPercentageOnceForeverDuration|Components\DiscountPercentageRepeatDuration|null $discount = null;
 
@@ -43,7 +43,7 @@ class DiscountsUpdateResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  Components\DiscountFixedOnceForeverDuration|Components\DiscountFixedRepeatDuration|Components\DiscountPercentageOnceForeverDuration|Components\DiscountPercentageRepeatDuration|null  $discount
+     * @param  \Spaire\Models\Components\DiscountFixedOnceForeverDuration|\Spaire\Models\Components\DiscountFixedRepeatDuration|\Spaire\Models\Components\DiscountPercentageOnceForeverDuration|\Spaire\Models\Components\DiscountPercentageRepeatDuration|null  $discount
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, Components\DiscountFixedOnceForeverDuration|Components\DiscountFixedRepeatDuration|Components\DiscountPercentageOnceForeverDuration|Components\DiscountPercentageRepeatDuration|null $discount = null)

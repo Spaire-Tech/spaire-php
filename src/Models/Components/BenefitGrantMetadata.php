@@ -27,7 +27,7 @@ class BenefitGrantMetadata
 
     /**
      *
-     * @var BenefitType $benefitType
+     * @var \Spaire\Models\Components\BenefitType $benefitType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('benefit_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitType')]
@@ -44,7 +44,7 @@ class BenefitGrantMetadata
     /**
      * @param  string  $benefitId
      * @param  string  $benefitGrantId
-     * @param  BenefitType  $benefitType
+     * @param  \Spaire\Models\Components\BenefitType  $benefitType
      * @param  ?string  $memberId
      * @phpstan-pure
      */

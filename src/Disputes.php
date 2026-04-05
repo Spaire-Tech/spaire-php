@@ -52,7 +52,7 @@ class Disputes
      * **Scopes**: `disputes:read`
      *
      * @param  string  $id
-     * @return Operations\DisputesGetResponse
+     * @return \Spaire\Models\Operations\DisputesGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\DisputesGetResponse
@@ -139,8 +139,8 @@ class Disputes
      *
      * **Scopes**: `disputes:read`
      *
-     * @param  ?Operations\DisputesListRequest  $request
-     * @return Operations\DisputesListResponse
+     * @param  ?\Spaire\Models\Operations\DisputesListRequest  $request
+     * @return \Spaire\Models\Operations\DisputesListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(?Operations\DisputesListRequest $request = null, ?Options $options = null): Operations\DisputesListResponse
@@ -254,8 +254,8 @@ class Disputes
      *
      * **Scopes**: `disputes:read`
      *
-     * @param  ?Operations\DisputesListRequest  $request
-     * @return \Generator<Operations\DisputesListResponse>
+     * @param  ?\Spaire\Models\Operations\DisputesListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\DisputesListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(?Operations\DisputesListRequest $request = null, ?Options $options = null): \Generator

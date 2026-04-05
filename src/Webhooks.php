@@ -52,8 +52,8 @@ class Webhooks
      *
      * **Scopes**: `webhooks:write`
      *
-     * @param  Components\WebhookEndpointCreate  $request
-     * @return Operations\WebhooksCreateWebhookEndpointResponse
+     * @param  \Spaire\Models\Components\WebhookEndpointCreate  $request
+     * @return \Spaire\Models\Operations\WebhooksCreateWebhookEndpointResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function createWebhookEndpoint(Components\WebhookEndpointCreate $request, ?Options $options = null): Operations\WebhooksCreateWebhookEndpointResponse
@@ -132,7 +132,7 @@ class Webhooks
      * **Scopes**: `webhooks:write`
      *
      * @param  string  $id
-     * @return Operations\WebhooksDeleteWebhookEndpointResponse
+     * @return \Spaire\Models\Operations\WebhooksDeleteWebhookEndpointResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function deleteWebhookEndpoint(string $id, ?Options $options = null): Operations\WebhooksDeleteWebhookEndpointResponse
@@ -211,7 +211,7 @@ class Webhooks
      * **Scopes**: `webhooks:read` `webhooks:write`
      *
      * @param  string  $id
-     * @return Operations\WebhooksGetWebhookEndpointResponse
+     * @return \Spaire\Models\Operations\WebhooksGetWebhookEndpointResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function getWebhookEndpoint(string $id, ?Options $options = null): Operations\WebhooksGetWebhookEndpointResponse
@@ -300,8 +300,8 @@ class Webhooks
      *
      * **Scopes**: `webhooks:read` `webhooks:write`
      *
-     * @param  ?Operations\WebhooksListWebhookDeliveriesRequest  $request
-     * @return Operations\WebhooksListWebhookDeliveriesResponse
+     * @param  ?\Spaire\Models\Operations\WebhooksListWebhookDeliveriesRequest  $request
+     * @return \Spaire\Models\Operations\WebhooksListWebhookDeliveriesResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listWebhookDeliveriesIndividual(?Operations\WebhooksListWebhookDeliveriesRequest $request = null, ?Options $options = null): Operations\WebhooksListWebhookDeliveriesResponse
@@ -420,8 +420,8 @@ class Webhooks
      *
      * **Scopes**: `webhooks:read` `webhooks:write`
      *
-     * @param  ?Operations\WebhooksListWebhookDeliveriesRequest  $request
-     * @return \Generator<Operations\WebhooksListWebhookDeliveriesResponse>
+     * @param  ?\Spaire\Models\Operations\WebhooksListWebhookDeliveriesRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\WebhooksListWebhookDeliveriesResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function listWebhookDeliveries(?Operations\WebhooksListWebhookDeliveriesRequest $request = null, ?Options $options = null): \Generator
@@ -443,7 +443,7 @@ class Webhooks
      * @param  string|array<string>|null  $organizationId
      * @param  ?int  $page
      * @param  ?int  $limit
-     * @return Operations\WebhooksListWebhookEndpointsResponse
+     * @return \Spaire\Models\Operations\WebhooksListWebhookEndpointsResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listWebhookEndpointsIndividual(string|array|null $organizationId = null, ?int $page = null, ?int $limit = null, ?Options $options = null): Operations\WebhooksListWebhookEndpointsResponse
@@ -560,7 +560,7 @@ class Webhooks
      * @param  string|array<string>|null  $organizationId
      * @param  ?int  $page
      * @param  ?int  $limit
-     * @return \Generator<Operations\WebhooksListWebhookEndpointsResponse>
+     * @return \Generator<\Spaire\Models\Operations\WebhooksListWebhookEndpointsResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function listWebhookEndpoints(string|array|null $organizationId = null, ?int $page = null, ?int $limit = null, ?Options $options = null): \Generator
@@ -580,7 +580,7 @@ class Webhooks
      * **Scopes**: `webhooks:write`
      *
      * @param  string  $id
-     * @return Operations\WebhooksRedeliverWebhookEventResponse
+     * @return \Spaire\Models\Operations\WebhooksRedeliverWebhookEventResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function redeliverWebhookEvent(string $id, ?Options $options = null): Operations\WebhooksRedeliverWebhookEventResponse
@@ -668,7 +668,7 @@ class Webhooks
      * **Scopes**: `webhooks:write`
      *
      * @param  string  $id
-     * @return Operations\WebhooksResetWebhookEndpointSecretResponse
+     * @return \Spaire\Models\Operations\WebhooksResetWebhookEndpointSecretResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function resetWebhookEndpointSecret(string $id, ?Options $options = null): Operations\WebhooksResetWebhookEndpointSecretResponse
@@ -755,9 +755,9 @@ class Webhooks
      *
      * **Scopes**: `webhooks:write`
      *
-     * @param  Components\WebhookEndpointUpdate  $webhookEndpointUpdate
+     * @param  \Spaire\Models\Components\WebhookEndpointUpdate  $webhookEndpointUpdate
      * @param  string  $id
-     * @return Operations\WebhooksUpdateWebhookEndpointResponse
+     * @return \Spaire\Models\Operations\WebhooksUpdateWebhookEndpointResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function updateWebhookEndpoint(Components\WebhookEndpointUpdate $webhookEndpointUpdate, string $id, ?Options $options = null): Operations\WebhooksUpdateWebhookEndpointResponse

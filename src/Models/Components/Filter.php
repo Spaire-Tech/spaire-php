@@ -13,7 +13,7 @@ class Filter
 {
     /**
      *
-     * @var FilterConjunction $conjunction
+     * @var \Spaire\Models\Components\FilterConjunction $conjunction
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('conjunction')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\FilterConjunction')]
@@ -22,15 +22,15 @@ class Filter
     /**
      * $clauses
      *
-     * @var array<FilterClause|Filter> $clauses
+     * @var array<\Spaire\Models\Components\FilterClause|\Spaire\Models\Components\Filter> $clauses
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('clauses')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\FilterClause|\Spaire\Models\Components\Filter>')]
     public array $clauses;
 
     /**
-     * @param  FilterConjunction  $conjunction
-     * @param  array<FilterClause|Filter>  $clauses
+     * @param  \Spaire\Models\Components\FilterConjunction  $conjunction
+     * @param  array<\Spaire\Models\Components\FilterClause|\Spaire\Models\Components\Filter>  $clauses
      * @phpstan-pure
      */
     public function __construct(FilterConjunction $conjunction, array $clauses)

@@ -35,7 +35,7 @@ class CustomersGetExternalResponse
     /**
      * Successful Response
      *
-     * @var ?Components\CustomerWithMembers $customerWithMembers
+     * @var ?\Spaire\Models\Components\CustomerWithMembers $customerWithMembers
      */
     public ?Components\CustomerWithMembers $customerWithMembers = null;
 
@@ -43,7 +43,7 @@ class CustomersGetExternalResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\CustomerWithMembers  $customerWithMembers
+     * @param  ?\Spaire\Models\Components\CustomerWithMembers  $customerWithMembers
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\CustomerWithMembers $customerWithMembers = null)

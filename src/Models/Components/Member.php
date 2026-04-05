@@ -46,7 +46,7 @@ class Member
 
     /**
      *
-     * @var MemberRole $role
+     * @var \Spaire\Models\Components\MemberRole $role
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('role')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MemberRole')]
@@ -81,7 +81,7 @@ class Member
      * @param  \DateTime  $createdAt
      * @param  string  $customerId
      * @param  string  $email
-     * @param  MemberRole  $role
+     * @param  \Spaire\Models\Components\MemberRole  $role
      * @param  ?\DateTime  $modifiedAt
      * @param  ?string  $name
      * @param  ?string  $externalId

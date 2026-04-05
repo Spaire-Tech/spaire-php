@@ -26,7 +26,7 @@ class WebhookBenefitCreatedPayload
 
     /**
      *
-     * @var BenefitCustom|BenefitDiscord|BenefitGitHubRepository|BenefitDownloadables|BenefitLicenseKeys|BenefitMeterCredit $data
+     * @var \Spaire\Models\Components\BenefitCustom|\Spaire\Models\Components\BenefitDiscord|\Spaire\Models\Components\BenefitGitHubRepository|\Spaire\Models\Components\BenefitDownloadables|\Spaire\Models\Components\BenefitLicenseKeys|\Spaire\Models\Components\BenefitMeterCredit $data
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('data')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitCustom|\Spaire\Models\Components\BenefitDiscord|\Spaire\Models\Components\BenefitGitHubRepository|\Spaire\Models\Components\BenefitDownloadables|\Spaire\Models\Components\BenefitLicenseKeys|\Spaire\Models\Components\BenefitMeterCredit')]
@@ -42,7 +42,7 @@ class WebhookBenefitCreatedPayload
     /**
      * @param  string  $type
      * @param  \DateTime  $timestamp
-     * @param  BenefitCustom|BenefitDiscord|BenefitGitHubRepository|BenefitDownloadables|BenefitLicenseKeys|BenefitMeterCredit  $data
+     * @param  \Spaire\Models\Components\BenefitCustom|\Spaire\Models\Components\BenefitDiscord|\Spaire\Models\Components\BenefitGitHubRepository|\Spaire\Models\Components\BenefitDownloadables|\Spaire\Models\Components\BenefitLicenseKeys|\Spaire\Models\Components\BenefitMeterCredit  $data
      * @phpstan-pure
      */
     public function __construct(\DateTime $timestamp, BenefitCustom|BenefitDiscord|BenefitGitHubRepository|BenefitDownloadables|BenefitLicenseKeys|BenefitMeterCredit $data, string $type = 'benefit.created')

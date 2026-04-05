@@ -70,7 +70,7 @@ class BenefitLicenseKeysSubscriber
 
     /**
      *
-     * @var BenefitSubscriberOrganization $organization
+     * @var \Spaire\Models\Components\BenefitSubscriberOrganization $organization
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('organization')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitSubscriberOrganization')]
@@ -78,7 +78,7 @@ class BenefitLicenseKeysSubscriber
 
     /**
      *
-     * @var BenefitLicenseKeysSubscriberProperties $properties
+     * @var \Spaire\Models\Components\BenefitLicenseKeysSubscriberProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitLicenseKeysSubscriberProperties')]
@@ -108,8 +108,8 @@ class BenefitLicenseKeysSubscriber
      * @param  bool  $deletable
      * @param  string  $organizationId
      * @param  array<string, string|int|float|bool>  $metadata
-     * @param  BenefitSubscriberOrganization  $organization
-     * @param  BenefitLicenseKeysSubscriberProperties  $properties
+     * @param  \Spaire\Models\Components\BenefitSubscriberOrganization  $organization
+     * @param  \Spaire\Models\Components\BenefitLicenseKeysSubscriberProperties  $properties
      * @param  ?\DateTime  $modifiedAt
      * @phpstan-pure
      */

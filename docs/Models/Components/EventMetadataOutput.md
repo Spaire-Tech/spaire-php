@@ -43,7 +43,7 @@ bool $value = /* values here */
 
 ```php
 /**
-* @var Components\CostMetadataOutput
+* @var \Spaire\Models\Components\CostMetadataOutput
 */
 Components\CostMetadataOutput $value = /* values here */
 ```
@@ -52,7 +52,7 @@ Components\CostMetadataOutput $value = /* values here */
 
 ```php
 /**
-* @var Components\LLMMetadata
+* @var \Spaire\Models\Components\LLMMetadata
 */
 Components\LLMMetadata $value = /* values here */
 ```

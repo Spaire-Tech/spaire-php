@@ -35,7 +35,7 @@ class CustomersGetStateExternalResponse
     /**
      * Successful Response
      *
-     * @var ?Components\CustomerState $customerState
+     * @var ?\Spaire\Models\Components\CustomerState $customerState
      */
     public ?Components\CustomerState $customerState = null;
 
@@ -43,7 +43,7 @@ class CustomersGetStateExternalResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\CustomerState  $customerState
+     * @param  ?\Spaire\Models\Components\CustomerState  $customerState
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\CustomerState $customerState = null)

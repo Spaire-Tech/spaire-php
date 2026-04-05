@@ -50,10 +50,10 @@ class SpaireOrders
      *
      * Confirm a retry payment using a Stripe confirmation token.
      *
-     * @param  Operations\CustomerPortalOrdersConfirmRetryPaymentSecurity  $security
-     * @param  Components\CustomerOrderConfirmPayment  $customerOrderConfirmPayment
+     * @param  \Spaire\Models\Operations\CustomerPortalOrdersConfirmRetryPaymentSecurity  $security
+     * @param  \Spaire\Models\Components\CustomerOrderConfirmPayment  $customerOrderConfirmPayment
      * @param  string  $id
-     * @return Operations\CustomerPortalOrdersConfirmRetryPaymentResponse
+     * @return \Spaire\Models\Operations\CustomerPortalOrdersConfirmRetryPaymentResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function confirmRetryPayment(Operations\CustomerPortalOrdersConfirmRetryPaymentSecurity $security, Components\CustomerOrderConfirmPayment $customerOrderConfirmPayment, string $id, ?Options $options = null): Operations\CustomerPortalOrdersConfirmRetryPaymentResponse
@@ -161,9 +161,9 @@ class SpaireOrders
      *
      * Trigger generation of an order's invoice.
      *
-     * @param  Operations\CustomerPortalOrdersGenerateInvoiceSecurity  $security
+     * @param  \Spaire\Models\Operations\CustomerPortalOrdersGenerateInvoiceSecurity  $security
      * @param  string  $id
-     * @return Operations\CustomerPortalOrdersGenerateInvoiceResponse
+     * @return \Spaire\Models\Operations\CustomerPortalOrdersGenerateInvoiceResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function generateInvoice(Operations\CustomerPortalOrdersGenerateInvoiceSecurity $security, string $id, ?Options $options = null): Operations\CustomerPortalOrdersGenerateInvoiceResponse
@@ -244,9 +244,9 @@ class SpaireOrders
      *
      * Get an order by ID for the authenticated customer.
      *
-     * @param  Operations\CustomerPortalOrdersGetSecurity  $security
+     * @param  \Spaire\Models\Operations\CustomerPortalOrdersGetSecurity  $security
      * @param  string  $id
-     * @return Operations\CustomerPortalOrdersGetResponse
+     * @return \Spaire\Models\Operations\CustomerPortalOrdersGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(Operations\CustomerPortalOrdersGetSecurity $security, string $id, ?Options $options = null): Operations\CustomerPortalOrdersGetResponse
@@ -337,9 +337,9 @@ class SpaireOrders
      *
      * Get the current payment status for an order.
      *
-     * @param  Operations\CustomerPortalOrdersGetPaymentStatusSecurity  $security
+     * @param  \Spaire\Models\Operations\CustomerPortalOrdersGetPaymentStatusSecurity  $security
      * @param  string  $id
-     * @return Operations\CustomerPortalOrdersGetPaymentStatusResponse
+     * @return \Spaire\Models\Operations\CustomerPortalOrdersGetPaymentStatusResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function getPaymentStatus(Operations\CustomerPortalOrdersGetPaymentStatusSecurity $security, string $id, ?Options $options = null): Operations\CustomerPortalOrdersGetPaymentStatusResponse
@@ -430,9 +430,9 @@ class SpaireOrders
      *
      * Get an order's invoice data.
      *
-     * @param  Operations\CustomerPortalOrdersInvoiceSecurity  $security
+     * @param  \Spaire\Models\Operations\CustomerPortalOrdersInvoiceSecurity  $security
      * @param  string  $id
-     * @return Operations\CustomerPortalOrdersInvoiceResponse
+     * @return \Spaire\Models\Operations\CustomerPortalOrdersInvoiceResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function invoice(Operations\CustomerPortalOrdersInvoiceSecurity $security, string $id, ?Options $options = null): Operations\CustomerPortalOrdersInvoiceResponse
@@ -523,9 +523,9 @@ class SpaireOrders
      *
      * List orders of the authenticated customer.
      *
-     * @param  Operations\CustomerPortalOrdersListSecurity  $security
-     * @param  ?Operations\CustomerPortalOrdersListRequest  $request
-     * @return Operations\CustomerPortalOrdersListResponse
+     * @param  \Spaire\Models\Operations\CustomerPortalOrdersListSecurity  $security
+     * @param  ?\Spaire\Models\Operations\CustomerPortalOrdersListRequest  $request
+     * @return \Spaire\Models\Operations\CustomerPortalOrdersListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(Operations\CustomerPortalOrdersListSecurity $security, ?Operations\CustomerPortalOrdersListRequest $request = null, ?Options $options = null): Operations\CustomerPortalOrdersListResponse
@@ -645,9 +645,9 @@ class SpaireOrders
      *
      * List orders of the authenticated customer.
      *
-     * @param  Operations\CustomerPortalOrdersListSecurity  $security
-     * @param  ?Operations\CustomerPortalOrdersListRequest  $request
-     * @return \Generator<Operations\CustomerPortalOrdersListResponse>
+     * @param  \Spaire\Models\Operations\CustomerPortalOrdersListSecurity  $security
+     * @param  ?\Spaire\Models\Operations\CustomerPortalOrdersListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\CustomerPortalOrdersListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(Operations\CustomerPortalOrdersListSecurity $security, ?Operations\CustomerPortalOrdersListRequest $request = null, ?Options $options = null): \Generator
@@ -664,10 +664,10 @@ class SpaireOrders
      *
      * Update an order for the authenticated customer.
      *
-     * @param  Operations\CustomerPortalOrdersUpdateSecurity  $security
-     * @param  Components\CustomerOrderUpdate  $customerOrderUpdate
+     * @param  \Spaire\Models\Operations\CustomerPortalOrdersUpdateSecurity  $security
+     * @param  \Spaire\Models\Components\CustomerOrderUpdate  $customerOrderUpdate
      * @param  string  $id
-     * @return Operations\CustomerPortalOrdersUpdateResponse
+     * @return \Spaire\Models\Operations\CustomerPortalOrdersUpdateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function update(Operations\CustomerPortalOrdersUpdateSecurity $security, Components\CustomerOrderUpdate $customerOrderUpdate, string $id, ?Options $options = null): Operations\CustomerPortalOrdersUpdateResponse

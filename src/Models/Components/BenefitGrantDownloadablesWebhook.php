@@ -62,7 +62,7 @@ class BenefitGrantDownloadablesWebhook
     /**
      * A customer in an organization.
      *
-     * @var Customer $customer
+     * @var \Spaire\Models\Components\Customer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer')]
@@ -70,7 +70,7 @@ class BenefitGrantDownloadablesWebhook
 
     /**
      *
-     * @var BenefitDownloadables $benefit
+     * @var \Spaire\Models\Components\BenefitDownloadables $benefit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('benefit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitDownloadables')]
@@ -78,7 +78,7 @@ class BenefitGrantDownloadablesWebhook
 
     /**
      *
-     * @var BenefitGrantDownloadablesProperties $properties
+     * @var \Spaire\Models\Components\BenefitGrantDownloadablesProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantDownloadablesProperties')]
@@ -138,7 +138,7 @@ class BenefitGrantDownloadablesWebhook
     /**
      * The error information if the benefit grant failed with an unrecoverable error.
      *
-     * @var ?BenefitGrantError $error
+     * @var ?\Spaire\Models\Components\BenefitGrantError $error
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('error')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantError|null')]
@@ -147,7 +147,7 @@ class BenefitGrantDownloadablesWebhook
 
     /**
      *
-     * @var ?Member $member
+     * @var ?\Spaire\Models\Components\Member $member
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('member')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Member|null')]
@@ -156,7 +156,7 @@ class BenefitGrantDownloadablesWebhook
 
     /**
      *
-     * @var ?BenefitGrantDownloadablesProperties $previousProperties
+     * @var ?\Spaire\Models\Components\BenefitGrantDownloadablesProperties $previousProperties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('previous_properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantDownloadablesProperties|null')]
@@ -170,18 +170,18 @@ class BenefitGrantDownloadablesWebhook
      * @param  bool  $isRevoked
      * @param  string  $customerId
      * @param  string  $benefitId
-     * @param  Customer  $customer
-     * @param  BenefitDownloadables  $benefit
-     * @param  BenefitGrantDownloadablesProperties  $properties
+     * @param  \Spaire\Models\Components\Customer  $customer
+     * @param  \Spaire\Models\Components\BenefitDownloadables  $benefit
+     * @param  \Spaire\Models\Components\BenefitGrantDownloadablesProperties  $properties
      * @param  ?\DateTime  $modifiedAt
      * @param  ?string  $subscriptionId
      * @param  ?string  $orderId
      * @param  ?\DateTime  $grantedAt
      * @param  ?\DateTime  $revokedAt
      * @param  ?string  $memberId
-     * @param  ?BenefitGrantError  $error
-     * @param  ?Member  $member
-     * @param  ?BenefitGrantDownloadablesProperties  $previousProperties
+     * @param  ?\Spaire\Models\Components\BenefitGrantError  $error
+     * @param  ?\Spaire\Models\Components\Member  $member
+     * @param  ?\Spaire\Models\Components\BenefitGrantDownloadablesProperties  $previousProperties
      * @phpstan-pure
      */
     public function __construct(\DateTime $createdAt, string $id, bool $isGranted, bool $isRevoked, string $customerId, string $benefitId, Customer $customer, BenefitDownloadables $benefit, BenefitGrantDownloadablesProperties $properties, ?\DateTime $modifiedAt = null, ?string $subscriptionId = null, ?string $orderId = null, ?\DateTime $grantedAt = null, ?\DateTime $revokedAt = null, ?string $memberId = null, ?BenefitGrantError $error = null, ?Member $member = null, ?BenefitGrantDownloadablesProperties $previousProperties = null)

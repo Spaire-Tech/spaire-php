@@ -30,7 +30,7 @@ class CustomFieldCreateDate
 
     /**
      *
-     * @var CustomFieldDateProperties $properties
+     * @var \Spaire\Models\Components\CustomFieldDateProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomFieldDateProperties')]
@@ -77,7 +77,7 @@ class CustomFieldCreateDate
      * @param  string  $type
      * @param  string  $slug
      * @param  string  $name
-     * @param  CustomFieldDateProperties  $properties
+     * @param  \Spaire\Models\Components\CustomFieldDateProperties  $properties
      * @param  ?array<string, string|int|float|bool>  $metadata
      * @param  ?string  $organizationId
      * @phpstan-pure

@@ -59,7 +59,7 @@ class CustomerCreate
 
     /**
      *
-     * @var ?AddressInput $billingAddress
+     * @var ?\Spaire\Models\Components\AddressInput $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\AddressInput|null')]
@@ -69,7 +69,7 @@ class CustomerCreate
     /**
      * $taxId
      *
-     * @var ?array<string|TaxIDFormat|null> $taxId
+     * @var ?array<string|\Spaire\Models\Components\TaxIDFormat|null> $taxId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax_id')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string|\Spaire\Models\Components\TaxIDFormat|null>|null')]
@@ -79,7 +79,7 @@ class CustomerCreate
     /**
      * The type of customer. Defaults to 'individual'. Set to 'team' for customers that can have multiple members.
      *
-     * @var ?CustomerType $type
+     * @var ?\Spaire\Models\Components\CustomerType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerType|null')]
@@ -98,7 +98,7 @@ class CustomerCreate
     /**
      * Optional owner member to create with the customer. If not provided, an owner member will be automatically created using the customer's email and name.
      *
-     * @var ?OwnerCreate $owner
+     * @var ?\Spaire\Models\Components\OwnerCreate $owner
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('owner')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OwnerCreate|null')]
@@ -110,11 +110,11 @@ class CustomerCreate
      * @param  ?array<string, string|int|float|bool>  $metadata
      * @param  ?string  $externalId
      * @param  ?string  $name
-     * @param  ?AddressInput  $billingAddress
-     * @param  ?array<string|TaxIDFormat|null>  $taxId
-     * @param  ?CustomerType  $type
+     * @param  ?\Spaire\Models\Components\AddressInput  $billingAddress
+     * @param  ?array<string|\Spaire\Models\Components\TaxIDFormat|null>  $taxId
+     * @param  ?\Spaire\Models\Components\CustomerType  $type
      * @param  ?string  $organizationId
-     * @param  ?OwnerCreate  $owner
+     * @param  ?\Spaire\Models\Components\OwnerCreate  $owner
      * @phpstan-pure
      */
     public function __construct(string $email, ?array $metadata = null, ?string $externalId = null, ?string $name = null, ?AddressInput $billingAddress = null, ?array $taxId = null, ?CustomerType $type = null, ?string $organizationId = null, ?OwnerCreate $owner = null)

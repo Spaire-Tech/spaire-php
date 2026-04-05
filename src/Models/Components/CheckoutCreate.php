@@ -83,7 +83,7 @@ class CheckoutCreate
     /**
      * The interval unit for the trial period.
      *
-     * @var ?TrialInterval $trialInterval
+     * @var ?\Spaire\Models\Components\TrialInterval $trialInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('trial_interval')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TrialInterval|null')]
@@ -186,7 +186,7 @@ class CheckoutCreate
 
     /**
      *
-     * @var ?AddressInput $customerBillingAddress
+     * @var ?\Spaire\Models\Components\AddressInput $customerBillingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_billing_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\AddressInput|null')]
@@ -239,7 +239,7 @@ class CheckoutCreate
 
     /**
      *
-     * @var ?PresentmentCurrency $currency
+     * @var ?\Spaire\Models\Components\PresentmentCurrency $currency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency|null')]
@@ -249,7 +249,7 @@ class CheckoutCreate
     /**
      * Optional mapping of product IDs to a list of ad-hoc prices to create for that product. If not set, catalog prices of the product will be used.
      *
-     * @var ?array<string, array<ProductPriceFixedCreate|ProductPriceCustomCreate|ProductPriceFreeCreate|ProductPriceSeatBasedCreate|ProductPriceMeteredUnitCreate>> $prices
+     * @var ?array<string, array<\Spaire\Models\Components\ProductPriceFixedCreate|\Spaire\Models\Components\ProductPriceCustomCreate|\Spaire\Models\Components\ProductPriceFreeCreate|\Spaire\Models\Components\ProductPriceSeatBasedCreate|\Spaire\Models\Components\ProductPriceMeteredUnitCreate>> $prices
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('prices')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, array<\Spaire\Models\Components\ProductPriceFixedCreate|\Spaire\Models\Components\ProductPriceCustomCreate|\Spaire\Models\Components\ProductPriceFreeCreate|\Spaire\Models\Components\ProductPriceSeatBasedCreate|\Spaire\Models\Components\ProductPriceMeteredUnitCreate>>|null')]
@@ -301,7 +301,7 @@ class CheckoutCreate
      * @param  ?bool  $allowTrial
      * @param  ?bool  $isBusinessCustomer
      * @param  ?array<string, string|int|float|bool>  $customerMetadata
-     * @param  ?TrialInterval  $trialInterval
+     * @param  ?\Spaire\Models\Components\TrialInterval  $trialInterval
      * @param  ?int  $trialIntervalCount
      * @param  ?string  $discountId
      * @param  ?int  $amount
@@ -313,14 +313,14 @@ class CheckoutCreate
      * @param  ?string  $customerEmail
      * @param  ?string  $customerIpAddress
      * @param  ?string  $customerBillingName
-     * @param  ?AddressInput  $customerBillingAddress
+     * @param  ?\Spaire\Models\Components\AddressInput  $customerBillingAddress
      * @param  ?string  $customerTaxId
      * @param  ?string  $subscriptionId
      * @param  ?string  $successUrl
      * @param  ?string  $returnUrl
      * @param  ?string  $embedOrigin
-     * @param  ?PresentmentCurrency  $currency
-     * @param  ?array<string, array<ProductPriceFixedCreate|ProductPriceCustomCreate|ProductPriceFreeCreate|ProductPriceSeatBasedCreate|ProductPriceMeteredUnitCreate>>  $prices
+     * @param  ?\Spaire\Models\Components\PresentmentCurrency  $currency
+     * @param  ?array<string, array<\Spaire\Models\Components\ProductPriceFixedCreate|\Spaire\Models\Components\ProductPriceCustomCreate|\Spaire\Models\Components\ProductPriceFreeCreate|\Spaire\Models\Components\ProductPriceSeatBasedCreate|\Spaire\Models\Components\ProductPriceMeteredUnitCreate>>  $prices
      * @phpstan-pure
      */
     public function __construct(array $products, ?array $metadata = null, ?array $customFieldData = null, ?array $customerMetadata = null, ?TrialInterval $trialInterval = null, ?int $trialIntervalCount = null, ?string $discountId = null, ?int $amount = null, ?int $seats = null, ?string $locale = null, ?string $customerId = null, ?string $externalCustomerId = null, ?string $customerName = null, ?string $customerEmail = null, ?string $customerIpAddress = null, ?string $customerBillingName = null, ?AddressInput $customerBillingAddress = null, ?string $customerTaxId = null, ?string $subscriptionId = null, ?string $successUrl = null, ?string $returnUrl = null, ?string $embedOrigin = null, ?PresentmentCurrency $currency = null, ?array $prices = null, ?bool $allowDiscountCodes = true, ?bool $requireBillingAddress = false, ?bool $allowTrial = true, ?bool $isBusinessCustomer = false)

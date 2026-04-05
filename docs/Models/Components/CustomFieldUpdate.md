@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Components\CustomFieldUpdateCheckbox
+* @var \Spaire\Models\Components\CustomFieldUpdateCheckbox
 */
 Components\CustomFieldUpdateCheckbox $value = /* values here */
 ```
@@ -16,7 +16,7 @@ Components\CustomFieldUpdateCheckbox $value = /* values here */
 
 ```php
 /**
-* @var Components\CustomFieldUpdateDate
+* @var \Spaire\Models\Components\CustomFieldUpdateDate
 */
 Components\CustomFieldUpdateDate $value = /* values here */
 ```
@@ -25,7 +25,7 @@ Components\CustomFieldUpdateDate $value = /* values here */
 
 ```php
 /**
-* @var Components\CustomFieldUpdateNumber
+* @var \Spaire\Models\Components\CustomFieldUpdateNumber
 */
 Components\CustomFieldUpdateNumber $value = /* values here */
 ```
@@ -34,7 +34,7 @@ Components\CustomFieldUpdateNumber $value = /* values here */
 
 ```php
 /**
-* @var Components\CustomFieldUpdateSelect
+* @var \Spaire\Models\Components\CustomFieldUpdateSelect
 */
 Components\CustomFieldUpdateSelect $value = /* values here */
 ```
@@ -43,7 +43,7 @@ Components\CustomFieldUpdateSelect $value = /* values here */
 
 ```php
 /**
-* @var Components\CustomFieldUpdateText
+* @var \Spaire\Models\Components\CustomFieldUpdateText
 */
 Components\CustomFieldUpdateText $value = /* values here */
 ```

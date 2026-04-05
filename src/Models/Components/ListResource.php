@@ -14,7 +14,7 @@ class ListResource
     /**
      * $items
      *
-     * @var array<CardPayment|GenericPayment> $items
+     * @var array<\Spaire\Models\Components\CardPayment|\Spaire\Models\Components\GenericPayment> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CardPayment|\Spaire\Models\Components\GenericPayment>')]
@@ -22,15 +22,15 @@ class ListResource
 
     /**
      *
-     * @var Pagination $pagination
+     * @var \Spaire\Models\Components\Pagination $pagination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pagination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Pagination')]
     public Pagination $pagination;
 
     /**
-     * @param  array<CardPayment|GenericPayment>  $items
-     * @param  Pagination  $pagination
+     * @param  array<\Spaire\Models\Components\CardPayment|\Spaire\Models\Components\GenericPayment>  $items
+     * @param  \Spaire\Models\Components\Pagination  $pagination
      * @phpstan-pure
      */
     public function __construct(array $items, Pagination $pagination)

@@ -51,7 +51,7 @@ class CustomerUpdate
 
     /**
      *
-     * @var ?AddressInput $billingAddress
+     * @var ?\Spaire\Models\Components\AddressInput $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\AddressInput|null')]
@@ -61,7 +61,7 @@ class CustomerUpdate
     /**
      * $taxId
      *
-     * @var ?array<string|TaxIDFormat|null> $taxId
+     * @var ?array<string|\Spaire\Models\Components\TaxIDFormat|null> $taxId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax_id')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string|\Spaire\Models\Components\TaxIDFormat|null>|null')]
@@ -80,7 +80,7 @@ class CustomerUpdate
     /**
      * The customer type. Can only be upgraded from 'individual' to 'team', never downgraded.
      *
-     * @var ?CustomerType $type
+     * @var ?\Spaire\Models\Components\CustomerType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerType|null')]
@@ -91,10 +91,10 @@ class CustomerUpdate
      * @param  ?array<string, string|int|float|bool>  $metadata
      * @param  ?string  $email
      * @param  ?string  $name
-     * @param  ?AddressInput  $billingAddress
-     * @param  ?array<string|TaxIDFormat|null>  $taxId
+     * @param  ?\Spaire\Models\Components\AddressInput  $billingAddress
+     * @param  ?array<string|\Spaire\Models\Components\TaxIDFormat|null>  $taxId
      * @param  ?string  $externalId
-     * @param  ?CustomerType  $type
+     * @param  ?\Spaire\Models\Components\CustomerType  $type
      * @phpstan-pure
      */
     public function __construct(?array $metadata = null, ?string $email = null, ?string $name = null, ?AddressInput $billingAddress = null, ?array $taxId = null, ?string $externalId = null, ?CustomerType $type = null)

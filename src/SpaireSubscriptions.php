@@ -50,9 +50,9 @@ class SpaireSubscriptions
      *
      * Cancel a subscription of the authenticated customer.
      *
-     * @param  Operations\CustomerPortalSubscriptionsCancelSecurity  $security
+     * @param  \Spaire\Models\Operations\CustomerPortalSubscriptionsCancelSecurity  $security
      * @param  string  $id
-     * @return Operations\CustomerPortalSubscriptionsCancelResponse
+     * @return \Spaire\Models\Operations\CustomerPortalSubscriptionsCancelResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function cancel(Operations\CustomerPortalSubscriptionsCancelSecurity $security, string $id, ?Options $options = null): Operations\CustomerPortalSubscriptionsCancelResponse
@@ -156,9 +156,9 @@ class SpaireSubscriptions
      *
      * **Scopes**: `customer_portal:read` `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalSubscriptionsGetSecurity  $security
+     * @param  \Spaire\Models\Operations\CustomerPortalSubscriptionsGetSecurity  $security
      * @param  string  $id
-     * @return Operations\CustomerPortalSubscriptionsGetResponse
+     * @return \Spaire\Models\Operations\CustomerPortalSubscriptionsGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(Operations\CustomerPortalSubscriptionsGetSecurity $security, string $id, ?Options $options = null): Operations\CustomerPortalSubscriptionsGetResponse
@@ -251,9 +251,9 @@ class SpaireSubscriptions
      *
      * **Scopes**: `customer_portal:read` `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalSubscriptionsListSecurity  $security
-     * @param  ?Operations\CustomerPortalSubscriptionsListRequest  $request
-     * @return Operations\CustomerPortalSubscriptionsListResponse
+     * @param  \Spaire\Models\Operations\CustomerPortalSubscriptionsListSecurity  $security
+     * @param  ?\Spaire\Models\Operations\CustomerPortalSubscriptionsListRequest  $request
+     * @return \Spaire\Models\Operations\CustomerPortalSubscriptionsListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(Operations\CustomerPortalSubscriptionsListSecurity $security, ?Operations\CustomerPortalSubscriptionsListRequest $request = null, ?Options $options = null): Operations\CustomerPortalSubscriptionsListResponse
@@ -374,9 +374,9 @@ class SpaireSubscriptions
      *
      * **Scopes**: `customer_portal:read` `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalSubscriptionsListSecurity  $security
-     * @param  ?Operations\CustomerPortalSubscriptionsListRequest  $request
-     * @return \Generator<Operations\CustomerPortalSubscriptionsListResponse>
+     * @param  \Spaire\Models\Operations\CustomerPortalSubscriptionsListSecurity  $security
+     * @param  ?\Spaire\Models\Operations\CustomerPortalSubscriptionsListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\CustomerPortalSubscriptionsListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(Operations\CustomerPortalSubscriptionsListSecurity $security, ?Operations\CustomerPortalSubscriptionsListRequest $request = null, ?Options $options = null): \Generator
@@ -393,10 +393,10 @@ class SpaireSubscriptions
      *
      * Update a subscription of the authenticated customer.
      *
-     * @param  Operations\CustomerPortalSubscriptionsUpdateSecurity  $security
-     * @param  Components\CustomerSubscriptionUpdateProduct|Components\CustomerSubscriptionUpdateSeats|Components\CustomerSubscriptionCancel  $customerSubscriptionUpdate
+     * @param  \Spaire\Models\Operations\CustomerPortalSubscriptionsUpdateSecurity  $security
+     * @param  \Spaire\Models\Components\CustomerSubscriptionUpdateProduct|\Spaire\Models\Components\CustomerSubscriptionUpdateSeats|\Spaire\Models\Components\CustomerSubscriptionCancel  $customerSubscriptionUpdate
      * @param  string  $id
-     * @return Operations\CustomerPortalSubscriptionsUpdateResponse
+     * @return \Spaire\Models\Operations\CustomerPortalSubscriptionsUpdateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function update(Operations\CustomerPortalSubscriptionsUpdateSecurity $security, Components\CustomerSubscriptionUpdateProduct|Components\CustomerSubscriptionUpdateSeats|Components\CustomerSubscriptionCancel $customerSubscriptionUpdate, string $id, ?Options $options = null): Operations\CustomerPortalSubscriptionsUpdateResponse

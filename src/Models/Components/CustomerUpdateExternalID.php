@@ -51,7 +51,7 @@ class CustomerUpdateExternalID
 
     /**
      *
-     * @var ?AddressInput $billingAddress
+     * @var ?\Spaire\Models\Components\AddressInput $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\AddressInput|null')]
@@ -61,7 +61,7 @@ class CustomerUpdateExternalID
     /**
      * $taxId
      *
-     * @var ?array<string|TaxIDFormat|null> $taxId
+     * @var ?array<string|\Spaire\Models\Components\TaxIDFormat|null> $taxId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax_id')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string|\Spaire\Models\Components\TaxIDFormat|null>|null')]
@@ -72,8 +72,8 @@ class CustomerUpdateExternalID
      * @param  ?array<string, string|int|float|bool>  $metadata
      * @param  ?string  $email
      * @param  ?string  $name
-     * @param  ?AddressInput  $billingAddress
-     * @param  ?array<string|TaxIDFormat|null>  $taxId
+     * @param  ?\Spaire\Models\Components\AddressInput  $billingAddress
+     * @param  ?array<string|\Spaire\Models\Components\TaxIDFormat|null>  $taxId
      * @phpstan-pure
      */
     public function __construct(?array $metadata = null, ?string $email = null, ?string $name = null, ?AddressInput $billingAddress = null, ?array $taxId = null)

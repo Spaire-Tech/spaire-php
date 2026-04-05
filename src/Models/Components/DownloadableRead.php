@@ -27,7 +27,7 @@ class DownloadableRead
 
     /**
      *
-     * @var FileDownload $file
+     * @var \Spaire\Models\Components\FileDownload $file
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('file')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\FileDownload')]
@@ -36,7 +36,7 @@ class DownloadableRead
     /**
      * @param  string  $id
      * @param  string  $benefitId
-     * @param  FileDownload  $file
+     * @param  \Spaire\Models\Components\FileDownload  $file
      * @phpstan-pure
      */
     public function __construct(string $id, string $benefitId, FileDownload $file)

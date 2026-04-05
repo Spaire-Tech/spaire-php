@@ -62,7 +62,7 @@ class BenefitGrantMeterCreditWebhook
     /**
      * A customer in an organization.
      *
-     * @var Customer $customer
+     * @var \Spaire\Models\Components\Customer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer')]
@@ -74,7 +74,7 @@ class BenefitGrantMeterCreditWebhook
      *
      * Use it to grant a number of units on a specific meter.
      *
-     * @var BenefitMeterCredit $benefit
+     * @var \Spaire\Models\Components\BenefitMeterCredit $benefit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('benefit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitMeterCredit')]
@@ -82,7 +82,7 @@ class BenefitGrantMeterCreditWebhook
 
     /**
      *
-     * @var BenefitGrantMeterCreditProperties $properties
+     * @var \Spaire\Models\Components\BenefitGrantMeterCreditProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantMeterCreditProperties')]
@@ -142,7 +142,7 @@ class BenefitGrantMeterCreditWebhook
     /**
      * The error information if the benefit grant failed with an unrecoverable error.
      *
-     * @var ?BenefitGrantError $error
+     * @var ?\Spaire\Models\Components\BenefitGrantError $error
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('error')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantError|null')]
@@ -151,7 +151,7 @@ class BenefitGrantMeterCreditWebhook
 
     /**
      *
-     * @var ?Member $member
+     * @var ?\Spaire\Models\Components\Member $member
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('member')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Member|null')]
@@ -160,7 +160,7 @@ class BenefitGrantMeterCreditWebhook
 
     /**
      *
-     * @var ?BenefitGrantMeterCreditProperties $previousProperties
+     * @var ?\Spaire\Models\Components\BenefitGrantMeterCreditProperties $previousProperties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('previous_properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantMeterCreditProperties|null')]
@@ -174,18 +174,18 @@ class BenefitGrantMeterCreditWebhook
      * @param  bool  $isRevoked
      * @param  string  $customerId
      * @param  string  $benefitId
-     * @param  Customer  $customer
-     * @param  BenefitMeterCredit  $benefit
-     * @param  BenefitGrantMeterCreditProperties  $properties
+     * @param  \Spaire\Models\Components\Customer  $customer
+     * @param  \Spaire\Models\Components\BenefitMeterCredit  $benefit
+     * @param  \Spaire\Models\Components\BenefitGrantMeterCreditProperties  $properties
      * @param  ?\DateTime  $modifiedAt
      * @param  ?string  $subscriptionId
      * @param  ?string  $orderId
      * @param  ?\DateTime  $grantedAt
      * @param  ?\DateTime  $revokedAt
      * @param  ?string  $memberId
-     * @param  ?BenefitGrantError  $error
-     * @param  ?Member  $member
-     * @param  ?BenefitGrantMeterCreditProperties  $previousProperties
+     * @param  ?\Spaire\Models\Components\BenefitGrantError  $error
+     * @param  ?\Spaire\Models\Components\Member  $member
+     * @param  ?\Spaire\Models\Components\BenefitGrantMeterCreditProperties  $previousProperties
      * @phpstan-pure
      */
     public function __construct(\DateTime $createdAt, string $id, bool $isGranted, bool $isRevoked, string $customerId, string $benefitId, Customer $customer, BenefitMeterCredit $benefit, BenefitGrantMeterCreditProperties $properties, ?\DateTime $modifiedAt = null, ?string $subscriptionId = null, ?string $orderId = null, ?\DateTime $grantedAt = null, ?\DateTime $revokedAt = null, ?string $memberId = null, ?BenefitGrantError $error = null, ?Member $member = null, ?BenefitGrantMeterCreditProperties $previousProperties = null)

@@ -93,7 +93,7 @@ class LicenseKeyCustomer
 
     /**
      *
-     * @var ?Address $billingAddress
+     * @var ?\Spaire\Models\Components\Address $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Address|null')]
@@ -102,7 +102,7 @@ class LicenseKeyCustomer
     /**
      * $taxId
      *
-     * @var ?array<string|TaxIDFormat|null> $taxId
+     * @var ?array<string|\Spaire\Models\Components\TaxIDFormat|null> $taxId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax_id')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string|\Spaire\Models\Components\TaxIDFormat|null>|null')]
@@ -119,7 +119,7 @@ class LicenseKeyCustomer
     /**
      * The type of customer: 'individual' for single users, 'team' for customers with multiple members. Legacy customers may have NULL type which is treated as 'individual'.
      *
-     * @var ?CustomerType $type
+     * @var ?\Spaire\Models\Components\CustomerType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerType|null')]
@@ -137,10 +137,10 @@ class LicenseKeyCustomer
      * @param  ?\DateTime  $modifiedAt
      * @param  ?string  $externalId
      * @param  ?string  $name
-     * @param  ?Address  $billingAddress
-     * @param  ?array<string|TaxIDFormat|null>  $taxId
+     * @param  ?\Spaire\Models\Components\Address  $billingAddress
+     * @param  ?array<string|\Spaire\Models\Components\TaxIDFormat|null>  $taxId
      * @param  ?\DateTime  $deletedAt
-     * @param  ?CustomerType  $type
+     * @param  ?\Spaire\Models\Components\CustomerType  $type
      * @phpstan-pure
      */
     public function __construct(string $id, \DateTime $createdAt, array $metadata, string $email, bool $emailVerified, string $organizationId, string $avatarUrl, ?\DateTime $modifiedAt = null, ?string $externalId = null, ?string $name = null, ?Address $billingAddress = null, ?array $taxId = null, ?\DateTime $deletedAt = null, ?CustomerType $type = null)

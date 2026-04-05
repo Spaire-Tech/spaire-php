@@ -22,7 +22,7 @@ class ProductPriceSeatTiersOutput
     /**
      * List of pricing tiers
      *
-     * @var array<ProductPriceSeatTier> $tiers
+     * @var array<\Spaire\Models\Components\ProductPriceSeatTier> $tiers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tiers')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\ProductPriceSeatTier>')]
@@ -37,6 +37,15 @@ class ProductPriceSeatTiersOutput
     public int $minimumSeats;
 
     /**
+     *
+     * @var ?\Spaire\Models\Components\SeatTierType $seatTierType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('seat_tier_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SeatTierType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?SeatTierType $seatTierType = null;
+
+    /**
      * Maximum number of seats allowed for purchase, derived from last tier. None for unlimited.
      *
      * @var ?int $maximumSeats
@@ -45,15 +54,17 @@ class ProductPriceSeatTiersOutput
     public ?int $maximumSeats;
 
     /**
-     * @param  array<ProductPriceSeatTier>  $tiers
+     * @param  array<\Spaire\Models\Components\ProductPriceSeatTier>  $tiers
      * @param  int  $minimumSeats
+     * @param  ?\Spaire\Models\Components\SeatTierType  $seatTierType
      * @param  ?int  $maximumSeats
      * @phpstan-pure
      */
-    public function __construct(array $tiers, int $minimumSeats, ?int $maximumSeats = null)
+    public function __construct(array $tiers, int $minimumSeats, ?SeatTierType $seatTierType = null, ?int $maximumSeats = null)
     {
         $this->tiers = $tiers;
         $this->minimumSeats = $minimumSeats;
+        $this->seatTierType = $seatTierType;
         $this->maximumSeats = $maximumSeats;
     }
 }

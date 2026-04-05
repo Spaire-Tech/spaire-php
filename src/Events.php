@@ -53,7 +53,7 @@ class Events
      * **Scopes**: `events:read` `events:write`
      *
      * @param  string  $id
-     * @return Operations\EventsGetResponse
+     * @return \Spaire\Models\Operations\EventsGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\EventsGetResponse
@@ -140,8 +140,8 @@ class Events
      *
      * **Scopes**: `events:write`
      *
-     * @param  Components\EventsIngest  $request
-     * @return Operations\EventsIngestResponse
+     * @param  \Spaire\Models\Components\EventsIngest  $request
+     * @return \Spaire\Models\Operations\EventsIngestResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function ingest(Components\EventsIngest $request, ?Options $options = null): Operations\EventsIngestResponse
@@ -219,8 +219,8 @@ class Events
      *
      * **Scopes**: `events:read` `events:write`
      *
-     * @param  ?Operations\EventsListRequest  $request
-     * @return Operations\EventsListResponse
+     * @param  ?\Spaire\Models\Operations\EventsListRequest  $request
+     * @return \Spaire\Models\Operations\EventsListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(?Operations\EventsListRequest $request = null, ?Options $options = null): Operations\EventsListResponse
@@ -296,8 +296,8 @@ class Events
      *
      * **Scopes**: `events:read` `events:write`
      *
-     * @param  ?Operations\EventsListNamesRequest  $request
-     * @return Operations\EventsListNamesResponse
+     * @param  ?\Spaire\Models\Operations\EventsListNamesRequest  $request
+     * @return \Spaire\Models\Operations\EventsListNamesResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listNamesIndividual(?Operations\EventsListNamesRequest $request = null, ?Options $options = null): Operations\EventsListNamesResponse
@@ -413,8 +413,8 @@ class Events
      *
      * **Scopes**: `events:read` `events:write`
      *
-     * @param  ?Operations\EventsListNamesRequest  $request
-     * @return \Generator<Operations\EventsListNamesResponse>
+     * @param  ?\Spaire\Models\Operations\EventsListNamesRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\EventsListNamesResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function listNames(?Operations\EventsListNamesRequest $request = null, ?Options $options = null): \Generator

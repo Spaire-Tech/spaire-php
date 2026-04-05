@@ -48,7 +48,7 @@ class OrganizationUpdate
     /**
      * Links to social profiles.
      *
-     * @var ?array<OrganizationSocialLink> $socials
+     * @var ?array<\Spaire\Models\Components\OrganizationSocialLink> $socials
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('socials')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\OrganizationSocialLink>|null')]
@@ -58,7 +58,7 @@ class OrganizationUpdate
     /**
      * Additional, private, business details Spaire needs about active organizations for compliance (KYC).
      *
-     * @var ?OrganizationDetails $details
+     * @var ?\Spaire\Models\Components\OrganizationDetails $details
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('details')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationDetails|null')]
@@ -68,7 +68,7 @@ class OrganizationUpdate
     /**
      * Default presentment currency for products and checkout.
      *
-     * @var ?PresentmentCurrency $defaultPresentmentCurrency
+     * @var ?\Spaire\Models\Components\PresentmentCurrency $defaultPresentmentCurrency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('default_presentment_currency')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency|null')]
@@ -76,8 +76,18 @@ class OrganizationUpdate
     public ?PresentmentCurrency $defaultPresentmentCurrency = null;
 
     /**
+     * Default tax behavior applied on products.
      *
-     * @var ?OrganizationFeatureSettings $featureSettings
+     * @var ?\Spaire\Models\Components\TaxBehaviorOption $defaultTaxBehavior
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('default_tax_behavior')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TaxBehaviorOption|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?TaxBehaviorOption $defaultTaxBehavior = null;
+
+    /**
+     *
+     * @var ?\Spaire\Models\Components\OrganizationFeatureSettings $featureSettings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('feature_settings')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationFeatureSettings|null')]
@@ -86,7 +96,7 @@ class OrganizationUpdate
 
     /**
      *
-     * @var ?OrganizationSubscriptionSettings $subscriptionSettings
+     * @var ?\Spaire\Models\Components\OrganizationSubscriptionSettings $subscriptionSettings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('subscription_settings')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationSubscriptionSettings|null')]
@@ -95,7 +105,7 @@ class OrganizationUpdate
 
     /**
      *
-     * @var ?OrganizationNotificationSettings $notificationSettings
+     * @var ?\Spaire\Models\Components\OrganizationNotificationSettings $notificationSettings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('notification_settings')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationNotificationSettings|null')]
@@ -104,7 +114,7 @@ class OrganizationUpdate
 
     /**
      *
-     * @var ?OrganizationCustomerEmailSettings $customerEmailSettings
+     * @var ?\Spaire\Models\Components\OrganizationCustomerEmailSettings $customerEmailSettings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_email_settings')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationCustomerEmailSettings|null')]
@@ -113,7 +123,7 @@ class OrganizationUpdate
 
     /**
      *
-     * @var ?OrganizationCustomerPortalSettings $customerPortalSettings
+     * @var ?\Spaire\Models\Components\OrganizationCustomerPortalSettings $customerPortalSettings
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_portal_settings')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationCustomerPortalSettings|null')]
@@ -121,21 +131,32 @@ class OrganizationUpdate
     public ?OrganizationCustomerPortalSettings $customerPortalSettings = null;
 
     /**
+     *
+     * @var ?\Spaire\Models\Components\OrganizationStorefrontSettings $storefrontSettings
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('storefront_settings')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrganizationStorefrontSettings|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?OrganizationStorefrontSettings $storefrontSettings = null;
+
+    /**
      * @param  ?string  $name
      * @param  ?string  $avatarUrl
      * @param  ?string  $email
      * @param  ?string  $website
-     * @param  ?array<OrganizationSocialLink>  $socials
-     * @param  ?OrganizationDetails  $details
-     * @param  ?PresentmentCurrency  $defaultPresentmentCurrency
-     * @param  ?OrganizationFeatureSettings  $featureSettings
-     * @param  ?OrganizationSubscriptionSettings  $subscriptionSettings
-     * @param  ?OrganizationNotificationSettings  $notificationSettings
-     * @param  ?OrganizationCustomerEmailSettings  $customerEmailSettings
-     * @param  ?OrganizationCustomerPortalSettings  $customerPortalSettings
+     * @param  ?array<\Spaire\Models\Components\OrganizationSocialLink>  $socials
+     * @param  ?\Spaire\Models\Components\OrganizationDetails  $details
+     * @param  ?\Spaire\Models\Components\PresentmentCurrency  $defaultPresentmentCurrency
+     * @param  ?\Spaire\Models\Components\TaxBehaviorOption  $defaultTaxBehavior
+     * @param  ?\Spaire\Models\Components\OrganizationFeatureSettings  $featureSettings
+     * @param  ?\Spaire\Models\Components\OrganizationSubscriptionSettings  $subscriptionSettings
+     * @param  ?\Spaire\Models\Components\OrganizationNotificationSettings  $notificationSettings
+     * @param  ?\Spaire\Models\Components\OrganizationCustomerEmailSettings  $customerEmailSettings
+     * @param  ?\Spaire\Models\Components\OrganizationCustomerPortalSettings  $customerPortalSettings
+     * @param  ?\Spaire\Models\Components\OrganizationStorefrontSettings  $storefrontSettings
      * @phpstan-pure
      */
-    public function __construct(?string $name = null, ?string $avatarUrl = null, ?string $email = null, ?string $website = null, ?array $socials = null, ?OrganizationDetails $details = null, ?PresentmentCurrency $defaultPresentmentCurrency = null, ?OrganizationFeatureSettings $featureSettings = null, ?OrganizationSubscriptionSettings $subscriptionSettings = null, ?OrganizationNotificationSettings $notificationSettings = null, ?OrganizationCustomerEmailSettings $customerEmailSettings = null, ?OrganizationCustomerPortalSettings $customerPortalSettings = null)
+    public function __construct(?string $name = null, ?string $avatarUrl = null, ?string $email = null, ?string $website = null, ?array $socials = null, ?OrganizationDetails $details = null, ?PresentmentCurrency $defaultPresentmentCurrency = null, ?TaxBehaviorOption $defaultTaxBehavior = null, ?OrganizationFeatureSettings $featureSettings = null, ?OrganizationSubscriptionSettings $subscriptionSettings = null, ?OrganizationNotificationSettings $notificationSettings = null, ?OrganizationCustomerEmailSettings $customerEmailSettings = null, ?OrganizationCustomerPortalSettings $customerPortalSettings = null, ?OrganizationStorefrontSettings $storefrontSettings = null)
     {
         $this->name = $name;
         $this->avatarUrl = $avatarUrl;
@@ -144,10 +165,12 @@ class OrganizationUpdate
         $this->socials = $socials;
         $this->details = $details;
         $this->defaultPresentmentCurrency = $defaultPresentmentCurrency;
+        $this->defaultTaxBehavior = $defaultTaxBehavior;
         $this->featureSettings = $featureSettings;
         $this->subscriptionSettings = $subscriptionSettings;
         $this->notificationSettings = $notificationSettings;
         $this->customerEmailSettings = $customerEmailSettings;
         $this->customerPortalSettings = $customerPortalSettings;
+        $this->storefrontSettings = $storefrontSettings;
     }
 }

@@ -22,14 +22,14 @@ class DiscountsUpdateRequest
 
     /**
      *
-     * @var Components\DiscountUpdate $discountUpdate
+     * @var \Spaire\Models\Components\DiscountUpdate $discountUpdate
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Components\DiscountUpdate $discountUpdate;
 
     /**
      * @param  string  $id
-     * @param  Components\DiscountUpdate  $discountUpdate
+     * @param  \Spaire\Models\Components\DiscountUpdate  $discountUpdate
      * @phpstan-pure
      */
     public function __construct(string $id, Components\DiscountUpdate $discountUpdate)

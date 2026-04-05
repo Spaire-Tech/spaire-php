@@ -63,7 +63,7 @@ class CustomFieldDate
 
     /**
      *
-     * @var CustomFieldDateProperties $properties
+     * @var \Spaire\Models\Components\CustomFieldDateProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomFieldDateProperties')]
@@ -92,7 +92,7 @@ class CustomFieldDate
      * @param  string  $slug
      * @param  string  $name
      * @param  string  $organizationId
-     * @param  CustomFieldDateProperties  $properties
+     * @param  \Spaire\Models\Components\CustomFieldDateProperties  $properties
      * @param  ?\DateTime  $modifiedAt
      * @phpstan-pure
      */

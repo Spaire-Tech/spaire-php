@@ -22,7 +22,7 @@ class ProductCreateOneTime
     /**
      * List of available prices for this product. It should contain at most one static price (fixed, custom or free), and any number of metered prices. Metered prices are not supported on one-time purchase products.
      *
-     * @var array<ProductPriceFixedCreate|ProductPriceCustomCreate|ProductPriceFreeCreate|ProductPriceSeatBasedCreate|ProductPriceMeteredUnitCreate> $prices
+     * @var array<\Spaire\Models\Components\ProductPriceFixedCreate|\Spaire\Models\Components\ProductPriceCustomCreate|\Spaire\Models\Components\ProductPriceFreeCreate|\Spaire\Models\Components\ProductPriceSeatBasedCreate|\Spaire\Models\Components\ProductPriceMeteredUnitCreate> $prices
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('prices')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\ProductPriceFixedCreate|\Spaire\Models\Components\ProductPriceCustomCreate|\Spaire\Models\Components\ProductPriceFreeCreate|\Spaire\Models\Components\ProductPriceSeatBasedCreate|\Spaire\Models\Components\ProductPriceMeteredUnitCreate>')]
@@ -51,7 +51,7 @@ class ProductCreateOneTime
 
     /**
      *
-     * @var ?ProductVisibility $visibility
+     * @var ?\Spaire\Models\Components\ProductVisibility $visibility
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('visibility')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductVisibility|null')]
@@ -61,7 +61,7 @@ class ProductCreateOneTime
     /**
      * List of custom fields to attach.
      *
-     * @var ?array<AttachedCustomFieldCreate> $attachedCustomFields
+     * @var ?array<\Spaire\Models\Components\AttachedCustomFieldCreate> $attachedCustomFields
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('attached_custom_fields')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\AttachedCustomFieldCreate>|null')]
@@ -118,10 +118,10 @@ class ProductCreateOneTime
 
     /**
      * @param  string  $name
-     * @param  array<ProductPriceFixedCreate|ProductPriceCustomCreate|ProductPriceFreeCreate|ProductPriceSeatBasedCreate|ProductPriceMeteredUnitCreate>  $prices
+     * @param  array<\Spaire\Models\Components\ProductPriceFixedCreate|\Spaire\Models\Components\ProductPriceCustomCreate|\Spaire\Models\Components\ProductPriceFreeCreate|\Spaire\Models\Components\ProductPriceSeatBasedCreate|\Spaire\Models\Components\ProductPriceMeteredUnitCreate>  $prices
      * @param  ?array<string, string|int|float|bool>  $metadata
-     * @param  ?ProductVisibility  $visibility
-     * @param  ?array<AttachedCustomFieldCreate>  $attachedCustomFields
+     * @param  ?\Spaire\Models\Components\ProductVisibility  $visibility
+     * @param  ?array<\Spaire\Models\Components\AttachedCustomFieldCreate>  $attachedCustomFields
      * @param  ?string  $description
      * @param  ?array<string>  $medias
      * @param  ?string  $organizationId

@@ -43,7 +43,7 @@ class LicenseKeyWithActivations
 
     /**
      *
-     * @var LicenseKeyCustomer $customer
+     * @var \Spaire\Models\Components\LicenseKeyCustomer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\LicenseKeyCustomer')]
@@ -73,7 +73,7 @@ class LicenseKeyWithActivations
 
     /**
      *
-     * @var LicenseKeyStatus $status
+     * @var \Spaire\Models\Components\LicenseKeyStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\LicenseKeyStatus')]
@@ -96,7 +96,7 @@ class LicenseKeyWithActivations
     /**
      * $activations
      *
-     * @var array<LicenseKeyActivationBase> $activations
+     * @var array<\Spaire\Models\Components\LicenseKeyActivationBase> $activations
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('activations')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\LicenseKeyActivationBase>')]
@@ -143,14 +143,14 @@ class LicenseKeyWithActivations
      * @param  \DateTime  $createdAt
      * @param  string  $organizationId
      * @param  string  $customerId
-     * @param  LicenseKeyCustomer  $customer
+     * @param  \Spaire\Models\Components\LicenseKeyCustomer  $customer
      * @param  string  $benefitId
      * @param  string  $key
      * @param  string  $displayKey
-     * @param  LicenseKeyStatus  $status
+     * @param  \Spaire\Models\Components\LicenseKeyStatus  $status
      * @param  int  $usage
      * @param  int  $validations
-     * @param  array<LicenseKeyActivationBase>  $activations
+     * @param  array<\Spaire\Models\Components\LicenseKeyActivationBase>  $activations
      * @param  ?\DateTime  $modifiedAt
      * @param  ?int  $limitActivations
      * @param  ?int  $limitUsage

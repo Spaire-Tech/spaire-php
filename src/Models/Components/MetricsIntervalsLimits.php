@@ -15,7 +15,7 @@ class MetricsIntervalsLimits
     /**
      * Date interval limit to get metrics for a given interval.
      *
-     * @var MetricsIntervalLimit $hour
+     * @var \Spaire\Models\Components\MetricsIntervalLimit $hour
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('hour')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MetricsIntervalLimit')]
@@ -24,7 +24,7 @@ class MetricsIntervalsLimits
     /**
      * Date interval limit to get metrics for a given interval.
      *
-     * @var MetricsIntervalLimit $day
+     * @var \Spaire\Models\Components\MetricsIntervalLimit $day
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('day')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MetricsIntervalLimit')]
@@ -33,7 +33,7 @@ class MetricsIntervalsLimits
     /**
      * Date interval limit to get metrics for a given interval.
      *
-     * @var MetricsIntervalLimit $week
+     * @var \Spaire\Models\Components\MetricsIntervalLimit $week
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('week')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MetricsIntervalLimit')]
@@ -42,7 +42,7 @@ class MetricsIntervalsLimits
     /**
      * Date interval limit to get metrics for a given interval.
      *
-     * @var MetricsIntervalLimit $month
+     * @var \Spaire\Models\Components\MetricsIntervalLimit $month
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('month')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MetricsIntervalLimit')]
@@ -51,18 +51,18 @@ class MetricsIntervalsLimits
     /**
      * Date interval limit to get metrics for a given interval.
      *
-     * @var MetricsIntervalLimit $year
+     * @var \Spaire\Models\Components\MetricsIntervalLimit $year
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('year')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MetricsIntervalLimit')]
     public MetricsIntervalLimit $year;
 
     /**
-     * @param  MetricsIntervalLimit  $hour
-     * @param  MetricsIntervalLimit  $day
-     * @param  MetricsIntervalLimit  $week
-     * @param  MetricsIntervalLimit  $month
-     * @param  MetricsIntervalLimit  $year
+     * @param  \Spaire\Models\Components\MetricsIntervalLimit  $hour
+     * @param  \Spaire\Models\Components\MetricsIntervalLimit  $day
+     * @param  \Spaire\Models\Components\MetricsIntervalLimit  $week
+     * @param  \Spaire\Models\Components\MetricsIntervalLimit  $month
+     * @param  \Spaire\Models\Components\MetricsIntervalLimit  $year
      * @phpstan-pure
      */
     public function __construct(MetricsIntervalLimit $hour, MetricsIntervalLimit $day, MetricsIntervalLimit $week, MetricsIntervalLimit $month, MetricsIntervalLimit $year)

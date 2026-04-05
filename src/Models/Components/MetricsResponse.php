@@ -15,7 +15,7 @@ class MetricsResponse
     /**
      * List of data for each timestamp.
      *
-     * @var array<MetricPeriod> $periods
+     * @var array<\Spaire\Models\Components\MetricPeriod> $periods
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('periods')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\MetricPeriod>')]
@@ -23,7 +23,7 @@ class MetricsResponse
 
     /**
      *
-     * @var MetricsTotals $totals
+     * @var \Spaire\Models\Components\MetricsTotals $totals
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('totals')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MetricsTotals')]
@@ -31,16 +31,16 @@ class MetricsResponse
 
     /**
      *
-     * @var Metrics $metrics
+     * @var \Spaire\Models\Components\Metrics $metrics
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metrics')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metrics')]
     public Metrics $metrics;
 
     /**
-     * @param  array<MetricPeriod>  $periods
-     * @param  MetricsTotals  $totals
-     * @param  Metrics  $metrics
+     * @param  array<\Spaire\Models\Components\MetricPeriod>  $periods
+     * @param  \Spaire\Models\Components\MetricsTotals  $totals
+     * @param  \Spaire\Models\Components\Metrics  $metrics
      * @phpstan-pure
      */
     public function __construct(array $periods, MetricsTotals $totals, Metrics $metrics)

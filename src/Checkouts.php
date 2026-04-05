@@ -52,9 +52,9 @@ class Checkouts
      *
      * Orders and subscriptions will be processed.
      *
-     * @param  Components\CheckoutConfirmStripe  $checkoutConfirmStripe
+     * @param  \Spaire\Models\Components\CheckoutConfirmStripe  $checkoutConfirmStripe
      * @param  string  $clientSecret
-     * @return Operations\CheckoutsClientConfirmResponse
+     * @return \Spaire\Models\Operations\CheckoutsClientConfirmResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function clientConfirm(Components\CheckoutConfirmStripe $checkoutConfirmStripe, string $clientSecret, ?Options $options = null): Operations\CheckoutsClientConfirmResponse
@@ -179,7 +179,7 @@ class Checkouts
      * Get a checkout session by client secret.
      *
      * @param  string  $clientSecret
-     * @return Operations\CheckoutsClientGetResponse
+     * @return \Spaire\Models\Operations\CheckoutsClientGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function clientGet(string $clientSecret, ?Options $options = null): Operations\CheckoutsClientGetResponse
@@ -275,9 +275,9 @@ class Checkouts
      *
      * Update a checkout session by client secret.
      *
-     * @param  Components\CheckoutUpdatePublic  $checkoutUpdatePublic
+     * @param  \Spaire\Models\Components\CheckoutUpdatePublic  $checkoutUpdatePublic
      * @param  string  $clientSecret
-     * @return Operations\CheckoutsClientUpdateResponse
+     * @return \Spaire\Models\Operations\CheckoutsClientUpdateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function clientUpdate(Components\CheckoutUpdatePublic $checkoutUpdatePublic, string $clientSecret, ?Options $options = null): Operations\CheckoutsClientUpdateResponse
@@ -392,8 +392,8 @@ class Checkouts
      *
      * **Scopes**: `checkouts:write`
      *
-     * @param  Components\CheckoutCreate  $request
-     * @return Operations\CheckoutsCreateResponse
+     * @param  \Spaire\Models\Components\CheckoutCreate  $request
+     * @return \Spaire\Models\Operations\CheckoutsCreateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function create(Components\CheckoutCreate $request, ?Options $options = null): Operations\CheckoutsCreateResponse
@@ -472,7 +472,7 @@ class Checkouts
      * **Scopes**: `checkouts:read` `checkouts:write`
      *
      * @param  string  $id
-     * @return Operations\CheckoutsGetResponse
+     * @return \Spaire\Models\Operations\CheckoutsGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\CheckoutsGetResponse
@@ -559,8 +559,8 @@ class Checkouts
      *
      * **Scopes**: `checkouts:read` `checkouts:write`
      *
-     * @param  ?Operations\CheckoutsListRequest  $request
-     * @return Operations\CheckoutsListResponse
+     * @param  ?\Spaire\Models\Operations\CheckoutsListRequest  $request
+     * @return \Spaire\Models\Operations\CheckoutsListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(?Operations\CheckoutsListRequest $request = null, ?Options $options = null): Operations\CheckoutsListResponse
@@ -677,8 +677,8 @@ class Checkouts
      *
      * **Scopes**: `checkouts:read` `checkouts:write`
      *
-     * @param  ?Operations\CheckoutsListRequest  $request
-     * @return \Generator<Operations\CheckoutsListResponse>
+     * @param  ?\Spaire\Models\Operations\CheckoutsListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\CheckoutsListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(?Operations\CheckoutsListRequest $request = null, ?Options $options = null): \Generator
@@ -697,9 +697,9 @@ class Checkouts
      *
      * **Scopes**: `checkouts:write`
      *
-     * @param  Components\CheckoutUpdate  $checkoutUpdate
+     * @param  \Spaire\Models\Components\CheckoutUpdate  $checkoutUpdate
      * @param  string  $id
-     * @return Operations\CheckoutsUpdateResponse
+     * @return \Spaire\Models\Operations\CheckoutsUpdateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function update(Components\CheckoutUpdate $checkoutUpdate, string $id, ?Options $options = null): Operations\CheckoutsUpdateResponse

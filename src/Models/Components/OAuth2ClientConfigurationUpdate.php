@@ -37,7 +37,7 @@ class OAuth2ClientConfigurationUpdate
     /**
      * $grantTypes
      *
-     * @var ?array<OAuth2ClientConfigurationUpdateGrantTypes> $grantTypes
+     * @var ?array<\Spaire\Models\Components\OAuth2ClientConfigurationUpdateGrantTypes> $grantTypes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('grant_types')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\OAuth2ClientConfigurationUpdateGrantTypes>|null')]
@@ -56,7 +56,7 @@ class OAuth2ClientConfigurationUpdate
 
     /**
      *
-     * @var ?SubType $defaultSubType
+     * @var ?\Spaire\Models\Components\SubType $defaultSubType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('default_sub_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubType|null')]
@@ -97,7 +97,7 @@ class OAuth2ClientConfigurationUpdate
 
     /**
      *
-     * @var ?OAuth2ClientConfigurationUpdateTokenEndpointAuthMethod $tokenEndpointAuthMethod
+     * @var ?\Spaire\Models\Components\OAuth2ClientConfigurationUpdateTokenEndpointAuthMethod $tokenEndpointAuthMethod
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('token_endpoint_auth_method')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OAuth2ClientConfigurationUpdateTokenEndpointAuthMethod|null')]
@@ -116,11 +116,11 @@ class OAuth2ClientConfigurationUpdate
      * @param  array<string>  $redirectUris
      * @param  string  $clientName
      * @param  string  $clientId
-     * @param  ?OAuth2ClientConfigurationUpdateTokenEndpointAuthMethod  $tokenEndpointAuthMethod
-     * @param  ?array<OAuth2ClientConfigurationUpdateGrantTypes>  $grantTypes
+     * @param  ?\Spaire\Models\Components\OAuth2ClientConfigurationUpdateTokenEndpointAuthMethod  $tokenEndpointAuthMethod
+     * @param  ?array<\Spaire\Models\Components\OAuth2ClientConfigurationUpdateGrantTypes>  $grantTypes
      * @param  ?array<string>  $responseTypes
      * @param  ?string  $scope
-     * @param  ?SubType  $defaultSubType
+     * @param  ?\Spaire\Models\Components\SubType  $defaultSubType
      * @param  ?string  $clientUri
      * @param  ?string  $logoUri
      * @param  ?string  $tosUri

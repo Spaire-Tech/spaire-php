@@ -51,7 +51,7 @@ class Oauth2
     /**
      * Authorize
      *
-     * @return Operations\Oauth2AuthorizeResponse
+     * @return \Spaire\Models\Operations\Oauth2AuthorizeResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function authorize(?Options $options = null): Operations\Oauth2AuthorizeResponse
@@ -111,8 +111,8 @@ class Oauth2
      *
      * Get information about an access token.
      *
-     * @param  Components\IntrospectTokenRequest  $request
-     * @return Operations\Oauth2IntrospectTokenResponse
+     * @param  \Spaire\Models\Components\IntrospectTokenRequest  $request
+     * @return \Spaire\Models\Operations\Oauth2IntrospectTokenResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function introspect(Components\IntrospectTokenRequest $request, ?Options $options = null): Operations\Oauth2IntrospectTokenResponse
@@ -177,8 +177,8 @@ class Oauth2
      *
      * Request an access token using a valid grant.
      *
-     * @param  Components\AuthorizationCodeTokenRequest|Components\RefreshTokenRequest|Components\WebTokenRequest  $request
-     * @return Operations\Oauth2RequestTokenResponse
+     * @param  \Spaire\Models\Components\AuthorizationCodeTokenRequest|\Spaire\Models\Components\RefreshTokenRequest|\Spaire\Models\Components\WebTokenRequest  $request
+     * @return \Spaire\Models\Operations\Oauth2RequestTokenResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function token(Components\AuthorizationCodeTokenRequest|Components\RefreshTokenRequest|Components\WebTokenRequest $request, ?Options $options = null): Operations\Oauth2RequestTokenResponse
@@ -243,8 +243,8 @@ class Oauth2
      *
      * Revoke an access token or a refresh token.
      *
-     * @param  Components\RevokeTokenRequest  $request
-     * @return Operations\Oauth2RevokeTokenResponse
+     * @param  \Spaire\Models\Components\RevokeTokenRequest  $request
+     * @return \Spaire\Models\Operations\Oauth2RevokeTokenResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function revoke(Components\RevokeTokenRequest $request, ?Options $options = null): Operations\Oauth2RevokeTokenResponse
@@ -309,7 +309,7 @@ class Oauth2
      *
      * Get information about the authenticated user.
      *
-     * @return Operations\Oauth2UserinfoResponse
+     * @return \Spaire\Models\Operations\Oauth2UserinfoResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function userinfo(?Options $options = null): Operations\Oauth2UserinfoResponse

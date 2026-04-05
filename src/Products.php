@@ -55,8 +55,8 @@ class Products
      *
      * **Scopes**: `products:write`
      *
-     * @param  Components\ProductCreateRecurring|Components\ProductCreateOneTime  $request
-     * @return Operations\ProductsCreateResponse
+     * @param  \Spaire\Models\Components\ProductCreateRecurring|\Spaire\Models\Components\ProductCreateOneTime  $request
+     * @return \Spaire\Models\Operations\ProductsCreateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function create(Components\ProductCreateRecurring|Components\ProductCreateOneTime $request, ?Options $options = null): Operations\ProductsCreateResponse
@@ -135,7 +135,7 @@ class Products
      * **Scopes**: `products:read` `products:write`
      *
      * @param  string  $id
-     * @return Operations\ProductsGetResponse
+     * @return \Spaire\Models\Operations\ProductsGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\ProductsGetResponse
@@ -222,8 +222,8 @@ class Products
      *
      * **Scopes**: `products:read` `products:write`
      *
-     * @param  ?Operations\ProductsListRequest  $request
-     * @return Operations\ProductsListResponse
+     * @param  ?\Spaire\Models\Operations\ProductsListRequest  $request
+     * @return \Spaire\Models\Operations\ProductsListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(?Operations\ProductsListRequest $request = null, ?Options $options = null): Operations\ProductsListResponse
@@ -342,8 +342,8 @@ class Products
      *
      * **Scopes**: `products:read` `products:write`
      *
-     * @param  ?Operations\ProductsListRequest  $request
-     * @return \Generator<Operations\ProductsListResponse>
+     * @param  ?\Spaire\Models\Operations\ProductsListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\ProductsListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(?Operations\ProductsListRequest $request = null, ?Options $options = null): \Generator
@@ -362,9 +362,9 @@ class Products
      *
      * **Scopes**: `products:write`
      *
-     * @param  Components\ProductUpdate  $productUpdate
+     * @param  \Spaire\Models\Components\ProductUpdate  $productUpdate
      * @param  string  $id
-     * @return Operations\ProductsUpdateResponse
+     * @return \Spaire\Models\Operations\ProductsUpdateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function update(Components\ProductUpdate $productUpdate, string $id, ?Options $options = null): Operations\ProductsUpdateResponse
@@ -468,9 +468,9 @@ class Products
      *
      * **Scopes**: `products:write`
      *
-     * @param  Components\ProductBenefitsUpdate  $productBenefitsUpdate
+     * @param  \Spaire\Models\Components\ProductBenefitsUpdate  $productBenefitsUpdate
      * @param  string  $id
-     * @return Operations\ProductsUpdateBenefitsResponse
+     * @return \Spaire\Models\Operations\ProductsUpdateBenefitsResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function updateBenefits(Components\ProductBenefitsUpdate $productBenefitsUpdate, string $id, ?Options $options = null): Operations\ProductsUpdateBenefitsResponse

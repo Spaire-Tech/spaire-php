@@ -36,7 +36,7 @@ class ProductUpdate
     /**
      * The interval unit for the trial period.
      *
-     * @var ?TrialInterval $trialInterval
+     * @var ?\Spaire\Models\Components\TrialInterval $trialInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('trial_interval')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TrialInterval|null')]
@@ -72,7 +72,7 @@ class ProductUpdate
     /**
      * The recurring interval of the product. If `None`, the product is a one-time purchase. **Can only be set on legacy recurring products. Once set, it can't be changed.**
      *
-     * @var ?SubscriptionRecurringInterval $recurringInterval
+     * @var ?\Spaire\Models\Components\SubscriptionRecurringInterval $recurringInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('recurring_interval')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionRecurringInterval|null')]
@@ -100,7 +100,7 @@ class ProductUpdate
     /**
      * The visibility of the product.
      *
-     * @var ?ProductVisibility $visibility
+     * @var ?\Spaire\Models\Components\ProductVisibility $visibility
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('visibility')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductVisibility|null')]
@@ -110,7 +110,7 @@ class ProductUpdate
     /**
      * List of available prices for this product. If you want to keep existing prices, include them in the list as an `ExistingProductPrice` object.
      *
-     * @var ?array<ExistingProductPrice|ProductPriceFixedCreate|ProductPriceCustomCreate|ProductPriceFreeCreate|ProductPriceSeatBasedCreate|ProductPriceMeteredUnitCreate> $prices
+     * @var ?array<\Spaire\Models\Components\ExistingProductPrice|\Spaire\Models\Components\ProductPriceFixedCreate|\Spaire\Models\Components\ProductPriceCustomCreate|\Spaire\Models\Components\ProductPriceFreeCreate|\Spaire\Models\Components\ProductPriceSeatBasedCreate|\Spaire\Models\Components\ProductPriceMeteredUnitCreate> $prices
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('prices')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\ExistingProductPrice|\Spaire\Models\Components\ProductPriceFixedCreate|\Spaire\Models\Components\ProductPriceCustomCreate|\Spaire\Models\Components\ProductPriceFreeCreate|\Spaire\Models\Components\ProductPriceSeatBasedCreate|\Spaire\Models\Components\ProductPriceMeteredUnitCreate>|null')]
@@ -130,7 +130,7 @@ class ProductUpdate
     /**
      * $attachedCustomFields
      *
-     * @var ?array<AttachedCustomFieldCreate> $attachedCustomFields
+     * @var ?array<\Spaire\Models\Components\AttachedCustomFieldCreate> $attachedCustomFields
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('attached_custom_fields')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\AttachedCustomFieldCreate>|null')]
@@ -139,17 +139,17 @@ class ProductUpdate
 
     /**
      * @param  ?array<string, string|int|float|bool>  $metadata
-     * @param  ?TrialInterval  $trialInterval
+     * @param  ?\Spaire\Models\Components\TrialInterval  $trialInterval
      * @param  ?int  $trialIntervalCount
      * @param  ?string  $name
      * @param  ?string  $description
-     * @param  ?SubscriptionRecurringInterval  $recurringInterval
+     * @param  ?\Spaire\Models\Components\SubscriptionRecurringInterval  $recurringInterval
      * @param  ?int  $recurringIntervalCount
      * @param  ?bool  $isArchived
-     * @param  ?ProductVisibility  $visibility
-     * @param  ?array<ExistingProductPrice|ProductPriceFixedCreate|ProductPriceCustomCreate|ProductPriceFreeCreate|ProductPriceSeatBasedCreate|ProductPriceMeteredUnitCreate>  $prices
+     * @param  ?\Spaire\Models\Components\ProductVisibility  $visibility
+     * @param  ?array<\Spaire\Models\Components\ExistingProductPrice|\Spaire\Models\Components\ProductPriceFixedCreate|\Spaire\Models\Components\ProductPriceCustomCreate|\Spaire\Models\Components\ProductPriceFreeCreate|\Spaire\Models\Components\ProductPriceSeatBasedCreate|\Spaire\Models\Components\ProductPriceMeteredUnitCreate>  $prices
      * @param  ?array<string>  $medias
-     * @param  ?array<AttachedCustomFieldCreate>  $attachedCustomFields
+     * @param  ?array<\Spaire\Models\Components\AttachedCustomFieldCreate>  $attachedCustomFields
      * @phpstan-pure
      */
     public function __construct(?array $metadata = null, ?TrialInterval $trialInterval = null, ?int $trialIntervalCount = null, ?string $name = null, ?string $description = null, ?SubscriptionRecurringInterval $recurringInterval = null, ?int $recurringIntervalCount = null, ?bool $isArchived = null, ?ProductVisibility $visibility = null, ?array $prices = null, ?array $medias = null, ?array $attachedCustomFields = null)

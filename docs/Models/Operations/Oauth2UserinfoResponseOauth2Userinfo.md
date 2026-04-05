@@ -9,7 +9,7 @@ Successful Response
 
 ```php
 /**
-* @var Components\UserInfoUser
+* @var \Spaire\Models\Components\UserInfoUser
 */
 Components\UserInfoUser $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Components\UserInfoUser $value = /* values here */
 
 ```php
 /**
-* @var Components\UserInfoOrganization
+* @var \Spaire\Models\Components\UserInfoOrganization
 */
 Components\UserInfoOrganization $value = /* values here */
 ```

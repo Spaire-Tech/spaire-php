@@ -21,14 +21,14 @@ class ProductsUpdateRequest
 
     /**
      *
-     * @var Components\ProductUpdate $productUpdate
+     * @var \Spaire\Models\Components\ProductUpdate $productUpdate
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Components\ProductUpdate $productUpdate;
 
     /**
      * @param  string  $id
-     * @param  Components\ProductUpdate  $productUpdate
+     * @param  \Spaire\Models\Components\ProductUpdate  $productUpdate
      * @phpstan-pure
      */
     public function __construct(string $id, Components\ProductUpdate $productUpdate)

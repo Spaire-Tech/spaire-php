@@ -21,14 +21,14 @@ class BenefitsUpdateRequest
 
     /**
      *
-     * @var Components\BenefitCustomUpdate|Components\BenefitDiscordUpdate|Components\BenefitGitHubRepositoryUpdate|Components\BenefitDownloadablesUpdate|Components\BenefitLicenseKeysUpdate|Components\BenefitMeterCreditUpdate $requestBody
+     * @var \Spaire\Models\Components\BenefitCustomUpdate|\Spaire\Models\Components\BenefitDiscordUpdate|\Spaire\Models\Components\BenefitGitHubRepositoryUpdate|\Spaire\Models\Components\BenefitDownloadablesUpdate|\Spaire\Models\Components\BenefitLicenseKeysUpdate|\Spaire\Models\Components\BenefitMeterCreditUpdate $requestBody
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Components\BenefitCustomUpdate|Components\BenefitDiscordUpdate|Components\BenefitGitHubRepositoryUpdate|Components\BenefitDownloadablesUpdate|Components\BenefitLicenseKeysUpdate|Components\BenefitMeterCreditUpdate $requestBody;
 
     /**
      * @param  string  $id
-     * @param  Components\BenefitCustomUpdate|Components\BenefitDiscordUpdate|Components\BenefitGitHubRepositoryUpdate|Components\BenefitDownloadablesUpdate|Components\BenefitLicenseKeysUpdate|Components\BenefitMeterCreditUpdate  $requestBody
+     * @param  \Spaire\Models\Components\BenefitCustomUpdate|\Spaire\Models\Components\BenefitDiscordUpdate|\Spaire\Models\Components\BenefitGitHubRepositoryUpdate|\Spaire\Models\Components\BenefitDownloadablesUpdate|\Spaire\Models\Components\BenefitLicenseKeysUpdate|\Spaire\Models\Components\BenefitMeterCreditUpdate  $requestBody
      * @phpstan-pure
      */
     public function __construct(string $id, Components\BenefitCustomUpdate|Components\BenefitDiscordUpdate|Components\BenefitGitHubRepositoryUpdate|Components\BenefitDownloadablesUpdate|Components\BenefitLicenseKeysUpdate|Components\BenefitMeterCreditUpdate $requestBody)

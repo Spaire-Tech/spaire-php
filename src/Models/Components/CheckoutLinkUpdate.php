@@ -36,7 +36,7 @@ class CheckoutLinkUpdate
     /**
      * The interval unit for the trial period.
      *
-     * @var ?TrialInterval $trialInterval
+     * @var ?\Spaire\Models\Components\TrialInterval $trialInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('trial_interval')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TrialInterval|null')]
@@ -108,7 +108,7 @@ class CheckoutLinkUpdate
 
     /**
      * @param  ?array<string, string|int|float|bool>  $metadata
-     * @param  ?TrialInterval  $trialInterval
+     * @param  ?\Spaire\Models\Components\TrialInterval  $trialInterval
      * @param  ?int  $trialIntervalCount
      * @param  ?array<string>  $products
      * @param  ?string  $label

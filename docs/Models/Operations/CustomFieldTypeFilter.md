@@ -9,7 +9,7 @@ Filter by custom field type.
 
 ```php
 /**
-* @var Components\CustomFieldType
+* @var \Spaire\Models\Components\CustomFieldType
 */
 Components\CustomFieldType $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Components\CustomFieldType $value = /* values here */
 
 ```php
 /**
-* @var array<Components\CustomFieldType>
+* @var array<\Spaire\Models\Components\CustomFieldType>
 */
 array $value = /* values here */
 ```

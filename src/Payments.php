@@ -52,7 +52,7 @@ class Payments
      * **Scopes**: `payments:read`
      *
      * @param  string  $id
-     * @return Operations\PaymentsGetResponse
+     * @return \Spaire\Models\Operations\PaymentsGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\PaymentsGetResponse
@@ -139,8 +139,8 @@ class Payments
      *
      * **Scopes**: `payments:read`
      *
-     * @param  ?Operations\PaymentsListRequest  $request
-     * @return Operations\PaymentsListResponse
+     * @param  ?\Spaire\Models\Operations\PaymentsListRequest  $request
+     * @return \Spaire\Models\Operations\PaymentsListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(?Operations\PaymentsListRequest $request = null, ?Options $options = null): Operations\PaymentsListResponse
@@ -257,8 +257,8 @@ class Payments
      *
      * **Scopes**: `payments:read`
      *
-     * @param  ?Operations\PaymentsListRequest  $request
-     * @return \Generator<Operations\PaymentsListResponse>
+     * @param  ?\Spaire\Models\Operations\PaymentsListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\PaymentsListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(?Operations\PaymentsListRequest $request = null, ?Options $options = null): \Generator

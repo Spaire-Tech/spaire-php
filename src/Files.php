@@ -52,11 +52,11 @@ class Files
      *
      * **Scopes**: `files:write`
      *
-     * @param  Components\DownloadableFileCreate|Components\ProductMediaFileCreate|Components\OrganizationAvatarFileCreate  $request
-     * @return Operations\FilesCreateResponse
+     * @param  \Spaire\Models\Components\DownloadableFileCreate|\Spaire\Models\Components\ProductMediaFileCreate|\Spaire\Models\Components\OrganizationAvatarFileCreate|\Spaire\Models\Components\StorefrontHeaderFileCreate  $request
+     * @return \Spaire\Models\Operations\FilesCreateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
-    public function create(Components\DownloadableFileCreate|Components\ProductMediaFileCreate|Components\OrganizationAvatarFileCreate $request, ?Options $options = null): Operations\FilesCreateResponse
+    public function create(Components\DownloadableFileCreate|Components\ProductMediaFileCreate|Components\OrganizationAvatarFileCreate|Components\StorefrontHeaderFileCreate $request, ?Options $options = null): Operations\FilesCreateResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/v1/files/');
@@ -132,7 +132,7 @@ class Files
      * **Scopes**: `files:write`
      *
      * @param  string  $id
-     * @return Operations\FilesDeleteResponse
+     * @return \Spaire\Models\Operations\FilesDeleteResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function delete(string $id, ?Options $options = null): Operations\FilesDeleteResponse
@@ -225,7 +225,7 @@ class Files
      * @param  string|array<string>|null  $ids
      * @param  ?int  $page
      * @param  ?int  $limit
-     * @return Operations\FilesListResponse
+     * @return \Spaire\Models\Operations\FilesListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(string|array|null $organizationId = null, string|array|null $ids = null, ?int $page = null, ?int $limit = null, ?Options $options = null): Operations\FilesListResponse
@@ -345,7 +345,7 @@ class Files
      * @param  string|array<string>|null  $ids
      * @param  ?int  $page
      * @param  ?int  $limit
-     * @return \Generator<Operations\FilesListResponse>
+     * @return \Generator<\Spaire\Models\Operations\FilesListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(string|array|null $organizationId = null, string|array|null $ids = null, ?int $page = null, ?int $limit = null, ?Options $options = null): \Generator
@@ -364,9 +364,9 @@ class Files
      *
      * **Scopes**: `files:write`
      *
-     * @param  Components\FilePatch  $filePatch
+     * @param  \Spaire\Models\Components\FilePatch  $filePatch
      * @param  string  $id
-     * @return Operations\FilesUpdateResponse
+     * @return \Spaire\Models\Operations\FilesUpdateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function update(Components\FilePatch $filePatch, string $id, ?Options $options = null): Operations\FilesUpdateResponse
@@ -410,7 +410,7 @@ class Files
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Spaire\Models\Components\DownloadableFileRead|\Spaire\Models\Components\ProductMediaFileRead|\Spaire\Models\Components\OrganizationAvatarFileRead', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Spaire\Models\Components\DownloadableFileRead|\Spaire\Models\Components\ProductMediaFileRead|\Spaire\Models\Components\OrganizationAvatarFileRead|\Spaire\Models\Components\StorefrontHeaderFileRead', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\FilesUpdateResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
@@ -470,9 +470,9 @@ class Files
      *
      * **Scopes**: `files:write`
      *
-     * @param  Components\FileUploadCompleted  $fileUploadCompleted
+     * @param  \Spaire\Models\Components\FileUploadCompleted  $fileUploadCompleted
      * @param  string  $id
-     * @return Operations\FilesUploadedResponse
+     * @return \Spaire\Models\Operations\FilesUploadedResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function uploaded(Components\FileUploadCompleted $fileUploadCompleted, string $id, ?Options $options = null): Operations\FilesUploadedResponse
@@ -516,7 +516,7 @@ class Files
 
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
-                $obj = $serializer->deserialize($responseData, '\Spaire\Models\Components\DownloadableFileRead|\Spaire\Models\Components\ProductMediaFileRead|\Spaire\Models\Components\OrganizationAvatarFileRead', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $obj = $serializer->deserialize($responseData, '\Spaire\Models\Components\DownloadableFileRead|\Spaire\Models\Components\ProductMediaFileRead|\Spaire\Models\Components\OrganizationAvatarFileRead|\Spaire\Models\Components\StorefrontHeaderFileRead', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
                 $response = new Operations\FilesUploadedResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,

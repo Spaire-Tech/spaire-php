@@ -45,7 +45,7 @@ class CustomerSubscription
 
     /**
      *
-     * @var SubscriptionRecurringInterval $recurringInterval
+     * @var \Spaire\Models\Components\SubscriptionRecurringInterval $recurringInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('recurring_interval')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionRecurringInterval')]
@@ -61,7 +61,7 @@ class CustomerSubscription
 
     /**
      *
-     * @var SubscriptionStatus $status
+     * @var \Spaire\Models\Components\SubscriptionStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionStatus')]
@@ -101,7 +101,7 @@ class CustomerSubscription
 
     /**
      *
-     * @var CustomerSubscriptionProduct $product
+     * @var \Spaire\Models\Components\CustomerSubscriptionProduct $product
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('product')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerSubscriptionProduct')]
@@ -110,7 +110,7 @@ class CustomerSubscription
     /**
      * List of enabled prices for the subscription.
      *
-     * @var array<LegacyRecurringProductPriceFixed|LegacyRecurringProductPriceCustom|LegacyRecurringProductPriceFree|ProductPriceFixed|ProductPriceCustom|ProductPriceFree|ProductPriceSeatBased|ProductPriceMeteredUnit> $prices
+     * @var array<\Spaire\Models\Components\LegacyRecurringProductPriceFixed|\Spaire\Models\Components\LegacyRecurringProductPriceCustom|\Spaire\Models\Components\LegacyRecurringProductPriceFree|\Spaire\Models\Components\ProductPriceFixed|\Spaire\Models\Components\ProductPriceCustom|\Spaire\Models\Components\ProductPriceFree|\Spaire\Models\Components\ProductPriceSeatBased|\Spaire\Models\Components\ProductPriceMeteredUnit> $prices
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('prices')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\LegacyRecurringProductPriceFixed|\Spaire\Models\Components\LegacyRecurringProductPriceCustom|\Spaire\Models\Components\LegacyRecurringProductPriceFree|\Spaire\Models\Components\ProductPriceFixed|\Spaire\Models\Components\ProductPriceCustom|\Spaire\Models\Components\ProductPriceFree|\Spaire\Models\Components\ProductPriceSeatBased|\Spaire\Models\Components\ProductPriceMeteredUnit>')]
@@ -119,7 +119,7 @@ class CustomerSubscription
     /**
      * List of meters associated with the subscription.
      *
-     * @var array<CustomerSubscriptionMeter> $meters
+     * @var array<\Spaire\Models\Components\CustomerSubscriptionMeter> $meters
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('meters')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CustomerSubscriptionMeter>')]
@@ -206,7 +206,7 @@ class CustomerSubscription
 
     /**
      *
-     * @var ?CustomerCancellationReason $customerCancellationReason
+     * @var ?\Spaire\Models\Components\CustomerCancellationReason $customerCancellationReason
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_cancellation_reason')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerCancellationReason|null')]
@@ -233,16 +233,16 @@ class CustomerSubscription
      * @param  string  $id
      * @param  int  $amount
      * @param  string  $currency
-     * @param  SubscriptionRecurringInterval  $recurringInterval
+     * @param  \Spaire\Models\Components\SubscriptionRecurringInterval  $recurringInterval
      * @param  int  $recurringIntervalCount
-     * @param  SubscriptionStatus  $status
+     * @param  \Spaire\Models\Components\SubscriptionStatus  $status
      * @param  \DateTime  $currentPeriodStart
      * @param  bool  $cancelAtPeriodEnd
      * @param  string  $customerId
      * @param  string  $productId
-     * @param  CustomerSubscriptionProduct  $product
-     * @param  array<LegacyRecurringProductPriceFixed|LegacyRecurringProductPriceCustom|LegacyRecurringProductPriceFree|ProductPriceFixed|ProductPriceCustom|ProductPriceFree|ProductPriceSeatBased|ProductPriceMeteredUnit>  $prices
-     * @param  array<CustomerSubscriptionMeter>  $meters
+     * @param  \Spaire\Models\Components\CustomerSubscriptionProduct  $product
+     * @param  array<\Spaire\Models\Components\LegacyRecurringProductPriceFixed|\Spaire\Models\Components\LegacyRecurringProductPriceCustom|\Spaire\Models\Components\LegacyRecurringProductPriceFree|\Spaire\Models\Components\ProductPriceFixed|\Spaire\Models\Components\ProductPriceCustom|\Spaire\Models\Components\ProductPriceFree|\Spaire\Models\Components\ProductPriceSeatBased|\Spaire\Models\Components\ProductPriceMeteredUnit>  $prices
+     * @param  array<\Spaire\Models\Components\CustomerSubscriptionMeter>  $meters
      * @param  ?\DateTime  $modifiedAt
      * @param  ?\DateTime  $currentPeriodEnd
      * @param  ?\DateTime  $trialStart
@@ -253,7 +253,7 @@ class CustomerSubscription
      * @param  ?\DateTime  $endedAt
      * @param  ?string  $discountId
      * @param  ?string  $checkoutId
-     * @param  ?CustomerCancellationReason  $customerCancellationReason
+     * @param  ?\Spaire\Models\Components\CustomerCancellationReason  $customerCancellationReason
      * @param  ?string  $customerCancellationComment
      * @param  ?int  $seats
      * @phpstan-pure

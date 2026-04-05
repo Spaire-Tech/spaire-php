@@ -35,7 +35,7 @@ class CustomerPortalSeatsListClaimedSubscriptionsResponse
     /**
      * Successful Response
      *
-     * @var ?array<Components\CustomerSubscription> $responseCustomerPortalSeatsListClaimedSubscriptions
+     * @var ?array<\Spaire\Models\Components\CustomerSubscription> $responseCustomerPortalSeatsListClaimedSubscriptions
      */
     public ?array $responseCustomerPortalSeatsListClaimedSubscriptions = null;
 
@@ -43,7 +43,7 @@ class CustomerPortalSeatsListClaimedSubscriptionsResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Components\CustomerSubscription>  $responseCustomerPortalSeatsListClaimedSubscriptions
+     * @param  ?array<\Spaire\Models\Components\CustomerSubscription>  $responseCustomerPortalSeatsListClaimedSubscriptions
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $responseCustomerPortalSeatsListClaimedSubscriptions = null)

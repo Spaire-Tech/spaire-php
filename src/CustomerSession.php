@@ -51,8 +51,8 @@ class CustomerSession
      *
      * **Scopes**: `customer_portal:read` `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalCustomerSessionGetAuthenticatedUserSecurity  $security
-     * @return Operations\CustomerPortalCustomerSessionGetAuthenticatedUserResponse
+     * @param  \Spaire\Models\Operations\CustomerPortalCustomerSessionGetAuthenticatedUserSecurity  $security
+     * @return \Spaire\Models\Operations\CustomerPortalCustomerSessionGetAuthenticatedUserResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function getAuthenticatedUser(Operations\CustomerPortalCustomerSessionGetAuthenticatedUserSecurity $security, ?Options $options = null): Operations\CustomerPortalCustomerSessionGetAuthenticatedUserResponse
@@ -120,8 +120,8 @@ class CustomerSession
      *
      * **Scopes**: `customer_portal:read` `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalCustomerSessionIntrospectSecurity  $security
-     * @return Operations\CustomerPortalCustomerSessionIntrospectResponse
+     * @param  \Spaire\Models\Operations\CustomerPortalCustomerSessionIntrospectSecurity  $security
+     * @return \Spaire\Models\Operations\CustomerPortalCustomerSessionIntrospectResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function introspect(Operations\CustomerPortalCustomerSessionIntrospectSecurity $security, ?Options $options = null): Operations\CustomerPortalCustomerSessionIntrospectResponse

@@ -43,7 +43,7 @@ class ValidatedLicenseKey
 
     /**
      *
-     * @var LicenseKeyCustomer $customer
+     * @var \Spaire\Models\Components\LicenseKeyCustomer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\LicenseKeyCustomer')]
@@ -73,7 +73,7 @@ class ValidatedLicenseKey
 
     /**
      *
-     * @var LicenseKeyStatus $status
+     * @var \Spaire\Models\Components\LicenseKeyStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\LicenseKeyStatus')]
@@ -131,7 +131,7 @@ class ValidatedLicenseKey
 
     /**
      *
-     * @var ?LicenseKeyActivationBase $activation
+     * @var ?\Spaire\Models\Components\LicenseKeyActivationBase $activation
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('activation')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\LicenseKeyActivationBase|null')]
@@ -143,11 +143,11 @@ class ValidatedLicenseKey
      * @param  \DateTime  $createdAt
      * @param  string  $organizationId
      * @param  string  $customerId
-     * @param  LicenseKeyCustomer  $customer
+     * @param  \Spaire\Models\Components\LicenseKeyCustomer  $customer
      * @param  string  $benefitId
      * @param  string  $key
      * @param  string  $displayKey
-     * @param  LicenseKeyStatus  $status
+     * @param  \Spaire\Models\Components\LicenseKeyStatus  $status
      * @param  int  $usage
      * @param  int  $validations
      * @param  ?\DateTime  $modifiedAt
@@ -155,7 +155,7 @@ class ValidatedLicenseKey
      * @param  ?int  $limitUsage
      * @param  ?\DateTime  $lastValidatedAt
      * @param  ?\DateTime  $expiresAt
-     * @param  ?LicenseKeyActivationBase  $activation
+     * @param  ?\Spaire\Models\Components\LicenseKeyActivationBase  $activation
      * @phpstan-pure
      */
     public function __construct(string $id, \DateTime $createdAt, string $organizationId, string $customerId, LicenseKeyCustomer $customer, string $benefitId, string $key, string $displayKey, LicenseKeyStatus $status, int $usage, int $validations, ?\DateTime $modifiedAt = null, ?int $limitActivations = null, ?int $limitUsage = null, ?\DateTime $lastValidatedAt = null, ?\DateTime $expiresAt = null, ?LicenseKeyActivationBase $activation = null)

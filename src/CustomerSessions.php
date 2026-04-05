@@ -55,8 +55,8 @@ class CustomerSessions
      *
      * **Scopes**: `customer_sessions:write`
      *
-     * @param  Components\CustomerSessionCustomerIDCreate|Components\CustomerSessionCustomerExternalIDCreate  $request
-     * @return Operations\CustomerSessionsCreateResponse
+     * @param  \Spaire\Models\Components\CustomerSessionCustomerIDCreate|\Spaire\Models\Components\CustomerSessionCustomerExternalIDCreate  $request
+     * @return \Spaire\Models\Operations\CustomerSessionsCreateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function create(Components\CustomerSessionCustomerIDCreate|Components\CustomerSessionCustomerExternalIDCreate $request, ?Options $options = null): Operations\CustomerSessionsCreateResponse

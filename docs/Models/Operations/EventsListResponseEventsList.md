@@ -9,7 +9,7 @@ Successful Response
 
 ```php
 /**
-* @var Components\ListResourceEvent
+* @var \Spaire\Models\Components\ListResourceEvent
 */
 Components\ListResourceEvent $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Components\ListResourceEvent $value = /* values here */
 
 ```php
 /**
-* @var Components\ListResourceWithCursorPaginationEvent
+* @var \Spaire\Models\Components\ListResourceWithCursorPaginationEvent
 */
 Components\ListResourceWithCursorPaginationEvent $value = /* values here */
 ```

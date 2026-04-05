@@ -53,8 +53,8 @@ class Metrics
      *
      * **Scopes**: `metrics:read`
      *
-     * @param  Operations\MetricsGetRequest  $request
-     * @return Operations\MetricsGetResponse
+     * @param  \Spaire\Models\Operations\MetricsGetRequest  $request
+     * @return \Spaire\Models\Operations\MetricsGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(Operations\MetricsGetRequest $request, ?Options $options = null): Operations\MetricsGetResponse
@@ -130,7 +130,7 @@ class Metrics
      *
      * **Scopes**: `metrics:read`
      *
-     * @return Operations\MetricsLimitsResponse
+     * @return \Spaire\Models\Operations\MetricsLimitsResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function limits(?Options $options = null): Operations\MetricsLimitsResponse

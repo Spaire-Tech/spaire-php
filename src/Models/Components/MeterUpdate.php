@@ -44,7 +44,7 @@ class MeterUpdate
     /**
      * The filter to apply on events that'll be used to calculate the meter.
      *
-     * @var ?Filter $filter
+     * @var ?\Spaire\Models\Components\Filter $filter
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('filter')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Filter|null')]
@@ -54,7 +54,7 @@ class MeterUpdate
     /**
      * The aggregation to apply on the filtered events to calculate the meter.
      *
-     * @var CountAggregation|PropertyAggregation|UniqueAggregation|null $aggregation
+     * @var \Spaire\Models\Components\CountAggregation|\Spaire\Models\Components\PropertyAggregation|\Spaire\Models\Components\UniqueAggregation|null $aggregation
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('aggregation')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CountAggregation|\Spaire\Models\Components\PropertyAggregation|\Spaire\Models\Components\UniqueAggregation|null')]
@@ -74,8 +74,8 @@ class MeterUpdate
     /**
      * @param  ?array<string, string|int|float|bool>  $metadata
      * @param  ?string  $name
-     * @param  ?Filter  $filter
-     * @param  CountAggregation|PropertyAggregation|UniqueAggregation|null  $aggregation
+     * @param  ?\Spaire\Models\Components\Filter  $filter
+     * @param  \Spaire\Models\Components\CountAggregation|\Spaire\Models\Components\PropertyAggregation|\Spaire\Models\Components\UniqueAggregation|null  $aggregation
      * @param  ?bool  $isArchived
      * @phpstan-pure
      */

@@ -71,7 +71,7 @@ class CustomerMeter
     /**
      * A customer in an organization.
      *
-     * @var Customer $customer
+     * @var \Spaire\Models\Components\Customer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer')]
@@ -79,7 +79,7 @@ class CustomerMeter
 
     /**
      *
-     * @var Meter $meter
+     * @var \Spaire\Models\Components\Meter $meter
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('meter')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Meter')]
@@ -101,8 +101,8 @@ class CustomerMeter
      * @param  float  $consumedUnits
      * @param  int  $creditedUnits
      * @param  float  $balance
-     * @param  Customer  $customer
-     * @param  Meter  $meter
+     * @param  \Spaire\Models\Components\Customer  $customer
+     * @param  \Spaire\Models\Components\Meter  $meter
      * @param  ?\DateTime  $modifiedAt
      * @phpstan-pure
      */

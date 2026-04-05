@@ -14,7 +14,7 @@ class ListResourceCustomField
     /**
      * $items
      *
-     * @var array<CustomFieldText|CustomFieldNumber|CustomFieldDate|CustomFieldCheckbox|CustomFieldSelect> $items
+     * @var array<\Spaire\Models\Components\CustomFieldText|\Spaire\Models\Components\CustomFieldNumber|\Spaire\Models\Components\CustomFieldDate|\Spaire\Models\Components\CustomFieldCheckbox|\Spaire\Models\Components\CustomFieldSelect> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\CustomFieldText|\Spaire\Models\Components\CustomFieldNumber|\Spaire\Models\Components\CustomFieldDate|\Spaire\Models\Components\CustomFieldCheckbox|\Spaire\Models\Components\CustomFieldSelect>')]
@@ -22,15 +22,15 @@ class ListResourceCustomField
 
     /**
      *
-     * @var Pagination $pagination
+     * @var \Spaire\Models\Components\Pagination $pagination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pagination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Pagination')]
     public Pagination $pagination;
 
     /**
-     * @param  array<CustomFieldText|CustomFieldNumber|CustomFieldDate|CustomFieldCheckbox|CustomFieldSelect>  $items
-     * @param  Pagination  $pagination
+     * @param  array<\Spaire\Models\Components\CustomFieldText|\Spaire\Models\Components\CustomFieldNumber|\Spaire\Models\Components\CustomFieldDate|\Spaire\Models\Components\CustomFieldCheckbox|\Spaire\Models\Components\CustomFieldSelect>  $items
+     * @param  \Spaire\Models\Components\Pagination  $pagination
      * @phpstan-pure
      */
     public function __construct(array $items, Pagination $pagination)

@@ -30,7 +30,7 @@ class ClientInvoiceCreate
     /**
      * Invoice line items. At least one required.
      *
-     * @var array<ClientInvoiceLineItemCreate> $lineItems
+     * @var array<\Spaire\Models\Components\ClientInvoiceLineItemCreate> $lineItems
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('line_items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\ClientInvoiceLineItemCreate>')]
@@ -130,7 +130,7 @@ class ClientInvoiceCreate
     /**
      * @param  string  $customerId
      * @param  string  $currency
-     * @param  array<ClientInvoiceLineItemCreate>  $lineItems
+     * @param  array<\Spaire\Models\Components\ClientInvoiceLineItemCreate>  $lineItems
      * @param  ?int  $discountAmount
      * @param  ?bool  $includePaymentLink
      * @param  ?bool  $showLogo

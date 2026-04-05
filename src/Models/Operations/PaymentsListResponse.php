@@ -35,7 +35,7 @@ class PaymentsListResponse
     /**
      * Successful Response
      *
-     * @var ?Components\ListResource $listResource
+     * @var ?\Spaire\Models\Components\ListResource $listResource
      */
     public ?Components\ListResource $listResource = null;
 
@@ -47,7 +47,7 @@ class PaymentsListResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\ListResource  $listResource
+     * @param  ?\Spaire\Models\Components\ListResource  $listResource
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\ListResource $listResource = null)

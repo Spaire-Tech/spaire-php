@@ -77,7 +77,7 @@ class BenefitDiscord
     /**
      * Properties for a benefit of type `discord`.
      *
-     * @var BenefitDiscordProperties $properties
+     * @var \Spaire\Models\Components\BenefitDiscordProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitDiscordProperties')]
@@ -107,7 +107,7 @@ class BenefitDiscord
      * @param  bool  $deletable
      * @param  string  $organizationId
      * @param  array<string, string|int|float|bool>  $metadata
-     * @param  BenefitDiscordProperties  $properties
+     * @param  \Spaire\Models\Components\BenefitDiscordProperties  $properties
      * @param  ?\DateTime  $modifiedAt
      * @phpstan-pure
      */

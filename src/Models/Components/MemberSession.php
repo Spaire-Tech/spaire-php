@@ -59,7 +59,7 @@ class MemberSession
     /**
      * A member of a customer.
      *
-     * @var Member $member
+     * @var \Spaire\Models\Components\Member $member
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('member')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Member')]
@@ -75,7 +75,7 @@ class MemberSession
     /**
      * A customer in an organization.
      *
-     * @var Customer $customer
+     * @var \Spaire\Models\Components\Customer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer')]
@@ -103,9 +103,9 @@ class MemberSession
      * @param  \DateTime  $expiresAt
      * @param  string  $memberPortalUrl
      * @param  string  $memberId
-     * @param  Member  $member
+     * @param  \Spaire\Models\Components\Member  $member
      * @param  string  $customerId
-     * @param  Customer  $customer
+     * @param  \Spaire\Models\Components\Customer  $customer
      * @param  ?\DateTime  $modifiedAt
      * @param  ?string  $returnUrl
      * @phpstan-pure

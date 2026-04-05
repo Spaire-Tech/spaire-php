@@ -49,7 +49,7 @@ class ProductTaxPreviewResponse
 
     /**
      *
-     * @var ?TaxRatePreview $taxRate
+     * @var ?\Spaire\Models\Components\TaxRatePreview $taxRate
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax_rate')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TaxRatePreview|null')]
@@ -70,7 +70,7 @@ class ProductTaxPreviewResponse
      * @param  int  $total
      * @param  string  $currency
      * @param  int  $quantity
-     * @param  ?TaxRatePreview  $taxRate
+     * @param  ?\Spaire\Models\Components\TaxRatePreview  $taxRate
      * @param  ?string  $taxabilityReason
      * @phpstan-pure
      */

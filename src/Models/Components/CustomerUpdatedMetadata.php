@@ -27,7 +27,7 @@ class CustomerUpdatedMetadata
 
     /**
      *
-     * @var CustomerUpdatedFields $updatedFields
+     * @var \Spaire\Models\Components\CustomerUpdatedFields $updatedFields
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_fields')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerUpdatedFields')]
@@ -50,7 +50,7 @@ class CustomerUpdatedMetadata
     /**
      * @param  string  $customerId
      * @param  string  $customerEmail
-     * @param  CustomerUpdatedFields  $updatedFields
+     * @param  \Spaire\Models\Components\CustomerUpdatedFields  $updatedFields
      * @param  ?string  $customerName
      * @param  ?string  $customerExternalId
      * @phpstan-pure

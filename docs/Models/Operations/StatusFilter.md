@@ -9,7 +9,7 @@ Filter by dispute status.
 
 ```php
 /**
-* @var Components\DisputeStatus
+* @var \Spaire\Models\Components\DisputeStatus
 */
 Components\DisputeStatus $value = /* values here */
 ```
@@ -18,7 +18,7 @@ Components\DisputeStatus $value = /* values here */
 
 ```php
 /**
-* @var array<Components\DisputeStatus>
+* @var array<\Spaire\Models\Components\DisputeStatus>
 */
 array $value = /* values here */
 ```

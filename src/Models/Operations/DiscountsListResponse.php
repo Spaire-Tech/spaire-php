@@ -35,7 +35,7 @@ class DiscountsListResponse
     /**
      * Successful Response
      *
-     * @var ?Components\ListResourceDiscount $listResourceDiscount
+     * @var ?\Spaire\Models\Components\ListResourceDiscount $listResourceDiscount
      */
     public ?Components\ListResourceDiscount $listResourceDiscount = null;
 
@@ -47,7 +47,7 @@ class DiscountsListResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\ListResourceDiscount  $listResourceDiscount
+     * @param  ?\Spaire\Models\Components\ListResourceDiscount  $listResourceDiscount
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\ListResourceDiscount $listResourceDiscount = null)

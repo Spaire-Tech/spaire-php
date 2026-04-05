@@ -50,7 +50,7 @@ class SpaireOrganizations
      * Get a customer portal's organization by slug.
      *
      * @param  string  $slug
-     * @return Operations\CustomerPortalOrganizationsGetResponse
+     * @return \Spaire\Models\Operations\CustomerPortalOrganizationsGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(string $slug, ?Options $options = null): Operations\CustomerPortalOrganizationsGetResponse

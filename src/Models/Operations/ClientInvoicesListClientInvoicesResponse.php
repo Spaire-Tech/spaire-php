@@ -35,7 +35,7 @@ class ClientInvoicesListClientInvoicesResponse
     /**
      * Successful Response
      *
-     * @var ?Components\ListResourceClientInvoiceSchema $listResourceClientInvoiceSchema
+     * @var ?\Spaire\Models\Components\ListResourceClientInvoiceSchema $listResourceClientInvoiceSchema
      */
     public ?Components\ListResourceClientInvoiceSchema $listResourceClientInvoiceSchema = null;
 
@@ -47,7 +47,7 @@ class ClientInvoicesListClientInvoicesResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\ListResourceClientInvoiceSchema  $listResourceClientInvoiceSchema
+     * @param  ?\Spaire\Models\Components\ListResourceClientInvoiceSchema  $listResourceClientInvoiceSchema
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\ListResourceClientInvoiceSchema $listResourceClientInvoiceSchema = null)

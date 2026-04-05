@@ -22,14 +22,14 @@ class MetersUpdateRequest
 
     /**
      *
-     * @var Components\MeterUpdate $meterUpdate
+     * @var \Spaire\Models\Components\MeterUpdate $meterUpdate
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Components\MeterUpdate $meterUpdate;
 
     /**
      * @param  string  $id
-     * @param  Components\MeterUpdate  $meterUpdate
+     * @param  \Spaire\Models\Components\MeterUpdate  $meterUpdate
      * @phpstan-pure
      */
     public function __construct(string $id, Components\MeterUpdate $meterUpdate)

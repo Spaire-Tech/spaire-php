@@ -122,7 +122,7 @@ class CheckoutUpdate
 
     /**
      *
-     * @var ?AddressInput $customerBillingAddress
+     * @var ?\Spaire\Models\Components\AddressInput $customerBillingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_billing_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\AddressInput|null')]
@@ -140,7 +140,7 @@ class CheckoutUpdate
     /**
      * The interval unit for the trial period.
      *
-     * @var ?TrialInterval $trialInterval
+     * @var ?\Spaire\Models\Components\TrialInterval $trialInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('trial_interval')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TrialInterval|null')]
@@ -158,7 +158,7 @@ class CheckoutUpdate
 
     /**
      *
-     * @var ?PresentmentCurrency $currency
+     * @var ?\Spaire\Models\Components\PresentmentCurrency $currency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency|null')]
@@ -269,11 +269,11 @@ class CheckoutUpdate
      * @param  ?string  $customerName
      * @param  ?string  $customerEmail
      * @param  ?string  $customerBillingName
-     * @param  ?AddressInput  $customerBillingAddress
+     * @param  ?\Spaire\Models\Components\AddressInput  $customerBillingAddress
      * @param  ?string  $customerTaxId
-     * @param  ?TrialInterval  $trialInterval
+     * @param  ?\Spaire\Models\Components\TrialInterval  $trialInterval
      * @param  ?int  $trialIntervalCount
-     * @param  ?PresentmentCurrency  $currency
+     * @param  ?\Spaire\Models\Components\PresentmentCurrency  $currency
      * @param  ?string  $discountId
      * @param  ?bool  $allowDiscountCodes
      * @param  ?bool  $requireBillingAddress

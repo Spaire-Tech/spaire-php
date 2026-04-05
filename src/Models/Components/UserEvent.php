@@ -55,7 +55,7 @@ class UserEvent
     /**
      * $metadata
      *
-     * @var array<string, string|int|float|bool|CostMetadataOutput|LLMMetadata> $metadata
+     * @var array<string, string|int|float|bool|\Spaire\Models\Components\CostMetadataOutput|\Spaire\Models\Components\LLMMetadata> $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('array<string, string|int|float|bool|\Spaire\Models\Components\CostMetadataOutput|\Spaire\Models\Components\LLMMetadata>')]
@@ -72,7 +72,7 @@ class UserEvent
     /**
      * The customer associated with the event.
      *
-     * @var ?Customer $customer
+     * @var ?\Spaire\Models\Components\Customer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer|null')]
@@ -137,9 +137,9 @@ class UserEvent
      * @param  string  $label
      * @param  string  $name
      * @param  string  $source
-     * @param  array<string, string|int|float|bool|CostMetadataOutput|LLMMetadata>  $metadata
+     * @param  array<string, string|int|float|bool|\Spaire\Models\Components\CostMetadataOutput|\Spaire\Models\Components\LLMMetadata>  $metadata
      * @param  ?string  $customerId
-     * @param  ?Customer  $customer
+     * @param  ?\Spaire\Models\Components\Customer  $customer
      * @param  ?string  $externalCustomerId
      * @param  ?int  $childCount
      * @param  ?string  $memberId

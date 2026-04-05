@@ -30,7 +30,7 @@ class Metric
 
     /**
      *
-     * @var MetricType $type
+     * @var \Spaire\Models\Components\MetricType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\MetricType')]
@@ -39,7 +39,7 @@ class Metric
     /**
      * @param  string  $slug
      * @param  string  $displayName
-     * @param  MetricType  $type
+     * @param  \Spaire\Models\Components\MetricType  $type
      * @phpstan-pure
      */
     public function __construct(string $slug, string $displayName, MetricType $type)

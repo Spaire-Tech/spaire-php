@@ -55,8 +55,8 @@ class Members
      *
      * **Scopes**: `members:write`
      *
-     * @param  Components\MemberCreate  $request
-     * @return Operations\MembersCreateMemberResponse
+     * @param  \Spaire\Models\Components\MemberCreate  $request
+     * @return \Spaire\Models\Operations\MembersCreateMemberResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function createMember(Components\MemberCreate $request, ?Options $options = null): Operations\MembersCreateMemberResponse
@@ -148,7 +148,7 @@ class Members
      * **Scopes**: `members:write`
      *
      * @param  string  $id
-     * @return Operations\MembersDeleteMemberResponse
+     * @return \Spaire\Models\Operations\MembersDeleteMemberResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function deleteMember(string $id, ?Options $options = null): Operations\MembersDeleteMemberResponse
@@ -229,7 +229,7 @@ class Members
      * **Scopes**: `members:read` `members:write`
      *
      * @param  string  $id
-     * @return Operations\MembersGetMemberResponse
+     * @return \Spaire\Models\Operations\MembersGetMemberResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function getMember(string $id, ?Options $options = null): Operations\MembersGetMemberResponse
@@ -316,8 +316,8 @@ class Members
      *
      * **Scopes**: `members:read` `members:write`
      *
-     * @param  ?Operations\MembersListMembersRequest  $request
-     * @return Operations\MembersListMembersResponse
+     * @param  ?\Spaire\Models\Operations\MembersListMembersRequest  $request
+     * @return \Spaire\Models\Operations\MembersListMembersResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listMembersIndividual(?Operations\MembersListMembersRequest $request = null, ?Options $options = null): Operations\MembersListMembersResponse
@@ -430,8 +430,8 @@ class Members
      *
      * **Scopes**: `members:read` `members:write`
      *
-     * @param  ?Operations\MembersListMembersRequest  $request
-     * @return \Generator<Operations\MembersListMembersResponse>
+     * @param  ?\Spaire\Models\Operations\MembersListMembersRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\MembersListMembersResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function listMembers(?Operations\MembersListMembersRequest $request = null, ?Options $options = null): \Generator
@@ -453,9 +453,9 @@ class Members
      *
      * **Scopes**: `members:write`
      *
-     * @param  Components\MemberUpdate  $memberUpdate
+     * @param  \Spaire\Models\Components\MemberUpdate  $memberUpdate
      * @param  string  $id
-     * @return Operations\MembersUpdateMemberResponse
+     * @return \Spaire\Models\Operations\MembersUpdateMemberResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function updateMember(Components\MemberUpdate $memberUpdate, string $id, ?Options $options = null): Operations\MembersUpdateMemberResponse

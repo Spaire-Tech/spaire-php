@@ -35,7 +35,7 @@ class LegacyRecurringProductPriceFixed
 
     /**
      *
-     * @var ProductPriceSource $source
+     * @var \Spaire\Models\Components\ProductPriceSource $source
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('source')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductPriceSource')]
@@ -43,7 +43,7 @@ class LegacyRecurringProductPriceFixed
 
     /**
      *
-     * @var PresentmentCurrency $priceCurrency
+     * @var \Spaire\Models\Components\PresentmentCurrency $priceCurrency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('price_currency')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency')]
@@ -67,7 +67,7 @@ class LegacyRecurringProductPriceFixed
 
     /**
      *
-     * @var SubscriptionRecurringInterval $recurringInterval
+     * @var \Spaire\Models\Components\SubscriptionRecurringInterval $recurringInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('recurring_interval')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionRecurringInterval')]
@@ -88,6 +88,15 @@ class LegacyRecurringProductPriceFixed
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('modified_at')]
     public ?\DateTime $modifiedAt;
+
+    /**
+     * The tax behavior of the price. If null, it defaults to the organization's default tax behavior.
+     *
+     * @var ?\Spaire\Models\Components\TaxBehaviorOption $taxBehavior
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tax_behavior')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TaxBehaviorOption|null')]
+    public ?TaxBehaviorOption $taxBehavior;
 
     /**
      *
@@ -114,19 +123,20 @@ class LegacyRecurringProductPriceFixed
     /**
      * @param  \DateTime  $createdAt
      * @param  string  $id
-     * @param  ProductPriceSource  $source
+     * @param  \Spaire\Models\Components\ProductPriceSource  $source
      * @param  string  $amountType
-     * @param  PresentmentCurrency  $priceCurrency
+     * @param  \Spaire\Models\Components\PresentmentCurrency  $priceCurrency
      * @param  bool  $isArchived
      * @param  string  $productId
      * @param  string  $type
-     * @param  SubscriptionRecurringInterval  $recurringInterval
+     * @param  \Spaire\Models\Components\SubscriptionRecurringInterval  $recurringInterval
      * @param  int  $priceAmount
      * @param  bool  $legacy
      * @param  ?\DateTime  $modifiedAt
+     * @param  ?\Spaire\Models\Components\TaxBehaviorOption  $taxBehavior
      * @phpstan-pure
      */
-    public function __construct(\DateTime $createdAt, string $id, ProductPriceSource $source, PresentmentCurrency $priceCurrency, bool $isArchived, string $productId, SubscriptionRecurringInterval $recurringInterval, int $priceAmount, ?\DateTime $modifiedAt = null, string $amountType = 'fixed', string $type = 'recurring', bool $legacy = true)
+    public function __construct(\DateTime $createdAt, string $id, ProductPriceSource $source, PresentmentCurrency $priceCurrency, bool $isArchived, string $productId, SubscriptionRecurringInterval $recurringInterval, int $priceAmount, ?\DateTime $modifiedAt = null, ?TaxBehaviorOption $taxBehavior = null, string $amountType = 'fixed', string $type = 'recurring', bool $legacy = true)
     {
         $this->createdAt = $createdAt;
         $this->id = $id;
@@ -137,6 +147,7 @@ class LegacyRecurringProductPriceFixed
         $this->recurringInterval = $recurringInterval;
         $this->priceAmount = $priceAmount;
         $this->modifiedAt = $modifiedAt;
+        $this->taxBehavior = $taxBehavior;
         $this->amountType = $amountType;
         $this->type = $type;
         $this->legacy = $legacy;

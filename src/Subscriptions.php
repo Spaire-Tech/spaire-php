@@ -57,8 +57,8 @@ class Subscriptions
      *
      * **Scopes**: `subscriptions:write`
      *
-     * @param  Components\SubscriptionCreateCustomer|Components\SubscriptionCreateExternalCustomer  $request
-     * @return Operations\SubscriptionsCreateResponse
+     * @param  \Spaire\Models\Components\SubscriptionCreateCustomer|\Spaire\Models\Components\SubscriptionCreateExternalCustomer  $request
+     * @return \Spaire\Models\Operations\SubscriptionsCreateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function create(Components\SubscriptionCreateCustomer|Components\SubscriptionCreateExternalCustomer $request, ?Options $options = null): Operations\SubscriptionsCreateResponse
@@ -137,7 +137,7 @@ class Subscriptions
      * **Scopes**: `subscriptions:read` `subscriptions:write`
      *
      * @param  string|array<string>|null  $organizationId
-     * @return Operations\SubscriptionsExportResponse
+     * @return \Spaire\Models\Operations\SubscriptionsExportResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function export(string|array|null $organizationId = null, ?Options $options = null): Operations\SubscriptionsExportResponse
@@ -217,7 +217,7 @@ class Subscriptions
      * **Scopes**: `subscriptions:read` `subscriptions:write`
      *
      * @param  string  $id
-     * @return Operations\SubscriptionsGetResponse
+     * @return \Spaire\Models\Operations\SubscriptionsGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\SubscriptionsGetResponse
@@ -304,8 +304,8 @@ class Subscriptions
      *
      * **Scopes**: `subscriptions:read` `subscriptions:write`
      *
-     * @param  ?Operations\SubscriptionsListRequest  $request
-     * @return Operations\SubscriptionsListResponse
+     * @param  ?\Spaire\Models\Operations\SubscriptionsListRequest  $request
+     * @return \Spaire\Models\Operations\SubscriptionsListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(?Operations\SubscriptionsListRequest $request = null, ?Options $options = null): Operations\SubscriptionsListResponse
@@ -424,8 +424,8 @@ class Subscriptions
      *
      * **Scopes**: `subscriptions:read` `subscriptions:write`
      *
-     * @param  ?Operations\SubscriptionsListRequest  $request
-     * @return \Generator<Operations\SubscriptionsListResponse>
+     * @param  ?\Spaire\Models\Operations\SubscriptionsListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\SubscriptionsListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(?Operations\SubscriptionsListRequest $request = null, ?Options $options = null): \Generator
@@ -445,7 +445,7 @@ class Subscriptions
      * **Scopes**: `subscriptions:write`
      *
      * @param  string  $id
-     * @return Operations\SubscriptionsRevokeResponse
+     * @return \Spaire\Models\Operations\SubscriptionsRevokeResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function revoke(string $id, ?Options $options = null): Operations\SubscriptionsRevokeResponse
@@ -554,9 +554,9 @@ class Subscriptions
      *
      * **Scopes**: `subscriptions:write`
      *
-     * @param  Components\SubscriptionUpdateProduct|Components\SubscriptionUpdateDiscount|Components\SubscriptionUpdateTrial|Components\SubscriptionUpdateSeats|Components\SubscriptionUpdateBillingPeriod|Components\SubscriptionCancel|Components\SubscriptionRevoke  $subscriptionUpdate
+     * @param  \Spaire\Models\Components\SubscriptionUpdateProduct|\Spaire\Models\Components\SubscriptionUpdateDiscount|\Spaire\Models\Components\SubscriptionUpdateTrial|\Spaire\Models\Components\SubscriptionUpdateSeats|\Spaire\Models\Components\SubscriptionUpdateBillingPeriod|\Spaire\Models\Components\SubscriptionCancel|\Spaire\Models\Components\SubscriptionRevoke  $subscriptionUpdate
      * @param  string  $id
-     * @return Operations\SubscriptionsUpdateResponse
+     * @return \Spaire\Models\Operations\SubscriptionsUpdateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function update(Components\SubscriptionUpdateProduct|Components\SubscriptionUpdateDiscount|Components\SubscriptionUpdateTrial|Components\SubscriptionUpdateSeats|Components\SubscriptionUpdateBillingPeriod|Components\SubscriptionCancel|Components\SubscriptionRevoke $subscriptionUpdate, string $id, ?Options $options = null): Operations\SubscriptionsUpdateResponse

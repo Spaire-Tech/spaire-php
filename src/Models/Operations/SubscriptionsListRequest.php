@@ -71,7 +71,7 @@ class SubscriptionsListRequest
     /**
      * Sorting criterion. Several criteria can be used simultaneously and will be applied in order. Add a minus sign `-` before the criteria name to sort by descending order.
      *
-     * @var ?array<Components\SubscriptionSortProperty> $sorting
+     * @var ?array<\Spaire\Models\Components\SubscriptionSortProperty> $sorting
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sorting')]
     public ?array $sorting = null;
@@ -110,7 +110,7 @@ class SubscriptionsListRequest
      * @param  string|array<string>|null  $discountId
      * @param  ?bool  $active
      * @param  ?bool  $cancelAtPeriodEnd
-     * @param  ?array<Components\SubscriptionSortProperty>  $sorting
+     * @param  ?array<\Spaire\Models\Components\SubscriptionSortProperty>  $sorting
      * @param  ?array<string, string|int|bool|array<string>|array<int>|array<bool>>  $metadata
      * @phpstan-pure
      */

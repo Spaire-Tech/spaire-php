@@ -35,7 +35,7 @@ class Dispute
 
     /**
      *
-     * @var DisputeStatus $status
+     * @var \Spaire\Models\Components\DisputeStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DisputeStatus')]
@@ -108,7 +108,7 @@ class Dispute
     /**
      * @param  \DateTime  $createdAt
      * @param  string  $id
-     * @param  DisputeStatus  $status
+     * @param  \Spaire\Models\Components\DisputeStatus  $status
      * @param  bool  $resolved
      * @param  bool  $closed
      * @param  int  $amount

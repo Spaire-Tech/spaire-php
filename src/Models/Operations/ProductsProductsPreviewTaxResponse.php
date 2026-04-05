@@ -35,7 +35,7 @@ class ProductsProductsPreviewTaxResponse
     /**
      * Successful Response
      *
-     * @var ?Components\ProductTaxPreviewResponse $productTaxPreviewResponse
+     * @var ?\Spaire\Models\Components\ProductTaxPreviewResponse $productTaxPreviewResponse
      */
     public ?Components\ProductTaxPreviewResponse $productTaxPreviewResponse = null;
 
@@ -43,7 +43,7 @@ class ProductsProductsPreviewTaxResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\ProductTaxPreviewResponse  $productTaxPreviewResponse
+     * @param  ?\Spaire\Models\Components\ProductTaxPreviewResponse  $productTaxPreviewResponse
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\ProductTaxPreviewResponse $productTaxPreviewResponse = null)

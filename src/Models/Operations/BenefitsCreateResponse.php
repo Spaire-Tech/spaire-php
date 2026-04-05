@@ -35,7 +35,7 @@ class BenefitsCreateResponse
     /**
      * Benefit created.
      *
-     * @var Components\BenefitCustom|Components\BenefitDiscord|Components\BenefitGitHubRepository|Components\BenefitDownloadables|Components\BenefitLicenseKeys|Components\BenefitMeterCredit|null $benefit
+     * @var \Spaire\Models\Components\BenefitCustom|\Spaire\Models\Components\BenefitDiscord|\Spaire\Models\Components\BenefitGitHubRepository|\Spaire\Models\Components\BenefitDownloadables|\Spaire\Models\Components\BenefitLicenseKeys|\Spaire\Models\Components\BenefitMeterCredit|null $benefit
      */
     public Components\BenefitCustom|Components\BenefitDiscord|Components\BenefitGitHubRepository|Components\BenefitDownloadables|Components\BenefitLicenseKeys|Components\BenefitMeterCredit|null $benefit = null;
 
@@ -43,7 +43,7 @@ class BenefitsCreateResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  Components\BenefitCustom|Components\BenefitDiscord|Components\BenefitGitHubRepository|Components\BenefitDownloadables|Components\BenefitLicenseKeys|Components\BenefitMeterCredit|null  $benefit
+     * @param  \Spaire\Models\Components\BenefitCustom|\Spaire\Models\Components\BenefitDiscord|\Spaire\Models\Components\BenefitGitHubRepository|\Spaire\Models\Components\BenefitDownloadables|\Spaire\Models\Components\BenefitLicenseKeys|\Spaire\Models\Components\BenefitMeterCredit|null  $benefit
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, Components\BenefitCustom|Components\BenefitDiscord|Components\BenefitGitHubRepository|Components\BenefitDownloadables|Components\BenefitLicenseKeys|Components\BenefitMeterCredit|null $benefit = null)

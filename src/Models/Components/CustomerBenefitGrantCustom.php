@@ -57,7 +57,7 @@ class CustomerBenefitGrantCustom
 
     /**
      *
-     * @var CustomerPortalCustomer $customer
+     * @var \Spaire\Models\Components\CustomerPortalCustomer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerPortalCustomer')]
@@ -65,7 +65,7 @@ class CustomerBenefitGrantCustom
 
     /**
      *
-     * @var BenefitCustomSubscriber $benefit
+     * @var \Spaire\Models\Components\BenefitCustomSubscriber $benefit
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('benefit')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitCustomSubscriber')]
@@ -73,7 +73,7 @@ class CustomerBenefitGrantCustom
 
     /**
      *
-     * @var BenefitGrantCustomProperties $properties
+     * @var \Spaire\Models\Components\BenefitGrantCustomProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantCustomProperties')]
@@ -125,7 +125,7 @@ class CustomerBenefitGrantCustom
 
     /**
      *
-     * @var ?BenefitGrantError $error
+     * @var ?\Spaire\Models\Components\BenefitGrantError $error
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('error')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantError|null')]
@@ -139,16 +139,16 @@ class CustomerBenefitGrantCustom
      * @param  string  $benefitId
      * @param  bool  $isGranted
      * @param  bool  $isRevoked
-     * @param  CustomerPortalCustomer  $customer
-     * @param  BenefitCustomSubscriber  $benefit
-     * @param  BenefitGrantCustomProperties  $properties
+     * @param  \Spaire\Models\Components\CustomerPortalCustomer  $customer
+     * @param  \Spaire\Models\Components\BenefitCustomSubscriber  $benefit
+     * @param  \Spaire\Models\Components\BenefitGrantCustomProperties  $properties
      * @param  ?\DateTime  $modifiedAt
      * @param  ?\DateTime  $grantedAt
      * @param  ?\DateTime  $revokedAt
      * @param  ?string  $subscriptionId
      * @param  ?string  $orderId
      * @param  ?string  $memberId
-     * @param  ?BenefitGrantError  $error
+     * @param  ?\Spaire\Models\Components\BenefitGrantError  $error
      * @phpstan-pure
      */
     public function __construct(\DateTime $createdAt, string $id, string $customerId, string $benefitId, bool $isGranted, bool $isRevoked, CustomerPortalCustomer $customer, BenefitCustomSubscriber $benefit, BenefitGrantCustomProperties $properties, ?\DateTime $modifiedAt = null, ?\DateTime $grantedAt = null, ?\DateTime $revokedAt = null, ?string $subscriptionId = null, ?string $orderId = null, ?string $memberId = null, ?BenefitGrantError $error = null)

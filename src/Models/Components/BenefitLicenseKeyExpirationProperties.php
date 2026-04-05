@@ -20,7 +20,7 @@ class BenefitLicenseKeyExpirationProperties
 
     /**
      *
-     * @var Timeframe $timeframe
+     * @var \Spaire\Models\Components\Timeframe $timeframe
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('timeframe')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Timeframe')]
@@ -28,7 +28,7 @@ class BenefitLicenseKeyExpirationProperties
 
     /**
      * @param  int  $ttl
-     * @param  Timeframe  $timeframe
+     * @param  \Spaire\Models\Components\Timeframe  $timeframe
      * @phpstan-pure
      */
     public function __construct(int $ttl, Timeframe $timeframe)

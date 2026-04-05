@@ -35,7 +35,7 @@ class CustomerPortalMembersListMembersResponse
     /**
      * Successful Response
      *
-     * @var ?array<Components\CustomerPortalMember> $responseCustomerPortalMembersListMembers
+     * @var ?array<\Spaire\Models\Components\CustomerPortalMember> $responseCustomerPortalMembersListMembers
      */
     public ?array $responseCustomerPortalMembersListMembers = null;
 
@@ -43,7 +43,7 @@ class CustomerPortalMembersListMembersResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<Components\CustomerPortalMember>  $responseCustomerPortalMembersListMembers
+     * @param  ?array<\Spaire\Models\Components\CustomerPortalMember>  $responseCustomerPortalMembersListMembers
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $responseCustomerPortalMembersListMembers = null)

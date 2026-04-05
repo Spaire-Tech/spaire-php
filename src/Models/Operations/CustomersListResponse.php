@@ -35,7 +35,7 @@ class CustomersListResponse
     /**
      * Successful Response
      *
-     * @var ?Components\ListResourceCustomerWithMembers $listResourceCustomerWithMembers
+     * @var ?\Spaire\Models\Components\ListResourceCustomerWithMembers $listResourceCustomerWithMembers
      */
     public ?Components\ListResourceCustomerWithMembers $listResourceCustomerWithMembers = null;
 
@@ -47,7 +47,7 @@ class CustomersListResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\ListResourceCustomerWithMembers  $listResourceCustomerWithMembers
+     * @param  ?\Spaire\Models\Components\ListResourceCustomerWithMembers  $listResourceCustomerWithMembers
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\ListResourceCustomerWithMembers $listResourceCustomerWithMembers = null)

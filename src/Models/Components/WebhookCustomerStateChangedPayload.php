@@ -38,7 +38,7 @@ class WebhookCustomerStateChangedPayload
      * * Granted benefits
      * * Active meters
      *
-     * @var CustomerState $data
+     * @var \Spaire\Models\Components\CustomerState $data
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('data')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerState')]
@@ -54,7 +54,7 @@ class WebhookCustomerStateChangedPayload
     /**
      * @param  string  $type
      * @param  \DateTime  $timestamp
-     * @param  CustomerState  $data
+     * @param  \Spaire\Models\Components\CustomerState  $data
      * @phpstan-pure
      */
     public function __construct(\DateTime $timestamp, CustomerState $data, string $type = 'customer.state_changed')

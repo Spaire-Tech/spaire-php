@@ -31,7 +31,7 @@ class ClientInvoicePreviewRequest
     /**
      * Invoice line items.
      *
-     * @var array<ClientInvoiceLineItemPreview> $lineItems
+     * @var array<\Spaire\Models\Components\ClientInvoiceLineItemPreview> $lineItems
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('line_items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\ClientInvoiceLineItemPreview>')]
@@ -187,7 +187,7 @@ class ClientInvoicePreviewRequest
     /**
      * @param  string  $organizationId
      * @param  string  $currency
-     * @param  array<ClientInvoiceLineItemPreview>  $lineItems
+     * @param  array<\Spaire\Models\Components\ClientInvoiceLineItemPreview>  $lineItems
      * @param  ?int  $discountAmount
      * @param  ?bool  $includePaymentLink
      * @param  ?bool  $showLogo

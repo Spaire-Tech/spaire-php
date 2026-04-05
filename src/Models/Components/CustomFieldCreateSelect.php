@@ -30,7 +30,7 @@ class CustomFieldCreateSelect
 
     /**
      *
-     * @var CustomFieldSelectProperties $properties
+     * @var \Spaire\Models\Components\CustomFieldSelectProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomFieldSelectProperties')]
@@ -77,7 +77,7 @@ class CustomFieldCreateSelect
      * @param  string  $type
      * @param  string  $slug
      * @param  string  $name
-     * @param  CustomFieldSelectProperties  $properties
+     * @param  \Spaire\Models\Components\CustomFieldSelectProperties  $properties
      * @param  ?array<string, string|int|float|bool>  $metadata
      * @param  ?string  $organizationId
      * @phpstan-pure

@@ -52,8 +52,8 @@ class Discounts
      *
      * **Scopes**: `discounts:write`
      *
-     * @param  Components\DiscountFixedOnceForeverDurationCreate|Components\DiscountFixedRepeatDurationCreate|Components\DiscountPercentageOnceForeverDurationCreate|Components\DiscountPercentageRepeatDurationCreate  $request
-     * @return Operations\DiscountsCreateResponse
+     * @param  \Spaire\Models\Components\DiscountFixedOnceForeverDurationCreate|\Spaire\Models\Components\DiscountFixedRepeatDurationCreate|\Spaire\Models\Components\DiscountPercentageOnceForeverDurationCreate|\Spaire\Models\Components\DiscountPercentageRepeatDurationCreate  $request
+     * @return \Spaire\Models\Operations\DiscountsCreateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function create(Components\DiscountFixedOnceForeverDurationCreate|Components\DiscountFixedRepeatDurationCreate|Components\DiscountPercentageOnceForeverDurationCreate|Components\DiscountPercentageRepeatDurationCreate $request, ?Options $options = null): Operations\DiscountsCreateResponse
@@ -132,7 +132,7 @@ class Discounts
      * **Scopes**: `discounts:write`
      *
      * @param  string  $id
-     * @return Operations\DiscountsDeleteResponse
+     * @return \Spaire\Models\Operations\DiscountsDeleteResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function delete(string $id, ?Options $options = null): Operations\DiscountsDeleteResponse
@@ -211,7 +211,7 @@ class Discounts
      * **Scopes**: `discounts:read` `discounts:write`
      *
      * @param  string  $id
-     * @return Operations\DiscountsGetResponse
+     * @return \Spaire\Models\Operations\DiscountsGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\DiscountsGetResponse
@@ -298,8 +298,8 @@ class Discounts
      *
      * **Scopes**: `discounts:read` `discounts:write`
      *
-     * @param  ?Operations\DiscountsListRequest  $request
-     * @return Operations\DiscountsListResponse
+     * @param  ?\Spaire\Models\Operations\DiscountsListRequest  $request
+     * @return \Spaire\Models\Operations\DiscountsListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(?Operations\DiscountsListRequest $request = null, ?Options $options = null): Operations\DiscountsListResponse
@@ -412,8 +412,8 @@ class Discounts
      *
      * **Scopes**: `discounts:read` `discounts:write`
      *
-     * @param  ?Operations\DiscountsListRequest  $request
-     * @return \Generator<Operations\DiscountsListResponse>
+     * @param  ?\Spaire\Models\Operations\DiscountsListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\DiscountsListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(?Operations\DiscountsListRequest $request = null, ?Options $options = null): \Generator
@@ -432,9 +432,9 @@ class Discounts
      *
      * **Scopes**: `discounts:write`
      *
-     * @param  Components\DiscountUpdate  $discountUpdate
+     * @param  \Spaire\Models\Components\DiscountUpdate  $discountUpdate
      * @param  string  $id
-     * @return Operations\DiscountsUpdateResponse
+     * @return \Spaire\Models\Operations\DiscountsUpdateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function update(Components\DiscountUpdate $discountUpdate, string $id, ?Options $options = null): Operations\DiscountsUpdateResponse

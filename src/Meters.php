@@ -52,8 +52,8 @@ class Meters
      *
      * **Scopes**: `meters:write`
      *
-     * @param  Components\MeterCreate  $request
-     * @return Operations\MetersCreateResponse
+     * @param  \Spaire\Models\Components\MeterCreate  $request
+     * @return \Spaire\Models\Operations\MetersCreateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function create(Components\MeterCreate $request, ?Options $options = null): Operations\MetersCreateResponse
@@ -132,7 +132,7 @@ class Meters
      * **Scopes**: `meters:read` `meters:write`
      *
      * @param  string  $id
-     * @return Operations\MetersGetResponse
+     * @return \Spaire\Models\Operations\MetersGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\MetersGetResponse
@@ -219,8 +219,8 @@ class Meters
      *
      * **Scopes**: `meters:read` `meters:write`
      *
-     * @param  ?Operations\MetersListRequest  $request
-     * @return Operations\MetersListResponse
+     * @param  ?\Spaire\Models\Operations\MetersListRequest  $request
+     * @return \Spaire\Models\Operations\MetersListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(?Operations\MetersListRequest $request = null, ?Options $options = null): Operations\MetersListResponse
@@ -335,8 +335,8 @@ class Meters
      *
      * **Scopes**: `meters:read` `meters:write`
      *
-     * @param  ?Operations\MetersListRequest  $request
-     * @return \Generator<Operations\MetersListResponse>
+     * @param  ?\Spaire\Models\Operations\MetersListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\MetersListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(?Operations\MetersListRequest $request = null, ?Options $options = null): \Generator
@@ -355,8 +355,8 @@ class Meters
      *
      * **Scopes**: `meters:read` `meters:write`
      *
-     * @param  Operations\MetersQuantitiesRequest  $request
-     * @return Operations\MetersQuantitiesResponse
+     * @param  \Spaire\Models\Operations\MetersQuantitiesRequest  $request
+     * @return \Spaire\Models\Operations\MetersQuantitiesResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function quantities(Operations\MetersQuantitiesRequest $request, ?Options $options = null): Operations\MetersQuantitiesResponse
@@ -443,9 +443,9 @@ class Meters
      *
      * **Scopes**: `meters:write`
      *
-     * @param  Components\MeterUpdate  $meterUpdate
+     * @param  \Spaire\Models\Components\MeterUpdate  $meterUpdate
      * @param  string  $id
-     * @return Operations\MetersUpdateResponse
+     * @return \Spaire\Models\Operations\MetersUpdateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function update(Components\MeterUpdate $meterUpdate, string $id, ?Options $options = null): Operations\MetersUpdateResponse

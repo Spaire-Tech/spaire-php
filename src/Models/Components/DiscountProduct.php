@@ -47,7 +47,7 @@ class DiscountProduct
 
     /**
      *
-     * @var ProductVisibility $visibility
+     * @var \Spaire\Models\Components\ProductVisibility $visibility
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('visibility')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductVisibility')]
@@ -88,7 +88,7 @@ class DiscountProduct
     /**
      * The interval unit for the trial period.
      *
-     * @var ?TrialInterval $trialInterval
+     * @var ?\Spaire\Models\Components\TrialInterval $trialInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('trial_interval')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TrialInterval|null')]
@@ -113,7 +113,7 @@ class DiscountProduct
     /**
      * The recurring interval of the product. If `None`, the product is a one-time purchase.
      *
-     * @var ?SubscriptionRecurringInterval $recurringInterval
+     * @var ?\Spaire\Models\Components\SubscriptionRecurringInterval $recurringInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('recurring_interval')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionRecurringInterval|null')]
@@ -132,15 +132,15 @@ class DiscountProduct
      * @param  string  $id
      * @param  \DateTime  $createdAt
      * @param  string  $name
-     * @param  ProductVisibility  $visibility
+     * @param  \Spaire\Models\Components\ProductVisibility  $visibility
      * @param  bool  $isRecurring
      * @param  bool  $isArchived
      * @param  string  $organizationId
      * @param  ?\DateTime  $modifiedAt
-     * @param  ?TrialInterval  $trialInterval
+     * @param  ?\Spaire\Models\Components\TrialInterval  $trialInterval
      * @param  ?int  $trialIntervalCount
      * @param  ?string  $description
-     * @param  ?SubscriptionRecurringInterval  $recurringInterval
+     * @param  ?\Spaire\Models\Components\SubscriptionRecurringInterval  $recurringInterval
      * @param  ?int  $recurringIntervalCount
      * @phpstan-pure
      */

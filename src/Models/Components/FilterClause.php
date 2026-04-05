@@ -20,7 +20,7 @@ class FilterClause
 
     /**
      *
-     * @var FilterOperator $operator
+     * @var \Spaire\Models\Components\FilterOperator $operator
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('operator')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\FilterOperator')]
@@ -36,7 +36,7 @@ class FilterClause
 
     /**
      * @param  string  $property
-     * @param  FilterOperator  $operator
+     * @param  \Spaire\Models\Components\FilterOperator  $operator
      * @param  string|int|bool  $value
      * @phpstan-pure
      */

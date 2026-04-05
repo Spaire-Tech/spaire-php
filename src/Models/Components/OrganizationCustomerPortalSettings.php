@@ -13,7 +13,7 @@ class OrganizationCustomerPortalSettings
 {
     /**
      *
-     * @var CustomerPortalUsageSettings $usage
+     * @var \Spaire\Models\Components\CustomerPortalUsageSettings $usage
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('usage')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerPortalUsageSettings')]
@@ -21,15 +21,15 @@ class OrganizationCustomerPortalSettings
 
     /**
      *
-     * @var CustomerPortalSubscriptionSettings $subscription
+     * @var \Spaire\Models\Components\CustomerPortalSubscriptionSettings $subscription
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('subscription')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerPortalSubscriptionSettings')]
     public CustomerPortalSubscriptionSettings $subscription;
 
     /**
-     * @param  CustomerPortalUsageSettings  $usage
-     * @param  CustomerPortalSubscriptionSettings  $subscription
+     * @param  \Spaire\Models\Components\CustomerPortalUsageSettings  $usage
+     * @param  \Spaire\Models\Components\CustomerPortalSubscriptionSettings  $subscription
      * @phpstan-pure
      */
     public function __construct(CustomerPortalUsageSettings $usage, CustomerPortalSubscriptionSettings $subscription)

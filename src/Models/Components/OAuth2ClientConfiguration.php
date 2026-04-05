@@ -30,7 +30,7 @@ class OAuth2ClientConfiguration
     /**
      * $grantTypes
      *
-     * @var ?array<GrantTypes> $grantTypes
+     * @var ?array<\Spaire\Models\Components\GrantTypes> $grantTypes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('grant_types')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\GrantTypes>|null')]
@@ -49,7 +49,7 @@ class OAuth2ClientConfiguration
 
     /**
      *
-     * @var ?SubType $defaultSubType
+     * @var ?\Spaire\Models\Components\SubType $defaultSubType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('default_sub_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubType|null')]
@@ -90,7 +90,7 @@ class OAuth2ClientConfiguration
 
     /**
      *
-     * @var ?TokenEndpointAuthMethod $tokenEndpointAuthMethod
+     * @var ?\Spaire\Models\Components\TokenEndpointAuthMethod $tokenEndpointAuthMethod
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('token_endpoint_auth_method')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TokenEndpointAuthMethod|null')]
@@ -108,11 +108,11 @@ class OAuth2ClientConfiguration
     /**
      * @param  array<string>  $redirectUris
      * @param  string  $clientName
-     * @param  ?TokenEndpointAuthMethod  $tokenEndpointAuthMethod
-     * @param  ?array<GrantTypes>  $grantTypes
+     * @param  ?\Spaire\Models\Components\TokenEndpointAuthMethod  $tokenEndpointAuthMethod
+     * @param  ?array<\Spaire\Models\Components\GrantTypes>  $grantTypes
      * @param  ?array<string>  $responseTypes
      * @param  ?string  $scope
-     * @param  ?SubType  $defaultSubType
+     * @param  ?\Spaire\Models\Components\SubType  $defaultSubType
      * @param  ?string  $clientUri
      * @param  ?string  $logoUri
      * @param  ?string  $tosUri

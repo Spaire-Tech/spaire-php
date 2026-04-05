@@ -46,7 +46,7 @@ class CustomerStateBenefitGrant
 
     /**
      *
-     * @var BenefitType $benefitType
+     * @var \Spaire\Models\Components\BenefitType $benefitType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('benefit_type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitType')]
@@ -63,7 +63,7 @@ class CustomerStateBenefitGrant
 
     /**
      *
-     * @var BenefitGrantDiscordProperties|BenefitGrantGitHubRepositoryProperties|BenefitGrantDownloadablesProperties|BenefitGrantLicenseKeysProperties|BenefitGrantCustomProperties $properties
+     * @var \Spaire\Models\Components\BenefitGrantDiscordProperties|\Spaire\Models\Components\BenefitGrantGitHubRepositoryProperties|\Spaire\Models\Components\BenefitGrantDownloadablesProperties|\Spaire\Models\Components\BenefitGrantLicenseKeysProperties|\Spaire\Models\Components\BenefitGrantCustomProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitGrantDiscordProperties|\Spaire\Models\Components\BenefitGrantGitHubRepositoryProperties|\Spaire\Models\Components\BenefitGrantDownloadablesProperties|\Spaire\Models\Components\BenefitGrantLicenseKeysProperties|\Spaire\Models\Components\BenefitGrantCustomProperties')]
@@ -82,9 +82,9 @@ class CustomerStateBenefitGrant
      * @param  \DateTime  $createdAt
      * @param  \DateTime  $grantedAt
      * @param  string  $benefitId
-     * @param  BenefitType  $benefitType
+     * @param  \Spaire\Models\Components\BenefitType  $benefitType
      * @param  array<string, string|int|float|bool>  $benefitMetadata
-     * @param  BenefitGrantDiscordProperties|BenefitGrantGitHubRepositoryProperties|BenefitGrantDownloadablesProperties|BenefitGrantLicenseKeysProperties|BenefitGrantCustomProperties  $properties
+     * @param  \Spaire\Models\Components\BenefitGrantDiscordProperties|\Spaire\Models\Components\BenefitGrantGitHubRepositoryProperties|\Spaire\Models\Components\BenefitGrantDownloadablesProperties|\Spaire\Models\Components\BenefitGrantLicenseKeysProperties|\Spaire\Models\Components\BenefitGrantCustomProperties  $properties
      * @param  ?\DateTime  $modifiedAt
      * @phpstan-pure
      */

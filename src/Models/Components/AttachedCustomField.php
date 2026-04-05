@@ -22,7 +22,7 @@ class AttachedCustomField
 
     /**
      *
-     * @var CustomFieldText|CustomFieldNumber|CustomFieldDate|CustomFieldCheckbox|CustomFieldSelect $customField
+     * @var \Spaire\Models\Components\CustomFieldText|\Spaire\Models\Components\CustomFieldNumber|\Spaire\Models\Components\CustomFieldDate|\Spaire\Models\Components\CustomFieldCheckbox|\Spaire\Models\Components\CustomFieldSelect $customField
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('custom_field')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomFieldText|\Spaire\Models\Components\CustomFieldNumber|\Spaire\Models\Components\CustomFieldDate|\Spaire\Models\Components\CustomFieldCheckbox|\Spaire\Models\Components\CustomFieldSelect')]
@@ -47,7 +47,7 @@ class AttachedCustomField
 
     /**
      * @param  string  $customFieldId
-     * @param  CustomFieldText|CustomFieldNumber|CustomFieldDate|CustomFieldCheckbox|CustomFieldSelect  $customField
+     * @param  \Spaire\Models\Components\CustomFieldText|\Spaire\Models\Components\CustomFieldNumber|\Spaire\Models\Components\CustomFieldDate|\Spaire\Models\Components\CustomFieldCheckbox|\Spaire\Models\Components\CustomFieldSelect  $customField
      * @param  int  $order
      * @param  bool  $required
      * @phpstan-pure

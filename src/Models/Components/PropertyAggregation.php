@@ -13,7 +13,7 @@ class PropertyAggregation
 {
     /**
      *
-     * @var Func $func
+     * @var \Spaire\Models\Components\Func $func
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('func')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Func')]
@@ -27,7 +27,7 @@ class PropertyAggregation
     public string $property;
 
     /**
-     * @param  Func  $func
+     * @param  \Spaire\Models\Components\Func  $func
      * @param  string  $property
      * @phpstan-pure
      */

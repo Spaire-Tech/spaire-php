@@ -14,7 +14,7 @@ class ListResourceDiscount
     /**
      * $items
      *
-     * @var array<DiscountFixedOnceForeverDuration|DiscountFixedRepeatDuration|DiscountPercentageOnceForeverDuration|DiscountPercentageRepeatDuration> $items
+     * @var array<\Spaire\Models\Components\DiscountFixedOnceForeverDuration|\Spaire\Models\Components\DiscountFixedRepeatDuration|\Spaire\Models\Components\DiscountPercentageOnceForeverDuration|\Spaire\Models\Components\DiscountPercentageRepeatDuration> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\DiscountFixedOnceForeverDuration|\Spaire\Models\Components\DiscountFixedRepeatDuration|\Spaire\Models\Components\DiscountPercentageOnceForeverDuration|\Spaire\Models\Components\DiscountPercentageRepeatDuration>')]
@@ -22,15 +22,15 @@ class ListResourceDiscount
 
     /**
      *
-     * @var Pagination $pagination
+     * @var \Spaire\Models\Components\Pagination $pagination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pagination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Pagination')]
     public Pagination $pagination;
 
     /**
-     * @param  array<DiscountFixedOnceForeverDuration|DiscountFixedRepeatDuration|DiscountPercentageOnceForeverDuration|DiscountPercentageRepeatDuration>  $items
-     * @param  Pagination  $pagination
+     * @param  array<\Spaire\Models\Components\DiscountFixedOnceForeverDuration|\Spaire\Models\Components\DiscountFixedRepeatDuration|\Spaire\Models\Components\DiscountPercentageOnceForeverDuration|\Spaire\Models\Components\DiscountPercentageRepeatDuration>  $items
+     * @param  \Spaire\Models\Components\Pagination  $pagination
      * @phpstan-pure
      */
     public function __construct(array $items, Pagination $pagination)

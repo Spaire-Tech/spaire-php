@@ -30,7 +30,7 @@ class CustomFieldCreateText
 
     /**
      *
-     * @var CustomFieldTextProperties $properties
+     * @var \Spaire\Models\Components\CustomFieldTextProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomFieldTextProperties')]
@@ -77,7 +77,7 @@ class CustomFieldCreateText
      * @param  string  $type
      * @param  string  $slug
      * @param  string  $name
-     * @param  CustomFieldTextProperties  $properties
+     * @param  \Spaire\Models\Components\CustomFieldTextProperties  $properties
      * @param  ?array<string, string|int|float|bool>  $metadata
      * @param  ?string  $organizationId
      * @phpstan-pure

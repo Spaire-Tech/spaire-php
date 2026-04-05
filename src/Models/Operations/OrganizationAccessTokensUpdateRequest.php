@@ -21,14 +21,14 @@ class OrganizationAccessTokensUpdateRequest
 
     /**
      *
-     * @var Components\OrganizationAccessTokenUpdate $organizationAccessTokenUpdate
+     * @var \Spaire\Models\Components\OrganizationAccessTokenUpdate $organizationAccessTokenUpdate
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Components\OrganizationAccessTokenUpdate $organizationAccessTokenUpdate;
 
     /**
      * @param  string  $id
-     * @param  Components\OrganizationAccessTokenUpdate  $organizationAccessTokenUpdate
+     * @param  \Spaire\Models\Components\OrganizationAccessTokenUpdate  $organizationAccessTokenUpdate
      * @phpstan-pure
      */
     public function __construct(string $id, Components\OrganizationAccessTokenUpdate $organizationAccessTokenUpdate)

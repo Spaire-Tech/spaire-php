@@ -46,7 +46,7 @@ class SubscriptionCreatedEvent
 
     /**
      *
-     * @var SubscriptionCreatedMetadata $metadata
+     * @var \Spaire\Models\Components\SubscriptionCreatedMetadata $metadata
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionCreatedMetadata')]
@@ -63,7 +63,7 @@ class SubscriptionCreatedEvent
     /**
      * The customer associated with the event.
      *
-     * @var ?Customer $customer
+     * @var ?\Spaire\Models\Components\Customer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Customer|null')]
@@ -136,9 +136,9 @@ class SubscriptionCreatedEvent
      * @param  string  $label
      * @param  string  $source
      * @param  string  $name
-     * @param  SubscriptionCreatedMetadata  $metadata
+     * @param  \Spaire\Models\Components\SubscriptionCreatedMetadata  $metadata
      * @param  ?string  $customerId
-     * @param  ?Customer  $customer
+     * @param  ?\Spaire\Models\Components\Customer  $customer
      * @param  ?string  $externalCustomerId
      * @param  ?int  $childCount
      * @param  ?string  $memberId

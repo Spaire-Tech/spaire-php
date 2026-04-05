@@ -55,8 +55,8 @@ class MemberSessions
      *
      * **Scopes**: `member_sessions:write`
      *
-     * @param  Components\MemberSessionCreate  $request
-     * @return Operations\MemberSessionsCreateResponse
+     * @param  \Spaire\Models\Components\MemberSessionCreate  $request
+     * @return \Spaire\Models\Operations\MemberSessionsCreateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function create(Components\MemberSessionCreate $request, ?Options $options = null): Operations\MemberSessionsCreateResponse

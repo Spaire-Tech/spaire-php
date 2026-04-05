@@ -22,18 +22,29 @@ class ProductPriceSeatTiersInput
     /**
      * List of pricing tiers
      *
-     * @var array<ProductPriceSeatTier> $tiers
+     * @var array<\Spaire\Models\Components\ProductPriceSeatTier> $tiers
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tiers')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\ProductPriceSeatTier>')]
     public array $tiers;
 
     /**
-     * @param  array<ProductPriceSeatTier>  $tiers
+     *
+     * @var ?\Spaire\Models\Components\SeatTierType $seatTierType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('seat_tier_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SeatTierType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?SeatTierType $seatTierType = null;
+
+    /**
+     * @param  array<\Spaire\Models\Components\ProductPriceSeatTier>  $tiers
+     * @param  ?\Spaire\Models\Components\SeatTierType  $seatTierType
      * @phpstan-pure
      */
-    public function __construct(array $tiers)
+    public function __construct(array $tiers, ?SeatTierType $seatTierType = null)
     {
         $this->tiers = $tiers;
+        $this->seatTierType = $seatTierType;
     }
 }

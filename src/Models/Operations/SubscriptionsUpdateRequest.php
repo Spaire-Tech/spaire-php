@@ -22,14 +22,14 @@ class SubscriptionsUpdateRequest
 
     /**
      *
-     * @var Components\SubscriptionUpdateProduct|Components\SubscriptionUpdateDiscount|Components\SubscriptionUpdateTrial|Components\SubscriptionUpdateSeats|Components\SubscriptionUpdateBillingPeriod|Components\SubscriptionCancel|Components\SubscriptionRevoke $subscriptionUpdate
+     * @var \Spaire\Models\Components\SubscriptionUpdateProduct|\Spaire\Models\Components\SubscriptionUpdateDiscount|\Spaire\Models\Components\SubscriptionUpdateTrial|\Spaire\Models\Components\SubscriptionUpdateSeats|\Spaire\Models\Components\SubscriptionUpdateBillingPeriod|\Spaire\Models\Components\SubscriptionCancel|\Spaire\Models\Components\SubscriptionRevoke $subscriptionUpdate
      */
     #[SpeakeasyMetadata('request:mediaType=application/json')]
     public Components\SubscriptionUpdateProduct|Components\SubscriptionUpdateDiscount|Components\SubscriptionUpdateTrial|Components\SubscriptionUpdateSeats|Components\SubscriptionUpdateBillingPeriod|Components\SubscriptionCancel|Components\SubscriptionRevoke $subscriptionUpdate;
 
     /**
      * @param  string  $id
-     * @param  Components\SubscriptionUpdateProduct|Components\SubscriptionUpdateDiscount|Components\SubscriptionUpdateTrial|Components\SubscriptionUpdateSeats|Components\SubscriptionUpdateBillingPeriod|Components\SubscriptionCancel|Components\SubscriptionRevoke  $subscriptionUpdate
+     * @param  \Spaire\Models\Components\SubscriptionUpdateProduct|\Spaire\Models\Components\SubscriptionUpdateDiscount|\Spaire\Models\Components\SubscriptionUpdateTrial|\Spaire\Models\Components\SubscriptionUpdateSeats|\Spaire\Models\Components\SubscriptionUpdateBillingPeriod|\Spaire\Models\Components\SubscriptionCancel|\Spaire\Models\Components\SubscriptionRevoke  $subscriptionUpdate
      * @phpstan-pure
      */
     public function __construct(string $id, Components\SubscriptionUpdateProduct|Components\SubscriptionUpdateDiscount|Components\SubscriptionUpdateTrial|Components\SubscriptionUpdateSeats|Components\SubscriptionUpdateBillingPeriod|Components\SubscriptionCancel|Components\SubscriptionRevoke $subscriptionUpdate)

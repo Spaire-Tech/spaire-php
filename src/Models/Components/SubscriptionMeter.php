@@ -62,7 +62,7 @@ class SubscriptionMeter
 
     /**
      *
-     * @var Meter $meter
+     * @var \Spaire\Models\Components\Meter $meter
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('meter')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Meter')]
@@ -83,7 +83,7 @@ class SubscriptionMeter
      * @param  int  $creditedUnits
      * @param  int  $amount
      * @param  string  $meterId
-     * @param  Meter  $meter
+     * @param  \Spaire\Models\Components\Meter  $meter
      * @param  ?\DateTime  $modifiedAt
      * @phpstan-pure
      */

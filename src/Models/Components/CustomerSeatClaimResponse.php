@@ -14,7 +14,7 @@ class CustomerSeatClaimResponse
 {
     /**
      *
-     * @var CustomerSeat $seat
+     * @var \Spaire\Models\Components\CustomerSeat $seat
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('seat')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerSeat')]
@@ -29,7 +29,7 @@ class CustomerSeatClaimResponse
     public string $customerSessionToken;
 
     /**
-     * @param  CustomerSeat  $seat
+     * @param  \Spaire\Models\Components\CustomerSeat  $seat
      * @param  string  $customerSessionToken
      * @phpstan-pure
      */

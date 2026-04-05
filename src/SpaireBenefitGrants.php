@@ -52,9 +52,9 @@ class SpaireBenefitGrants
      *
      * **Scopes**: `customer_portal:read` `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalBenefitGrantsGetSecurity  $security
+     * @param  \Spaire\Models\Operations\CustomerPortalBenefitGrantsGetSecurity  $security
      * @param  string  $id
-     * @return Operations\CustomerPortalBenefitGrantsGetResponse
+     * @return \Spaire\Models\Operations\CustomerPortalBenefitGrantsGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(Operations\CustomerPortalBenefitGrantsGetSecurity $security, string $id, ?Options $options = null): Operations\CustomerPortalBenefitGrantsGetResponse
@@ -147,9 +147,9 @@ class SpaireBenefitGrants
      *
      * **Scopes**: `customer_portal:read` `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalBenefitGrantsListSecurity  $security
-     * @param  ?Operations\CustomerPortalBenefitGrantsListRequest  $request
-     * @return Operations\CustomerPortalBenefitGrantsListResponse
+     * @param  \Spaire\Models\Operations\CustomerPortalBenefitGrantsListSecurity  $security
+     * @param  ?\Spaire\Models\Operations\CustomerPortalBenefitGrantsListRequest  $request
+     * @return \Spaire\Models\Operations\CustomerPortalBenefitGrantsListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(Operations\CustomerPortalBenefitGrantsListSecurity $security, ?Operations\CustomerPortalBenefitGrantsListRequest $request = null, ?Options $options = null): Operations\CustomerPortalBenefitGrantsListResponse
@@ -274,9 +274,9 @@ class SpaireBenefitGrants
      *
      * **Scopes**: `customer_portal:read` `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalBenefitGrantsListSecurity  $security
-     * @param  ?Operations\CustomerPortalBenefitGrantsListRequest  $request
-     * @return \Generator<Operations\CustomerPortalBenefitGrantsListResponse>
+     * @param  \Spaire\Models\Operations\CustomerPortalBenefitGrantsListSecurity  $security
+     * @param  ?\Spaire\Models\Operations\CustomerPortalBenefitGrantsListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\CustomerPortalBenefitGrantsListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(Operations\CustomerPortalBenefitGrantsListSecurity $security, ?Operations\CustomerPortalBenefitGrantsListRequest $request = null, ?Options $options = null): \Generator
@@ -295,10 +295,10 @@ class SpaireBenefitGrants
      *
      * **Scopes**: `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalBenefitGrantsUpdateSecurity  $security
-     * @param  Components\CustomerBenefitGrantDiscordUpdate|Components\CustomerBenefitGrantGitHubRepositoryUpdate|Components\CustomerBenefitGrantDownloadablesUpdate|Components\CustomerBenefitGrantLicenseKeysUpdate|Components\CustomerBenefitGrantCustomUpdate|Components\CustomerBenefitGrantMeterCreditUpdate  $customerBenefitGrantUpdate
+     * @param  \Spaire\Models\Operations\CustomerPortalBenefitGrantsUpdateSecurity  $security
+     * @param  \Spaire\Models\Components\CustomerBenefitGrantDiscordUpdate|\Spaire\Models\Components\CustomerBenefitGrantGitHubRepositoryUpdate|\Spaire\Models\Components\CustomerBenefitGrantDownloadablesUpdate|\Spaire\Models\Components\CustomerBenefitGrantLicenseKeysUpdate|\Spaire\Models\Components\CustomerBenefitGrantCustomUpdate|\Spaire\Models\Components\CustomerBenefitGrantMeterCreditUpdate  $customerBenefitGrantUpdate
      * @param  string  $id
-     * @return Operations\CustomerPortalBenefitGrantsUpdateResponse
+     * @return \Spaire\Models\Operations\CustomerPortalBenefitGrantsUpdateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function update(Operations\CustomerPortalBenefitGrantsUpdateSecurity $security, Components\CustomerBenefitGrantDiscordUpdate|Components\CustomerBenefitGrantGitHubRepositoryUpdate|Components\CustomerBenefitGrantDownloadablesUpdate|Components\CustomerBenefitGrantLicenseKeysUpdate|Components\CustomerBenefitGrantCustomUpdate|Components\CustomerBenefitGrantMeterCreditUpdate $customerBenefitGrantUpdate, string $id, ?Options $options = null): Operations\CustomerPortalBenefitGrantsUpdateResponse

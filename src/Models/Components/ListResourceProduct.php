@@ -14,7 +14,7 @@ class ListResourceProduct
     /**
      * $items
      *
-     * @var array<Product> $items
+     * @var array<\Spaire\Models\Components\Product> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\Product>')]
@@ -22,15 +22,15 @@ class ListResourceProduct
 
     /**
      *
-     * @var Pagination $pagination
+     * @var \Spaire\Models\Components\Pagination $pagination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pagination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Pagination')]
     public Pagination $pagination;
 
     /**
-     * @param  array<Product>  $items
-     * @param  Pagination  $pagination
+     * @param  array<\Spaire\Models\Components\Product>  $items
+     * @param  \Spaire\Models\Components\Pagination  $pagination
      * @phpstan-pure
      */
     public function __construct(array $items, Pagination $pagination)

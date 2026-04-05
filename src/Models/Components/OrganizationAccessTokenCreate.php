@@ -21,7 +21,7 @@ class OrganizationAccessTokenCreate
     /**
      * $scopes
      *
-     * @var array<AvailableScope> $scopes
+     * @var array<\Spaire\Models\Components\AvailableScope> $scopes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('scopes')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\AvailableScope>')]
@@ -45,7 +45,7 @@ class OrganizationAccessTokenCreate
 
     /**
      * @param  string  $comment
-     * @param  array<AvailableScope>  $scopes
+     * @param  array<\Spaire\Models\Components\AvailableScope>  $scopes
      * @param  ?string  $organizationId
      * @param  ?string  $expiresIn
      * @phpstan-pure

@@ -63,7 +63,7 @@ class CustomFieldNumber
 
     /**
      *
-     * @var CustomFieldNumberProperties $properties
+     * @var \Spaire\Models\Components\CustomFieldNumberProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomFieldNumberProperties')]
@@ -92,7 +92,7 @@ class CustomFieldNumber
      * @param  string  $slug
      * @param  string  $name
      * @param  string  $organizationId
-     * @param  CustomFieldNumberProperties  $properties
+     * @param  \Spaire\Models\Components\CustomFieldNumberProperties  $properties
      * @param  ?\DateTime  $modifiedAt
      * @phpstan-pure
      */

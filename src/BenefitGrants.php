@@ -51,8 +51,8 @@ class BenefitGrants
      *
      * **Scopes**: `benefits:read` `benefits:write`
      *
-     * @param  ?Operations\BenefitGrantsListRequest  $request
-     * @return Operations\BenefitGrantsListResponse
+     * @param  ?\Spaire\Models\Operations\BenefitGrantsListRequest  $request
+     * @return \Spaire\Models\Operations\BenefitGrantsListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(?Operations\BenefitGrantsListRequest $request = null, ?Options $options = null): Operations\BenefitGrantsListResponse
@@ -167,8 +167,8 @@ class BenefitGrants
      *
      * **Scopes**: `benefits:read` `benefits:write`
      *
-     * @param  ?Operations\BenefitGrantsListRequest  $request
-     * @return \Generator<Operations\BenefitGrantsListResponse>
+     * @param  ?\Spaire\Models\Operations\BenefitGrantsListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\BenefitGrantsListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(?Operations\BenefitGrantsListRequest $request = null, ?Options $options = null): \Generator

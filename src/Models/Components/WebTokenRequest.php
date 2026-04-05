@@ -55,7 +55,7 @@ class WebTokenRequest
 
     /**
      *
-     * @var ?WebTokenRequestSubType $subType
+     * @var ?\Spaire\Models\Components\WebTokenRequestSubType $subType
      */
     #[SpeakeasyMetadata('form:name=sub_type')]
     public ?WebTokenRequestSubType $subType = null;
@@ -65,7 +65,7 @@ class WebTokenRequest
      * @param  string  $clientId
      * @param  string  $clientSecret
      * @param  string  $sessionToken
-     * @param  ?WebTokenRequestSubType  $subType
+     * @param  ?\Spaire\Models\Components\WebTokenRequestSubType  $subType
      * @param  ?string  $sub
      * @param  ?string  $scope
      * @phpstan-pure

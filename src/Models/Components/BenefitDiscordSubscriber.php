@@ -70,7 +70,7 @@ class BenefitDiscordSubscriber
 
     /**
      *
-     * @var BenefitSubscriberOrganization $organization
+     * @var \Spaire\Models\Components\BenefitSubscriberOrganization $organization
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('organization')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitSubscriberOrganization')]
@@ -79,7 +79,7 @@ class BenefitDiscordSubscriber
     /**
      * Properties available to subscribers for a benefit of type `discord`.
      *
-     * @var BenefitDiscordSubscriberProperties $properties
+     * @var \Spaire\Models\Components\BenefitDiscordSubscriberProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitDiscordSubscriberProperties')]
@@ -109,8 +109,8 @@ class BenefitDiscordSubscriber
      * @param  bool  $deletable
      * @param  string  $organizationId
      * @param  array<string, string|int|float|bool>  $metadata
-     * @param  BenefitSubscriberOrganization  $organization
-     * @param  BenefitDiscordSubscriberProperties  $properties
+     * @param  \Spaire\Models\Components\BenefitSubscriberOrganization  $organization
+     * @param  \Spaire\Models\Components\BenefitDiscordSubscriberProperties  $properties
      * @param  ?\DateTime  $modifiedAt
      * @phpstan-pure
      */

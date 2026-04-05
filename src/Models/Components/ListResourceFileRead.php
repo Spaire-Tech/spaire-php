@@ -14,23 +14,23 @@ class ListResourceFileRead
     /**
      * $items
      *
-     * @var array<DownloadableFileRead|ProductMediaFileRead|OrganizationAvatarFileRead> $items
+     * @var array<\Spaire\Models\Components\DownloadableFileRead|\Spaire\Models\Components\ProductMediaFileRead|\Spaire\Models\Components\OrganizationAvatarFileRead|\Spaire\Models\Components\StorefrontHeaderFileRead> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\DownloadableFileRead|\Spaire\Models\Components\ProductMediaFileRead|\Spaire\Models\Components\OrganizationAvatarFileRead>')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\DownloadableFileRead|\Spaire\Models\Components\ProductMediaFileRead|\Spaire\Models\Components\OrganizationAvatarFileRead|\Spaire\Models\Components\StorefrontHeaderFileRead>')]
     public array $items;
 
     /**
      *
-     * @var Pagination $pagination
+     * @var \Spaire\Models\Components\Pagination $pagination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pagination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Pagination')]
     public Pagination $pagination;
 
     /**
-     * @param  array<DownloadableFileRead|ProductMediaFileRead|OrganizationAvatarFileRead>  $items
-     * @param  Pagination  $pagination
+     * @param  array<\Spaire\Models\Components\DownloadableFileRead|\Spaire\Models\Components\ProductMediaFileRead|\Spaire\Models\Components\OrganizationAvatarFileRead|\Spaire\Models\Components\StorefrontHeaderFileRead>  $items
+     * @param  \Spaire\Models\Components\Pagination  $pagination
      * @phpstan-pure
      */
     public function __construct(array $items, Pagination $pagination)

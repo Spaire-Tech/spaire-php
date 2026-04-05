@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Components\FilterClause
+* @var \Spaire\Models\Components\FilterClause
 */
 Components\FilterClause $value = /* values here */
 ```
@@ -16,7 +16,7 @@ Components\FilterClause $value = /* values here */
 
 ```php
 /**
-* @var Components\Filter
+* @var \Spaire\Models\Components\Filter
 */
 Components\Filter $value = /* values here */
 ```

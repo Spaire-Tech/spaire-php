@@ -13,7 +13,7 @@ class Metrics
 {
     /**
      *
-     * @var ?Metric $orders
+     * @var ?\Spaire\Models\Components\Metric $orders
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('orders')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -22,7 +22,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $revenue
+     * @var ?\Spaire\Models\Components\Metric $revenue
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('revenue')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -31,7 +31,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $netRevenue
+     * @var ?\Spaire\Models\Components\Metric $netRevenue
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('net_revenue')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -40,7 +40,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $cumulativeRevenue
+     * @var ?\Spaire\Models\Components\Metric $cumulativeRevenue
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('cumulative_revenue')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -49,7 +49,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $netCumulativeRevenue
+     * @var ?\Spaire\Models\Components\Metric $netCumulativeRevenue
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('net_cumulative_revenue')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -58,7 +58,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $costs
+     * @var ?\Spaire\Models\Components\Metric $costs
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('costs')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -67,7 +67,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $cumulativeCosts
+     * @var ?\Spaire\Models\Components\Metric $cumulativeCosts
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('cumulative_costs')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -76,7 +76,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $averageOrderValue
+     * @var ?\Spaire\Models\Components\Metric $averageOrderValue
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('average_order_value')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -85,7 +85,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $netAverageOrderValue
+     * @var ?\Spaire\Models\Components\Metric $netAverageOrderValue
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('net_average_order_value')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -94,7 +94,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $averageRevenuePerUser
+     * @var ?\Spaire\Models\Components\Metric $averageRevenuePerUser
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('average_revenue_per_user')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -103,7 +103,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $costPerUser
+     * @var ?\Spaire\Models\Components\Metric $costPerUser
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('cost_per_user')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -112,7 +112,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $activeUserByEvent
+     * @var ?\Spaire\Models\Components\Metric $activeUserByEvent
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('active_user_by_event')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -121,7 +121,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $oneTimeProducts
+     * @var ?\Spaire\Models\Components\Metric $oneTimeProducts
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('one_time_products')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -130,7 +130,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $oneTimeProductsRevenue
+     * @var ?\Spaire\Models\Components\Metric $oneTimeProductsRevenue
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('one_time_products_revenue')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -139,7 +139,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $oneTimeProductsNetRevenue
+     * @var ?\Spaire\Models\Components\Metric $oneTimeProductsNetRevenue
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('one_time_products_net_revenue')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -148,7 +148,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $newSubscriptions
+     * @var ?\Spaire\Models\Components\Metric $newSubscriptions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('new_subscriptions')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -157,7 +157,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $newSubscriptionsRevenue
+     * @var ?\Spaire\Models\Components\Metric $newSubscriptionsRevenue
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('new_subscriptions_revenue')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -166,7 +166,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $newSubscriptionsNetRevenue
+     * @var ?\Spaire\Models\Components\Metric $newSubscriptionsNetRevenue
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('new_subscriptions_net_revenue')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -175,7 +175,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $renewedSubscriptions
+     * @var ?\Spaire\Models\Components\Metric $renewedSubscriptions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('renewed_subscriptions')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -184,7 +184,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $renewedSubscriptionsRevenue
+     * @var ?\Spaire\Models\Components\Metric $renewedSubscriptionsRevenue
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('renewed_subscriptions_revenue')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -193,7 +193,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $renewedSubscriptionsNetRevenue
+     * @var ?\Spaire\Models\Components\Metric $renewedSubscriptionsNetRevenue
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('renewed_subscriptions_net_revenue')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -202,7 +202,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $activeSubscriptions
+     * @var ?\Spaire\Models\Components\Metric $activeSubscriptions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('active_subscriptions')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -211,7 +211,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $committedSubscriptions
+     * @var ?\Spaire\Models\Components\Metric $committedSubscriptions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('committed_subscriptions')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -220,7 +220,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $monthlyRecurringRevenue
+     * @var ?\Spaire\Models\Components\Metric $monthlyRecurringRevenue
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('monthly_recurring_revenue')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -229,7 +229,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $committedMonthlyRecurringRevenue
+     * @var ?\Spaire\Models\Components\Metric $committedMonthlyRecurringRevenue
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('committed_monthly_recurring_revenue')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -238,7 +238,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $checkouts
+     * @var ?\Spaire\Models\Components\Metric $checkouts
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('checkouts')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -247,7 +247,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $succeededCheckouts
+     * @var ?\Spaire\Models\Components\Metric $succeededCheckouts
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('succeeded_checkouts')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -256,7 +256,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $checkoutsConversion
+     * @var ?\Spaire\Models\Components\Metric $checkoutsConversion
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('checkouts_conversion')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -265,7 +265,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $canceledSubscriptions
+     * @var ?\Spaire\Models\Components\Metric $canceledSubscriptions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('canceled_subscriptions')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -274,7 +274,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $canceledSubscriptionsCustomerService
+     * @var ?\Spaire\Models\Components\Metric $canceledSubscriptionsCustomerService
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('canceled_subscriptions_customer_service')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -283,7 +283,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $canceledSubscriptionsLowQuality
+     * @var ?\Spaire\Models\Components\Metric $canceledSubscriptionsLowQuality
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('canceled_subscriptions_low_quality')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -292,7 +292,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $canceledSubscriptionsMissingFeatures
+     * @var ?\Spaire\Models\Components\Metric $canceledSubscriptionsMissingFeatures
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('canceled_subscriptions_missing_features')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -301,7 +301,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $canceledSubscriptionsSwitchedService
+     * @var ?\Spaire\Models\Components\Metric $canceledSubscriptionsSwitchedService
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('canceled_subscriptions_switched_service')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -310,7 +310,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $canceledSubscriptionsTooComplex
+     * @var ?\Spaire\Models\Components\Metric $canceledSubscriptionsTooComplex
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('canceled_subscriptions_too_complex')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -319,7 +319,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $canceledSubscriptionsTooExpensive
+     * @var ?\Spaire\Models\Components\Metric $canceledSubscriptionsTooExpensive
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('canceled_subscriptions_too_expensive')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -328,7 +328,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $canceledSubscriptionsUnused
+     * @var ?\Spaire\Models\Components\Metric $canceledSubscriptionsUnused
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('canceled_subscriptions_unused')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -337,7 +337,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $canceledSubscriptionsOther
+     * @var ?\Spaire\Models\Components\Metric $canceledSubscriptionsOther
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('canceled_subscriptions_other')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -346,7 +346,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $churnedSubscriptions
+     * @var ?\Spaire\Models\Components\Metric $churnedSubscriptions
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('churned_subscriptions')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -355,7 +355,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $churnRate
+     * @var ?\Spaire\Models\Components\Metric $churnRate
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('churn_rate')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -364,7 +364,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $ltv
+     * @var ?\Spaire\Models\Components\Metric $ltv
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('ltv')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -373,7 +373,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $grossMargin
+     * @var ?\Spaire\Models\Components\Metric $grossMargin
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('gross_margin')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -382,7 +382,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $grossMarginPercentage
+     * @var ?\Spaire\Models\Components\Metric $grossMarginPercentage
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('gross_margin_percentage')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -391,7 +391,7 @@ class Metrics
 
     /**
      *
-     * @var ?Metric $cashflow
+     * @var ?\Spaire\Models\Components\Metric $cashflow
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('cashflow')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Metric|null')]
@@ -399,49 +399,49 @@ class Metrics
     public ?Metric $cashflow = null;
 
     /**
-     * @param  ?Metric  $orders
-     * @param  ?Metric  $revenue
-     * @param  ?Metric  $netRevenue
-     * @param  ?Metric  $cumulativeRevenue
-     * @param  ?Metric  $netCumulativeRevenue
-     * @param  ?Metric  $costs
-     * @param  ?Metric  $cumulativeCosts
-     * @param  ?Metric  $averageOrderValue
-     * @param  ?Metric  $netAverageOrderValue
-     * @param  ?Metric  $averageRevenuePerUser
-     * @param  ?Metric  $costPerUser
-     * @param  ?Metric  $activeUserByEvent
-     * @param  ?Metric  $oneTimeProducts
-     * @param  ?Metric  $oneTimeProductsRevenue
-     * @param  ?Metric  $oneTimeProductsNetRevenue
-     * @param  ?Metric  $newSubscriptions
-     * @param  ?Metric  $newSubscriptionsRevenue
-     * @param  ?Metric  $newSubscriptionsNetRevenue
-     * @param  ?Metric  $renewedSubscriptions
-     * @param  ?Metric  $renewedSubscriptionsRevenue
-     * @param  ?Metric  $renewedSubscriptionsNetRevenue
-     * @param  ?Metric  $activeSubscriptions
-     * @param  ?Metric  $committedSubscriptions
-     * @param  ?Metric  $monthlyRecurringRevenue
-     * @param  ?Metric  $committedMonthlyRecurringRevenue
-     * @param  ?Metric  $checkouts
-     * @param  ?Metric  $succeededCheckouts
-     * @param  ?Metric  $checkoutsConversion
-     * @param  ?Metric  $canceledSubscriptions
-     * @param  ?Metric  $canceledSubscriptionsCustomerService
-     * @param  ?Metric  $canceledSubscriptionsLowQuality
-     * @param  ?Metric  $canceledSubscriptionsMissingFeatures
-     * @param  ?Metric  $canceledSubscriptionsSwitchedService
-     * @param  ?Metric  $canceledSubscriptionsTooComplex
-     * @param  ?Metric  $canceledSubscriptionsTooExpensive
-     * @param  ?Metric  $canceledSubscriptionsUnused
-     * @param  ?Metric  $canceledSubscriptionsOther
-     * @param  ?Metric  $churnedSubscriptions
-     * @param  ?Metric  $churnRate
-     * @param  ?Metric  $ltv
-     * @param  ?Metric  $grossMargin
-     * @param  ?Metric  $grossMarginPercentage
-     * @param  ?Metric  $cashflow
+     * @param  ?\Spaire\Models\Components\Metric  $orders
+     * @param  ?\Spaire\Models\Components\Metric  $revenue
+     * @param  ?\Spaire\Models\Components\Metric  $netRevenue
+     * @param  ?\Spaire\Models\Components\Metric  $cumulativeRevenue
+     * @param  ?\Spaire\Models\Components\Metric  $netCumulativeRevenue
+     * @param  ?\Spaire\Models\Components\Metric  $costs
+     * @param  ?\Spaire\Models\Components\Metric  $cumulativeCosts
+     * @param  ?\Spaire\Models\Components\Metric  $averageOrderValue
+     * @param  ?\Spaire\Models\Components\Metric  $netAverageOrderValue
+     * @param  ?\Spaire\Models\Components\Metric  $averageRevenuePerUser
+     * @param  ?\Spaire\Models\Components\Metric  $costPerUser
+     * @param  ?\Spaire\Models\Components\Metric  $activeUserByEvent
+     * @param  ?\Spaire\Models\Components\Metric  $oneTimeProducts
+     * @param  ?\Spaire\Models\Components\Metric  $oneTimeProductsRevenue
+     * @param  ?\Spaire\Models\Components\Metric  $oneTimeProductsNetRevenue
+     * @param  ?\Spaire\Models\Components\Metric  $newSubscriptions
+     * @param  ?\Spaire\Models\Components\Metric  $newSubscriptionsRevenue
+     * @param  ?\Spaire\Models\Components\Metric  $newSubscriptionsNetRevenue
+     * @param  ?\Spaire\Models\Components\Metric  $renewedSubscriptions
+     * @param  ?\Spaire\Models\Components\Metric  $renewedSubscriptionsRevenue
+     * @param  ?\Spaire\Models\Components\Metric  $renewedSubscriptionsNetRevenue
+     * @param  ?\Spaire\Models\Components\Metric  $activeSubscriptions
+     * @param  ?\Spaire\Models\Components\Metric  $committedSubscriptions
+     * @param  ?\Spaire\Models\Components\Metric  $monthlyRecurringRevenue
+     * @param  ?\Spaire\Models\Components\Metric  $committedMonthlyRecurringRevenue
+     * @param  ?\Spaire\Models\Components\Metric  $checkouts
+     * @param  ?\Spaire\Models\Components\Metric  $succeededCheckouts
+     * @param  ?\Spaire\Models\Components\Metric  $checkoutsConversion
+     * @param  ?\Spaire\Models\Components\Metric  $canceledSubscriptions
+     * @param  ?\Spaire\Models\Components\Metric  $canceledSubscriptionsCustomerService
+     * @param  ?\Spaire\Models\Components\Metric  $canceledSubscriptionsLowQuality
+     * @param  ?\Spaire\Models\Components\Metric  $canceledSubscriptionsMissingFeatures
+     * @param  ?\Spaire\Models\Components\Metric  $canceledSubscriptionsSwitchedService
+     * @param  ?\Spaire\Models\Components\Metric  $canceledSubscriptionsTooComplex
+     * @param  ?\Spaire\Models\Components\Metric  $canceledSubscriptionsTooExpensive
+     * @param  ?\Spaire\Models\Components\Metric  $canceledSubscriptionsUnused
+     * @param  ?\Spaire\Models\Components\Metric  $canceledSubscriptionsOther
+     * @param  ?\Spaire\Models\Components\Metric  $churnedSubscriptions
+     * @param  ?\Spaire\Models\Components\Metric  $churnRate
+     * @param  ?\Spaire\Models\Components\Metric  $ltv
+     * @param  ?\Spaire\Models\Components\Metric  $grossMargin
+     * @param  ?\Spaire\Models\Components\Metric  $grossMarginPercentage
+     * @param  ?\Spaire\Models\Components\Metric  $cashflow
      * @phpstan-pure
      */
     public function __construct(?Metric $orders = null, ?Metric $revenue = null, ?Metric $netRevenue = null, ?Metric $cumulativeRevenue = null, ?Metric $netCumulativeRevenue = null, ?Metric $costs = null, ?Metric $cumulativeCosts = null, ?Metric $averageOrderValue = null, ?Metric $netAverageOrderValue = null, ?Metric $averageRevenuePerUser = null, ?Metric $costPerUser = null, ?Metric $activeUserByEvent = null, ?Metric $oneTimeProducts = null, ?Metric $oneTimeProductsRevenue = null, ?Metric $oneTimeProductsNetRevenue = null, ?Metric $newSubscriptions = null, ?Metric $newSubscriptionsRevenue = null, ?Metric $newSubscriptionsNetRevenue = null, ?Metric $renewedSubscriptions = null, ?Metric $renewedSubscriptionsRevenue = null, ?Metric $renewedSubscriptionsNetRevenue = null, ?Metric $activeSubscriptions = null, ?Metric $committedSubscriptions = null, ?Metric $monthlyRecurringRevenue = null, ?Metric $committedMonthlyRecurringRevenue = null, ?Metric $checkouts = null, ?Metric $succeededCheckouts = null, ?Metric $checkoutsConversion = null, ?Metric $canceledSubscriptions = null, ?Metric $canceledSubscriptionsCustomerService = null, ?Metric $canceledSubscriptionsLowQuality = null, ?Metric $canceledSubscriptionsMissingFeatures = null, ?Metric $canceledSubscriptionsSwitchedService = null, ?Metric $canceledSubscriptionsTooComplex = null, ?Metric $canceledSubscriptionsTooExpensive = null, ?Metric $canceledSubscriptionsUnused = null, ?Metric $canceledSubscriptionsOther = null, ?Metric $churnedSubscriptions = null, ?Metric $churnRate = null, ?Metric $ltv = null, ?Metric $grossMargin = null, ?Metric $grossMarginPercentage = null, ?Metric $cashflow = null)

@@ -52,8 +52,8 @@ class Refunds
      *
      * **Scopes**: `refunds:write`
      *
-     * @param  Components\RefundCreate  $request
-     * @return Operations\RefundsCreateResponse
+     * @param  \Spaire\Models\Components\RefundCreate  $request
+     * @return \Spaire\Models\Operations\RefundsCreateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function create(Components\RefundCreate $request, ?Options $options = null): Operations\RefundsCreateResponse
@@ -150,8 +150,8 @@ class Refunds
      *
      * **Scopes**: `refunds:read` `refunds:write`
      *
-     * @param  ?Operations\RefundsListRequest  $request
-     * @return Operations\RefundsListResponse
+     * @param  ?\Spaire\Models\Operations\RefundsListRequest  $request
+     * @return \Spaire\Models\Operations\RefundsListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(?Operations\RefundsListRequest $request = null, ?Options $options = null): Operations\RefundsListResponse
@@ -269,8 +269,8 @@ class Refunds
      *
      * **Scopes**: `refunds:read` `refunds:write`
      *
-     * @param  ?Operations\RefundsListRequest  $request
-     * @return \Generator<Operations\RefundsListResponse>
+     * @param  ?\Spaire\Models\Operations\RefundsListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\RefundsListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(?Operations\RefundsListRequest $request = null, ?Options $options = null): \Generator

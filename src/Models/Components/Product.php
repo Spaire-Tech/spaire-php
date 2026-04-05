@@ -38,7 +38,7 @@ class Product
 
     /**
      *
-     * @var ProductVisibility $visibility
+     * @var \Spaire\Models\Components\ProductVisibility $visibility
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('visibility')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductVisibility')]
@@ -80,7 +80,7 @@ class Product
     /**
      * List of prices for this product.
      *
-     * @var array<LegacyRecurringProductPriceFixed|LegacyRecurringProductPriceCustom|LegacyRecurringProductPriceFree|ProductPriceFixed|ProductPriceCustom|ProductPriceFree|ProductPriceSeatBased|ProductPriceMeteredUnit> $prices
+     * @var array<\Spaire\Models\Components\LegacyRecurringProductPriceFixed|\Spaire\Models\Components\LegacyRecurringProductPriceCustom|\Spaire\Models\Components\LegacyRecurringProductPriceFree|\Spaire\Models\Components\ProductPriceFixed|\Spaire\Models\Components\ProductPriceCustom|\Spaire\Models\Components\ProductPriceFree|\Spaire\Models\Components\ProductPriceSeatBased|\Spaire\Models\Components\ProductPriceMeteredUnit> $prices
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('prices')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\LegacyRecurringProductPriceFixed|\Spaire\Models\Components\LegacyRecurringProductPriceCustom|\Spaire\Models\Components\LegacyRecurringProductPriceFree|\Spaire\Models\Components\ProductPriceFixed|\Spaire\Models\Components\ProductPriceCustom|\Spaire\Models\Components\ProductPriceFree|\Spaire\Models\Components\ProductPriceSeatBased|\Spaire\Models\Components\ProductPriceMeteredUnit>')]
@@ -89,7 +89,7 @@ class Product
     /**
      * List of benefits granted by the product.
      *
-     * @var array<BenefitCustom|BenefitDiscord|BenefitGitHubRepository|BenefitDownloadables|BenefitLicenseKeys|BenefitMeterCredit> $benefits
+     * @var array<\Spaire\Models\Components\BenefitCustom|\Spaire\Models\Components\BenefitDiscord|\Spaire\Models\Components\BenefitGitHubRepository|\Spaire\Models\Components\BenefitDownloadables|\Spaire\Models\Components\BenefitLicenseKeys|\Spaire\Models\Components\BenefitMeterCredit> $benefits
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('benefits')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\BenefitCustom|\Spaire\Models\Components\BenefitDiscord|\Spaire\Models\Components\BenefitGitHubRepository|\Spaire\Models\Components\BenefitDownloadables|\Spaire\Models\Components\BenefitLicenseKeys|\Spaire\Models\Components\BenefitMeterCredit>')]
@@ -98,7 +98,7 @@ class Product
     /**
      * List of medias associated to the product.
      *
-     * @var array<ProductMediaFileRead> $medias
+     * @var array<\Spaire\Models\Components\ProductMediaFileRead> $medias
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('medias')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\ProductMediaFileRead>')]
@@ -107,7 +107,7 @@ class Product
     /**
      * List of custom fields attached to the product.
      *
-     * @var array<AttachedCustomField> $attachedCustomFields
+     * @var array<\Spaire\Models\Components\AttachedCustomField> $attachedCustomFields
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('attached_custom_fields')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\AttachedCustomField>')]
@@ -124,7 +124,7 @@ class Product
     /**
      * The interval unit for the trial period.
      *
-     * @var ?TrialInterval $trialInterval
+     * @var ?\Spaire\Models\Components\TrialInterval $trialInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('trial_interval')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TrialInterval|null')]
@@ -149,7 +149,7 @@ class Product
     /**
      * The recurring interval of the product. If `None`, the product is a one-time purchase.
      *
-     * @var ?SubscriptionRecurringInterval $recurringInterval
+     * @var ?\Spaire\Models\Components\SubscriptionRecurringInterval $recurringInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('recurring_interval')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionRecurringInterval|null')]
@@ -167,20 +167,20 @@ class Product
      * @param  string  $id
      * @param  \DateTime  $createdAt
      * @param  string  $name
-     * @param  ProductVisibility  $visibility
+     * @param  \Spaire\Models\Components\ProductVisibility  $visibility
      * @param  bool  $isRecurring
      * @param  bool  $isArchived
      * @param  string  $organizationId
      * @param  array<string, string|int|float|bool>  $metadata
-     * @param  array<LegacyRecurringProductPriceFixed|LegacyRecurringProductPriceCustom|LegacyRecurringProductPriceFree|ProductPriceFixed|ProductPriceCustom|ProductPriceFree|ProductPriceSeatBased|ProductPriceMeteredUnit>  $prices
-     * @param  array<BenefitCustom|BenefitDiscord|BenefitGitHubRepository|BenefitDownloadables|BenefitLicenseKeys|BenefitMeterCredit>  $benefits
-     * @param  array<ProductMediaFileRead>  $medias
-     * @param  array<AttachedCustomField>  $attachedCustomFields
+     * @param  array<\Spaire\Models\Components\LegacyRecurringProductPriceFixed|\Spaire\Models\Components\LegacyRecurringProductPriceCustom|\Spaire\Models\Components\LegacyRecurringProductPriceFree|\Spaire\Models\Components\ProductPriceFixed|\Spaire\Models\Components\ProductPriceCustom|\Spaire\Models\Components\ProductPriceFree|\Spaire\Models\Components\ProductPriceSeatBased|\Spaire\Models\Components\ProductPriceMeteredUnit>  $prices
+     * @param  array<\Spaire\Models\Components\BenefitCustom|\Spaire\Models\Components\BenefitDiscord|\Spaire\Models\Components\BenefitGitHubRepository|\Spaire\Models\Components\BenefitDownloadables|\Spaire\Models\Components\BenefitLicenseKeys|\Spaire\Models\Components\BenefitMeterCredit>  $benefits
+     * @param  array<\Spaire\Models\Components\ProductMediaFileRead>  $medias
+     * @param  array<\Spaire\Models\Components\AttachedCustomField>  $attachedCustomFields
      * @param  ?\DateTime  $modifiedAt
-     * @param  ?TrialInterval  $trialInterval
+     * @param  ?\Spaire\Models\Components\TrialInterval  $trialInterval
      * @param  ?int  $trialIntervalCount
      * @param  ?string  $description
-     * @param  ?SubscriptionRecurringInterval  $recurringInterval
+     * @param  ?\Spaire\Models\Components\SubscriptionRecurringInterval  $recurringInterval
      * @param  ?int  $recurringIntervalCount
      * @phpstan-pure
      */

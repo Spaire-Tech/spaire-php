@@ -38,7 +38,7 @@ class WebhookEndpoint
 
     /**
      *
-     * @var WebhookFormat $format
+     * @var \Spaire\Models\Components\WebhookFormat $format
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('format')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\WebhookFormat')]
@@ -63,7 +63,7 @@ class WebhookEndpoint
     /**
      * The events that will trigger the webhook.
      *
-     * @var array<WebhookEventType> $events
+     * @var array<\Spaire\Models\Components\WebhookEventType> $events
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('events')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\WebhookEventType>')]
@@ -89,10 +89,10 @@ class WebhookEndpoint
      * @param  \DateTime  $createdAt
      * @param  string  $id
      * @param  string  $url
-     * @param  WebhookFormat  $format
+     * @param  \Spaire\Models\Components\WebhookFormat  $format
      * @param  string  $secret
      * @param  string  $organizationId
-     * @param  array<WebhookEventType>  $events
+     * @param  array<\Spaire\Models\Components\WebhookEventType>  $events
      * @param  bool  $enabled
      * @param  ?\DateTime  $modifiedAt
      * @phpstan-pure

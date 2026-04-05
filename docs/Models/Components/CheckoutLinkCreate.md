@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Components\CheckoutLinkCreateProductPrice
+* @var \Spaire\Models\Components\CheckoutLinkCreateProductPrice
 */
 Components\CheckoutLinkCreateProductPrice $value = /* values here */
 ```
@@ -16,7 +16,7 @@ Components\CheckoutLinkCreateProductPrice $value = /* values here */
 
 ```php
 /**
-* @var Components\CheckoutLinkCreateProduct
+* @var \Spaire\Models\Components\CheckoutLinkCreateProduct
 */
 Components\CheckoutLinkCreateProduct $value = /* values here */
 ```
@@ -25,7 +25,7 @@ Components\CheckoutLinkCreateProduct $value = /* values here */
 
 ```php
 /**
-* @var Components\CheckoutLinkCreateProducts
+* @var \Spaire\Models\Components\CheckoutLinkCreateProducts
 */
 Components\CheckoutLinkCreateProducts $value = /* values here */
 ```

@@ -7,7 +7,7 @@
 
 ```php
 /**
-* @var Components\DownloadableFileRead
+* @var \Spaire\Models\Components\DownloadableFileRead
 */
 Components\DownloadableFileRead $value = /* values here */
 ```
@@ -16,7 +16,7 @@ Components\DownloadableFileRead $value = /* values here */
 
 ```php
 /**
-* @var Components\OrganizationAvatarFileRead
+* @var \Spaire\Models\Components\OrganizationAvatarFileRead
 */
 Components\OrganizationAvatarFileRead $value = /* values here */
 ```
@@ -25,8 +25,17 @@ Components\OrganizationAvatarFileRead $value = /* values here */
 
 ```php
 /**
-* @var Components\ProductMediaFileRead
+* @var \Spaire\Models\Components\ProductMediaFileRead
 */
 Components\ProductMediaFileRead $value = /* values here */
+```
+
+### `Components\StorefrontHeaderFileRead`
+
+```php
+/**
+* @var \Spaire\Models\Components\StorefrontHeaderFileRead
+*/
+Components\StorefrontHeaderFileRead $value = /* values here */
 ```
 

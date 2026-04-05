@@ -35,7 +35,7 @@ class MemberSessionsCreateResponse
     /**
      * Member session created.
      *
-     * @var ?Components\MemberSession $memberSession
+     * @var ?\Spaire\Models\Components\MemberSession $memberSession
      */
     public ?Components\MemberSession $memberSession = null;
 
@@ -43,7 +43,7 @@ class MemberSessionsCreateResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?Components\MemberSession  $memberSession
+     * @param  ?\Spaire\Models\Components\MemberSession  $memberSession
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?Components\MemberSession $memberSession = null)

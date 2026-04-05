@@ -29,7 +29,7 @@ class Order
 
     /**
      *
-     * @var OrderStatus $status
+     * @var \Spaire\Models\Components\OrderStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrderStatus')]
@@ -124,7 +124,7 @@ class Order
 
     /**
      *
-     * @var OrderBillingReason $billingReason
+     * @var \Spaire\Models\Components\OrderBillingReason $billingReason
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_reason')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrderBillingReason')]
@@ -172,7 +172,7 @@ class Order
 
     /**
      *
-     * @var OrderCustomer $customer
+     * @var \Spaire\Models\Components\OrderCustomer $customer
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrderCustomer')]
@@ -189,7 +189,7 @@ class Order
     /**
      * Line items composing the order.
      *
-     * @var array<OrderItemSchema> $items
+     * @var array<\Spaire\Models\Components\OrderItemSchema> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\OrderItemSchema>')]
@@ -221,7 +221,7 @@ class Order
 
     /**
      *
-     * @var ?Address $billingAddress
+     * @var ?\Spaire\Models\Components\Address $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Address|null')]
@@ -275,7 +275,7 @@ class Order
 
     /**
      *
-     * @var ?OrderProduct $product
+     * @var ?\Spaire\Models\Components\OrderProduct $product
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('product')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrderProduct|null')]
@@ -283,7 +283,7 @@ class Order
 
     /**
      *
-     * @var DiscountFixedOnceForeverDurationBase|DiscountFixedRepeatDurationBase|DiscountPercentageOnceForeverDurationBase|DiscountPercentageRepeatDurationBase|null $discount
+     * @var \Spaire\Models\Components\DiscountFixedOnceForeverDurationBase|\Spaire\Models\Components\DiscountFixedRepeatDurationBase|\Spaire\Models\Components\DiscountPercentageOnceForeverDurationBase|\Spaire\Models\Components\DiscountPercentageRepeatDurationBase|null $discount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('discount')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DiscountFixedOnceForeverDurationBase|\Spaire\Models\Components\DiscountFixedRepeatDurationBase|\Spaire\Models\Components\DiscountPercentageOnceForeverDurationBase|\Spaire\Models\Components\DiscountPercentageRepeatDurationBase|null')]
@@ -291,7 +291,7 @@ class Order
 
     /**
      *
-     * @var ?OrderSubscription $subscription
+     * @var ?\Spaire\Models\Components\OrderSubscription $subscription
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('subscription')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\OrderSubscription|null')]
@@ -309,7 +309,7 @@ class Order
     /**
      * @param  string  $id
      * @param  \DateTime  $createdAt
-     * @param  OrderStatus  $status
+     * @param  \Spaire\Models\Components\OrderStatus  $status
      * @param  bool  $paid
      * @param  int  $subtotalAmount
      * @param  int  $discountAmount
@@ -321,28 +321,28 @@ class Order
      * @param  int  $refundedAmount
      * @param  int  $refundedTaxAmount
      * @param  string  $currency
-     * @param  OrderBillingReason  $billingReason
+     * @param  \Spaire\Models\Components\OrderBillingReason  $billingReason
      * @param  string  $invoiceNumber
      * @param  bool  $isInvoiceGenerated
      * @param  string  $customerId
      * @param  array<string, string|int|float|bool>  $metadata
      * @param  int  $platformFeeAmount
-     * @param  OrderCustomer  $customer
+     * @param  \Spaire\Models\Components\OrderCustomer  $customer
      * @param  string  $userId
-     * @param  array<OrderItemSchema>  $items
+     * @param  array<\Spaire\Models\Components\OrderItemSchema>  $items
      * @param  string  $description
      * @param  ?\DateTime  $modifiedAt
      * @param  ?string  $billingName
-     * @param  ?Address  $billingAddress
+     * @param  ?\Spaire\Models\Components\Address  $billingAddress
      * @param  ?string  $productId
      * @param  ?string  $discountId
      * @param  ?string  $subscriptionId
      * @param  ?string  $checkoutId
      * @param  ?array<string, string|int|bool|\DateTime|null>  $customFieldData
      * @param  ?string  $platformFeeCurrency
-     * @param  ?OrderProduct  $product
-     * @param  DiscountFixedOnceForeverDurationBase|DiscountFixedRepeatDurationBase|DiscountPercentageOnceForeverDurationBase|DiscountPercentageRepeatDurationBase|null  $discount
-     * @param  ?OrderSubscription  $subscription
+     * @param  ?\Spaire\Models\Components\OrderProduct  $product
+     * @param  \Spaire\Models\Components\DiscountFixedOnceForeverDurationBase|\Spaire\Models\Components\DiscountFixedRepeatDurationBase|\Spaire\Models\Components\DiscountPercentageOnceForeverDurationBase|\Spaire\Models\Components\DiscountPercentageRepeatDurationBase|null  $discount
+     * @param  ?\Spaire\Models\Components\OrderSubscription  $subscription
      * @param  ?int  $seats
      * @phpstan-pure
      */

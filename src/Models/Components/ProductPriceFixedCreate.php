@@ -22,12 +22,22 @@ class ProductPriceFixedCreate
 
     /**
      *
-     * @var ?PresentmentCurrency $priceCurrency
+     * @var ?\Spaire\Models\Components\PresentmentCurrency $priceCurrency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('price_currency')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PresentmentCurrency $priceCurrency = null;
+
+    /**
+     * The tax behavior of the price. If not set, it will default to the organization's default tax behavior.
+     *
+     * @var ?\Spaire\Models\Components\TaxBehaviorOption $taxBehavior
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tax_behavior')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TaxBehaviorOption|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?TaxBehaviorOption $taxBehavior = null;
 
     /**
      *
@@ -39,13 +49,15 @@ class ProductPriceFixedCreate
     /**
      * @param  string  $amountType
      * @param  int  $priceAmount
-     * @param  ?PresentmentCurrency  $priceCurrency
+     * @param  ?\Spaire\Models\Components\PresentmentCurrency  $priceCurrency
+     * @param  ?\Spaire\Models\Components\TaxBehaviorOption  $taxBehavior
      * @phpstan-pure
      */
-    public function __construct(int $priceAmount, ?PresentmentCurrency $priceCurrency = null, string $amountType = 'fixed')
+    public function __construct(int $priceAmount, ?PresentmentCurrency $priceCurrency = null, ?TaxBehaviorOption $taxBehavior = null, string $amountType = 'fixed')
     {
         $this->priceAmount = $priceAmount;
         $this->priceCurrency = $priceCurrency;
+        $this->taxBehavior = $taxBehavior;
         $this->amountType = $amountType;
     }
 }

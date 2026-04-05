@@ -54,7 +54,7 @@ class Orders
      *
      * @param  string|array<string>|null  $organizationId
      * @param  string|array<string>|null  $productId
-     * @return Operations\OrdersExportResponse
+     * @return \Spaire\Models\Operations\OrdersExportResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function export(string|array|null $organizationId = null, string|array|null $productId = null, ?Options $options = null): Operations\OrdersExportResponse
@@ -135,7 +135,7 @@ class Orders
      * **Scopes**: `orders:read`
      *
      * @param  string  $id
-     * @return Operations\OrdersGenerateInvoiceResponse
+     * @return \Spaire\Models\Operations\OrdersGenerateInvoiceResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function generateInvoice(string $id, ?Options $options = null): Operations\OrdersGenerateInvoiceResponse
@@ -213,7 +213,7 @@ class Orders
      * **Scopes**: `orders:read`
      *
      * @param  string  $id
-     * @return Operations\OrdersGetResponse
+     * @return \Spaire\Models\Operations\OrdersGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\OrdersGetResponse
@@ -301,7 +301,7 @@ class Orders
      * **Scopes**: `orders:read`
      *
      * @param  string  $id
-     * @return Operations\OrdersInvoiceResponse
+     * @return \Spaire\Models\Operations\OrdersInvoiceResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function invoice(string $id, ?Options $options = null): Operations\OrdersInvoiceResponse
@@ -388,8 +388,8 @@ class Orders
      *
      * **Scopes**: `orders:read`
      *
-     * @param  ?Operations\OrdersListRequest  $request
-     * @return Operations\OrdersListResponse
+     * @param  ?\Spaire\Models\Operations\OrdersListRequest  $request
+     * @return \Spaire\Models\Operations\OrdersListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(?Operations\OrdersListRequest $request = null, ?Options $options = null): Operations\OrdersListResponse
@@ -508,8 +508,8 @@ class Orders
      *
      * **Scopes**: `orders:read`
      *
-     * @param  ?Operations\OrdersListRequest  $request
-     * @return \Generator<Operations\OrdersListResponse>
+     * @param  ?\Spaire\Models\Operations\OrdersListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\OrdersListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(?Operations\OrdersListRequest $request = null, ?Options $options = null): \Generator
@@ -528,9 +528,9 @@ class Orders
      *
      * **Scopes**: `orders:write`
      *
-     * @param  Components\OrderUpdate  $orderUpdate
+     * @param  \Spaire\Models\Components\OrderUpdate  $orderUpdate
      * @param  string  $id
-     * @return Operations\OrdersUpdateResponse
+     * @return \Spaire\Models\Operations\OrdersUpdateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function update(Components\OrderUpdate $orderUpdate, string $id, ?Options $options = null): Operations\OrdersUpdateResponse

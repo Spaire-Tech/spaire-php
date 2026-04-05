@@ -15,7 +15,7 @@ class ClientInvoicesListClientInvoicesRequest
     /**
      * Sorting criterion. Several criteria can be used simultaneously and will be applied in order. Add a minus sign `-` before the criteria name to sort by descending order.
      *
-     * @var ?array<Components\ClientInvoiceSortProperty> $sorting
+     * @var ?array<\Spaire\Models\Components\ClientInvoiceSortProperty> $sorting
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=sorting')]
     public ?array $sorting = null;
@@ -39,7 +39,7 @@ class ClientInvoicesListClientInvoicesRequest
     /**
      * @param  ?int  $page
      * @param  ?int  $limit
-     * @param  ?array<Components\ClientInvoiceSortProperty>  $sorting
+     * @param  ?array<\Spaire\Models\Components\ClientInvoiceSortProperty>  $sorting
      * @phpstan-pure
      */
     public function __construct(?array $sorting = null, ?int $page = 1, ?int $limit = 10)

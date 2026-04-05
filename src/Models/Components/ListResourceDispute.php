@@ -14,7 +14,7 @@ class ListResourceDispute
     /**
      * $items
      *
-     * @var array<Dispute> $items
+     * @var array<\Spaire\Models\Components\Dispute> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\Dispute>')]
@@ -22,15 +22,15 @@ class ListResourceDispute
 
     /**
      *
-     * @var Pagination $pagination
+     * @var \Spaire\Models\Components\Pagination $pagination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pagination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Pagination')]
     public Pagination $pagination;
 
     /**
-     * @param  array<Dispute>  $items
-     * @param  Pagination  $pagination
+     * @param  array<\Spaire\Models\Components\Dispute>  $items
+     * @param  \Spaire\Models\Components\Pagination  $pagination
      * @phpstan-pure
      */
     public function __construct(array $items, Pagination $pagination)

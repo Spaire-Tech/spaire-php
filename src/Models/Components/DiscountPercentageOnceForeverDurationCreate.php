@@ -14,7 +14,7 @@ class DiscountPercentageOnceForeverDurationCreate
 {
     /**
      *
-     * @var DiscountDuration $duration
+     * @var \Spaire\Models\Components\DiscountDuration $duration
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('duration')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DiscountDuration')]
@@ -22,7 +22,7 @@ class DiscountPercentageOnceForeverDurationCreate
 
     /**
      *
-     * @var DiscountType $type
+     * @var \Spaire\Models\Components\DiscountType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\DiscountType')]
@@ -125,8 +125,8 @@ class DiscountPercentageOnceForeverDurationCreate
     public ?string $organizationId = null;
 
     /**
-     * @param  DiscountDuration  $duration
-     * @param  DiscountType  $type
+     * @param  \Spaire\Models\Components\DiscountDuration  $duration
+     * @param  \Spaire\Models\Components\DiscountType  $type
      * @param  int  $basisPoints
      * @param  string  $name
      * @param  ?array<string, string|int|float|bool>  $metadata

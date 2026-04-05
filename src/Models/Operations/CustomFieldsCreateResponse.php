@@ -35,7 +35,7 @@ class CustomFieldsCreateResponse
     /**
      * Custom field created.
      *
-     * @var Components\CustomFieldText|Components\CustomFieldNumber|Components\CustomFieldDate|Components\CustomFieldCheckbox|Components\CustomFieldSelect|null $customField
+     * @var \Spaire\Models\Components\CustomFieldText|\Spaire\Models\Components\CustomFieldNumber|\Spaire\Models\Components\CustomFieldDate|\Spaire\Models\Components\CustomFieldCheckbox|\Spaire\Models\Components\CustomFieldSelect|null $customField
      */
     public Components\CustomFieldText|Components\CustomFieldNumber|Components\CustomFieldDate|Components\CustomFieldCheckbox|Components\CustomFieldSelect|null $customField = null;
 
@@ -43,7 +43,7 @@ class CustomFieldsCreateResponse
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  Components\CustomFieldText|Components\CustomFieldNumber|Components\CustomFieldDate|Components\CustomFieldCheckbox|Components\CustomFieldSelect|null  $customField
+     * @param  \Spaire\Models\Components\CustomFieldText|\Spaire\Models\Components\CustomFieldNumber|\Spaire\Models\Components\CustomFieldDate|\Spaire\Models\Components\CustomFieldCheckbox|\Spaire\Models\Components\CustomFieldSelect|null  $customField
      * @phpstan-pure
      */
     public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, Components\CustomFieldText|Components\CustomFieldNumber|Components\CustomFieldDate|Components\CustomFieldCheckbox|Components\CustomFieldSelect|null $customField = null)

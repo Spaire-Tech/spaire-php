@@ -52,8 +52,8 @@ class Benefits
      *
      * **Scopes**: `benefits:write`
      *
-     * @param  Components\BenefitCustomCreate|Components\BenefitDiscordCreate|Components\BenefitGitHubRepositoryCreate|Components\BenefitDownloadablesCreate|Components\BenefitLicenseKeysCreate|Components\BenefitMeterCreditCreate  $request
-     * @return Operations\BenefitsCreateResponse
+     * @param  \Spaire\Models\Components\BenefitCustomCreate|\Spaire\Models\Components\BenefitDiscordCreate|\Spaire\Models\Components\BenefitGitHubRepositoryCreate|\Spaire\Models\Components\BenefitDownloadablesCreate|\Spaire\Models\Components\BenefitLicenseKeysCreate|\Spaire\Models\Components\BenefitMeterCreditCreate  $request
+     * @return \Spaire\Models\Operations\BenefitsCreateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function create(Components\BenefitCustomCreate|Components\BenefitDiscordCreate|Components\BenefitGitHubRepositoryCreate|Components\BenefitDownloadablesCreate|Components\BenefitLicenseKeysCreate|Components\BenefitMeterCreditCreate $request, ?Options $options = null): Operations\BenefitsCreateResponse
@@ -136,7 +136,7 @@ class Benefits
      * **Scopes**: `benefits:write`
      *
      * @param  string  $id
-     * @return Operations\BenefitsDeleteResponse
+     * @return \Spaire\Models\Operations\BenefitsDeleteResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function delete(string $id, ?Options $options = null): Operations\BenefitsDeleteResponse
@@ -226,7 +226,7 @@ class Benefits
      * **Scopes**: `benefits:read` `benefits:write`
      *
      * @param  string  $id
-     * @return Operations\BenefitsGetResponse
+     * @return \Spaire\Models\Operations\BenefitsGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(string $id, ?Options $options = null): Operations\BenefitsGetResponse
@@ -315,8 +315,8 @@ class Benefits
      *
      * **Scopes**: `benefits:read` `benefits:write`
      *
-     * @param  Operations\BenefitsGrantsRequest  $request
-     * @return Operations\BenefitsGrantsResponse
+     * @param  \Spaire\Models\Operations\BenefitsGrantsRequest  $request
+     * @return \Spaire\Models\Operations\BenefitsGrantsResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function grantsIndividual(Operations\BenefitsGrantsRequest $request, ?Options $options = null): Operations\BenefitsGrantsResponse
@@ -443,8 +443,8 @@ class Benefits
      *
      * **Scopes**: `benefits:read` `benefits:write`
      *
-     * @param  Operations\BenefitsGrantsRequest  $request
-     * @return \Generator<Operations\BenefitsGrantsResponse>
+     * @param  \Spaire\Models\Operations\BenefitsGrantsRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\BenefitsGrantsResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function grants(Operations\BenefitsGrantsRequest $request, ?Options $options = null): \Generator
@@ -463,8 +463,8 @@ class Benefits
      *
      * **Scopes**: `benefits:read` `benefits:write`
      *
-     * @param  ?Operations\BenefitsListRequest  $request
-     * @return Operations\BenefitsListResponse
+     * @param  ?\Spaire\Models\Operations\BenefitsListRequest  $request
+     * @return \Spaire\Models\Operations\BenefitsListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(?Operations\BenefitsListRequest $request = null, ?Options $options = null): Operations\BenefitsListResponse
@@ -581,8 +581,8 @@ class Benefits
      *
      * **Scopes**: `benefits:read` `benefits:write`
      *
-     * @param  ?Operations\BenefitsListRequest  $request
-     * @return \Generator<Operations\BenefitsListResponse>
+     * @param  ?\Spaire\Models\Operations\BenefitsListRequest  $request
+     * @return \Generator<\Spaire\Models\Operations\BenefitsListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(?Operations\BenefitsListRequest $request = null, ?Options $options = null): \Generator
@@ -601,9 +601,9 @@ class Benefits
      *
      * **Scopes**: `benefits:write`
      *
-     * @param  Components\BenefitCustomUpdate|Components\BenefitDiscordUpdate|Components\BenefitGitHubRepositoryUpdate|Components\BenefitDownloadablesUpdate|Components\BenefitLicenseKeysUpdate|Components\BenefitMeterCreditUpdate  $requestBody
+     * @param  \Spaire\Models\Components\BenefitCustomUpdate|\Spaire\Models\Components\BenefitDiscordUpdate|\Spaire\Models\Components\BenefitGitHubRepositoryUpdate|\Spaire\Models\Components\BenefitDownloadablesUpdate|\Spaire\Models\Components\BenefitLicenseKeysUpdate|\Spaire\Models\Components\BenefitMeterCreditUpdate  $requestBody
      * @param  string  $id
-     * @return Operations\BenefitsUpdateResponse
+     * @return \Spaire\Models\Operations\BenefitsUpdateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function update(Components\BenefitCustomUpdate|Components\BenefitDiscordUpdate|Components\BenefitGitHubRepositoryUpdate|Components\BenefitDownloadablesUpdate|Components\BenefitLicenseKeysUpdate|Components\BenefitMeterCreditUpdate $requestBody, string $id, ?Options $options = null): Operations\BenefitsUpdateResponse

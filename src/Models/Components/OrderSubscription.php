@@ -54,7 +54,7 @@ class OrderSubscription
 
     /**
      *
-     * @var SubscriptionRecurringInterval $recurringInterval
+     * @var \Spaire\Models\Components\SubscriptionRecurringInterval $recurringInterval
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('recurring_interval')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionRecurringInterval')]
@@ -70,7 +70,7 @@ class OrderSubscription
 
     /**
      *
-     * @var SubscriptionStatus $status
+     * @var \Spaire\Models\Components\SubscriptionStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\SubscriptionStatus')]
@@ -189,7 +189,7 @@ class OrderSubscription
 
     /**
      *
-     * @var ?CustomerCancellationReason $customerCancellationReason
+     * @var ?\Spaire\Models\Components\CustomerCancellationReason $customerCancellationReason
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('customer_cancellation_reason')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\CustomerCancellationReason|null')]
@@ -217,9 +217,9 @@ class OrderSubscription
      * @param  string  $id
      * @param  int  $amount
      * @param  string  $currency
-     * @param  SubscriptionRecurringInterval  $recurringInterval
+     * @param  \Spaire\Models\Components\SubscriptionRecurringInterval  $recurringInterval
      * @param  int  $recurringIntervalCount
-     * @param  SubscriptionStatus  $status
+     * @param  \Spaire\Models\Components\SubscriptionStatus  $status
      * @param  \DateTime  $currentPeriodStart
      * @param  bool  $cancelAtPeriodEnd
      * @param  string  $customerId
@@ -234,7 +234,7 @@ class OrderSubscription
      * @param  ?\DateTime  $endedAt
      * @param  ?string  $discountId
      * @param  ?string  $checkoutId
-     * @param  ?CustomerCancellationReason  $customerCancellationReason
+     * @param  ?\Spaire\Models\Components\CustomerCancellationReason  $customerCancellationReason
      * @param  ?string  $customerCancellationComment
      * @param  ?int  $seats
      * @phpstan-pure

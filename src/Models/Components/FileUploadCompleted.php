@@ -28,7 +28,7 @@ class FileUploadCompleted
     /**
      * $parts
      *
-     * @var array<S3FileUploadCompletedPart> $parts
+     * @var array<\Spaire\Models\Components\S3FileUploadCompletedPart> $parts
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('parts')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\S3FileUploadCompletedPart>')]
@@ -37,7 +37,7 @@ class FileUploadCompleted
     /**
      * @param  string  $id
      * @param  string  $path
-     * @param  array<S3FileUploadCompletedPart>  $parts
+     * @param  array<\Spaire\Models\Components\S3FileUploadCompletedPart>  $parts
      * @phpstan-pure
      */
     public function __construct(string $id, string $path, array $parts)

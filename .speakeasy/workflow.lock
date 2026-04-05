@@ -1,9 +1,9 @@
-speakeasyVersion: 1.759.3
+speakeasyVersion: 1.761.1
 sources:
     Spaire-OAS:
         sourceNamespace: spaire-oas
-        sourceRevisionDigest: sha256:f9d98b30d8a24c9afe33107a73107eba7c66f00dff3802a42ec0ae3f5ce5f20c
-        sourceBlobDigest: sha256:5cd0b8ddabc7d907421bf94235ba20f148d007bc553e15b397bae8fb9e70f404
+        sourceRevisionDigest: sha256:64bf2c3be273697342ab3604377a128b564260ee33a3c134805b89044e74d280
+        sourceBlobDigest: sha256:9361567aa95210027251eb4c893b0e793bd5076765634cd7b10a4bc3942b0f6e
         tags:
             - latest
             - 0.1.0
@@ -11,8 +11,10 @@ targets:
     spaire:
         source: Spaire-OAS
         sourceNamespace: spaire-oas
-        sourceRevisionDigest: sha256:f9d98b30d8a24c9afe33107a73107eba7c66f00dff3802a42ec0ae3f5ce5f20c
-        sourceBlobDigest: sha256:5cd0b8ddabc7d907421bf94235ba20f148d007bc553e15b397bae8fb9e70f404
+        sourceRevisionDigest: sha256:64bf2c3be273697342ab3604377a128b564260ee33a3c134805b89044e74d280
+        sourceBlobDigest: sha256:9361567aa95210027251eb4c893b0e793bd5076765634cd7b10a4bc3942b0f6e
+        codeSamplesNamespace: spaire-oas-php-code-samples
+        codeSamplesRevisionDigest: sha256:ba88a95be732edff2c031611d3b4f317f2fd1cc42c8eb6839f483147d7d36290
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -38,3 +40,9 @@ workflow:
                 packagist:
                     username: spaire
                     token: $packagist_token
+            codeSamples:
+                output: codeSamples.yaml
+                registry:
+                    location: registry.speakeasyapi.dev/spaire/spaire-workspace/spaire-oas-php-code-samples
+                labelOverride:
+                    fixedValue: PHP (SDK)

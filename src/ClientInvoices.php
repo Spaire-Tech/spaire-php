@@ -52,8 +52,8 @@ class ClientInvoices
      *
      * **Scopes**: `client_invoices:write`
      *
-     * @param  Components\ClientInvoiceCreate  $request
-     * @return Operations\ClientInvoicesCreateClientInvoiceResponse
+     * @param  \Spaire\Models\Components\ClientInvoiceCreate  $request
+     * @return \Spaire\Models\Operations\ClientInvoicesCreateClientInvoiceResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function createClientInvoice(Components\ClientInvoiceCreate $request, ?Options $options = null): Operations\ClientInvoicesCreateClientInvoiceResponse
@@ -132,7 +132,7 @@ class ClientInvoices
      * **Scopes**: `client_invoices:read`
      *
      * @param  string  $id
-     * @return Operations\ClientInvoicesDownloadClientInvoicePdfResponse
+     * @return \Spaire\Models\Operations\ClientInvoicesDownloadClientInvoicePdfResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function downloadClientInvoicePdf(string $id, ?Options $options = null): Operations\ClientInvoicesDownloadClientInvoicePdfResponse
@@ -201,7 +201,7 @@ class ClientInvoices
      * **Scopes**: `client_invoices:write`
      *
      * @param  string  $id
-     * @return Operations\ClientInvoicesFinalizeClientInvoiceResponse
+     * @return \Spaire\Models\Operations\ClientInvoicesFinalizeClientInvoiceResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function finalizeClientInvoice(string $id, ?Options $options = null): Operations\ClientInvoicesFinalizeClientInvoiceResponse
@@ -278,7 +278,7 @@ class ClientInvoices
      * **Scopes**: `client_invoices:read`
      *
      * @param  string  $id
-     * @return Operations\ClientInvoicesGetClientInvoiceResponse
+     * @return \Spaire\Models\Operations\ClientInvoicesGetClientInvoiceResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function getClientInvoice(string $id, ?Options $options = null): Operations\ClientInvoicesGetClientInvoiceResponse
@@ -356,8 +356,8 @@ class ClientInvoices
      *
      * @param  ?int  $page
      * @param  ?int  $limit
-     * @param  ?array<Components\ClientInvoiceSortProperty>  $sorting
-     * @return Operations\ClientInvoicesListClientInvoicesResponse
+     * @param  ?array<\Spaire\Models\Components\ClientInvoiceSortProperty>  $sorting
+     * @return \Spaire\Models\Operations\ClientInvoicesListClientInvoicesResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listClientInvoicesIndividual(?int $page = null, ?int $limit = null, ?array $sorting = null, ?Options $options = null): Operations\ClientInvoicesListClientInvoicesResponse
@@ -473,8 +473,8 @@ class ClientInvoices
      *
      * @param  ?int  $page
      * @param  ?int  $limit
-     * @param  ?array<Components\ClientInvoiceSortProperty>  $sorting
-     * @return \Generator<Operations\ClientInvoicesListClientInvoicesResponse>
+     * @param  ?array<\Spaire\Models\Components\ClientInvoiceSortProperty>  $sorting
+     * @return \Generator<\Spaire\Models\Operations\ClientInvoicesListClientInvoicesResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function listClientInvoices(?int $page = null, ?int $limit = null, ?array $sorting = null, ?Options $options = null): \Generator
@@ -494,7 +494,7 @@ class ClientInvoices
      * **Scopes**: `client_invoices:write`
      *
      * @param  string  $id
-     * @return Operations\ClientInvoicesMarkClientInvoicePaidResponse
+     * @return \Spaire\Models\Operations\ClientInvoicesMarkClientInvoicePaidResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function markClientInvoicePaid(string $id, ?Options $options = null): Operations\ClientInvoicesMarkClientInvoicePaidResponse
@@ -570,8 +570,8 @@ class ClientInvoices
      *
      * **Scopes**: `client_invoices:read`
      *
-     * @param  Components\ClientInvoicePreviewRequest  $request
-     * @return Operations\ClientInvoicesPreviewClientInvoicePdfResponse
+     * @param  \Spaire\Models\Components\ClientInvoicePreviewRequest  $request
+     * @return \Spaire\Models\Operations\ClientInvoicesPreviewClientInvoicePdfResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function previewClientInvoicePdf(Components\ClientInvoicePreviewRequest $request, ?Options $options = null): Operations\ClientInvoicesPreviewClientInvoicePdfResponse
@@ -641,7 +641,7 @@ class ClientInvoices
      * **Scopes**: `client_invoices:write`
      *
      * @param  string  $id
-     * @return Operations\ClientInvoicesSendClientInvoiceResponse
+     * @return \Spaire\Models\Operations\ClientInvoicesSendClientInvoiceResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function sendClientInvoice(string $id, ?Options $options = null): Operations\ClientInvoicesSendClientInvoiceResponse
@@ -718,7 +718,7 @@ class ClientInvoices
      * **Scopes**: `client_invoices:write`
      *
      * @param  string  $id
-     * @return Operations\ClientInvoicesVoidClientInvoiceResponse
+     * @return \Spaire\Models\Operations\ClientInvoicesVoidClientInvoiceResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function voidClientInvoice(string $id, ?Options $options = null): Operations\ClientInvoicesVoidClientInvoiceResponse

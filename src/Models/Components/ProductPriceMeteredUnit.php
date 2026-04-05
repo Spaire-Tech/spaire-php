@@ -30,7 +30,7 @@ class ProductPriceMeteredUnit
 
     /**
      *
-     * @var ProductPriceSource $source
+     * @var \Spaire\Models\Components\ProductPriceSource $source
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('source')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductPriceSource')]
@@ -38,7 +38,7 @@ class ProductPriceMeteredUnit
 
     /**
      *
-     * @var PresentmentCurrency $priceCurrency
+     * @var \Spaire\Models\Components\PresentmentCurrency $priceCurrency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('price_currency')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\PresentmentCurrency')]
@@ -62,7 +62,7 @@ class ProductPriceMeteredUnit
 
     /**
      *
-     * @var ProductPriceType $type
+     * @var \Spaire\Models\Components\ProductPriceType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductPriceType')]
@@ -87,7 +87,7 @@ class ProductPriceMeteredUnit
     /**
      * A meter associated to a metered price.
      *
-     * @var ProductPriceMeter $meter
+     * @var \Spaire\Models\Components\ProductPriceMeter $meter
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('meter')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ProductPriceMeter')]
@@ -102,8 +102,17 @@ class ProductPriceMeteredUnit
     public ?\DateTime $modifiedAt;
 
     /**
+     * The tax behavior of the price. If null, it defaults to the organization's default tax behavior.
      *
-     * @var ?SubscriptionRecurringInterval $recurringInterval
+     * @var ?\Spaire\Models\Components\TaxBehaviorOption $taxBehavior
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tax_behavior')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\TaxBehaviorOption|null')]
+    public ?TaxBehaviorOption $taxBehavior;
+
+    /**
+     *
+     * @var ?\Spaire\Models\Components\SubscriptionRecurringInterval $recurringInterval
      * @deprecated  field: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('recurring_interval')]
@@ -128,21 +137,22 @@ class ProductPriceMeteredUnit
     /**
      * @param  \DateTime  $createdAt
      * @param  string  $id
-     * @param  ProductPriceSource  $source
+     * @param  \Spaire\Models\Components\ProductPriceSource  $source
      * @param  string  $amountType
-     * @param  PresentmentCurrency  $priceCurrency
+     * @param  \Spaire\Models\Components\PresentmentCurrency  $priceCurrency
      * @param  bool  $isArchived
      * @param  string  $productId
-     * @param  ProductPriceType  $type
+     * @param  \Spaire\Models\Components\ProductPriceType  $type
      * @param  string  $unitAmount
      * @param  string  $meterId
-     * @param  ProductPriceMeter  $meter
+     * @param  \Spaire\Models\Components\ProductPriceMeter  $meter
      * @param  ?\DateTime  $modifiedAt
-     * @param  ?SubscriptionRecurringInterval  $recurringInterval
+     * @param  ?\Spaire\Models\Components\TaxBehaviorOption  $taxBehavior
+     * @param  ?\Spaire\Models\Components\SubscriptionRecurringInterval  $recurringInterval
      * @param  ?int  $capAmount
      * @phpstan-pure
      */
-    public function __construct(\DateTime $createdAt, string $id, ProductPriceSource $source, PresentmentCurrency $priceCurrency, bool $isArchived, string $productId, ProductPriceType $type, string $unitAmount, string $meterId, ProductPriceMeter $meter, ?\DateTime $modifiedAt = null, ?SubscriptionRecurringInterval $recurringInterval = null, ?int $capAmount = null, string $amountType = 'metered_unit')
+    public function __construct(\DateTime $createdAt, string $id, ProductPriceSource $source, PresentmentCurrency $priceCurrency, bool $isArchived, string $productId, ProductPriceType $type, string $unitAmount, string $meterId, ProductPriceMeter $meter, ?\DateTime $modifiedAt = null, ?TaxBehaviorOption $taxBehavior = null, ?SubscriptionRecurringInterval $recurringInterval = null, ?int $capAmount = null, string $amountType = 'metered_unit')
     {
         $this->createdAt = $createdAt;
         $this->id = $id;
@@ -155,6 +165,7 @@ class ProductPriceMeteredUnit
         $this->meterId = $meterId;
         $this->meter = $meter;
         $this->modifiedAt = $modifiedAt;
+        $this->taxBehavior = $taxBehavior;
         $this->recurringInterval = $recurringInterval;
         $this->capAmount = $capAmount;
         $this->amountType = $amountType;

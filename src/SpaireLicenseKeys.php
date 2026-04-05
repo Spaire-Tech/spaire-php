@@ -55,8 +55,8 @@ class SpaireLicenseKeys
      * > If you plan to validate a license key on a server, use the `/v1/license-keys/activate`
      * > endpoint instead.
      *
-     * @param  Components\LicenseKeyActivate  $request
-     * @return Operations\CustomerPortalLicenseKeysActivateResponse
+     * @param  \Spaire\Models\Components\LicenseKeyActivate  $request
+     * @return \Spaire\Models\Operations\CustomerPortalLicenseKeysActivateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function activate(Components\LicenseKeyActivate $request, ?Options $options = null): Operations\CustomerPortalLicenseKeysActivateResponse
@@ -159,8 +159,8 @@ class SpaireLicenseKeys
      * > If you plan to validate a license key on a server, use the `/v1/license-keys/deactivate`
      * > endpoint instead.
      *
-     * @param  Components\LicenseKeyDeactivate  $request
-     * @return Operations\CustomerPortalLicenseKeysDeactivateResponse
+     * @param  \Spaire\Models\Components\LicenseKeyDeactivate  $request
+     * @return \Spaire\Models\Operations\CustomerPortalLicenseKeysDeactivateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function deactivate(Components\LicenseKeyDeactivate $request, ?Options $options = null): Operations\CustomerPortalLicenseKeysDeactivateResponse
@@ -240,9 +240,9 @@ class SpaireLicenseKeys
      *
      * **Scopes**: `customer_portal:read` `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalLicenseKeysGetSecurity  $security
+     * @param  \Spaire\Models\Operations\CustomerPortalLicenseKeysGetSecurity  $security
      * @param  string  $id
-     * @return Operations\CustomerPortalLicenseKeysGetResponse
+     * @return \Spaire\Models\Operations\CustomerPortalLicenseKeysGetResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function get(Operations\CustomerPortalLicenseKeysGetSecurity $security, string $id, ?Options $options = null): Operations\CustomerPortalLicenseKeysGetResponse
@@ -333,11 +333,11 @@ class SpaireLicenseKeys
      *
      * **Scopes**: `customer_portal:read` `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalLicenseKeysListSecurity  $security
+     * @param  \Spaire\Models\Operations\CustomerPortalLicenseKeysListSecurity  $security
      * @param  ?string  $benefitId
      * @param  ?int  $page
      * @param  ?int  $limit
-     * @return Operations\CustomerPortalLicenseKeysListResponse
+     * @return \Spaire\Models\Operations\CustomerPortalLicenseKeysListResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     private function listIndividual(Operations\CustomerPortalLicenseKeysListSecurity $security, ?string $benefitId = null, ?int $page = null, ?int $limit = null, ?Options $options = null): Operations\CustomerPortalLicenseKeysListResponse
@@ -478,11 +478,11 @@ class SpaireLicenseKeys
      *
      * **Scopes**: `customer_portal:read` `customer_portal:write`
      *
-     * @param  Operations\CustomerPortalLicenseKeysListSecurity  $security
+     * @param  \Spaire\Models\Operations\CustomerPortalLicenseKeysListSecurity  $security
      * @param  ?string  $benefitId
      * @param  ?int  $page
      * @param  ?int  $limit
-     * @return \Generator<Operations\CustomerPortalLicenseKeysListResponse>
+     * @return \Generator<\Spaire\Models\Operations\CustomerPortalLicenseKeysListResponse>
      * @throws \Spaire\Models\Errors\APIException
      */
     public function list(Operations\CustomerPortalLicenseKeysListSecurity $security, ?string $benefitId = null, ?int $page = null, ?int $limit = null, ?Options $options = null): \Generator
@@ -504,8 +504,8 @@ class SpaireLicenseKeys
      * > If you plan to validate a license key on a server, use the `/v1/license-keys/validate`
      * > endpoint instead.
      *
-     * @param  Components\LicenseKeyValidate  $request
-     * @return Operations\CustomerPortalLicenseKeysValidateResponse
+     * @param  \Spaire\Models\Components\LicenseKeyValidate  $request
+     * @return \Spaire\Models\Operations\CustomerPortalLicenseKeysValidateResponse
      * @throws \Spaire\Models\Errors\APIException
      */
     public function validate(Components\LicenseKeyValidate $request, ?Options $options = null): Operations\CustomerPortalLicenseKeysValidateResponse

@@ -43,7 +43,7 @@ class BenefitDownloadablesUpdate
 
     /**
      *
-     * @var ?BenefitDownloadablesCreateProperties $properties
+     * @var ?\Spaire\Models\Components\BenefitDownloadablesCreateProperties $properties
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('properties')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\BenefitDownloadablesCreateProperties|null')]
@@ -61,7 +61,7 @@ class BenefitDownloadablesUpdate
      * @param  string  $type
      * @param  ?array<string, string|int|float|bool>  $metadata
      * @param  ?string  $description
-     * @param  ?BenefitDownloadablesCreateProperties  $properties
+     * @param  ?\Spaire\Models\Components\BenefitDownloadablesCreateProperties  $properties
      * @phpstan-pure
      */
     public function __construct(?array $metadata = null, ?string $description = null, ?BenefitDownloadablesCreateProperties $properties = null, string $type = 'downloadables')

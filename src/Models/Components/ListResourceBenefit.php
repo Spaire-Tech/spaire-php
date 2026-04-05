@@ -14,7 +14,7 @@ class ListResourceBenefit
     /**
      * $items
      *
-     * @var array<BenefitCustom|BenefitDiscord|BenefitGitHubRepository|BenefitDownloadables|BenefitLicenseKeys|BenefitMeterCredit> $items
+     * @var array<\Spaire\Models\Components\BenefitCustom|\Spaire\Models\Components\BenefitDiscord|\Spaire\Models\Components\BenefitGitHubRepository|\Spaire\Models\Components\BenefitDownloadables|\Spaire\Models\Components\BenefitLicenseKeys|\Spaire\Models\Components\BenefitMeterCredit> $items
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\BenefitCustom|\Spaire\Models\Components\BenefitDiscord|\Spaire\Models\Components\BenefitGitHubRepository|\Spaire\Models\Components\BenefitDownloadables|\Spaire\Models\Components\BenefitLicenseKeys|\Spaire\Models\Components\BenefitMeterCredit>')]
@@ -22,15 +22,15 @@ class ListResourceBenefit
 
     /**
      *
-     * @var Pagination $pagination
+     * @var \Spaire\Models\Components\Pagination $pagination
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('pagination')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\Pagination')]
     public Pagination $pagination;
 
     /**
-     * @param  array<BenefitCustom|BenefitDiscord|BenefitGitHubRepository|BenefitDownloadables|BenefitLicenseKeys|BenefitMeterCredit>  $items
-     * @param  Pagination  $pagination
+     * @param  array<\Spaire\Models\Components\BenefitCustom|\Spaire\Models\Components\BenefitDiscord|\Spaire\Models\Components\BenefitGitHubRepository|\Spaire\Models\Components\BenefitDownloadables|\Spaire\Models\Components\BenefitLicenseKeys|\Spaire\Models\Components\BenefitMeterCredit>  $items
+     * @param  \Spaire\Models\Components\Pagination  $pagination
      * @phpstan-pure
      */
     public function __construct(array $items, Pagination $pagination)

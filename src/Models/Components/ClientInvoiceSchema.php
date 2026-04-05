@@ -43,7 +43,7 @@ class ClientInvoiceSchema
 
     /**
      *
-     * @var ClientInvoiceStatus $status
+     * @var \Spaire\Models\Components\ClientInvoiceStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Spaire\Models\Components\ClientInvoiceStatus')]
@@ -195,7 +195,7 @@ class ClientInvoiceSchema
     /**
      * $lineItems
      *
-     * @var ?array<ClientInvoiceLineItemSchema> $lineItems
+     * @var ?array<\Spaire\Models\Components\ClientInvoiceLineItemSchema> $lineItems
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('line_items')]
     #[\Speakeasy\Serializer\Annotation\Type('array<\Spaire\Models\Components\ClientInvoiceLineItemSchema>|null')]
@@ -207,7 +207,7 @@ class ClientInvoiceSchema
      * @param  \DateTime  $createdAt
      * @param  string  $organizationId
      * @param  string  $customerId
-     * @param  ClientInvoiceStatus  $status
+     * @param  \Spaire\Models\Components\ClientInvoiceStatus  $status
      * @param  string  $currency
      * @param  int  $subtotalAmount
      * @param  int  $discountAmount
@@ -228,7 +228,7 @@ class ClientInvoiceSchema
      * @param  ?string  $checkoutLink
      * @param  ?array<string, mixed>  $userMetadata
      * @param  ?string  $orderId
-     * @param  ?array<ClientInvoiceLineItemSchema>  $lineItems
+     * @param  ?array<\Spaire\Models\Components\ClientInvoiceLineItemSchema>  $lineItems
      * @phpstan-pure
      */
     public function __construct(string $id, \DateTime $createdAt, string $organizationId, string $customerId, ClientInvoiceStatus $status, string $currency, int $subtotalAmount, int $discountAmount, int $taxAmount, int $totalAmount, bool $includePaymentLink, bool $showLogo, bool $showMorAttribution, ?\DateTime $modifiedAt = null, ?string $stripeInvoiceId = null, ?string $memo = null, ?string $poNumber = null, ?LocalDate $dueDate = null, ?string $onBehalfOfLabel = null, ?string $discountLabel = null, ?string $stripeHostedInvoiceUrl = null, ?string $invoicePdfUrl = null, ?string $checkoutLink = null, ?array $userMetadata = null, ?string $orderId = null, ?array $lineItems = null)
